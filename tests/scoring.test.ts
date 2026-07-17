@@ -140,6 +140,64 @@ describe('rank', () => {
   });
 });
 
+describe('cupped-rib silhouette-specific scoring', () => {
+  const catalog = loadCatalog();
+
+  it('penalizes underbust looseness symmetrically for cupped-rib silhouettes (loose ≈ as bad as tight)', () => {
+    // Body with small rib produces positive diff (loose) at underbust for
+    // most corsets. Compare same corset's rib penalty when its
+    // silhouette_category is 'cupped-rib' vs when it's not.
+    const config = defaultScoringConfig(catalog);
+    const narrowRibBody: Body = {
+      natural_waist_in: 28,
+      underbust: { circumference_in: 30, position_in: -5 },
+      upper_hip: { circumference_in: 34, position_in: 4 },
+      iliac: { circumference_in: 38, position_in: 7 },
+    };
+    // Find a cupped-rib silhouette in the catalog with a variant to test.
+    const cuppedRib = catalog.corsets.find(
+      (c) => c.silhouette_category === 'cupped-rib' && c.variants.length > 0
+        && c.variants.some((v) => v.waist_sizes_in.length > 0),
+    );
+    if (!cuppedRib) return; // Skip if none available in fixture data.
+    // Run ranking with cupped-rib label as-is, then again with the label
+    // temporarily switched to 'hourglass' to compare.
+    const asCupped = rank(narrowRibBody, catalog, config);
+    const cuppedRow = asCupped.find((r) => r.corset.id === cuppedRib.id);
+    if (!cuppedRow) return;
+    // Find the underbust position penalty in this ranking.
+    const cuppedUnderbust = cuppedRow.best.position_results.find(
+      (p) => (p.label ?? '').startsWith('under-bust'),
+    );
+    if (!cuppedUnderbust || cuppedUnderbust.diff_in === null) return;
+    // Skip if diff is not positive (this test only exercises the loose case).
+    if (cuppedUnderbust.diff_in <= 0.1) return;
+
+    // Manually score the same corset+variant+size but with silhouette
+    // temporarily marked as 'hourglass' (which uses the normal loose slope).
+    const modifiedCatalog: Catalog = {
+      ...catalog,
+      corsets: catalog.corsets.map((c) =>
+        c.id === cuppedRib.id ? { ...c, silhouette_category: 'hourglass' } : c,
+      ),
+    };
+    const asHourglass = rank(narrowRibBody, modifiedCatalog, config);
+    const hourglassRow = asHourglass.find((r) => r.corset.id === cuppedRib.id);
+    if (!hourglassRow) return;
+    const hourglassUnderbust = hourglassRow.best.position_results.find(
+      (p) => (p.label ?? '').startsWith('under-bust'),
+    );
+    if (!hourglassUnderbust) return;
+
+    // The cupped-rib version should have a STRICTLY GREATER underbust penalty
+    // than the hourglass version, because looseness at rib is symmetrized
+    // to the tightness slope (3x vs 2x).
+    expect(cuppedUnderbust.penalty).toBeGreaterThan(hourglassUnderbust.penalty);
+    // Sanity: ratio should be roughly tightness_slope / looseness_slope = 1.5.
+    expect(cuppedUnderbust.penalty / hourglassUnderbust.penalty).toBeCloseTo(1.5, 1);
+  });
+});
+
 describe('looseness at non-waist positions (negative gap)', () => {
   const catalog = loadCatalog();
 

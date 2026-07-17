@@ -146,8 +146,17 @@ export function scoreCorset(
         // Want actualGap = 0 everywhere. Symmetric deviation penalty.
         penalty = weight * Math.abs(actualGap) * config.tightness_slope;
       } else {
-        // curved: asymmetric on diff, current behavior.
-        penalty = penaltyForDiff(diff, weight, config.tightness_slope, config.looseness_slope);
+        // curved: asymmetric on diff — EXCEPT at the underbust of a cupped-rib
+        // silhouette, where the design intent is to CUP the rib (accommodate,
+        // don't compress or flare away from it). Both directions of misfit
+        // are equally bad there, so we symmetrize by using tightness_slope
+        // for looseness too.
+        const isCuppedRibUnderbust =
+          corset.silhouette_category === 'cupped-rib' && weightKey === 'underbust';
+        const loosenessSlope = isCuppedRibUnderbust
+          ? config.tightness_slope
+          : config.looseness_slope;
+        penalty = penaltyForDiff(diff, weight, config.tightness_slope, loosenessSlope);
       }
 
       return {

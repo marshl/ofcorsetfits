@@ -57,7 +57,6 @@ export interface Corset {
   url: string;
   silhouette_category: SilhouetteCategory;
   silhouette_words: string[];
-  grading: string;
   body_length_in: number | null;
   above_waist_length_in: number | null;
   below_waist_length_in: number | null;

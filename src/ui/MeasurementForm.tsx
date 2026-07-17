@@ -166,7 +166,7 @@ export function MeasurementForm({
           current?.position_in !== undefined
             ? toDisplayPosition(info.direction, current.position_in)
             : '';
-        const positionLabel = `Position (in ${info.direction} waist)`;
+        const positionLabel = `Position (${info.direction} waist)`;
         return (
           <fieldset key={key} className="landmark">
             <legend>{info.display}</legend>
