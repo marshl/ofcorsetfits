@@ -161,20 +161,28 @@ export function scoreCorset(
 
   // ----- Hourglass-gap penalty (curved mode only) -----
   // Fires when any non-waist position's actual gap is SMALLER than the waist's
-  // gap. Excess = max(0, gap_at_waist - gap_at_pos). Sum across positions,
-  // scale by hourglass_gap_slope. In straight/closed modes the per-position
-  // penalty already enforces gap uniformity, so we skip this.
+  // gap. Excess = max(0, gap_at_waist - clamped_gap_at_pos). Sum across
+  // positions, scale by hourglass_gap_slope. In straight/closed modes the
+  // per-position penalty already enforces gap uniformity, so we skip this.
+  //
+  // Both gaps are clamped to non-negative before comparison:
+  //   - gap_at_waist < 0 (corset can't reach target) → different failure,
+  //     caught by the waist penalty. Clamped to 0.
+  //   - gap_at_position < 0 (corset floats loose at that position — body
+  //     smaller than corset there) → visually a gap of 0 at that position
+  //     (lace edges touch), not a "negative gap." The looseness is caught
+  //     by the per-position penalty; double-counting via a negative-gap
+  //     hourglass excess would over-penalize. Clamped to 0.
+  //
+  // Net: hourglass penalty is purely about "waist gap > rib/hip gap" SHAPE,
+  // not compounded with loose-corset penalties.
   let hourglassPenalty = 0;
   if (config.gap_shape === 'curved') {
-    // gap_at_waist is only positive when corset closes smaller than target.
-    // (Negative "gap" means corset can't reach target — a different failure
-    // mode already caught by the waist penalty. Clamp to 0.)
     const gapAtWaist = Math.max(0, targetWaist - effectiveWaist);
     for (const pos of positionResults) {
       if (pos.actual_gap_in === null) continue;
-      // Excess = amount by which waist gap exceeds this position's gap.
-      // Positive excess → this position's gap is smaller than waist's → hourglass.
-      const excess = Math.max(0, gapAtWaist - pos.actual_gap_in);
+      const clampedGap = Math.max(0, pos.actual_gap_in);
+      const excess = Math.max(0, gapAtWaist - clampedGap);
       hourglassPenalty += excess * config.hourglass_gap_slope;
     }
   }

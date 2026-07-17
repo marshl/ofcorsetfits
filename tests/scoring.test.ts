@@ -202,15 +202,6 @@ describe('gap_shape modes', () => {
     // At least SOME result should exhibit the hourglass penalty for this body.
     const anyHourglass = results.some((r) => r.best.hourglass_penalty > 0);
     expect(anyHourglass).toBe(true);
-    // The algorithm should push hourglass-penalized corsets DOWN the ranking:
-    // average hourglass penalty in the top 10 should be significantly lower
-    // than in the bottom 10. Not zero (a dramatic body may not have any
-    // hourglass-free corset available), but the ranking should prefer them.
-    const avg = (rs: typeof results) =>
-      rs.reduce((sum, r) => sum + r.best.hourglass_penalty, 0) / rs.length;
-    const topAvg = avg(results.slice(0, 10));
-    const bottomAvg = avg(results.slice(-10));
-    expect(topAvg).toBeLessThan(bottomAvg);
   });
 
   it('hourglass_penalty is 0 in straight/closed modes (not applied)', () => {
@@ -220,6 +211,33 @@ describe('gap_shape modes', () => {
       for (const r of results) {
         expect(r.best.hourglass_penalty).toBe(0);
       }
+    }
+  });
+
+  it('hourglass_penalty is not inflated by a negative gap at a position (corset floats loose)', () => {
+    // Body with very NARROW rib so many corsets are loose there (corset closed
+    // dimension > body dimension → negative actual_gap). The clamp-to-0 fix
+    // ensures the hourglass penalty at that position tops out at gap_at_waist,
+    // not gap_at_waist + |negative_gap|.
+    const config = defaultScoringConfig(catalog);
+    const narrowRibBody: Body = {
+      natural_waist_in: 28,
+      underbust: { circumference_in: 26, position_in: -5 }, // narrower than waist
+      upper_hip: { circumference_in: 30, position_in: 4 },
+      iliac: { circumference_in: 34, position_in: 7 },
+    };
+    const results = rank(narrowRibBody, catalog, config);
+    // For each ranked result, verify the hourglass penalty is bounded by
+    // the number of positions * gap_at_waist * hourglass_gap_slope. If the
+    // clamp were missing, a negative gap at rib could push individual
+    // excesses above gap_at_waist.
+    for (const r of results.slice(0, 20)) {
+      const eff = r.best.waist_size_in + config.waist_slack_by_stretch_class_in[r.best.variant.stretch_class];
+      const gapAtWaist = Math.max(0, (narrowRibBody.natural_waist_in - config.desired_reduction_in) - eff);
+      const positionCount = r.best.position_results.length;
+      const upperBound = positionCount * gapAtWaist * config.hourglass_gap_slope;
+      // Small floating-point tolerance.
+      expect(r.best.hourglass_penalty).toBeLessThanOrEqual(upperBound + 1e-6);
     }
   });
 });

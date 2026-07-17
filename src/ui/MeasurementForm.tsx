@@ -223,21 +223,32 @@ export function MeasurementForm({
       </label>
 
       <label className="field">
-        <span>Gap shape</span>
+        <span>Lacing gap shape</span>
         <select
           value={gapShape}
           onChange={(e) => onGapShapeChange(e.target.value as GapShape)}
         >
-          <option value="curved">Curved (any shape, no hourglass gaps)</option>
-          <option value="straight">Straight — parallel gap at reduction size</option>
-          <option value="closed">Closed — fully closes at every landmark</option>
+          <option value="curved">
+            )( &nbsp; V-shape / teardrop — wider at rib &amp; hip, tighter at waist
+          </option>
+          <option value="straight">
+            || &nbsp; Parallel — uniform gap top to bottom
+          </option>
+          <option value="closed">
+            | &nbsp; Fully closed — no gap at any position
+          </option>
         </select>
         <span className="helper">
-          How you want the laced gap to look. <strong>Curved</strong> allows
-          natural variation but heavily penalizes hourglass shapes (waist
-          billowing wider than rib/hip). <strong>Straight</strong> demands
-          a parallel gap — requires the corset's spring profile to match
-          your body silhouette. <strong>Closed</strong> is the most restrictive.
+          The visual shape of the laced gap at the back of the corset.{' '}
+          <strong>)( V-shape / teardrop</strong> is the natural default: the
+          corset cinches at the waist and opens gradually toward the rib and
+          hip. Reverse gaps <em>()</em> (hourglass / X-shape), where the
+          waist billows wider than the rib and hip, are heavily penalized.{' '}
+          <strong>|| Parallel</strong> demands the same gap width at every
+          position — only corsets whose spring profile matches your body's
+          silhouette can achieve this.{' '}
+          <strong>| Fully closed</strong> is the most restrictive: the corset
+          must close on you at every landmark, not just the waist.
         </span>
       </label>
     </form>
