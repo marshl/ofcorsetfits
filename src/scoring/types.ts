@@ -168,7 +168,24 @@ export interface CorsetScoreResult {
   total: number;
 }
 
+/**
+ * Best-scoring (size, total) for a specific variant of a silhouette.
+ * Used by the UI to show all variants of a corset with their individual
+ * best-per-variant scores + links.
+ */
+export interface VariantBest {
+  variant: CorsetVariant;
+  best_size_in: number;
+  total: number;
+}
+
 export interface RankedResult {
   corset: Corset;
   best: CorsetScoreResult;
+  /**
+   * All variants that passed the stretch_preference filter, each with its
+   * own best-scoring size + total. Sorted ascending by total (best first).
+   * The first entry always matches `best.variant`.
+   */
+  variant_bests: VariantBest[];
 }

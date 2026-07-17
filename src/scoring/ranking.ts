@@ -15,37 +15,65 @@ import type {
   CorsetScoreResult,
   RankedResult,
   ScoringConfig,
+  VariantBest,
 } from './types.ts';
 import { scoreCorset } from './scoring.ts';
 
 /**
  * For a single corset, try every (variant × waist size) combination and
- * return the lowest-total result. Returns null if no variant survives
- * the stretch_preference filter.
+ * return the lowest-total result overall PLUS per-variant best results.
+ * Returns null if no variant survives the stretch_preference filter.
  */
 export function bestForCorset(
   body: Body,
   corset: Corset,
   config: ScoringConfig,
-): CorsetScoreResult | null {
+): { best: CorsetScoreResult; variantBests: VariantBest[] } | null {
   const candidateVariants = config.stretch_preference === 'any'
     ? corset.variants
     : corset.variants.filter((v) => v.stretch_class === config.stretch_preference);
   if (candidateVariants.length === 0) return null;
 
-  let best: CorsetScoreResult | null = null;
+  const variantBests: VariantBest[] = [];
+  let overallBest: CorsetScoreResult | null = null;
+
   for (const variant of candidateVariants) {
+    let variantBest: CorsetScoreResult | null = null;
     for (const size of corset.waist_sizes_in) {
       const result = scoreCorset(body, corset, variant, size, config);
-      if (best === null || result.total < best.total) {
-        best = result;
+      if (variantBest === null || result.total < variantBest.total) {
+        variantBest = result;
       }
     }
+    if (variantBest === null) continue;
+    variantBests.push({
+      variant,
+      best_size_in: variantBest.waist_size_in,
+      total: variantBest.total,
+    });
+    if (overallBest === null || variantBest.total < overallBest.total) {
+      overallBest = variantBest;
+    }
   }
-  return best;
+
+  if (overallBest === null) return null;
+  variantBests.sort((a, b) => a.total - b.total);
+  return { best: overallBest, variantBests };
 }
 
-/** Rank every corset in the catalog by best-fit score (ascending — lower is better). */
+/**
+ * Rank every VARIANT in the catalog by best-fit score (ascending).
+ *
+ * Each entry represents a single SKU (silhouette × material variant), scored
+ * at its own best waist size. Same silhouette in multiple materials produces
+ * multiple rows because they have different stretch classes → different slack
+ * → different effective-waist math → different scores.
+ *
+ * `variant_bests` on each entry still carries all variants of that silhouette
+ * for cross-reference in the UI (users can see the current variant's siblings
+ * without scrolling). The first entry in `variant_bests` matches this row's
+ * variant only when the row's variant is the best for its silhouette.
+ */
 export function rank(
   body: Body,
   catalog: Catalog,
@@ -53,9 +81,42 @@ export function rank(
 ): RankedResult[] {
   const results: RankedResult[] = [];
   for (const corset of catalog.corsets) {
-    const best = bestForCorset(body, corset, config);
-    if (best === null) continue;
-    results.push({ corset, best });
+    const candidateVariants = config.stretch_preference === 'any'
+      ? corset.variants
+      : corset.variants.filter((v) => v.stretch_class === config.stretch_preference);
+    if (candidateVariants.length === 0) continue;
+
+    // Best CorsetScoreResult per variant of this silhouette.
+    const perVariantScores: CorsetScoreResult[] = [];
+    for (const variant of candidateVariants) {
+      let best: CorsetScoreResult | null = null;
+      for (const size of corset.waist_sizes_in) {
+        const result = scoreCorset(body, corset, variant, size, config);
+        if (best === null || result.total < best.total) {
+          best = result;
+        }
+      }
+      if (best !== null) perVariantScores.push(best);
+    }
+    if (perVariantScores.length === 0) continue;
+
+    // Precompute the shared variant_bests list (used by all rows of this silhouette).
+    const variantBests = perVariantScores
+      .map((s) => ({
+        variant: s.variant,
+        best_size_in: s.waist_size_in,
+        total: s.total,
+      }))
+      .sort((a, b) => a.total - b.total);
+
+    // Emit one row per variant.
+    for (const scoreResult of perVariantScores) {
+      results.push({
+        corset,
+        best: scoreResult,
+        variant_bests: variantBests,
+      });
+    }
   }
   results.sort((a, b) => a.best.total - b.best.total);
   return results;

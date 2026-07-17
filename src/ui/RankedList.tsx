@@ -1,11 +1,10 @@
 /**
- * Ranked corset list — shows the top N results with a per-corset
- * expandable breakdown of how the score was assembled.
- *
- * Each row has: rank number, corset ID + name, best variant, best size,
- * total score, silhouette category. Clicking a row reveals a table of
- * per-position penalties (waist + each landmark), which is how you
- * understand WHY a corset ranked where it did.
+ * Ranked list — one row per VARIANT (silhouette × material variant). Same
+ * silhouette in multiple materials appears as multiple rows because the
+ * different stretch classes produce different scores. Expanding a row
+ * reveals the per-position penalty breakdown for THAT specific variant,
+ * plus a compact cross-reference of the same silhouette's other variants
+ * so you can compare siblings without scrolling.
  */
 
 import { useState } from 'react';
@@ -23,8 +22,13 @@ function formatDiff(diff: number | null): string {
   return `${sign}${diff.toFixed(2)}"`;
 }
 
-export function RankedList({ results, topN = 20 }: RankedListProps) {
-  const [expandedId, setExpandedId] = useState<string | null>(null);
+/** Unique key per row: same silhouette in different variants → different keys. */
+function rowKey(r: RankedResult): string {
+  return `${r.corset.id}::${r.best.variant.url}`;
+}
+
+export function RankedList({ results, topN = 30 }: RankedListProps) {
+  const [expandedKey, setExpandedKey] = useState<string | null>(null);
   const shown = results.slice(0, topN);
 
   if (results.length === 0) {
@@ -42,23 +46,30 @@ export function RankedList({ results, topN = 20 }: RankedListProps) {
   return (
     <section className="ranked-list">
       <h2>
-        Best fits <span className="count">({shown.length} of {results.length} shown)</span>
+        Best fits{' '}
+        <span className="count">
+          ({shown.length} of {results.length} shown — variants ranked separately)
+        </span>
       </h2>
       <ol className="ranked-rows">
         {shown.map((r, i) => {
-          const isExpanded = expandedId === r.corset.id;
+          const key = rowKey(r);
+          const isExpanded = expandedKey === key;
           const stretch = r.best.variant.stretch_class;
+          const otherVariants = r.variant_bests.filter(
+            (vb) => vb.variant.url !== r.best.variant.url,
+          );
           return (
-            <li key={r.corset.id} className={`ranked-row ranked-row-${stretch}`}>
+            <li key={key} className={`ranked-row ranked-row-${stretch}`}>
               <button
                 type="button"
                 className="ranked-row-header"
-                onClick={() => setExpandedId(isExpanded ? null : r.corset.id)}
+                onClick={() => setExpandedKey(isExpanded ? null : key)}
                 aria-expanded={isExpanded}
               >
                 <span className="rank">{i + 1}</span>
                 <span className="corset-id">{r.corset.id}</span>
-                <span className="corset-name">{r.corset.name}</span>
+                <span className="corset-name">{r.best.variant.name}</span>
                 <span className={`stretch stretch-${stretch}`}>{stretch}</span>
                 <span className="best-size">size {r.best.waist_size_in}"</span>
                 <span className="silhouette">{r.corset.silhouette_category}</span>
@@ -144,6 +155,45 @@ export function RankedList({ results, topN = 20 }: RankedListProps) {
                       )}
                     </tbody>
                   </table>
+
+                  {otherVariants.length > 0 && (
+                    <div className="variant-list">
+                      <strong>
+                        Other variants of {r.corset.id}
+                        <span className="count"> ({otherVariants.length})</span>
+                      </strong>
+                      <ul className="variant-rows">
+                        {otherVariants.map((vb) => (
+                          <li key={vb.variant.url} className="variant-row">
+                            <span
+                              className={`stretch stretch-${vb.variant.stretch_class}`}
+                            >
+                              {vb.variant.stretch_class}
+                            </span>
+                            <span className="variant-name">
+                              {vb.variant.name}
+                            </span>
+                            <span className="variant-materials">
+                              {vb.variant.materials.join(', ') || '—'}
+                            </span>
+                            <span className="best-size">
+                              size {vb.best_size_in}"
+                            </span>
+                            <span className="score">
+                              score {vb.total.toFixed(2)}
+                            </span>
+                            <a
+                              href={vb.variant.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              buy ↗
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               )}
             </li>
