@@ -23,21 +23,40 @@ interface MeasurementFormProps {
 }
 
 type LandmarkKey = 'underbust' | 'upper_hip' | 'iliac';
+type Direction = 'above' | 'below';
 
-const LANDMARK_LABELS: Record<LandmarkKey, { display: string; helper: string }> = {
+const LANDMARK_LABELS: Record<LandmarkKey, { display: string; helper: string; direction: Direction }> = {
   underbust: {
     display: 'Underbust',
-    helper: 'Just under the ribcage. Position is inches ABOVE natural waist.',
+    direction: 'above',
+    helper: 'Just under the ribcage.',
   },
   upper_hip: {
     display: 'Upper hip',
-    helper: 'Where the hip curve starts (~2" below waist). Position is inches BELOW.',
+    direction: 'below',
+    helper: 'Where the hip curve starts (~2" below waist).',
   },
   iliac: {
     display: 'Iliac',
-    helper: 'Top of the hip bones (widest of the lower torso). Inches BELOW waist.',
+    direction: 'below',
+    helper: 'Top of the hip bones (widest of the lower torso).',
   },
 };
+
+/**
+ * Underbust positions are stored INTERNALLY as negative (position -5 = 5"
+ * above waist), matching the corset schema's signed convention. But the UI
+ * shows positive numbers per user request — the "above/below waist" text on
+ * the label carries the direction instead of the sign. These helpers
+ * translate between the internal signed value and the displayed unsigned one.
+ */
+function toDisplayPosition(direction: Direction, signedPosition: number): number {
+  return direction === 'above' ? -signedPosition : signedPosition;
+}
+
+function toSignedPosition(direction: Direction, displayPosition: number): number {
+  return direction === 'above' ? -displayPosition : displayPosition;
+}
 
 function toNumber(raw: string): number | null {
   if (raw.trim() === '') return null;
@@ -143,6 +162,11 @@ export function MeasurementForm({
       {(['underbust', 'upper_hip', 'iliac'] as const).map((key) => {
         const current = body[key];
         const info = LANDMARK_LABELS[key];
+        const displayPosition =
+          current?.position_in !== undefined
+            ? toDisplayPosition(info.direction, current.position_in)
+            : '';
+        const positionLabel = `Position (in ${info.direction} waist)`;
         return (
           <fieldset key={key} className="landmark">
             <legend>{info.display}</legend>
@@ -158,14 +182,25 @@ export function MeasurementForm({
               />
             </label>
             <label className="field">
-              <span>Position (in from waist)</span>
+              <span>{positionLabel}</span>
               <input
                 type="number"
                 step="0.5"
-                min="-15"
+                min="0"
                 max="15"
-                value={current?.position_in ?? ''}
-                onChange={(e) => setLandmarkField(key, 'position_in', e.target.value)}
+                value={displayPosition}
+                onChange={(e) => {
+                  const n = toNumber(e.target.value);
+                  if (n === null) {
+                    setLandmarkField(key, 'position_in', '');
+                  } else {
+                    setLandmarkField(
+                      key,
+                      'position_in',
+                      String(toSignedPosition(info.direction, n)),
+                    );
+                  }
+                }}
               />
             </label>
             <span className="helper">{info.helper}</span>
