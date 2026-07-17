@@ -80,7 +80,7 @@ export function RankedList({
           Best fits{' '}
           <span className="count">
             ({shown.length} of {results.length} shown — variants with the
-            same material are grouped)
+            same stretch class are grouped)
           </span>
         </h2>
         <label className="advanced-toggle">
@@ -115,7 +115,7 @@ export function RankedList({
                 <span className="corset-name">
                   {r.best.variant.name}
                   {memberCount > 1 && (
-                    <span className="group-count"> +{memberCount - 1} colors</span>
+                    <span className="group-count"> +{memberCount - 1} variants</span>
                   )}
                 </span>
                 <span className={`stretch stretch-${stretch}`}>{stretch}</span>
@@ -147,7 +147,7 @@ export function RankedList({
                   <div className="variant-list">
                     <strong>
                       Buy this fit ({memberCount}{' '}
-                      {memberCount === 1 ? 'option' : 'color options — same fit'})
+                      {memberCount === 1 ? 'option' : 'variants — same fit'})
                     </strong>
                     <ul className="variant-rows">
                       {group.variants.map((v) => {
@@ -252,7 +252,7 @@ export function RankedList({
                   {otherGroups.length > 0 && (
                     <div className="variant-list">
                       <strong>
-                        Other materials of {r.corset.id}
+                        Other stretch options for {r.corset.id}
                         <span className="count"> ({otherGroups.length})</span>
                       </strong>
                       <ul className="variant-rows">

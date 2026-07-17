@@ -22,13 +22,15 @@ import { scoreCorset } from './scoring.ts';
 
 /**
  * Fit signature: two variants sharing this key have identical fit math and
- * therefore identical scores. Used to group variants into ranking rows so
- * multiple SKUs with the same material composition don't clutter the list
- * as pseudo-duplicates.
+ * therefore identical scores. In the current model, the ONLY input to
+ * scoring that varies per variant is `stretch_class` (which drives slack).
+ * Materials are informative to the user but don't change the score — a
+ * "satin" and a "brocade" variant with the same stretch_class produce
+ * identical rankings, so they collapse into one row. Individual material
+ * differences remain visible in the "Buy this fit" list inside the row.
  */
 function fitSignature(v: CorsetVariant): string {
-  const materials = [...v.materials].sort().join(',');
-  return `${v.stretch_class}::${materials}`;
+  return v.stretch_class;
 }
 
 /**
