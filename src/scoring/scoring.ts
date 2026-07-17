@@ -83,7 +83,11 @@ export function scoreCorset(
   const slack = config.waist_slack_by_stretch_class_in[variant.stretch_class] ?? 0;
   const effectiveWaist = waistSize + slack;
   const targetWaist = body.natural_waist_in - config.desired_reduction_in;
-  const G = config.desired_reduction_in; // target gap size for straight mode
+  // Target uniform gap size for straight mode. Independent of reduction —
+  // corsetry convention: ~2" parallel gap regardless of how much you're
+  // reducing to. If reduction is 4", the corset closes 2" below target and
+  // is gap-laced 2" up to target.
+  const G = config.straight_gap_size_in;
 
   // ----- Waist penalty (branches on gap_shape) -----
   let waistPenaltyValue: number;

@@ -244,9 +244,10 @@ export function MeasurementForm({
           corset cinches at the waist and opens gradually toward the rib and
           hip. Reverse gaps <em>()</em> (hourglass / X-shape), where the
           waist billows wider than the rib and hip, are heavily penalized.{' '}
-          <strong>|| Parallel</strong> demands the same gap width at every
-          position — only corsets whose spring profile matches your body's
-          silhouette can achieve this.{' '}
+          <strong>|| Parallel</strong> targets a uniform 2" gap at every
+          position (the standard corsetry convention, independent of your
+          reduction goal) — only corsets whose spring profile matches your
+          body's silhouette can achieve this.{' '}
           <strong>| Fully closed</strong> is the most restrictive: the corset
           must close on you at every landmark, not just the waist.
         </span>

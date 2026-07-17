@@ -119,6 +119,15 @@ export interface ScoringConfig {
    */
   desired_reduction_in: number;
   /**
+   * The uniform lacing gap size (inches) the STRAIGHT gap_shape mode
+   * optimizes toward. Independent of `desired_reduction_in`: the reduction
+   * says what the wearer wants their waist to look like; this says how
+   * much lacing gap they want when parallel-laced. Corsetry convention is
+   * ~2" — most wearable and aesthetic parallel-gap default. Ignored in
+   * `curved` and `closed` modes.
+   */
+  straight_gap_size_in: number;
+  /**
    * Waist-specific asymmetry — INVERTED relative to the other landmarks.
    * `waist_over_target_slope` (typically HIGHER) applies when the corset's
    * effective waist is LARGER than the target — meaning the corset physically

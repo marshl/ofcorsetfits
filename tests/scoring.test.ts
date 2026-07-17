@@ -140,6 +140,39 @@ describe('rank', () => {
   });
 });
 
+describe('looseness at non-waist positions (negative gap)', () => {
+  const catalog = loadCatalog();
+
+  it('a corset with a negative gap at a landmark contributes a meaningful position penalty', () => {
+    // Body with a narrow rib so many corsets will have closed underbust >
+    // body underbust → negative actual_gap → "loose" per the diff formula.
+    const config = defaultScoringConfig(catalog);
+    const narrowRibBody: Body = {
+      natural_waist_in: 28,
+      underbust: { circumference_in: 26, position_in: -5 },
+      upper_hip: { circumference_in: 34, position_in: 4 },
+      iliac: { circumference_in: 38, position_in: 7 },
+    };
+    const results = rank(narrowRibBody, catalog, config);
+    // Find at least one ranked result where the underbust position has a
+    // negative actual_gap AND a non-trivial penalty (per the bumped slope).
+    let matched = false;
+    for (const r of results.slice(0, 20)) {
+      for (const p of r.best.position_results) {
+        if (p.label?.startsWith('under-bust') && p.actual_gap_in !== null && p.actual_gap_in < -0.5) {
+          // With the bumped looseness_slope, a 1"+ negative gap should
+          // yield a penalty of at least 2.0 (weight × diff × 2.0 slope).
+          expect(p.penalty).toBeGreaterThan(1.5);
+          matched = true;
+          break;
+        }
+      }
+      if (matched) break;
+    }
+    expect(matched).toBe(true);
+  });
+});
+
 describe('gap_shape modes', () => {
   const catalog = loadCatalog();
 

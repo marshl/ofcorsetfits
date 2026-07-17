@@ -144,9 +144,13 @@ export function rank(
  * Sensible starting scoring config, informed by the design doc.
  *
  * Weights: waist matters most (2×), low hip least (0.7× — most people
- * don't emphasize it). Non-waist landmark slopes: tightness is 3× looseness
- * because a too-tight corset compressing the ribcage is unwearable while
- * a slightly loose one is a shrug.
+ * don't emphasize it).
+ *
+ * Non-waist landmark slopes: tightness (3.0) > looseness (2.0), but
+ * looseness is meaningful — a corset that's LOOSER than the body at rib
+ * or hip (negative actual_gap; corset flares away from the body) is a
+ * real fit problem, not "a shrug." Tightness is still worse because at
+ * a bony landmark the corset just physically can't close.
  *
  * Waist target math: 2" reduction default (comfortable daily wear;
  * tightlacing pushes toward 4-6"). Over-target slope is HARSH (3.0)
@@ -165,8 +169,9 @@ export function defaultScoringConfig(catalog: Catalog): ScoringConfig {
       low_hip: 0.7,
     },
     tightness_slope: 3.0,
-    looseness_slope: 1.0,
+    looseness_slope: 2.0,
     desired_reduction_in: 2.0,
+    straight_gap_size_in: 2.0,
     waist_over_target_slope: 3.0,
     waist_under_target_slope: 0.5,
     waist_slack_by_stretch_class_in: catalog.brand_waist_slack_by_stretch_class_in ?? {
