@@ -218,6 +218,7 @@ fieldset.landmark .helper {
 }
 .score-breakdown th:first-child, .score-breakdown td:first-child { text-align: left; }
 .score-breakdown th { font-weight: 600; color: var(--muted); font-size: 0.75rem; text-transform: uppercase; }
+.score-breakdown tr.hourglass-row td { background: #fbf5ea; color: var(--stretch-high); font-weight: 500; }
 
 .ranked-list-empty {
   padding: 2rem;

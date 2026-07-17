@@ -139,3 +139,87 @@ describe('rank', () => {
     expect(medium[0].corset.id).not.toBe(highSpring[0].corset.id);
   });
 });
+
+describe('gap_shape modes', () => {
+  const catalog = loadCatalog();
+
+  it('curved (default) allows corsets that would produce a curved gap', () => {
+    const config = defaultScoringConfig(catalog);
+    expect(config.gap_shape).toBe('curved');
+    const results = rank(mediumBody, catalog, config);
+    // Sanity: top result exists in curved mode.
+    expect(results.length).toBeGreaterThan(0);
+  });
+
+  it('closed rejects most corsets — top results have small gaps at every position', () => {
+    const config = defaultScoringConfig(catalog);
+    const closed = rank(mediumBody, catalog, { ...config, gap_shape: 'closed' });
+    const curved = rank(mediumBody, catalog, { ...config, gap_shape: 'curved' });
+    // Closed mode's top result should have small |actual_gap| at every non-waist
+    // position, since gap != 0 is penalized symmetrically.
+    const closedTop = closed[0];
+    for (const p of closedTop.best.position_results) {
+      if (p.actual_gap_in === null) continue;
+      expect(Math.abs(p.actual_gap_in)).toBeLessThan(4);
+    }
+    // Curved and closed produce different ranking orders for the same body.
+    // At least one of the top 5 should differ between the two modes.
+    const curvedTop5 = curved.slice(0, 5).map((r) => r.corset.id);
+    const closedTop5 = closed.slice(0, 5).map((r) => r.corset.id);
+    expect(closedTop5).not.toEqual(curvedTop5);
+  });
+
+  it('straight rewards corsets whose spring profile matches the body silhouette', () => {
+    const config = defaultScoringConfig(catalog);
+    const straight = rank(mediumBody, catalog, { ...config, gap_shape: 'straight' });
+    const curved = rank(mediumBody, catalog, { ...config, gap_shape: 'curved' });
+    // Sanity: still produces a ranking.
+    expect(straight.length).toBeGreaterThan(0);
+    // Top result in straight mode has approximately uniform gaps across
+    // non-waist positions — the whole point of the mode.
+    const top = straight[0];
+    const gaps = top.best.position_results
+      .map((p) => p.actual_gap_in)
+      .filter((g): g is number => g !== null);
+    if (gaps.length >= 2) {
+      const spread = Math.max(...gaps) - Math.min(...gaps);
+      // A curved-mode top result might have gap spread > 3"; straight-mode
+      // should be tighter than that.
+      expect(spread).toBeLessThan(3);
+    }
+    // Straight mode reorders vs curved.
+    expect(straight[0].corset.id !== curved[0].corset.id ||
+      straight[1]?.corset.id !== curved[1]?.corset.id).toBe(true);
+  });
+
+  it('curved mode applies hourglass_penalty when waist gap > non-waist gaps', () => {
+    // Construct a body where a corset with small rib and hip spring and large
+    // waist gap would produce an hourglass shape. We use highSpringBody
+    // (wide rib + wide iliac) — this body's non-waist gaps will be TIGHTER
+    // than the waist gap for many corsets that don't have enough spring.
+    const config = defaultScoringConfig(catalog);
+    const results = rank(highSpringBody, catalog, config);
+    // At least SOME result should exhibit the hourglass penalty for this body.
+    const anyHourglass = results.some((r) => r.best.hourglass_penalty > 0);
+    expect(anyHourglass).toBe(true);
+    // The algorithm should push hourglass-penalized corsets DOWN the ranking:
+    // average hourglass penalty in the top 10 should be significantly lower
+    // than in the bottom 10. Not zero (a dramatic body may not have any
+    // hourglass-free corset available), but the ranking should prefer them.
+    const avg = (rs: typeof results) =>
+      rs.reduce((sum, r) => sum + r.best.hourglass_penalty, 0) / rs.length;
+    const topAvg = avg(results.slice(0, 10));
+    const bottomAvg = avg(results.slice(-10));
+    expect(topAvg).toBeLessThan(bottomAvg);
+  });
+
+  it('hourglass_penalty is 0 in straight/closed modes (not applied)', () => {
+    const config = defaultScoringConfig(catalog);
+    for (const mode of ['straight', 'closed'] as const) {
+      const results = rank(highSpringBody, catalog, { ...config, gap_shape: mode });
+      for (const r of results) {
+        expect(r.best.hourglass_penalty).toBe(0);
+      }
+    }
+  });
+});

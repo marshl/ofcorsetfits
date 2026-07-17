@@ -11,15 +11,17 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import catalogJson from '../../catalog/mystic-city.json';
-import type { Body, Catalog, StretchClass } from '../scoring/types.ts';
+import type { Body, Catalog, GapShape, StretchClass } from '../scoring/types.ts';
 import { defaultScoringConfig, rank } from '../scoring/index.ts';
 import { MeasurementForm } from './MeasurementForm.tsx';
 import { RankedList } from './RankedList.tsx';
 import {
   loadBody,
+  loadGapShape,
   loadReduction,
   loadStretchPreference,
   saveBody,
+  saveGapShape,
   saveReduction,
   saveStretchPreference,
 } from './persist.ts';
@@ -41,6 +43,9 @@ export function App() {
   const [desiredReduction, setDesiredReduction] = useState<number>(
     () => loadReduction() ?? 2,
   );
+  const [gapShape, setGapShape] = useState<GapShape>(
+    () => loadGapShape() ?? 'curved',
+  );
 
   useEffect(() => {
     saveBody(body);
@@ -54,12 +59,17 @@ export function App() {
     saveReduction(desiredReduction);
   }, [desiredReduction]);
 
+  useEffect(() => {
+    saveGapShape(gapShape);
+  }, [gapShape]);
+
   const results = useMemo(() => {
     const config = defaultScoringConfig(catalog);
     config.stretch_preference = stretchPreference;
     config.desired_reduction_in = desiredReduction;
+    config.gap_shape = gapShape;
     return rank(body, catalog, config);
-  }, [body, stretchPreference, desiredReduction]);
+  }, [body, stretchPreference, desiredReduction, gapShape]);
 
   return (
     <div className="app">
@@ -84,6 +94,8 @@ export function App() {
             onStretchPreferenceChange={setStretchPreference}
             desiredReduction={desiredReduction}
             onDesiredReductionChange={setDesiredReduction}
+            gapShape={gapShape}
+            onGapShapeChange={setGapShape}
           />
         </aside>
         <section className="app-content">

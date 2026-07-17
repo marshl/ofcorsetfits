@@ -5,11 +5,12 @@
  * rather than reading stale data with a new shape.
  */
 
-import type { Body, StretchClass } from '../scoring/types.ts';
+import type { Body, GapShape, StretchClass } from '../scoring/types.ts';
 
 const BODY_KEY = 'ofcorsetfits:body:v1';
 const STRETCH_KEY = 'ofcorsetfits:stretch_preference:v1';
 const REDUCTION_KEY = 'ofcorsetfits:desired_reduction_in:v1';
+const GAP_SHAPE_KEY = 'ofcorsetfits:gap_shape:v1';
 
 export function loadBody(): Body | null {
   try {
@@ -62,6 +63,26 @@ export function loadReduction(): number | null {
 export function saveReduction(reduction: number): void {
   try {
     localStorage.setItem(REDUCTION_KEY, String(reduction));
+  } catch {
+    // ignore
+  }
+}
+
+export function loadGapShape(): GapShape | null {
+  try {
+    const raw = localStorage.getItem(GAP_SHAPE_KEY);
+    if (raw === 'curved' || raw === 'straight' || raw === 'closed') {
+      return raw;
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+export function saveGapShape(gap_shape: GapShape): void {
+  try {
+    localStorage.setItem(GAP_SHAPE_KEY, gap_shape);
   } catch {
     // ignore
   }

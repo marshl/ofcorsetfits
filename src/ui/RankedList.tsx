@@ -100,6 +100,7 @@ export function RankedList({ results, topN = 20 }: RankedListProps) {
                         <th>Corset</th>
                         <th>Body</th>
                         <th>Diff</th>
+                        <th>Gap</th>
                         <th>Weight</th>
                         <th>Penalty</th>
                       </tr>
@@ -108,6 +109,7 @@ export function RankedList({ results, topN = 20 }: RankedListProps) {
                       <tr>
                         <td>waist (effective)</td>
                         <td>{(r.best.waist_size_in).toFixed(1)}" + slack</td>
+                        <td>—</td>
                         <td>—</td>
                         <td>—</td>
                         <td>—</td>
@@ -123,10 +125,23 @@ export function RankedList({ results, topN = 20 }: RankedListProps) {
                               : `${p.user_circumference_in.toFixed(1)}"`}
                           </td>
                           <td>{formatDiff(p.diff_in)}</td>
+                          <td>{formatDiff(p.actual_gap_in)}</td>
                           <td>{p.weight.toFixed(1)}</td>
                           <td>{p.penalty.toFixed(3)}</td>
                         </tr>
                       ))}
+                      {r.best.hourglass_penalty > 0 && (
+                        <tr className="hourglass-row">
+                          <td>hourglass gap</td>
+                          <td colSpan={5}>
+                            <em>
+                              Waist gap is wider than one or more non-waist gaps
+                              — reverse-gap shape. Penalized.
+                            </em>
+                          </td>
+                          <td>{r.best.hourglass_penalty.toFixed(3)}</td>
+                        </tr>
+                      )}
                     </tbody>
                   </table>
                 </div>

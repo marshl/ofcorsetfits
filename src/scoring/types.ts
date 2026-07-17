@@ -9,6 +9,19 @@
 
 export type StretchClass = 'low' | 'medium' | 'high';
 
+/**
+ * How the wearer wants the corset's laced gap to look:
+ * - `curved`: no gap-uniformity constraint. Per-position penalties are
+ *   independent; scoring is asymmetric (waist over-target harsh, under-target
+ *   mild; other landmarks tight harsh, loose mild). Current default.
+ * - `straight`: wearer wants a parallel gap of size G = desired_reduction_in
+ *   at every position. Per-position penalty is `|actual_gap_i - G| * weight`.
+ *   Requires the corset's spring profile to match the wearer's body silhouette.
+ * - `closed`: wearer wants the corset fully closed (gap = 0) at every position.
+ *   Most restrictive; typically only bespoke corsets can achieve this.
+ */
+export type GapShape = 'curved' | 'straight' | 'closed';
+
 export type SilhouetteCategory =
   | 'hourglass'
   | 'pipestem'
@@ -116,6 +129,19 @@ export interface ScoringConfig {
   waist_slack_by_stretch_class_in: Record<StretchClass, number>;
   /** Only consider variants whose stretch_class matches; `any` disables the filter. */
   stretch_preference: StretchClass | 'any';
+  /**
+   * How the wearer wants the laced gap to look. Determines the shape of
+   * per-position penalties (see `GapShape` type for full description).
+   */
+  gap_shape: GapShape;
+  /**
+   * Slope for the "reverse gap" penalty applied in `curved` gap_shape mode
+   * only. Fires when a non-waist position's actual gap is SMALLER than the
+   * waist's gap (hourglass gap — waist billows open while rib/hip pinch).
+   * That shape is aesthetically bad and physically opposite to what corsets
+   * are for. High default (~3.0) makes this a dominant penalty when it fires.
+   */
+  hourglass_gap_slope: number;
 }
 
 export interface PositionResult {
@@ -124,6 +150,9 @@ export interface PositionResult {
   corset_circumference_in: number;
   user_circumference_in: number | null;
   diff_in: number | null;
+  /** `body_c - (closed_c + slack)` — the lace-gap width at this position when
+   *  the corset conforms to the wearer's body. Positive = gap exists. */
+  actual_gap_in: number | null;
   penalty: number;
   weight: number;
 }
@@ -133,6 +162,9 @@ export interface CorsetScoreResult {
   variant: CorsetVariant;
   waist_penalty: number;
   position_results: PositionResult[];
+  /** Additional penalty in curved mode when the corset would produce an
+   *  hourglass gap (waist gap > rib/hip gaps). 0 in straight/closed modes. */
+  hourglass_penalty: number;
   total: number;
 }
 

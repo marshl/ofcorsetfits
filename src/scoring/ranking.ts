@@ -96,5 +96,10 @@ export function defaultScoringConfig(catalog: Catalog): ScoringConfig {
       high: 1.75,
     },
     stretch_preference: 'any',
+    gap_shape: 'curved',
+    // High default — hourglass gap is a distinct failure mode that should
+    // dominate scoring when it appears. A 1" hourglass excess at each of two
+    // positions produces a 6-point penalty, larger than most position penalties.
+    hourglass_gap_slope: 3.0,
   };
 }

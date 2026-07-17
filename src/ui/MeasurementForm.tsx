@@ -9,7 +9,7 @@
  * penalty rather than treated as a perfect match).
  */
 
-import type { Body, StretchClass } from '../scoring/types.ts';
+import type { Body, GapShape, StretchClass } from '../scoring/types.ts';
 
 interface MeasurementFormProps {
   body: Body;
@@ -18,6 +18,8 @@ interface MeasurementFormProps {
   onStretchPreferenceChange: (pref: StretchClass | 'any') => void;
   desiredReduction: number;
   onDesiredReductionChange: (reduction: number) => void;
+  gapShape: GapShape;
+  onGapShapeChange: (shape: GapShape) => void;
 }
 
 type LandmarkKey = 'underbust' | 'upper_hip' | 'iliac';
@@ -50,6 +52,8 @@ export function MeasurementForm({
   onStretchPreferenceChange,
   desiredReduction,
   onDesiredReductionChange,
+  gapShape,
+  onGapShapeChange,
 }: MeasurementFormProps) {
   const setWaist = (raw: string) => {
     const n = toNumber(raw);
@@ -181,6 +185,25 @@ export function MeasurementForm({
           <option value="high">High stretch (mesh-dominant)</option>
         </select>
         <span className="helper">Filter corsets by the material's stretch behavior.</span>
+      </label>
+
+      <label className="field">
+        <span>Gap shape</span>
+        <select
+          value={gapShape}
+          onChange={(e) => onGapShapeChange(e.target.value as GapShape)}
+        >
+          <option value="curved">Curved (any shape, no hourglass gaps)</option>
+          <option value="straight">Straight — parallel gap at reduction size</option>
+          <option value="closed">Closed — fully closes at every landmark</option>
+        </select>
+        <span className="helper">
+          How you want the laced gap to look. <strong>Curved</strong> allows
+          natural variation but heavily penalizes hourglass shapes (waist
+          billowing wider than rib/hip). <strong>Straight</strong> demands
+          a parallel gap — requires the corset's spring profile to match
+          your body silhouette. <strong>Closed</strong> is the most restrictive.
+        </span>
       </label>
     </form>
   );
