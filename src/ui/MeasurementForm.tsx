@@ -99,7 +99,7 @@ export function MeasurementForm({
         <span>Natural waist (inches) *</span>
         <input
           type="number"
-          step="0.25"
+          step="0.5"
           min="10"
           max="80"
           value={body.natural_waist_in}
@@ -119,7 +119,7 @@ export function MeasurementForm({
               <span>Circumference (in)</span>
               <input
                 type="number"
-                step="0.25"
+                step="0.5"
                 min="10"
                 max="80"
                 value={current?.circumference_in ?? ''}
@@ -130,7 +130,7 @@ export function MeasurementForm({
               <span>Position (in from waist)</span>
               <input
                 type="number"
-                step="0.25"
+                step="0.5"
                 min="-15"
                 max="15"
                 value={current?.position_in ?? ''}
