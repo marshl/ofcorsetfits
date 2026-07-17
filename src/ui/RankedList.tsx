@@ -33,6 +33,23 @@ function rowKey(r: RankedResult): string {
   return `${r.corset.id}::${groupSignatureKey(r.variant_group)}`;
 }
 
+/**
+ * Build a product-page URL with WooCommerce's `attribute_pa_size` query
+ * parameter set so the size dropdown is pre-selected when the user clicks
+ * through. Only appends the param if the variant actually offers that size —
+ * pre-selecting an unavailable size would show "invalid selection" on MCC's
+ * page.
+ */
+function buyUrlWithSize(
+  url: string,
+  size: number,
+  variantSizes: number[],
+): string {
+  if (!variantSizes.includes(size)) return url;
+  const separator = url.includes('?') ? '&' : '?';
+  return `${url}${separator}attribute_pa_size=${size}`;
+}
+
 export function RankedList({ results, topN = 30 }: RankedListProps) {
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
   const shown = results.slice(0, topN);
@@ -121,6 +138,11 @@ export function RankedList({ results, topN = 30 }: RankedListProps) {
                           r.best.waist_size_in,
                         );
                         const isUnbuyable = v.waist_sizes_in.length === 0;
+                        const href = buyUrlWithSize(
+                          v.url,
+                          r.best.waist_size_in,
+                          v.waist_sizes_in,
+                        );
                         return (
                           <li key={v.url} className="variant-row variant-row-grouped">
                             <span className="variant-name">
@@ -138,11 +160,15 @@ export function RankedList({ results, topN = 30 }: RankedListProps) {
                               )}
                             </span>
                             <a
-                              href={v.url}
+                              href={href}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              buy on mysticcitycorsets.com ↗
+                              buy on mysticcitycorsets.com
+                              {offersBestSize && (
+                                <> (size {r.best.waist_size_in}")</>
+                              )}
+                              {' '}↗
                             </a>
                           </li>
                         );
@@ -209,39 +235,47 @@ export function RankedList({ results, topN = 30 }: RankedListProps) {
                         <span className="count"> ({otherGroups.length})</span>
                       </strong>
                       <ul className="variant-rows">
-                        {otherGroups.map((g) => (
-                          <li key={groupSignatureKey(g)} className="variant-row">
-                            <span
-                              className={`stretch stretch-${g.variants[0].stretch_class}`}
-                            >
-                              {g.variants[0].stretch_class}
-                            </span>
-                            <span className="variant-name">
-                              {g.variants[0].name}
-                              {g.variants.length > 1 && (
-                                <span className="group-count">
-                                  {' '}+{g.variants.length - 1} colors
-                                </span>
-                              )}
-                            </span>
-                            <span className="variant-materials">
-                              {g.variants[0].materials.join(', ') || '—'}
-                            </span>
-                            <span className="best-size">
-                              size {g.best_size_in}"
-                            </span>
-                            <span className="score">
-                              score {g.total.toFixed(2)}
-                            </span>
-                            <a
-                              href={g.variants[0].url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              buy ↗
-                            </a>
-                          </li>
-                        ))}
+                        {otherGroups.map((g) => {
+                          const rep = g.variants[0];
+                          const href = buyUrlWithSize(
+                            rep.url,
+                            g.best_size_in,
+                            rep.waist_sizes_in,
+                          );
+                          return (
+                            <li key={groupSignatureKey(g)} className="variant-row">
+                              <span
+                                className={`stretch stretch-${rep.stretch_class}`}
+                              >
+                                {rep.stretch_class}
+                              </span>
+                              <span className="variant-name">
+                                {rep.name}
+                                {g.variants.length > 1 && (
+                                  <span className="group-count">
+                                    {' '}+{g.variants.length - 1} colors
+                                  </span>
+                                )}
+                              </span>
+                              <span className="variant-materials">
+                                {rep.materials.join(', ') || '—'}
+                              </span>
+                              <span className="best-size">
+                                size {g.best_size_in}"
+                              </span>
+                              <span className="score">
+                                score {g.total.toFixed(2)}
+                              </span>
+                              <a
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                buy ↗
+                              </a>
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                   )}
