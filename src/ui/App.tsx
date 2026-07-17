@@ -19,10 +19,12 @@ import {
   loadBody,
   loadGapShape,
   loadReduction,
+  loadShowAdvanced,
   loadStretchPreference,
   saveBody,
   saveGapShape,
   saveReduction,
+  saveShowAdvanced,
   saveStretchPreference,
 } from './persist.ts';
 
@@ -46,6 +48,9 @@ export function App() {
   const [gapShape, setGapShape] = useState<GapShape>(
     () => loadGapShape() ?? 'curved',
   );
+  const [showAdvanced, setShowAdvanced] = useState<boolean>(
+    () => loadShowAdvanced() ?? false,
+  );
 
   useEffect(() => {
     saveBody(body);
@@ -62,6 +67,10 @@ export function App() {
   useEffect(() => {
     saveGapShape(gapShape);
   }, [gapShape]);
+
+  useEffect(() => {
+    saveShowAdvanced(showAdvanced);
+  }, [showAdvanced]);
 
   const results = useMemo(() => {
     const config = defaultScoringConfig(catalog);
@@ -99,7 +108,11 @@ export function App() {
           />
         </aside>
         <section className="app-content">
-          <RankedList results={results} />
+          <RankedList
+            results={results}
+            showAdvanced={showAdvanced}
+            onShowAdvancedChange={setShowAdvanced}
+          />
         </section>
       </main>
       <footer className="app-footer">

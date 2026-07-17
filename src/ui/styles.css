@@ -124,7 +124,7 @@ fieldset.landmark .helper {
 /* ---------- RankedList ---------- */
 
 .ranked-list h2 {
-  margin: 0 0 1rem;
+  margin: 0 0 0.25rem;
   font-size: 1.1rem;
 }
 .ranked-list h2 .count {
@@ -132,6 +132,27 @@ fieldset.landmark .helper {
   font-weight: normal;
   font-size: 0.85rem;
 }
+
+.ranked-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.advanced-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--muted);
+  user-select: none;
+}
+.advanced-toggle input[type="checkbox"] { cursor: pointer; }
+.advanced-toggle:hover { color: var(--fg); }
 
 .ranked-rows {
   list-style: none;
@@ -294,6 +315,7 @@ fieldset.landmark .helper {
 .score-breakdown th:first-child, .score-breakdown td:first-child { text-align: left; }
 .score-breakdown th { font-weight: 600; color: var(--muted); font-size: 0.75rem; text-transform: uppercase; }
 .score-breakdown tr.hourglass-row td { background: #fbf5ea; color: var(--stretch-high); font-weight: 500; }
+.waist-size-hint { color: var(--muted); font-weight: normal; font-size: 0.8rem; }
 
 .ranked-list-empty {
   padding: 2rem;

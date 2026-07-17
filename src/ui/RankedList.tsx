@@ -15,6 +15,8 @@ import type { RankedResult, VariantGroup } from '../scoring/types.ts';
 interface RankedListProps {
   results: RankedResult[];
   topN?: number;
+  showAdvanced: boolean;
+  onShowAdvancedChange: (value: boolean) => void;
 }
 
 function formatDiff(diff: number | null): string {
@@ -50,7 +52,12 @@ function buyUrlWithSize(
   return `${url}${separator}attribute_pa_size=${size}`;
 }
 
-export function RankedList({ results, topN = 30 }: RankedListProps) {
+export function RankedList({
+  results,
+  topN = 30,
+  showAdvanced,
+  onShowAdvancedChange,
+}: RankedListProps) {
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
   const shown = results.slice(0, topN);
 
@@ -68,13 +75,23 @@ export function RankedList({ results, topN = 30 }: RankedListProps) {
 
   return (
     <section className="ranked-list">
-      <h2>
-        Best fits{' '}
-        <span className="count">
-          ({shown.length} of {results.length} shown — variants with the same
-          material are grouped)
-        </span>
-      </h2>
+      <div className="ranked-list-header">
+        <h2>
+          Best fits{' '}
+          <span className="count">
+            ({shown.length} of {results.length} shown — variants with the
+            same material are grouped)
+          </span>
+        </h2>
+        <label className="advanced-toggle">
+          <input
+            type="checkbox"
+            checked={showAdvanced}
+            onChange={(e) => onShowAdvancedChange(e.target.checked)}
+          />
+          <span>Show algorithm details (weight, penalty)</span>
+        </label>
+      </div>
       <ol className="ranked-rows">
         {shown.map((r, i) => {
           const key = rowKey(r);
@@ -182,21 +199,24 @@ export function RankedList({ results, topN = 30 }: RankedListProps) {
                         <th>Position</th>
                         <th>Corset</th>
                         <th>Body</th>
-                        <th>Diff</th>
                         <th>Gap</th>
-                        <th>Weight</th>
-                        <th>Penalty</th>
+                        {showAdvanced && <th>Weight</th>}
+                        {showAdvanced && <th>Penalty</th>}
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>waist (effective)</td>
-                        <td>{(r.best.waist_size_in).toFixed(1)}" + slack</td>
-                        <td>—</td>
-                        <td>—</td>
-                        <td>—</td>
-                        <td>—</td>
-                        <td>{r.best.waist_penalty.toFixed(3)}</td>
+                        <td>
+                          waist{' '}
+                          <span className="waist-size-hint">
+                            (size {r.best.waist_size_in}")
+                          </span>
+                        </td>
+                        <td>{r.best.effective_waist_in.toFixed(1)}"</td>
+                        <td>{r.best.target_waist_in.toFixed(1)}"</td>
+                        <td>{formatDiff(r.best.waist_gap_in)}</td>
+                        {showAdvanced && <td>—</td>}
+                        {showAdvanced && <td>{r.best.waist_penalty.toFixed(3)}</td>}
                       </tr>
                       {r.best.position_results.map((p, idx) => (
                         <tr key={idx}>
@@ -207,22 +227,23 @@ export function RankedList({ results, topN = 30 }: RankedListProps) {
                               ? '—'
                               : `${p.user_circumference_in.toFixed(1)}"`}
                           </td>
-                          <td>{formatDiff(p.diff_in)}</td>
                           <td>{formatDiff(p.actual_gap_in)}</td>
-                          <td>{p.weight.toFixed(1)}</td>
-                          <td>{p.penalty.toFixed(3)}</td>
+                          {showAdvanced && <td>{p.weight.toFixed(1)}</td>}
+                          {showAdvanced && <td>{p.penalty.toFixed(3)}</td>}
                         </tr>
                       ))}
                       {r.best.hourglass_penalty > 0 && (
                         <tr className="hourglass-row">
                           <td>hourglass gap</td>
-                          <td colSpan={5}>
+                          <td colSpan={showAdvanced ? 4 : 3}>
                             <em>
                               Waist gap is wider than one or more non-waist gaps
                               — reverse-gap shape. Penalized.
                             </em>
                           </td>
-                          <td>{r.best.hourglass_penalty.toFixed(3)}</td>
+                          {showAdvanced && (
+                            <td>{r.best.hourglass_penalty.toFixed(3)}</td>
+                          )}
                         </tr>
                       )}
                     </tbody>

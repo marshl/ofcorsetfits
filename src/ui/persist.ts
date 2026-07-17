@@ -11,6 +11,7 @@ const BODY_KEY = 'ofcorsetfits:body:v1';
 const STRETCH_KEY = 'ofcorsetfits:stretch_preference:v1';
 const REDUCTION_KEY = 'ofcorsetfits:desired_reduction_in:v1';
 const GAP_SHAPE_KEY = 'ofcorsetfits:gap_shape:v1';
+const ADVANCED_KEY = 'ofcorsetfits:show_advanced:v1';
 
 export function loadBody(): Body | null {
   try {
@@ -83,6 +84,25 @@ export function loadGapShape(): GapShape | null {
 export function saveGapShape(gap_shape: GapShape): void {
   try {
     localStorage.setItem(GAP_SHAPE_KEY, gap_shape);
+  } catch {
+    // ignore
+  }
+}
+
+export function loadShowAdvanced(): boolean | null {
+  try {
+    const raw = localStorage.getItem(ADVANCED_KEY);
+    if (raw === 'true') return true;
+    if (raw === 'false') return false;
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+export function saveShowAdvanced(value: boolean): void {
+  try {
+    localStorage.setItem(ADVANCED_KEY, value ? 'true' : 'false');
   } catch {
     // ignore
   }

@@ -208,6 +208,9 @@ export function scoreCorset(
   return {
     waist_size_in: waistSize,
     variant,
+    effective_waist_in: effectiveWaist,
+    target_waist_in: targetWaist,
+    waist_gap_in: targetWaist - effectiveWaist,
     waist_penalty: waistPenaltyValue,
     position_results: positionResults,
     hourglass_penalty: hourglassPenalty,

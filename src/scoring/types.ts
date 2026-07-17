@@ -174,6 +174,16 @@ export interface PositionResult {
 export interface CorsetScoreResult {
   waist_size_in: number;
   variant: CorsetVariant;
+  /** Waist circumference when the corset is fully closed on the wearer:
+   *  `waist_size_in + stretch_slack`. This is the minimum wearable waist. */
+  effective_waist_in: number;
+  /** Waist target: `body.natural_waist_in - desired_reduction_in`. */
+  target_waist_in: number;
+  /** Gap at the waist: `target_waist_in - effective_waist_in`. Positive =
+   *  the corset closes SMALLER than the target and the wearer gap-laces up
+   *  to the target. Negative = corset can't reach target (fully closed is
+   *  still looser than intended). */
+  waist_gap_in: number;
   waist_penalty: number;
   position_results: PositionResult[];
   /** Additional penalty in curved mode when the corset would produce an
