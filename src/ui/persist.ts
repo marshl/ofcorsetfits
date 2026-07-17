@@ -9,6 +9,7 @@ import type { Body, StretchClass } from '../scoring/types.ts';
 
 const BODY_KEY = 'ofcorsetfits:body:v1';
 const STRETCH_KEY = 'ofcorsetfits:stretch_preference:v1';
+const REDUCTION_KEY = 'ofcorsetfits:desired_reduction_in:v1';
 
 export function loadBody(): Body | null {
   try {
@@ -42,6 +43,25 @@ export function loadStretchPreference(): StretchClass | 'any' | null {
 export function saveStretchPreference(pref: StretchClass | 'any'): void {
   try {
     localStorage.setItem(STRETCH_KEY, pref);
+  } catch {
+    // ignore
+  }
+}
+
+export function loadReduction(): number | null {
+  try {
+    const raw = localStorage.getItem(REDUCTION_KEY);
+    if (raw === null) return null;
+    const n = Number(raw);
+    return Number.isFinite(n) ? n : null;
+  } catch {
+    return null;
+  }
+}
+
+export function saveReduction(reduction: number): void {
+  try {
+    localStorage.setItem(REDUCTION_KEY, String(reduction));
   } catch {
     // ignore
   }

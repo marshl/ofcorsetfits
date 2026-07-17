@@ -16,6 +16,8 @@ interface MeasurementFormProps {
   onBodyChange: (body: Body) => void;
   stretchPreference: StretchClass | 'any';
   onStretchPreferenceChange: (pref: StretchClass | 'any') => void;
+  desiredReduction: number;
+  onDesiredReductionChange: (reduction: number) => void;
 }
 
 type LandmarkKey = 'underbust' | 'upper_hip' | 'iliac';
@@ -46,11 +48,19 @@ export function MeasurementForm({
   onBodyChange,
   stretchPreference,
   onStretchPreferenceChange,
+  desiredReduction,
+  onDesiredReductionChange,
 }: MeasurementFormProps) {
   const setWaist = (raw: string) => {
     const n = toNumber(raw);
     if (n !== null) onBodyChange({ ...body, natural_waist_in: n });
   };
+
+  const setReduction = (raw: string) => {
+    const n = toNumber(raw);
+    if (n !== null && n >= 0) onDesiredReductionChange(n);
+  };
+  const targetWaist = body.natural_waist_in - desiredReduction;
 
   const setLandmarkField = (
     key: LandmarkKey,
@@ -107,6 +117,23 @@ export function MeasurementForm({
           required
         />
         <span className="helper">The narrowest circumference of your torso.</span>
+      </label>
+
+      <label className="field">
+        <span>Desired reduction (inches)</span>
+        <input
+          type="number"
+          step="0.5"
+          min="0"
+          max="12"
+          value={desiredReduction}
+          onChange={(e) => setReduction(e.target.value)}
+        />
+        <span className="helper">
+          How much smaller you want your waist to look when the corset is worn.
+          Comfortable daily wear ≈ 2". Tightlacing ≈ 4-6".
+          Target waist = <strong>{targetWaist.toFixed(1)}"</strong>.
+        </span>
       </label>
 
       {(['underbust', 'upper_hip', 'iliac'] as const).map((key) => {

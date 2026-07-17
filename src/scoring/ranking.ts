@@ -63,10 +63,19 @@ export function rank(
 
 /**
  * Sensible starting scoring config, informed by the design doc.
- * Waist is weighted 2x other landmarks (it matters most). Low hip is
- * de-emphasized (~0.7×) because most people don't sit their lower hip
- * as high on the priority list. Tightness slope is 3× looseness because
- * a too-tight corset is unwearable while a too-loose one is a shrug.
+ *
+ * Weights: waist matters most (2×), low hip least (0.7× — most people
+ * don't emphasize it). Non-waist landmark slopes: tightness is 3× looseness
+ * because a too-tight corset compressing the ribcage is unwearable while
+ * a slightly loose one is a shrug.
+ *
+ * Waist target math: 2" reduction default (comfortable daily wear;
+ * tightlacing pushes toward 4-6"). Over-target slope is HARSH (3.0)
+ * because a corset that can't reach the target is unusable for its
+ * intended reduction. Under-target slope is MILD (0.5) because a corset
+ * that closes smaller than target is fine — user gap-laces it up to
+ * target. The mild penalty still discourages picking a size 18 corset
+ * when you want to wear a 24" waist, though.
  */
 export function defaultScoringConfig(catalog: Catalog): ScoringConfig {
   return {
@@ -78,6 +87,9 @@ export function defaultScoringConfig(catalog: Catalog): ScoringConfig {
     },
     tightness_slope: 3.0,
     looseness_slope: 1.0,
+    desired_reduction_in: 2.0,
+    waist_over_target_slope: 3.0,
+    waist_under_target_slope: 0.5,
     waist_slack_by_stretch_class_in: catalog.brand_waist_slack_by_stretch_class_in ?? {
       low: 0.5,
       medium: 1.0,

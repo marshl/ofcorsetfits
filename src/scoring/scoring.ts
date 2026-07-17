@@ -21,7 +21,7 @@ import type {
 import { bodyCircumferenceAt } from './body.ts';
 
 /**
- * Asymmetric linear penalty for a fit difference.
+ * Asymmetric linear penalty for a landmark (non-waist) fit difference.
  * diff = corset_circumference - body_circumference.
  *   diff > 0 → corset is loose (weighted by looseness_slope)
  *   diff < 0 → corset is tight (weighted by tightness_slope — usually higher)
@@ -34,6 +34,23 @@ export function penaltyForDiff(
 ): number {
   if (diff >= 0) return weight * diff * looseness_slope;
   return weight * Math.abs(diff) * tightness_slope;
+}
+
+/**
+ * Waist penalty — asymmetry INVERTED relative to `penaltyForDiff`.
+ * diff = effective_corset_waist - target_waist.
+ *   diff > 0 → corset can't reach target (over_target_slope — usually HIGH)
+ *   diff < 0 → corset closes smaller than target; user gap-laces
+ *              (under_target_slope — usually LOW)
+ */
+export function waistPenalty(
+  diff: number,
+  weight: number,
+  over_target_slope: number,
+  under_target_slope: number,
+): number {
+  if (diff >= 0) return weight * diff * over_target_slope;
+  return weight * Math.abs(diff) * under_target_slope;
 }
 
 /** Extract the weight key from a corset measurement's label. */
@@ -54,12 +71,13 @@ export function scoreCorset(
 ): CorsetScoreResult {
   const slack = config.waist_slack_by_stretch_class_in[variant.stretch_class] ?? 0;
   const effectiveWaist = waistSize + slack;
-  const waistDiff = effectiveWaist - body.natural_waist_in;
-  const waistPenalty = penaltyForDiff(
+  const targetWaist = body.natural_waist_in - config.desired_reduction_in;
+  const waistDiff = effectiveWaist - targetWaist;
+  const waistPenaltyValue = waistPenalty(
     waistDiff,
     config.weights.waist,
-    config.tightness_slope,
-    config.looseness_slope,
+    config.waist_over_target_slope,
+    config.waist_under_target_slope,
   );
 
   const positionResults: PositionResult[] = corset.measurements.map(
@@ -96,11 +114,11 @@ export function scoreCorset(
     },
   );
 
-  const total = waistPenalty + positionResults.reduce((sum, r) => sum + r.penalty, 0);
+  const total = waistPenaltyValue + positionResults.reduce((sum, r) => sum + r.penalty, 0);
   return {
     waist_size_in: waistSize,
     variant,
-    waist_penalty: waistPenalty,
+    waist_penalty: waistPenaltyValue,
     position_results: positionResults,
     total,
   };

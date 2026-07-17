@@ -17,8 +17,10 @@ import { MeasurementForm } from './MeasurementForm.tsx';
 import { RankedList } from './RankedList.tsx';
 import {
   loadBody,
+  loadReduction,
   loadStretchPreference,
   saveBody,
+  saveReduction,
   saveStretchPreference,
 } from './persist.ts';
 
@@ -36,6 +38,9 @@ export function App() {
   const [stretchPreference, setStretchPreference] = useState<StretchClass | 'any'>(
     () => loadStretchPreference() ?? 'any',
   );
+  const [desiredReduction, setDesiredReduction] = useState<number>(
+    () => loadReduction() ?? 2,
+  );
 
   useEffect(() => {
     saveBody(body);
@@ -45,11 +50,16 @@ export function App() {
     saveStretchPreference(stretchPreference);
   }, [stretchPreference]);
 
+  useEffect(() => {
+    saveReduction(desiredReduction);
+  }, [desiredReduction]);
+
   const results = useMemo(() => {
     const config = defaultScoringConfig(catalog);
     config.stretch_preference = stretchPreference;
+    config.desired_reduction_in = desiredReduction;
     return rank(body, catalog, config);
-  }, [body, stretchPreference]);
+  }, [body, stretchPreference, desiredReduction]);
 
   return (
     <div className="app">
@@ -72,6 +82,8 @@ export function App() {
             onBodyChange={setBody}
             stretchPreference={stretchPreference}
             onStretchPreferenceChange={setStretchPreference}
+            desiredReduction={desiredReduction}
+            onDesiredReductionChange={setDesiredReduction}
           />
         </aside>
         <section className="app-content">

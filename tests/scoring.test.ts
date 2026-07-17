@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
-import { rank, defaultScoringConfig, penaltyForDiff } from '../src/scoring/index.ts';
+import { rank, defaultScoringConfig, penaltyForDiff, waistPenalty } from '../src/scoring/index.ts';
 import type { Body, Catalog, StretchClass } from '../src/scoring/types.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -29,7 +29,7 @@ const highSpringBody: Body = {
   iliac: { circumference_in: 44, position_in: 7 },
 };
 
-describe('penaltyForDiff', () => {
+describe('penaltyForDiff (non-waist landmarks)', () => {
   it('applies looseness slope to positive diffs', () => {
     expect(penaltyForDiff(2, 1, 3, 1)).toBe(2); // 1 * 2 * 1
   });
@@ -41,6 +41,32 @@ describe('penaltyForDiff', () => {
   });
   it('scales by weight', () => {
     expect(penaltyForDiff(2, 2, 3, 1)).toBe(4);
+  });
+});
+
+describe('waistPenalty (target-based, inverted asymmetry)', () => {
+  it('applies over_target_slope to positive diffs (corset too big to reach target)', () => {
+    // diff=2 means corset is 2" larger than target — can't reach.
+    expect(waistPenalty(2, 1, 3, 0.5)).toBe(6); // 1 * 2 * 3
+  });
+  it('applies under_target_slope to negative diffs (corset closes smaller — gap-lace)', () => {
+    // diff=-2 means corset closes 2" smaller than target — gap-lace up.
+    expect(waistPenalty(-2, 1, 3, 0.5)).toBe(1); // 1 * 2 * 0.5
+  });
+  it('is zero at a perfect target match', () => {
+    expect(waistPenalty(0, 1, 3, 0.5)).toBe(0);
+  });
+  it('inverts the asymmetry of penaltyForDiff', () => {
+    // For the same |diff| = 2, over-target should be HARSHER than under-target,
+    // whereas for landmarks it's the reverse (tight is harsher than loose).
+    const overTarget = waistPenalty(2, 1, 3, 0.5);
+    const underTarget = waistPenalty(-2, 1, 3, 0.5);
+    expect(overTarget).toBeGreaterThan(underTarget);
+    // And the inverted-slope penalty function for a landmark would score
+    // negative diffs harsher (tight is bad on ribs), which is the opposite.
+    const landmarkNeg = penaltyForDiff(-2, 1, 3, 1);
+    const landmarkPos = penaltyForDiff(2, 1, 3, 1);
+    expect(landmarkNeg).toBeGreaterThan(landmarkPos);
   });
 });
 
@@ -77,14 +103,32 @@ describe('rank', () => {
     for (const r of highOnly) expect(allIds.has(r.corset.id)).toBe(true);
   });
 
-  it("top-ranked corset's effective waist matches the body's waist within tolerance", () => {
+  it("top-ranked corset's effective waist matches the TARGET waist within tolerance", () => {
     const config = defaultScoringConfig(catalog);
     const results = rank(mediumBody, catalog, config);
     const top = results[0];
     const slack = config.waist_slack_by_stretch_class_in[top.best.variant.stretch_class];
     const effectiveWaist = top.best.waist_size_in + slack;
-    // A well-fitting corset should be within ~2" of body waist.
-    expect(Math.abs(effectiveWaist - mediumBody.natural_waist_in)).toBeLessThan(2);
+    const targetWaist = mediumBody.natural_waist_in - config.desired_reduction_in;
+    // Under the new asymmetry: over-target is harshly penalized, so top result
+    // should be AT or BELOW target. Allow a small over-target tolerance because
+    // discrete waist sizes may not hit exactly.
+    expect(effectiveWaist - targetWaist).toBeLessThan(1.5);
+  });
+
+  it('top-ranked corset changes when desired_reduction_in changes', () => {
+    const baseConfig = defaultScoringConfig(catalog);
+    const gentle = rank(mediumBody, catalog, { ...baseConfig, desired_reduction_in: 1 });
+    const aggressive = rank(mediumBody, catalog, { ...baseConfig, desired_reduction_in: 5 });
+    // With a 1" reduction (target 27) vs 5" reduction (target 23), the
+    // recommended size will differ. Effective waists should differ meaningfully.
+    const gentleTop = gentle[0];
+    const aggressiveTop = aggressive[0];
+    const gentleSlack = baseConfig.waist_slack_by_stretch_class_in[gentleTop.best.variant.stretch_class];
+    const aggressiveSlack = baseConfig.waist_slack_by_stretch_class_in[aggressiveTop.best.variant.stretch_class];
+    const gentleEff = gentleTop.best.waist_size_in + gentleSlack;
+    const aggressiveEff = aggressiveTop.best.waist_size_in + aggressiveSlack;
+    expect(gentleEff).toBeGreaterThan(aggressiveEff);
   });
 
   it('rankings differ between body profiles', () => {

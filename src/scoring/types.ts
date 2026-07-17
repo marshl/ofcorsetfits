@@ -84,10 +84,34 @@ export interface PositionWeights {
 
 export interface ScoringConfig {
   weights: PositionWeights;
-  /** Multiplier for negative diffs (corset < body → tight). Typically > 1. */
+  /**
+   * Slopes applied to non-waist landmark diffs (underbust, upper hip, low hip).
+   * Positive diff = corset > body (loose). Negative diff = corset < body (tight).
+   * Tightness is typically harsher because a corset can't compress the ribs
+   * or hip bones, whereas a loose corset is at worst a shrug.
+   */
   tightness_slope: number;
-  /** Multiplier for positive diffs (corset > body → loose). Typically ≤ 1. */
   looseness_slope: number;
+  /**
+   * Target waist reduction in inches. The algorithm ranks corsets by how well
+   * they achieve `natural_waist_in - desired_reduction_in` when worn, NOT how
+   * well they fit at natural waist. Corsets are almost always worn cinched;
+   * a 0-reduction fit is a rare use case.
+   */
+  desired_reduction_in: number;
+  /**
+   * Waist-specific asymmetry — INVERTED relative to the other landmarks.
+   * `waist_over_target_slope` (typically HIGHER) applies when the corset's
+   * effective waist is LARGER than the target — meaning the corset physically
+   * can't reach the target reduction (fully closed is already looser than
+   * target). This is bad; corset is unusable for that target.
+   * `waist_under_target_slope` (typically LOWER) applies when the corset's
+   * effective waist is SMALLER than the target — the wearer gap-laces it
+   * open to reach target. Perfectly workable; only mild penalty for
+   * corsets that close way below target (why buy a size 18 to wear at 24?).
+   */
+  waist_over_target_slope: number;
+  waist_under_target_slope: number;
   /** Effective-waist correction per material class (inches added to nominal waist size). */
   waist_slack_by_stretch_class_in: Record<StretchClass, number>;
   /** Only consider variants whose stretch_class matches; `any` disables the filter. */
