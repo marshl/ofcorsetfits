@@ -57,7 +57,9 @@ export function bestForCorset(
   }
 
   // Score each bucket once (using the first variant — all members are identical
-  // for scoring purposes).
+  // for scoring purposes). Candidate sizes are the UNION of all group members'
+  // per-variant `waist_sizes_in`. Groups whose union is empty (all members
+  // currently unbuyable) are skipped from the ranking.
   const groups: VariantGroup[] = [];
   let overallBest: CorsetScoreResult | null = null;
 
@@ -65,8 +67,15 @@ export function bestForCorset(
     // Sort members deterministically by name so UI display is stable.
     bucket.sort((a, b) => a.name.localeCompare(b.name));
     const rep = bucket[0];
+    // Union of sizes across all group members.
+    const sizeUnion = new Set<number>();
+    for (const v of bucket) {
+      for (const s of v.waist_sizes_in) sizeUnion.add(s);
+    }
+    if (sizeUnion.size === 0) continue; // unbuyable group — skip
+
     let bestForBucket: CorsetScoreResult | null = null;
-    for (const size of corset.waist_sizes_in) {
+    for (const size of sizeUnion) {
       const result = scoreCorset(body, corset, rep, size, config);
       if (bestForBucket === null || result.total < bestForBucket.total) {
         bestForBucket = result;

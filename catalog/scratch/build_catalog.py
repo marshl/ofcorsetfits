@@ -10,7 +10,7 @@ Each corset entry captures:
   - measurements array with one entry per measurement point (under-bust,
     upper-hip, low-hip), each with position_from_waist_in (negative above
     waist, positive below) and spring_in
-  - waist_sizes_in (the sizes this design is offered in, from the scrape)
+  - variants[i].waist_sizes_in (per-variant offered sizes; no silhouette-level rollup)
   - materials array (parsed from title, for provenance)
   - silhouette_words array (raw scraped keyword list, for provenance)
   - source metadata (which sources contributed which fields)
@@ -33,6 +33,7 @@ URL_MAP_PATH = HERE / "url-to-design.json"
 SCRAPED_PATH = HERE / "scraped-per-design.json"
 REVIEW_PATH = CATALOG / "hip-positions.yaml"
 PRODUCT_URLS_PATH = HERE / "product-urls.txt"
+PER_VARIANT_SIZES_PATH = HERE / "per-variant-sizes.json"
 OUT_PATH = CATALOG / "mystic-city.json"
 
 sys.path.insert(0, str(HERE))
@@ -133,13 +134,31 @@ def load_json_designs() -> dict[str, dict]:
     return out
 
 
+def load_per_variant_sizes() -> dict[str, list[int]]:
+    """Load per-variant scraped size lists. Returns {url: sizes}. URLs that
+    errored (dict with 'error' key in the JSON) are treated as missing and
+    excluded, since they have no reliable size data.
+    """
+    if not PER_VARIANT_SIZES_PATH.exists():
+        return {}
+    raw = json.loads(PER_VARIANT_SIZES_PATH.read_text())
+    out: dict[str, list[int]] = {}
+    for url, value in raw.items():
+        if isinstance(value, list):
+            out[url] = sorted(value)
+    return out
+
+
 def collect_variants_per_design(design_ids: list[str]) -> dict[str, list[dict]]:
     """Scan all sitemap product URLs, group SKUs under their design_id, and
     derive material+stretch_class per variant from the slug alone (no HTTP
     fetches needed — the material keywords live in the slug itself).
+    Attaches per-variant waist_sizes_in from the per-variant size scrape.
 
-    Returns { design_id: [ {name, url, materials, stretch_class}, ... ], ... }.
+    Returns { design_id: [ {name, url, materials, stretch_class,
+                            waist_sizes_in}, ... ], ... }.
     """
+    per_variant_sizes = load_per_variant_sizes()
     urls = [
         u.strip() for u in PRODUCT_URLS_PATH.read_text().splitlines()
         if u.strip() and "/shop/" in u and not u.rstrip("/").endswith("/shop")
@@ -190,6 +209,7 @@ def collect_variants_per_design(design_ids: list[str]) -> dict[str, list[dict]]:
             "url": url,
             "materials": materials,
             "stretch_class": stretch_cls,
+            "waist_sizes_in": per_variant_sizes.get(url, []),
         })
 
     # Sort variants within each design by (stretch_class order, name) for
@@ -273,7 +293,6 @@ def build_entry(design_id: str, review_row: dict, json_row: dict,
         )
 
     # Scrape-derived metadata.
-    sizes = scrape_row.get("sizes") or []
     silhouette_words = scrape_row.get("silhouette_words") or []
     title = (scrape_row.get("title") or "").replace("\n", " ").strip()
     scraped_calibration = scrape_row.get("calibration")
@@ -281,7 +300,10 @@ def build_entry(design_id: str, review_row: dict, json_row: dict,
 
     silhouette_category = pick_silhouette_category(silhouette_words)
 
-    # Aggregate materials + stretch classes across variants.
+    # Aggregate materials + stretch classes across variants. Sizes are per-variant
+    # (see CorsetVariant.waist_sizes_in) — no silhouette-level rollup, since it
+    # would be misleading (unioning what "the silhouette offers" hides real
+    # per-color availability differences the ranking already accounts for).
     all_materials: set[str] = set()
     all_stretch_classes: set[str] = set()
     for v in variants:
@@ -308,7 +330,6 @@ def build_entry(design_id: str, review_row: dict, json_row: dict,
         "above_waist_length_in": None,
         "below_waist_length_in": None,
         "measurements": measurements,
-        "waist_sizes_in": sizes,
         "materials_summary": materials_summary,
         "stretch_class_options": stretch_class_options,
         "variants": variants,

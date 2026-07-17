@@ -116,18 +116,37 @@ export function RankedList({ results, topN = 30 }: RankedListProps) {
                       {memberCount === 1 ? 'option' : 'color options — same fit'})
                     </strong>
                     <ul className="variant-rows">
-                      {group.variants.map((v) => (
-                        <li key={v.url} className="variant-row variant-row-grouped">
-                          <span className="variant-name">{v.name}</span>
-                          <a
-                            href={v.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            buy on mysticcitycorsets.com ↗
-                          </a>
-                        </li>
-                      ))}
+                      {group.variants.map((v) => {
+                        const offersBestSize = v.waist_sizes_in.includes(
+                          r.best.waist_size_in,
+                        );
+                        const isUnbuyable = v.waist_sizes_in.length === 0;
+                        return (
+                          <li key={v.url} className="variant-row variant-row-grouped">
+                            <span className="variant-name">
+                              {v.name}
+                              {!offersBestSize && !isUnbuyable && (
+                                <span className="size-note">
+                                  {' '}(no size {r.best.waist_size_in}" —
+                                  offers {v.waist_sizes_in.join(', ')})
+                                </span>
+                              )}
+                              {isUnbuyable && (
+                                <span className="size-note unbuyable">
+                                  {' '}(no sizes currently listed — may be out of stock)
+                                </span>
+                              )}
+                            </span>
+                            <a
+                              href={v.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              buy on mysticcitycorsets.com ↗
+                            </a>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
 

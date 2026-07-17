@@ -266,6 +266,8 @@ fieldset.landmark .helper {
   grid-template-columns: 1fr auto;
 }
 .variant-row-grouped .variant-name { font-weight: 400; }
+.size-note { color: var(--muted); font-size: 0.8rem; font-style: italic; }
+.size-note.unbuyable { color: var(--stretch-high); }
 @media (max-width: 800px) {
   .variant-row {
     grid-template-columns: 4rem 1fr auto;

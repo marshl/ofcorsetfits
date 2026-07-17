@@ -6,7 +6,7 @@
     "medium": 1.0,
     "high": 1.75
   },
-  "generated_at_iso": "2026-07-17T12:36:15+00:00",
+  "generated_at_iso": "2026-07-17T14:26:49+00:00",
   "sources": {
     "comparison_chart_json": "https://www.mysticcitycorsets.com/wp-admin/admin-ajax.php?action=wp_ajax_ninja_tables_public_action&table_id=18400&target_action=get-all-data",
     "product_sitemap": "https://www.mysticcitycorsets.com/product-sitemap.xml",
@@ -40,15 +40,6 @@
           "label": "upper-hip (4in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32
-      ],
       "materials_summary": [
         "cotton",
         "pvc"
@@ -64,7 +55,16 @@
             "cotton",
             "pvc"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
         }
       ],
       "notes": null,
@@ -113,16 +113,6 @@
           "label": "upper-hip (4.5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36
-      ],
       "materials_summary": [
         "brocade",
         "cotton"
@@ -138,7 +128,17 @@
             "brocade",
             "cotton"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         }
       ],
       "notes": null,
@@ -191,20 +191,6 @@
           "label": "low-hip (7in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40
-      ],
       "materials_summary": [
         "cotton",
         "mesh"
@@ -220,7 +206,20 @@
           "materials": [
             "cotton"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Black Cotton Mesh",
@@ -229,7 +228,20 @@
             "cotton",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         }
       ],
       "notes": null,
@@ -282,20 +294,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "brocade",
         "mesh",
@@ -314,7 +312,8 @@
             "brocade",
             "velveteen"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": []
         },
         {
           "name": "Green Velveteen Brocade",
@@ -323,7 +322,20 @@
             "brocade",
             "velveteen"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         },
         {
           "name": "Baby Blue Satin Mesh",
@@ -332,7 +344,20 @@
             "mesh",
             "satin"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         },
         {
           "name": "Baby Blue Satin White Mesh Lace",
@@ -341,7 +366,20 @@
             "mesh",
             "satin"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         }
       ],
       "notes": null,
@@ -395,19 +433,6 @@
           "label": "low-hip (7in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "cotton",
         "mesh",
@@ -425,7 +450,20 @@
           "materials": [
             "cotton"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Printed Satin Sport Mesh",
@@ -435,7 +473,20 @@
             "satin",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Satin Sport Mesh",
@@ -445,7 +496,20 @@
             "satin",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         }
       ],
       "notes": null,
@@ -498,17 +562,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "satin"
       ],
@@ -522,7 +575,17 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         }
       ],
       "notes": null,
@@ -575,19 +638,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36
-      ],
       "materials_summary": [
         "satin"
       ],
@@ -601,7 +651,8 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": []
         },
         {
           "name": "Black Satin Hip Ties",
@@ -609,7 +660,8 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": []
         }
       ],
       "notes": null,
@@ -664,19 +716,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46
-      ],
       "materials_summary": [
         "brocade",
         "cotton",
@@ -693,7 +732,20 @@
           "materials": [
             "cotton"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46
+          ]
         },
         {
           "name": "Green Bird Brocade Plus",
@@ -701,7 +753,20 @@
           "materials": [
             "brocade"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46
+          ]
         },
         {
           "name": "Navy Silver Bird Brocade Plus",
@@ -709,7 +774,20 @@
           "materials": [
             "brocade"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46
+          ]
         },
         {
           "name": "Plus Black Mesh",
@@ -717,7 +795,20 @@
           "materials": [
             "mesh"
           ],
-          "stretch_class": "high"
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46
+          ]
         }
       ],
       "notes": null,
@@ -770,19 +861,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "cotton",
         "pvc"
@@ -798,7 +876,8 @@
             "cotton",
             "pvc"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": []
         }
       ],
       "notes": null,
@@ -851,15 +930,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28
-      ],
       "materials_summary": [
         "cotton",
         "mesh",
@@ -877,7 +947,16 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28
+          ]
         }
       ],
       "notes": null,
@@ -924,18 +1003,6 @@
           "label": "upper-hip (5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36
-      ],
       "materials_summary": [
         "brocade",
         "mesh"
@@ -951,7 +1018,19 @@
           "materials": [
             "brocade"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         },
         {
           "name": "Black Brocade Mesh",
@@ -960,7 +1039,19 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         },
         {
           "name": "Brocade Mesh",
@@ -969,7 +1060,19 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         }
       ],
       "notes": null,
@@ -1023,23 +1126,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46
-      ],
       "materials_summary": [
         "satin"
       ],
@@ -1053,7 +1139,8 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": []
         },
         {
           "name": "Plus Beige Satin Wide Hips",
@@ -1061,7 +1148,8 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": []
         }
       ],
       "notes": null,
@@ -1108,16 +1196,6 @@
           "label": "upper-hip (4in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32
-      ],
       "materials_summary": [
         "mesh",
         "satin"
@@ -1134,13 +1212,33 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
         },
         {
           "name": "Black Red Mini",
           "url": "https://www.mysticcitycorsets.com/shop/mcc152x-black-red-mini-underbust-corset/",
           "materials": [],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
         },
         {
           "name": "Beige Mesh Mini",
@@ -1148,7 +1246,8 @@
           "materials": [
             "mesh"
           ],
-          "stretch_class": "high"
+          "stretch_class": "high",
+          "waist_sizes_in": []
         },
         {
           "name": "Black Mesh Mini",
@@ -1156,7 +1255,21 @@
           "materials": [
             "mesh"
           ],
-          "stretch_class": "high"
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Purple Red Black Peach Beige White Pink Mesh Mini",
@@ -1164,7 +1277,22 @@
           "materials": [
             "mesh"
           ],
-          "stretch_class": "high"
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40
+          ]
         }
       ],
       "notes": null,
@@ -1218,17 +1346,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32
-      ],
       "materials_summary": [
         "mesh",
         "satin",
@@ -1246,7 +1363,18 @@
             "satin",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
         }
       ],
       "notes": null,
@@ -1301,21 +1429,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40
-      ],
       "materials_summary": [
         "mesh",
         "satin",
@@ -1333,7 +1446,8 @@
             "satin",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": []
         }
       ],
       "notes": null,
@@ -1380,18 +1494,6 @@
           "label": "upper-hip (4in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36
-      ],
       "materials_summary": [
         "brocade",
         "mesh",
@@ -1408,7 +1510,8 @@
           "materials": [
             "brocade"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": []
         },
         {
           "name": "Sport Mesh",
@@ -1417,7 +1520,8 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "high"
+          "stretch_class": "high",
+          "waist_sizes_in": []
         }
       ],
       "notes": null,
@@ -1464,18 +1568,6 @@
           "label": "upper-hip (4in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36
-      ],
       "materials_summary": [
         "cotton",
         "mesh",
@@ -1493,7 +1585,19 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         }
       ],
       "notes": null,
@@ -1541,20 +1645,6 @@
           "label": "upper-hip (4in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "brocade",
         "mesh",
@@ -1568,7 +1658,21 @@
           "name": "Leopard",
           "url": "https://www.mysticcitycorsets.com/shop/mcc20-leopard-underbust-corset/",
           "materials": [],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Sport Mesh Black Brocade",
@@ -1578,7 +1682,18 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
         },
         {
           "name": "Sport Mesh Brocade",
@@ -1588,7 +1703,8 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": []
         }
       ],
       "notes": null,
@@ -1636,19 +1752,6 @@
           "label": "upper-hip (4in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "brocade",
         "mesh",
@@ -1665,7 +1768,17 @@
             "mesh",
             "satin"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30
+          ]
         },
         {
           "name": "Black Brocade Mesh",
@@ -1674,7 +1787,17 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         },
         {
           "name": "Pink Brocade Mesh Waspie",
@@ -1683,7 +1806,22 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
         }
       ],
       "notes": null,
@@ -1738,21 +1876,6 @@
           "label": "low-hip (7in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40
-      ],
       "materials_summary": [
         "brocade"
       ],
@@ -1766,7 +1889,22 @@
           "materials": [
             "brocade"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40
+          ]
         }
       ],
       "notes": null,
@@ -1813,19 +1951,6 @@
           "label": "upper-hip (4in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "cotton",
         "mesh",
@@ -1843,7 +1968,19 @@
           "materials": [
             "pvc"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         },
         {
           "name": "Black Cotton Mesh",
@@ -1852,7 +1989,19 @@
             "cotton",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         },
         {
           "name": "Beige Mesh",
@@ -1860,7 +2009,19 @@
           "materials": [
             "mesh"
           ],
-          "stretch_class": "high"
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         }
       ],
       "notes": null,
@@ -1908,15 +2069,6 @@
           "label": "upper-hip (5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        14,
-        16,
-        18,
-        20,
-        22,
-        24,
-        26
-      ],
       "materials_summary": [
         "brocade",
         "mesh"
@@ -1933,7 +2085,15 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            14,
+            16,
+            18,
+            20,
+            22,
+            24
+          ]
         },
         {
           "name": "Mesh",
@@ -1941,7 +2101,15 @@
           "materials": [
             "mesh"
           ],
-          "stretch_class": "high"
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            14,
+            16,
+            18,
+            20,
+            22,
+            24
+          ]
         }
       ],
       "notes": null,
@@ -1990,20 +2158,6 @@
           "label": "upper-hip (4in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "brocade",
         "mesh",
@@ -2021,7 +2175,21 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Black Brocade Mesh",
@@ -2030,7 +2198,21 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Beige Mesh",
@@ -2038,7 +2220,21 @@
           "materials": [
             "mesh"
           ],
-          "stretch_class": "high"
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         }
       ],
       "notes": null,
@@ -2085,19 +2281,6 @@
           "label": "upper-hip (4in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "satin"
       ],
@@ -2111,7 +2294,20 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         }
       ],
       "notes": null,
@@ -2160,19 +2356,6 @@
           "label": "upper-hip (5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "cotton",
         "mesh"
@@ -2188,7 +2371,18 @@
             "cotton",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34
+          ]
         }
       ],
       "notes": null,
@@ -2235,20 +2429,6 @@
           "label": "upper-hip (4.5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "brocade",
         "mesh"
@@ -2264,7 +2444,21 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         }
       ],
       "notes": null,
@@ -2318,20 +2512,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "brocade",
         "mesh"
@@ -2347,7 +2527,21 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         }
       ],
       "notes": null,
@@ -2394,20 +2588,6 @@
           "label": "upper-hip (4.5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "brocade",
         "mesh"
@@ -2423,7 +2603,21 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Black Brocade Mesh",
@@ -2432,7 +2626,21 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         }
       ],
       "notes": null,
@@ -2480,20 +2688,6 @@
           "label": "upper-hip (4.5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "brocade",
         "mesh"
@@ -2509,7 +2703,21 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         }
       ],
       "notes": null,
@@ -2557,20 +2765,6 @@
           "label": "upper-hip (4.5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "brocade",
         "mesh"
@@ -2586,7 +2780,21 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         }
       ],
       "notes": null,
@@ -2634,17 +2842,6 @@
           "label": "upper-hip (5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36
-      ],
       "materials_summary": [
         "pvc"
       ],
@@ -2658,7 +2855,18 @@
           "materials": [
             "pvc"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         }
       ],
       "notes": null,
@@ -2705,19 +2913,6 @@
           "label": "upper-hip (5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "brocade",
         "cotton",
@@ -2736,7 +2931,20 @@
           "materials": [
             "brocade"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Black Cotton",
@@ -2744,7 +2952,19 @@
           "materials": [
             "cotton"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         },
         {
           "name": "Black Velveteen Brocade",
@@ -2753,7 +2973,8 @@
             "brocade",
             "velveteen"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": []
         },
         {
           "name": "Burgundy Velveteen Brocade",
@@ -2762,7 +2983,8 @@
             "brocade",
             "velveteen"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": []
         },
         {
           "name": "Green Velveteen Brocade",
@@ -2771,7 +2993,19 @@
             "brocade",
             "velveteen"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         },
         {
           "name": "White Cotton Hip Ties",
@@ -2779,7 +3013,8 @@
           "materials": [
             "cotton"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": []
         },
         {
           "name": "Black Cotton Mesh",
@@ -2788,7 +3023,8 @@
             "cotton",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": []
         },
         {
           "name": "Black Cotton Mesh Hip Ties",
@@ -2797,7 +3033,21 @@
             "cotton",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40
+          ]
         },
         {
           "name": "Buttercream Cotton Mesh Hip Ties",
@@ -2806,7 +3056,19 @@
             "cotton",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Cherry Brocade Black Mesh",
@@ -2815,7 +3077,22 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
         },
         {
           "name": "Beige Mesh",
@@ -2823,7 +3100,19 @@
           "materials": [
             "mesh"
           ],
-          "stretch_class": "high"
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         }
       ],
       "notes": null,
@@ -2870,20 +3159,6 @@
           "label": "upper-hip (4.5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [],
       "stretch_class_options": [
         "medium"
@@ -2893,7 +3168,8 @@
           "name": "Old Map",
           "url": "https://www.mysticcitycorsets.com/shop/mcc5-old-map-underbust-corset/",
           "materials": [],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": []
         }
       ],
       "notes": null,
@@ -2947,19 +3223,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "brocade",
         "mesh"
@@ -2975,7 +3238,14 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26
+          ]
         }
       ],
       "notes": null,
@@ -3029,19 +3299,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "brocade",
         "cotton",
@@ -3058,7 +3315,19 @@
           "materials": [
             "cotton"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         },
         {
           "name": "Purple Brocade Mesh",
@@ -3067,7 +3336,20 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Red Peacock Brocade Mesh",
@@ -3076,7 +3358,20 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         }
       ],
       "notes": null,
@@ -3124,15 +3419,6 @@
           "label": "upper-hip (4.5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32
-      ],
       "materials_summary": [
         "satin"
       ],
@@ -3146,7 +3432,16 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
         }
       ],
       "notes": null,
@@ -3194,17 +3489,6 @@
           "label": "upper-hip (3.5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34
-      ],
       "materials_summary": [
         "brocade",
         "cotton",
@@ -3223,7 +3507,18 @@
           "materials": [
             "brocade"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34
+          ]
         },
         {
           "name": "Bird Brocade Sport Mesh Waspie",
@@ -3233,7 +3528,18 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34
+          ]
         },
         {
           "name": "Black Brocade Sport Mesh Waspie",
@@ -3243,7 +3549,18 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34
+          ]
         },
         {
           "name": "Black Cotton Sport Mesh Waspie",
@@ -3253,7 +3570,21 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40
+          ]
         },
         {
           "name": "Beige Sport Mesh Waspie",
@@ -3262,7 +3593,20 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "high"
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Pink Sport Mesh Waspie",
@@ -3271,7 +3615,22 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "high"
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40
+          ]
         },
         {
           "name": "Red Sport Mesh Waspie",
@@ -3280,7 +3639,22 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "high"
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40
+          ]
         },
         {
           "name": "White Sport Mesh Waspie",
@@ -3289,7 +3663,22 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "high"
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40
+          ]
         }
       ],
       "notes": null,
@@ -3343,21 +3732,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40
-      ],
       "materials_summary": [
         "mesh",
         "satin",
@@ -3375,7 +3749,8 @@
             "satin",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": []
         },
         {
           "name": "Orange Satin Sport Mesh",
@@ -3385,7 +3760,20 @@
             "satin",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         }
       ],
       "notes": null,
@@ -3439,19 +3827,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "cotton",
         "mesh"
@@ -3467,7 +3842,18 @@
             "cotton",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34
+          ]
         }
       ],
       "notes": null,
@@ -3520,19 +3906,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "mesh",
         "satin"
@@ -3548,7 +3921,18 @@
             "mesh",
             "satin"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34
+          ]
         }
       ],
       "notes": null,
@@ -3603,17 +3987,6 @@
           "label": "low-hip (6.5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32
-      ],
       "materials_summary": [
         "brocade",
         "cotton",
@@ -3632,7 +4005,8 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": []
         },
         {
           "name": "Black Cotton Sport Mesh",
@@ -3642,7 +4016,18 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
         },
         {
           "name": "Brocade White Sport Mesh",
@@ -3652,7 +4037,17 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30
+          ]
         }
       ],
       "notes": null,
@@ -3706,21 +4101,6 @@
           "label": "low-hip (7in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40
-      ],
       "materials_summary": [
         "brocade",
         "cotton",
@@ -3739,7 +4119,22 @@
           "materials": [
             "brocade"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40
+          ]
         },
         {
           "name": "Black Cotton Sport Mesh",
@@ -3749,7 +4144,20 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Black Cotton Sport Mesh Antimuffin",
@@ -3759,7 +4167,8 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": []
         },
         {
           "name": "Sport Mesh Hip Ties",
@@ -3768,7 +4177,20 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "high"
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         }
       ],
       "notes": null,
@@ -3821,20 +4243,6 @@
           "label": "low-hip (7in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40
-      ],
       "materials_summary": [
         "brocade",
         "cotton",
@@ -3851,7 +4259,8 @@
           "materials": [
             "cotton"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": []
         },
         {
           "name": "Black Cotton A",
@@ -3859,7 +4268,15 @@
           "materials": [
             "cotton"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28
+          ]
         },
         {
           "name": "Floral Brocade",
@@ -3867,7 +4284,17 @@
           "materials": [
             "brocade"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
         },
         {
           "name": "White Cotton",
@@ -3875,7 +4302,15 @@
           "materials": [
             "cotton"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28
+          ]
         },
         {
           "name": "Black Brocade Mesh",
@@ -3884,7 +4319,18 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34
+          ]
         }
       ],
       "notes": null,
@@ -3933,19 +4379,6 @@
           "label": "upper-hip (4in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36
-      ],
       "materials_summary": [
         "mesh",
         "satin"
@@ -3961,7 +4394,15 @@
             "mesh",
             "satin"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26
+          ]
         }
       ],
       "notes": null,
@@ -4009,19 +4450,6 @@
           "label": "upper-hip (4.5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36
-      ],
       "materials_summary": [
         "mesh",
         "satin"
@@ -4037,7 +4465,18 @@
             "mesh",
             "satin"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
         }
       ],
       "notes": null,
@@ -4084,20 +4523,6 @@
           "label": "upper-hip (4in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40
-      ],
       "materials_summary": [
         "brocade",
         "cotton",
@@ -4117,7 +4542,21 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40
+          ]
         },
         {
           "name": "Gold Brocade Mesh",
@@ -4126,7 +4565,24 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46
+          ]
         },
         {
           "name": "Purple Brocade Mesh",
@@ -4135,7 +4591,24 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46
+          ]
         },
         {
           "name": "Wide Hips Black Cotton Sport Mesh",
@@ -4145,7 +4618,19 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Wide Hips Beige Sport Mesh",
@@ -4154,7 +4639,19 @@
             "mesh",
             "sport mesh"
           ],
-          "stretch_class": "high"
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         }
       ],
       "notes": null,
@@ -4206,21 +4703,6 @@
           "label": "low-hip (6.5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42
-      ],
       "materials_summary": [
         "satin"
       ],
@@ -4234,7 +4716,8 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": []
         },
         {
           "name": "Black Satin Hip Ties",
@@ -4242,7 +4725,21 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44
+          ]
         }
       ],
       "notes": null,
@@ -4296,15 +4793,6 @@
           "label": "low-hip (8in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46
-      ],
       "materials_summary": [
         "satin"
       ],
@@ -4318,7 +4806,16 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46
+          ]
         }
       ],
       "notes": null,
@@ -4371,15 +4868,6 @@
           "label": "low-hip (7in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46
-      ],
       "materials_summary": [
         "cotton",
         "mesh",
@@ -4397,7 +4885,16 @@
             "mesh",
             "satin"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46
+          ]
         }
       ],
       "notes": null,
@@ -4451,19 +4948,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46
-      ],
       "materials_summary": [
         "mesh",
         "satin"
@@ -4479,7 +4963,20 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46
+          ]
         },
         {
           "name": "Beige Satin Mesh Plus",
@@ -4488,7 +4985,20 @@
             "mesh",
             "satin"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46
+          ]
         },
         {
           "name": "Mesh Satin Plus",
@@ -4497,7 +5007,8 @@
             "mesh",
             "satin"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": []
         }
       ],
       "notes": null,
@@ -4552,24 +5063,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46
-      ],
       "materials_summary": [
         "brocade",
         "cotton",
@@ -4585,7 +5078,24 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42,
+            44,
+            46
+          ]
         },
         {
           "name": "Pink Brocade Size32",
@@ -4593,7 +5103,21 @@
           "materials": [
             "brocade"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Plus Black Cotton Hip Ties",
@@ -4601,7 +5125,21 @@
           "materials": [
             "cotton"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         }
       ],
       "notes": null,
@@ -4654,18 +5192,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36
-      ],
       "materials_summary": [
         "brocade"
       ],
@@ -4679,7 +5205,19 @@
           "materials": [
             "brocade"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         }
       ],
       "notes": null,
@@ -4732,19 +5270,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36
-      ],
       "materials_summary": [
         "brocade",
         "cotton",
@@ -4761,7 +5286,8 @@
           "materials": [
             "cotton"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": []
         },
         {
           "name": "Red Cotton Lace",
@@ -4769,7 +5295,20 @@
           "materials": [
             "cotton"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         },
         {
           "name": "Black Brocade Mesh",
@@ -4778,7 +5317,21 @@
             "brocade",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         }
       ],
       "notes": null,
@@ -4833,15 +5386,6 @@
           "label": "low-hip (6in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32
-      ],
       "materials_summary": [
         "brocade",
         "cotton",
@@ -4861,7 +5405,17 @@
             "cotton",
             "pvc"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34
+          ]
         },
         {
           "name": "Black Cotton Zipper",
@@ -4869,7 +5423,16 @@
           "materials": [
             "cotton"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            36
+          ]
         },
         {
           "name": "Cherry Brocade",
@@ -4877,7 +5440,16 @@
           "materials": [
             "brocade"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
         },
         {
           "name": "Hip Ties Blue Teal Satin",
@@ -4885,7 +5457,16 @@
           "materials": [
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
         },
         {
           "name": "Hip Ties Dragon Brocade",
@@ -4893,7 +5474,16 @@
           "materials": [
             "brocade"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
         },
         {
           "name": "Black Satin Black Mesh",
@@ -4902,7 +5492,18 @@
             "mesh",
             "satin"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34
+          ]
         }
       ],
       "notes": null,
@@ -4949,20 +5550,6 @@
           "label": "upper-hip (4in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "brocade",
         "cotton",
@@ -4980,7 +5567,20 @@
           "materials": [
             "cotton"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         },
         {
           "name": "Brocade Cotton",
@@ -4989,7 +5589,8 @@
             "brocade",
             "cotton"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": []
         },
         {
           "name": "Black Cotton Mesh",
@@ -4998,7 +5599,20 @@
             "cotton",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         },
         {
           "name": "Purple Rose Mesh",
@@ -5006,7 +5620,20 @@
           "materials": [
             "mesh"
           ],
-          "stretch_class": "high"
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
         }
       ],
       "notes": null,
@@ -5053,19 +5680,6 @@
           "label": "upper-hip (4in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "pvc",
         "satin"
@@ -5081,7 +5695,17 @@
             "pvc",
             "satin"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
         }
       ],
       "notes": null,
@@ -5128,19 +5752,6 @@
           "label": "upper-hip (3.5in below waist)"
         }
       ],
-      "waist_sizes_in": [
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38
-      ],
       "materials_summary": [
         "cotton",
         "mesh",
@@ -5158,7 +5769,19 @@
           "materials": [
             "pvc"
           ],
-          "stretch_class": "low"
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Black Cotton Mesh Short",
@@ -5167,7 +5790,20 @@
             "cotton",
             "mesh"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         },
         {
           "name": "Black Satin Mesh Short",
@@ -5176,7 +5812,20 @@
             "mesh",
             "satin"
           ],
-          "stretch_class": "medium"
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
         }
       ],
       "notes": null,

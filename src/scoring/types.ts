@@ -42,6 +42,13 @@ export interface CorsetVariant {
   url: string;
   materials: string[];
   stretch_class: StretchClass;
+  /**
+   * Waist sizes this specific SKU is currently offered in (scraped from its
+   * WooCommerce variation dropdown). Empty array = currently unbuyable
+   * (out-of-stock or dropdown suppressed). Different variants of the same
+   * silhouette can differ here — this is per-variant, not per-silhouette.
+   */
+  waist_sizes_in: number[];
 }
 
 export interface Corset {
@@ -55,7 +62,6 @@ export interface Corset {
   above_waist_length_in: number | null;
   below_waist_length_in: number | null;
   measurements: CorsetMeasurement[];
-  waist_sizes_in: number[];
   materials_summary: string[];
   stretch_class_options: string[];
   variants: CorsetVariant[];
