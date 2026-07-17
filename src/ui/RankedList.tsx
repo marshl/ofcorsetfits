@@ -1,14 +1,16 @@
 /**
- * Ranked list — one row per VARIANT (silhouette × material variant). Same
- * silhouette in multiple materials appears as multiple rows because the
- * different stretch classes produce different scores. Expanding a row
- * reveals the per-position penalty breakdown for THAT specific variant,
- * plus a compact cross-reference of the same silhouette's other variants
- * so you can compare siblings without scrolling.
+ * Ranked list — one row per VARIANT GROUP (silhouette + fit signature).
+ * A group is 1+ SKUs sharing the same stretch class + material composition:
+ * they differ only by fabric color / decorative flourishes, which don't
+ * affect fit, so they get one shared row with multiple buy links.
+ *
+ * Expanding a row shows the per-position penalty breakdown for the group's
+ * canonical variant, all group members' buy links, and a cross-reference
+ * to any OTHER fit-signature groups of the same silhouette.
  */
 
 import { useState } from 'react';
-import type { RankedResult } from '../scoring/types.ts';
+import type { RankedResult, VariantGroup } from '../scoring/types.ts';
 
 interface RankedListProps {
   results: RankedResult[];
@@ -22,9 +24,13 @@ function formatDiff(diff: number | null): string {
   return `${sign}${diff.toFixed(2)}"`;
 }
 
-/** Unique key per row: same silhouette in different variants → different keys. */
+function groupSignatureKey(g: VariantGroup): string {
+  return g.variants[0].url;
+}
+
+/** Unique key per row: silhouette + group's canonical URL. */
 function rowKey(r: RankedResult): string {
-  return `${r.corset.id}::${r.best.variant.url}`;
+  return `${r.corset.id}::${groupSignatureKey(r.variant_group)}`;
 }
 
 export function RankedList({ results, topN = 30 }: RankedListProps) {
@@ -48,7 +54,8 @@ export function RankedList({ results, topN = 30 }: RankedListProps) {
       <h2>
         Best fits{' '}
         <span className="count">
-          ({shown.length} of {results.length} shown — variants ranked separately)
+          ({shown.length} of {results.length} shown — variants with the same
+          material are grouped)
         </span>
       </h2>
       <ol className="ranked-rows">
@@ -56,9 +63,11 @@ export function RankedList({ results, topN = 30 }: RankedListProps) {
           const key = rowKey(r);
           const isExpanded = expandedKey === key;
           const stretch = r.best.variant.stretch_class;
-          const otherVariants = r.variant_bests.filter(
-            (vb) => vb.variant.url !== r.best.variant.url,
+          const group = r.variant_group;
+          const otherGroups = r.all_groups.filter(
+            (g) => groupSignatureKey(g) !== groupSignatureKey(group),
           );
+          const memberCount = group.variants.length;
           return (
             <li key={key} className={`ranked-row ranked-row-${stretch}`}>
               <button
@@ -69,7 +78,12 @@ export function RankedList({ results, topN = 30 }: RankedListProps) {
               >
                 <span className="rank">{i + 1}</span>
                 <span className="corset-id">{r.corset.id}</span>
-                <span className="corset-name">{r.best.variant.name}</span>
+                <span className="corset-name">
+                  {r.best.variant.name}
+                  {memberCount > 1 && (
+                    <span className="group-count"> +{memberCount - 1} colors</span>
+                  )}
+                </span>
                 <span className={`stretch stretch-${stretch}`}>{stretch}</span>
                 <span className="best-size">size {r.best.waist_size_in}"</span>
                 <span className="silhouette">{r.corset.silhouette_category}</span>
@@ -81,18 +95,10 @@ export function RankedList({ results, topN = 30 }: RankedListProps) {
                 <div className="ranked-row-details">
                   <div className="detail-meta">
                     <div>
-                      <strong>Variant:</strong> {r.best.variant.name} —{' '}
-                      <a
-                        href={r.best.variant.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        buy on mysticcitycorsets.com ↗
-                      </a>
-                    </div>
-                    <div>
                       <strong>Materials:</strong>{' '}
                       {r.best.variant.materials.join(', ') || '(unspecified)'}
+                      {' — '}
+                      <em>stretch class: {stretch}</em>
                     </div>
                     <div>
                       <strong>Silhouette words:</strong>{' '}
@@ -102,6 +108,27 @@ export function RankedList({ results, topN = 30 }: RankedListProps) {
                       <strong>Torso length:</strong>{' '}
                       {r.corset.body_length_in ?? 'unknown'}"
                     </div>
+                  </div>
+
+                  <div className="variant-list">
+                    <strong>
+                      Buy this fit ({memberCount}{' '}
+                      {memberCount === 1 ? 'option' : 'color options — same fit'})
+                    </strong>
+                    <ul className="variant-rows">
+                      {group.variants.map((v) => (
+                        <li key={v.url} className="variant-row variant-row-grouped">
+                          <span className="variant-name">{v.name}</span>
+                          <a
+                            href={v.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            buy on mysticcitycorsets.com ↗
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
 
                   <table className="score-breakdown">
@@ -156,34 +183,39 @@ export function RankedList({ results, topN = 30 }: RankedListProps) {
                     </tbody>
                   </table>
 
-                  {otherVariants.length > 0 && (
+                  {otherGroups.length > 0 && (
                     <div className="variant-list">
                       <strong>
-                        Other variants of {r.corset.id}
-                        <span className="count"> ({otherVariants.length})</span>
+                        Other materials of {r.corset.id}
+                        <span className="count"> ({otherGroups.length})</span>
                       </strong>
                       <ul className="variant-rows">
-                        {otherVariants.map((vb) => (
-                          <li key={vb.variant.url} className="variant-row">
+                        {otherGroups.map((g) => (
+                          <li key={groupSignatureKey(g)} className="variant-row">
                             <span
-                              className={`stretch stretch-${vb.variant.stretch_class}`}
+                              className={`stretch stretch-${g.variants[0].stretch_class}`}
                             >
-                              {vb.variant.stretch_class}
+                              {g.variants[0].stretch_class}
                             </span>
                             <span className="variant-name">
-                              {vb.variant.name}
+                              {g.variants[0].name}
+                              {g.variants.length > 1 && (
+                                <span className="group-count">
+                                  {' '}+{g.variants.length - 1} colors
+                                </span>
+                              )}
                             </span>
                             <span className="variant-materials">
-                              {vb.variant.materials.join(', ') || '—'}
+                              {g.variants[0].materials.join(', ') || '—'}
                             </span>
                             <span className="best-size">
-                              size {vb.best_size_in}"
+                              size {g.best_size_in}"
                             </span>
                             <span className="score">
-                              score {vb.total.toFixed(2)}
+                              score {g.total.toFixed(2)}
                             </span>
                             <a
-                              href={vb.variant.url}
+                              href={g.variants[0].url}
                               target="_blank"
                               rel="noopener noreferrer"
                             >

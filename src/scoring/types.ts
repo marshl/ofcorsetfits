@@ -169,12 +169,18 @@ export interface CorsetScoreResult {
 }
 
 /**
- * Best-scoring (size, total) for a specific variant of a silhouette.
- * Used by the UI to show all variants of a corset with their individual
- * best-per-variant scores + links.
+ * A group of variants that share the same fit signature: the same
+ * `(stretch_class, sorted materials)` tuple. Fit math is identical across
+ * members — same effective waist, same springs, same scoring result — so
+ * they all produce the same score. They differ only in fabric color or
+ * decorative elements (e.g. "with lace"), which the algorithm can't and
+ * shouldn't distinguish.
+ *
+ * `variants[0]` is the canonical representative (used for `best.variant`
+ * on a RankedResult). The rest are equivalent SKUs the user can also buy.
  */
-export interface VariantBest {
-  variant: CorsetVariant;
+export interface VariantGroup {
+  variants: CorsetVariant[];
   best_size_in: number;
   total: number;
 }
@@ -183,9 +189,14 @@ export interface RankedResult {
   corset: Corset;
   best: CorsetScoreResult;
   /**
-   * All variants that passed the stretch_preference filter, each with its
-   * own best-scoring size + total. Sorted ascending by total (best first).
-   * The first entry always matches `best.variant`.
+   * The variant group this row represents (all SKUs sharing this row's
+   * fit signature). `variants[0]` matches `best.variant`.
    */
-  variant_bests: VariantBest[];
+  variant_group: VariantGroup;
+  /**
+   * All variant groups of this silhouette, sorted ascending by score.
+   * Used by the UI to show a "same silhouette, other materials" list
+   * inside the expanded row. Includes this row's own group.
+   */
+  all_groups: VariantGroup[];
 }

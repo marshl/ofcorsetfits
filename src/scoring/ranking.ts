@@ -13,66 +13,93 @@ import type {
   Catalog,
   Corset,
   CorsetScoreResult,
+  CorsetVariant,
   RankedResult,
   ScoringConfig,
-  VariantBest,
+  VariantGroup,
 } from './types.ts';
 import { scoreCorset } from './scoring.ts';
 
 /**
- * For a single corset, try every (variant × waist size) combination and
- * return the lowest-total result overall PLUS per-variant best results.
- * Returns null if no variant survives the stretch_preference filter.
+ * Fit signature: two variants sharing this key have identical fit math and
+ * therefore identical scores. Used to group variants into ranking rows so
+ * multiple SKUs with the same material composition don't clutter the list
+ * as pseudo-duplicates.
+ */
+function fitSignature(v: CorsetVariant): string {
+  const materials = [...v.materials].sort().join(',');
+  return `${v.stretch_class}::${materials}`;
+}
+
+/**
+ * For a single corset, group its variants by fit signature and compute one
+ * `VariantGroup` per group (best waist size + total across all group members —
+ * they're identical, so one score representing the group). Returns null if
+ * no variant passes the stretch_preference filter.
  */
 export function bestForCorset(
   body: Body,
   corset: Corset,
   config: ScoringConfig,
-): { best: CorsetScoreResult; variantBests: VariantBest[] } | null {
+): { best: CorsetScoreResult; groups: VariantGroup[] } | null {
   const candidateVariants = config.stretch_preference === 'any'
     ? corset.variants
     : corset.variants.filter((v) => v.stretch_class === config.stretch_preference);
   if (candidateVariants.length === 0) return null;
 
-  const variantBests: VariantBest[] = [];
+  // Bucket variants by fit signature.
+  const buckets = new Map<string, CorsetVariant[]>();
+  for (const v of candidateVariants) {
+    const key = fitSignature(v);
+    const bucket = buckets.get(key);
+    if (bucket) bucket.push(v);
+    else buckets.set(key, [v]);
+  }
+
+  // Score each bucket once (using the first variant — all members are identical
+  // for scoring purposes).
+  const groups: VariantGroup[] = [];
   let overallBest: CorsetScoreResult | null = null;
 
-  for (const variant of candidateVariants) {
-    let variantBest: CorsetScoreResult | null = null;
+  for (const bucket of buckets.values()) {
+    // Sort members deterministically by name so UI display is stable.
+    bucket.sort((a, b) => a.name.localeCompare(b.name));
+    const rep = bucket[0];
+    let bestForBucket: CorsetScoreResult | null = null;
     for (const size of corset.waist_sizes_in) {
-      const result = scoreCorset(body, corset, variant, size, config);
-      if (variantBest === null || result.total < variantBest.total) {
-        variantBest = result;
+      const result = scoreCorset(body, corset, rep, size, config);
+      if (bestForBucket === null || result.total < bestForBucket.total) {
+        bestForBucket = result;
       }
     }
-    if (variantBest === null) continue;
-    variantBests.push({
-      variant,
-      best_size_in: variantBest.waist_size_in,
-      total: variantBest.total,
+    if (bestForBucket === null) continue;
+    groups.push({
+      variants: bucket,
+      best_size_in: bestForBucket.waist_size_in,
+      total: bestForBucket.total,
     });
-    if (overallBest === null || variantBest.total < overallBest.total) {
-      overallBest = variantBest;
+    if (overallBest === null || bestForBucket.total < overallBest.total) {
+      overallBest = bestForBucket;
     }
   }
 
   if (overallBest === null) return null;
-  variantBests.sort((a, b) => a.total - b.total);
-  return { best: overallBest, variantBests };
+  groups.sort((a, b) => a.total - b.total);
+  return { best: overallBest, groups };
 }
 
 /**
- * Rank every VARIANT in the catalog by best-fit score (ascending).
+ * Rank every VARIANT GROUP in the catalog by best-fit score (ascending).
  *
- * Each entry represents a single SKU (silhouette × material variant), scored
- * at its own best waist size. Same silhouette in multiple materials produces
- * multiple rows because they have different stretch classes → different slack
- * → different effective-waist math → different scores.
+ * A variant group is one or more SKUs of a single silhouette that share the
+ * same fit signature (stretch_class + materials). Different fabric colors or
+ * decorative elements — the algorithm-invisible axes — collapse into one row
+ * rather than producing pseudo-duplicates.
  *
- * `variant_bests` on each entry still carries all variants of that silhouette
- * for cross-reference in the UI (users can see the current variant's siblings
- * without scrolling). The first entry in `variant_bests` matches this row's
- * variant only when the row's variant is the best for its silhouette.
+ * `all_groups` on each row carries every variant group of the row's
+ * silhouette so the UI can cross-reference siblings (e.g., MCC110's
+ * `low + [brocade, velveteen]` group visible from the `medium + [mesh, satin]`
+ * row without scrolling).
  */
 export function rank(
   body: Body,
@@ -81,40 +108,22 @@ export function rank(
 ): RankedResult[] {
   const results: RankedResult[] = [];
   for (const corset of catalog.corsets) {
-    const candidateVariants = config.stretch_preference === 'any'
-      ? corset.variants
-      : corset.variants.filter((v) => v.stretch_class === config.stretch_preference);
-    if (candidateVariants.length === 0) continue;
+    const summary = bestForCorset(body, corset, config);
+    if (summary === null) continue;
+    const { groups } = summary;
 
-    // Best CorsetScoreResult per variant of this silhouette.
-    const perVariantScores: CorsetScoreResult[] = [];
-    for (const variant of candidateVariants) {
-      let best: CorsetScoreResult | null = null;
-      for (const size of corset.waist_sizes_in) {
-        const result = scoreCorset(body, corset, variant, size, config);
-        if (best === null || result.total < best.total) {
-          best = result;
-        }
-      }
-      if (best !== null) perVariantScores.push(best);
-    }
-    if (perVariantScores.length === 0) continue;
-
-    // Precompute the shared variant_bests list (used by all rows of this silhouette).
-    const variantBests = perVariantScores
-      .map((s) => ({
-        variant: s.variant,
-        best_size_in: s.waist_size_in,
-        total: s.total,
-      }))
-      .sort((a, b) => a.total - b.total);
-
-    // Emit one row per variant.
-    for (const scoreResult of perVariantScores) {
+    // Emit one row per variant group. To find the CorsetScoreResult for each
+    // group's canonical variant (variants[0]), we re-score the size that
+    // groups[i].best_size_in indicates. Cheaper than storing the full result
+    // per group inside bestForCorset.
+    for (const group of groups) {
+      const rep = group.variants[0];
+      const scoreResult = scoreCorset(body, corset, rep, group.best_size_in, config);
       results.push({
         corset,
         best: scoreResult,
-        variant_bests: variantBests,
+        variant_group: group,
+        all_groups: groups,
       });
     }
   }

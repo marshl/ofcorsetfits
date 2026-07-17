@@ -253,6 +253,19 @@ fieldset.landmark .helper {
   border: 1px solid var(--accent);
   border-radius: 3px;
 }
+
+.group-count {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* "Buy this fit" grouped variants — simpler grid than the sibling-materials list */
+.variant-row-grouped {
+  grid-template-columns: 1fr auto;
+}
+.variant-row-grouped .variant-name { font-weight: 400; }
 @media (max-width: 800px) {
   .variant-row {
     grid-template-columns: 4rem 1fr auto;
