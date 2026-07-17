@@ -1,0 +1,515 @@
+{
+  "MCC17": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc17-black-satin-sport-mesh/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40],
+    "silhouette_words": ["hourglass", "cupped rib", "hip ties", "underbust", "longline"],
+    "calibration": null,
+    "title": "MCC17 Cotton Satin Mesh Corset",
+    "sku": "MCC17mesh",
+    "hardcoded_measurements": "Front: 12.5″, Side: 10-14″, Back: 14″, Rib spring: 10″, Upper Hip Spring: 13″, Lower Hip Spring: 16″"
+  },
+  "MCC19": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc19-sport-mesh-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36],
+    "silhouette_words": ["underbust", "conical"],
+    "calibration": "waist can stretch a bit and sizes run big (for ex: size 22″ is more close to 23″)",
+    "title": "MCC19 Black Satin / Sport Mesh Underbust Corset",
+    "sku": "MCC19 Black Sport Mesh",
+    "hardcoded_measurements": "front length: 11.5″, side length: 8.5-12″, back length: 13.25″, Rib spring: 8″, Upper Hip Spring: 12″"
+  },
+  "MCC68": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc68-cherry-brocade-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40],
+    "silhouette_words": ["underbust", "longline", "cupped rib", "hip ties"],
+    "calibration": null,
+    "title": "MCC68 Cherry Brocade Hipties Underbust Corset",
+    "sku": "MCC68 Wine Cherry Brocade/hip ties",
+    "hardcoded_measurements": "Front: 12.5″, Side: 10.5-14″, Back: 15″, Rib spring: 8″, Upper Hip Spring: 12″, Lower Hip Spring: 14″"
+  },
+  "MCC54": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc54-red-brocade-mesh-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["hourglass", "underbust", "longline", "cupped rib"],
+    "calibration": "sizes run a little large, waist tape can stretch a bit",
+    "title": "MCC54 Red Brocade/Mesh Corset",
+    "sku": "MCC54 red peacock/Back sport mesh",
+    "hardcoded_measurements": "Rib spring: 9″, Upper Hip Spring: 13″, Lower Hip Spring: 15″, Front: 12″, Side: 9-12.5″, Back: 14″"
+  },
+  "MCC112": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc112-black-cotton-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["long torso", "longline", "underbust", "cupped rib"],
+    "calibration": null,
+    "title": "MCC112 Black Cotton Long Torso Underbust Corset",
+    "sku": "MCC112 Black Cotton",
+    "hardcoded_measurements": "Front: 14.5\", Side: 12\", Back: 14\", Underbust length: 5.5\", Rib spring: 10\", Upper Hip Spring: 14\", Lower Hip Spring: 17\""
+  },
+  "MCC64": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc64-black-cotton-sport-mesh-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32],
+    "silhouette_words": ["underbust", "longline", "cupped rib", "conical", "hip ties"],
+    "calibration": null,
+    "title": "MCC64 Black Cotton Sport Mesh Underbust Corset",
+    "sku": "MCC64-black cotton/black sport mesh",
+    "hardcoded_measurements": "Front: 12.5″, Side: 10-14″, Back: 14.5-13.5″, Rib spring: 10″, Upper Hip Spring: 12″, Lower Hip Spring: 14″"
+  },
+  "MCC94": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc94-black-cotton-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["underbust", "cupped rib"],
+    "calibration": null,
+    "title": "MCC94 Black Cotton Underbust Corset",
+    "sku": "MCC94 Black Cotton",
+    "hardcoded_measurements": "Front: 10.75″, Side: 8″, Back: 12″, Rib spring: 11″, Upper Hip Spring: 12″; 26 bones (6 flat, 20 spiral), stiff busk, stiff underbusk 1″ wide"
+  },
+  "MCC124": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc124-black-satin-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36],
+    "silhouette_words": ["hourglass", "underbust", "longline"],
+    "calibration": "sizes run a little large, waist tape can stretch a bit",
+    "title": "MCC124 Black Satin Underbust Corset",
+    "sku": "MCC124 Satin",
+    "hardcoded_measurements": "Rib spring: 9\"; Upper Hip Spring: 11\"; Lower Hip Spring: 14\""
+  },
+  "MCC98": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc98-black-satin-mesh-short-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["underbust", "hip ties"],
+    "calibration": null,
+    "title": "MCC98 Hip Ties Black Satin/Mesh Short Underbust Corset",
+    "sku": "MCC98 Hip Ties Black Satin/Mesh",
+    "hardcoded_measurements": "Front: 10″, Side: 7.5″, Back: 9.25″, Rib spring: 7″, Upper Hip Spring: 7″"
+  },
+  "MCC75": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc75-leopard-satin-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40],
+    "silhouette_words": ["underbust", "conical"],
+    "calibration": "waist can stretch a bit and sizes run big (for ex: size 22″ is more close to 23″); requires longer 'seasoning'",
+    "title": "MCC75 Leopard Satin Underbust Corset",
+    "sku": "MCC75 Leopard",
+    "hardcoded_measurements": "front length: 12 1/4″; side length: 10-12.5″; back length: 12.5″; rib spring: 6″; upper hip spring: 14″"
+  },
+  "MCC90": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc90-cherry-brocade-underbust-corset/",
+    "sizes": [20, 22, 24, 26, 28, 30, 32],
+    "silhouette_words": ["underbust", "longline", "hip ties", "cupped rib", "long torso"],
+    "calibration": "waist can stretch a bit and sizes run big (for ex: size 22″ is more close to 23″)",
+    "title": "MCC90 Hip Ties Cherry Brocade Underbust Corset",
+    "sku": "MCC90 Cherry Brocade/Hip Ties",
+    "hardcoded_measurements": "Front: 14.5″, Side: 12″, Back: 17.25″, Rib spring: 12″, Upper Hip Spring: 10″, Hips Spring: 12″"
+  },
+  "MCC130": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc130-black-cotton-black-metallic-pvc-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["underbust", "cupped rib", "long torso"],
+    "calibration": null,
+    "title": "MCC130 Black Cotton/Black Metallic PVC Underbust Corset",
+    "sku": "MCC130 Cotton/PVC",
+    "hardcoded_measurements": "Front: 14.75″, Side: 13-15.5″, Back: 15″, Rib spring: 14″, Upper Hip Spring: 13″, Hips Spring: 14″; 26 total bones (6 flat 12mm, 20 spiral 6mm); 1″ wide flat stiff bone underbusk; Floating modesty panel 6″ wide"
+  },
+  "MCC44L": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc44l-beige-mesh-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["underbust", "conical"],
+    "calibration": "waist can stretch a bit and sizes run big (for ex: size 22″ is more close to 23″)",
+    "title": "MCC44L Beige Mesh Underbust Corset",
+    "sku": "MCC44L Beige Satin/Beige Mesh",
+    "hardcoded_measurements": "Front: 11.25″, Side: 9-10.5″, Back: 12″, Rib spring: 6″, Upper Hip Spring: 11″"
+  },
+  "MCC86": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc86-black-cotton-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36],
+    "silhouette_words": ["underbust", "long torso", "cupped rib"],
+    "calibration": "sizes run a little large, waist tape can stretch a bit",
+    "title": "MCC86 Long Line, Steel Boned Underbust Corset Black Cotton",
+    "sku": "MCC86",
+    "hardcoded_measurements": "Front: 14\", Back: 15.75\", Rib spring: 7\", Upper Hip Spring: 10\", Low Hip Spring: 13\""
+  },
+  "MCC61": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc61-orange-satin-sport-mesh-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40],
+    "silhouette_words": ["underbust", "longline", "hip ties", "cupped rib"],
+    "calibration": "waist can stretch a bit and sizes run big (for ex: size 22″ is more close to 23″)",
+    "title": "MCC61 Orange Satin/Black Sport Mesh Underbust Corset",
+    "sku": "MCC61 Orange Satin/Black Sport mesh",
+    "hardcoded_measurements": "Rib spring: 8″, Upper Hip Spring: 12″, Lower Hip Spring: 15″, front length: 12″, side length: 10-14″, back length: 13.5″"
+  },
+  "MCC73": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc73-black-satin-mesh-with-lace-underbust-corset-size-28/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36],
+    "silhouette_words": ["underbust", "hourglass", "longline"],
+    "calibration": null,
+    "title": "MCC73 Black Satin Mesh with lace Underbust corset size 28″",
+    "sku": "MCC73 Black Satin/Sport Mesh with burgundy lace size 28\"",
+    "hardcoded_measurements": "Front: 12\", Back: 14.5\", Side: 9.5\", Rib spring: 9-10\"; Upper Hip Spring: 14\"; 34 bones (6 flat 12mm, 28 spiral 6mm)"
+  },
+  "MCC25": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc25-beige-mesh-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["underbust", "cupped rib"],
+    "calibration": "waist measurement runs big – for ex: size 20″ is more close to 21″",
+    "title": "MCC25 Beige Mesh Underbust Corset",
+    "sku": "MCC25 Beige Satin/Mesh",
+    "hardcoded_measurements": "Rib spring: 6″, Upper Hip Spring: 9-10″"
+  },
+  "MCC152X": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc152x-black-red-mini-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32],
+    "silhouette_words": ["underbust", "waspie"],
+    "calibration": null,
+    "title": "MCC152X Red PVC \"Mini\" Underbust Corset",
+    "sku": "MCC152X-Red PVC",
+    "hardcoded_measurements": "Front: 6.75\", Side: 4\" (also stated as 3.5\"), Back: 6.75\", Modesty Panel: 5.5\" wide; 26 total bones (6 flat, 20 spiral 6mm); Size 18\" has 16 bones"
+  },
+  "MCC110": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc110-baby-blue-satin-mesh-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["underbust", "longline", "cupped rib"],
+    "calibration": "waist can stretch a bit and sizes run big (for ex: size 22″ is more close to 23″)",
+    "title": "MCC110 Baby Blue Satin/White Mesh Underbust Corset",
+    "sku": "MCC110 Baby Blue Satin/Mesh",
+    "hardcoded_measurements": "Rib spring: 8″, Upper Hip Spring: 12″, Lower Hip Spring: 14″"
+  },
+  "MCC38": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc38-black-brocade-mesh-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["underbust", "cupped rib"],
+    "calibration": "Sizes run a little bigger, waist tape can stretch a bit",
+    "title": "MCC38 Black Brocade/Mesh Underbust Corset",
+    "sku": "MCC38 black brocade/mesh",
+    "hardcoded_measurements": "Front: 11.25″, Side: 8″, Back: 11″, Rib spring: 8″, Upper Hip Spring: 12″"
+  },
+  "MCC6": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc6-peacock-brocade-waspie-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34],
+    "silhouette_words": ["underbust", "waspie", "hourglass"],
+    "calibration": "MCC sizes run a little bigger, waist tape can stretch a bit.",
+    "title": "MCC6 Peacock Brocade Waspie Underbust Corset",
+    "sku": "MCC6 peacock brocade",
+    "hardcoded_measurements": "Front: 9 1/8″, Side: 6 1/2″, Back: 9 3/4″, Rib spring: 5-6″, Upper Hip Spring: 8″"
+  },
+  "MCC38X": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc38x-cream-floral-brocade-white-mesh-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["underbust", "conical", "cupped rib"],
+    "calibration": "Sizes run a little bigger, waist tape can stretch a bit",
+    "title": "MCC38X Cream Floral Brocade/White Mesh Underbust Corset",
+    "sku": "MCC38X white sport mesh",
+    "hardcoded_measurements": "Front: 11.25″, Side: 8.5″, Back: 11″, Rib spring: 10″, Upper Hip Spring: 13″"
+  },
+  "MCC69": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc69-white-cotton-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40],
+    "silhouette_words": ["underbust", "longline", "cupped rib"],
+    "calibration": null,
+    "title": "MCC69 White Cotton Underbust Corset",
+    "sku": "MCC69 White Cotton",
+    "hardcoded_measurements": "Front: 12.5″, Side: 9.5-14″, Back: 14″, Rib spring: 8″, Upper Hip Spring: 10″, Lower Hip Spring: 12″; 6 flat bones (12mm), 20 spiral bones (6mm), total 26 bones; Floating modesty panel: 6″ wide"
+  },
+  "MCC127": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc127-plus-size-black-mesh-underbust-corset/",
+    "sizes": [26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46],
+    "silhouette_words": ["underbust", "plus size", "conical", "hip ties", "longline"],
+    "calibration": "waist can stretch a bit and sizes run big (for ex: size 22″ is more close to 23″)",
+    "title": "MCC127 \"Plus Size\" Black Mesh Underbust Corset",
+    "sku": "MCC127 Black Cotton/Sport Mesh/with hip ties",
+    "hardcoded_measurements": "Front: 13.5″, Side: 10-13″, Back: 13.5″, Rib spring: 4″, Upper Hip Spring: 14″, Lower Hip Spring: 16″; 28 bones (6 flat, 22 spiral)"
+  },
+  "MCC95": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc95-black-satin-metallic-pvc-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["underbust", "cupped rib"],
+    "calibration": null,
+    "title": "MCC95 Black Satin/PVC Underbust Corset",
+    "sku": "MCC95 Satin/PVC",
+    "hardcoded_measurements": "Front: 13″, Side: 11″, Back: 11.5″, Rib spring: 11″, Upper Hip Spring: 12″"
+  },
+  "MCC76": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc76-black-satin-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42],
+    "silhouette_words": ["underbust", "conical"],
+    "calibration": "waist can stretch a bit and sizes runs big. for ex: size 22″ is more close to 23″",
+    "title": "MCC76 Black Satin Underbust Corset",
+    "sku": "MCC76 Black Satin",
+    "hardcoded_measurements": "Front: 13.5″, Side: 10.5-15″, Back: 15″, Rib spring: 6″, Upper Hip Spring: 9″, Low Hip Spring: 12″"
+  },
+  "MCC84L": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc84l-black-satin-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46],
+    "silhouette_words": ["conical", "longline", "long torso", "underbust", "hip ties"],
+    "calibration": null,
+    "title": "MCC84L Black Satin Corset",
+    "sku": "MCC84L Satin",
+    "hardcoded_measurements": "Rib spring: 8″, Upper Hip Spring: 14″, lower Hip spring: 19″; Front length: 14.25″, back length: 16.5″; 26 bones in sizes 22-26″, 34 bones in sizes 28-38″; 6 flat bones, 20 spiral bones"
+  },
+  "MCC148": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc148-black-satin-underbust-corset-plus-size/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46],
+    "silhouette_words": ["underbust", "hourglass", "cupped rib", "hip ties"],
+    "calibration": "Designed for short waisted body shapes; accommodates quite large reduction with conical shape and slight cupped rib",
+    "title": "MCC148 Black Satin underbust corset Wide Hips",
+    "sku": "MCC148",
+    "hardcoded_measurements": "Front: 13.5\", Side: 10\", Back: 15\"; Rib spring: 8\"; Upper Hip Spring: 13\"; Lower Hip Spring: 18\"; 34 total bones (6 flat 12mm, 28 spiral 6mm)"
+  },
+  "MCC79": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc79-leopard-satin-plus-size-underbust-corset/",
+    "sizes": [34, 36, 38, 40, 42, 44, 46],
+    "silhouette_words": ["underbust", "longline", "plus size", "conical ribs"],
+    "calibration": null,
+    "title": "MCC79 Leopard Satin Plus size Underbust Corset",
+    "sku": "MCC79 leopard",
+    "hardcoded_measurements": "Front: 17″, Busk: 13.5″, Side: 12-16″, Back: 15.5-17″, Rib spring: 8″, Upper Hip Spring: 18″, Lower Hip Spring: 22″; 30 bones (6 flat 12mm, 24 spiral 6mm), 7″ floating modesty panel"
+  },
+  "MCC57": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc57-purple-brocade-mesh-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["underbust", "cupped rib", "hip ties", "longline"],
+    "calibration": null,
+    "title": "MCC57 Purple Brocade Mesh Underbust Corset",
+    "sku": "MCC57 Purple Mesh/Brocade",
+    "hardcoded_measurements": "Front: 13″, Side: 9.5-13″, Back: 14.5″, Rib spring: 8″, Upper Hip Spring: 12″, Lower Hip Spring: 15″; 28 bones (6 flat 12mm, 22 spiral 6mm), underbusk 1″ wide stiff bone, floating modesty panel 6″ wide"
+  },
+  "MCC19A": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc19a-black-cotton-sport-mesh-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36],
+    "silhouette_words": ["underbust", "conical"],
+    "calibration": "waist can stretch a bit and sizes run big (for ex: size 22″ is more close to 23″)",
+    "title": "MCC19A Black Satin/Cotton/Sport Mesh Underbust Corset",
+    "sku": "MCC19A Black cotton/Black sport mesh/Busk",
+    "hardcoded_measurements": "Front: 11.75\", Side: 8.5-12\", Back: 13.25\", Rib spring: 6\", Upper Hip Spring: 10\""
+  },
+  "MCC44A": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc44a-wine-metallic-pvc-underbust-corset/",
+    "sizes": [20, 22, 24, 26, 28, 30, 32, 34, 36],
+    "silhouette_words": ["underbust", "conical", "hip ties"],
+    "calibration": null,
+    "title": "MCC44A Metallic PVC Underbust Corset",
+    "sku": "MCC44A Black&Wine PVC with hip ties and chains",
+    "hardcoded_measurements": "Front: 10.75-11″, Side: 8.5-9.5″, Back: 11.25″, Busk: 9.25″, Rib spring: 5″, Upper Hip Spring: 11″; 26 bones (6 flat 12mm, 20 spiral 6mm); hip ties accommodate up to 4″ additional"
+  },
+  "MCC35": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc35-r-purple-brocade-mesh-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["hourglass", "underbust"],
+    "calibration": "Designed for hourglass silhouette, perfect for short torsos",
+    "title": "MCC35-R Peacock Brocade/Mesh Underbust Corset",
+    "sku": "MCC35-R Peacock/Mesh",
+    "hardcoded_measurements": "Front: 10-11\", Back: 10.25\", Side: 10\"; Rib spring: 8\"; Upper Hip Spring: 14\""
+  },
+  "MCC59": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc59-black-satin-underbust-corset/",
+    "sizes": [20, 22, 24, 26, 28, 30, 32],
+    "silhouette_words": ["underbust", "cupped rib", "hip ties"],
+    "calibration": "waist can stretch a bit and sizes runs big (for ex: size 22\" is more close to 23\")",
+    "title": "MCC59 Black Satin Steel Boned Waist Training Underbust Corset",
+    "sku": "MCC59 satin/Hip ties",
+    "hardcoded_measurements": "Front: 13.5\", Back: 12\", Rib spring: 12\", Upper Hip Spring: 8\""
+  },
+  "MCC5": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc5-old-map-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["hourglass", "underbust"],
+    "calibration": "sizes run a little large, waist tape can stretch a bit",
+    "title": "MCC5 Satin/Old Map Underbust Corset",
+    "sku": "MCC5-old map fabric/satin/leather",
+    "hardcoded_measurements": "Front: 10.75″, Side: 9″, Back: 10.75″, Rib spring: 6″, Upper Hip Spring: 11″"
+  },
+  "MCC83": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc83-rose-satin-plus-size-underbust-corset/",
+    "sizes": [26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46],
+    "silhouette_words": ["underbust", "longline", "plus size", "hip ties"],
+    "calibration": null,
+    "title": "MCC83 Rose Satin \"Plus Size\" Underbust Corset",
+    "sku": "MCC83 Rose",
+    "hardcoded_measurements": "Front: 13.5\"; Side: 13.5\"; Back: 15\"; Rib spring: 4\"; Upper Hip Spring: 10\"; Lower Hip Spring: 12\"; 26 steel bones (6 flat, 20 spiral); Floating Modesty Panel: 8\" wide"
+  },
+  "MCC144": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc144-brocade-mesh-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36],
+    "silhouette_words": ["underbust", "cupped rib"],
+    "calibration": "waist can stretch a bit and sizes run big (for ex: size 22″ is more close to 23″)",
+    "title": "MCC144 Brocade Mesh Underbust Corset",
+    "sku": "MCC144-Bird Brocade/Mesh",
+    "hardcoded_measurements": "Rib spring: 7″, Upper Hip Spring: 12″, front length: 11.5″, side length: 9-11″, back length: 11.75″"
+  },
+  "MCC21": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc21-black-brocade-mesh-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["underbust", "waspie", "hourglass"],
+    "calibration": "Designed for hourglass silhouette",
+    "title": "MCC21 Black Brocade Mesh Underbust Corset Waspie",
+    "sku": "MCC21 Black Brocade-Mesh",
+    "hardcoded_measurements": "Front: 8.5\", Back: 9.5\", Side: 6.75\"; Rib spring: 5\"; Upper Hip Spring: 10\""
+  },
+  "MCC32X": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc32x-beige-mesh-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["hourglass", "waspie", "underbust", "cupped rib"],
+    "calibration": null,
+    "title": "MCC32X Beige Mesh Underbust Waspie Curvy Corset",
+    "sku": "MCC32X Beige Satin/Mesh",
+    "hardcoded_measurements": "Front: 9.25-9.5″, Side: 7.5-8″, Back: 9″, Rib spring: 8″, Upper Hip Spring: 12″; 6 flat bones, 18 spiral bones (sizes 16-18″ have 16 bones); stiff busk; stiff 1″ wide underbusk"
+  },
+  "MCC63": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc63-black-cotton-mesh-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["underbust", "longline", "cupped rib", "hip ties"],
+    "calibration": null,
+    "title": "MCC63 Black Cotton/Mesh Underbust Corset with hip ties",
+    "sku": "MCC63-Black Cotton/Mesh",
+    "hardcoded_measurements": "Front: 11″, Side: 9″, Back: 13.5″, Rib spring: 8″, Upper Hip Spring: 12″, Lower Hip Spring: 14″; 26 bones (6 flat 12mm, 20 spiral 6mm); stiff busk; stiff underbusk"
+  },
+  "MCC101": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc101-black-cotton-brocade-underbust-corset/",
+    "sizes": [22, 24, 26, 28, 30, 32, 34, 36],
+    "silhouette_words": ["underbust", "longline", "cupped rib", "hip ties"],
+    "calibration": "Designed for inverted triangle, ruler or masculine silhouette",
+    "title": "MCC101 Black Cotton Mesh Underbust Long Line Corset",
+    "sku": "MCC101",
+    "hardcoded_measurements": "Front: 14.5\", Side: 10.5\", Back: 15.25\", Rib spring: 8\", Upper Hip Spring: 8\", Modesty Panel: 6\" wide; hip ties accommodate up to 4\" additional room"
+  },
+  "MCC254": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc254-mesh-underbust-corset/",
+    "sizes": [14, 16, 18, 20, 22, 24, 26],
+    "silhouette_words": ["hourglass", "underbust", "cupped rib"],
+    "calibration": null,
+    "title": "MCC254 Black Mesh Underbust Corset",
+    "sku": "MCC254 Black Mesh, extreme, stiff busk",
+    "hardcoded_measurements": "Front: 10-11″, Side: 9.25-11″, Back: 12″, Rib spring: 15″, Upper Hip Spring: 18″"
+  },
+  "MCC20": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc20-leopard-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["hourglass", "waspie", "cupped rib"],
+    "calibration": "Designed for hourglass silhouette; perfect for short torsos",
+    "title": "MCC20 Leopard Satin Underbust Corset",
+    "sku": "MCC20 Leopard Satin",
+    "hardcoded_measurements": "Front: 8.75\", Back: 9.25\", Side: 6.75\"; Rib spring: 8\"; Upper Hip Spring: 14\""
+  },
+  "MCC34": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc34-black-cotton-mesh-hip-ties-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["underbust", "conical", "cupped rib", "hip ties"],
+    "calibration": null,
+    "title": "MCC34 Hip Ties Black Cotton/Mesh Underbust Corset",
+    "sku": "MCC34 with hip ties-black cotton/mesh",
+    "hardcoded_measurements": "Front: 10.5″, Side: 8.5-11.5″, Back: 12.5″, Busk: 9.5″, Rib spring: 6″, Hip Spring: 12″; 6 flat bones (12mm), 20 spiral bones (6mm), total 26 bones"
+  },
+  "MCC227": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc227-bird-brocade-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40],
+    "silhouette_words": ["underbust", "long torso", "cupped rib", "hip ties", "longline"],
+    "calibration": null,
+    "title": "MCC227 Long Torso Bird Brocade Underbust Corset",
+    "sku": "MCC227 Navy Bird Brocade",
+    "hardcoded_measurements": "Front: 12.75″, Side: 10.5-14″, Back: 16.25″, Rib spring: 9″, Upper Hip Spring: 12″, Lower Hip Spring: 13″; 26 bones (6 flat 12mm, 20 spiral 6mm); 1″ wide flat stiff underbusk; floating modesty panel 5″ wide"
+  },
+  "MCC139": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc139-black-cotton-sport-mesh-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28],
+    "silhouette_words": ["underbust", "cupped rib", "hip ties"],
+    "calibration": "waist can stretch a bit and sizes run big (for ex: size 22″ is more close to 23″)",
+    "title": "MCC139 Black Cotton Sport Mesh Underbust Corset",
+    "sku": "MCC139-sport-mesh-black",
+    "hardcoded_measurements": "Rib spring: 13″, Upper Hip Spring: 13″ (closed), Lower Hip Spring: 14″ (closed)"
+  },
+  "MCC72": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc72-black-satin-mesh-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36],
+    "silhouette_words": ["underbust", "conical", "cupped rib", "hip ties"],
+    "calibration": null,
+    "title": "MCC72 Black Satin Mesh Underbust Corset",
+    "sku": "MCC72",
+    "hardcoded_measurements": "Front: 10.75″; Side: 8.5″; Back: 10″; Underbust Length: 3.5″; Rib spring: 8-9″ (measured 3.5″ above waist); Upper Hip Spring: 10″"
+  },
+  "MCC38-W": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc38-w-cream-floral-brocade-white-mesh-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["underbust", "conical", "cupped rib"],
+    "calibration": null,
+    "title": "MCC38W Cream Floral Brocade/White Mesh Underbust Corset",
+    "sku": "MCC38-W",
+    "hardcoded_measurements": "Front: 11.25″, Side: 8″, Back: 11.25″, Rib spring: 9″, Upper Hip Spring: 16″"
+  },
+  "MCC82": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc82-black-cotton-mesh-satin-plus-size-underbust-corset/",
+    "sizes": [34, 36, 38, 40, 42, 44, 46],
+    "silhouette_words": ["underbust", "longline", "plus size"],
+    "calibration": "waist can stretch a bit and sizes run big (for ex: size 22\" is more close to 23\")",
+    "title": "MCC82 Black Cotton/Mesh \"Plus Size\" Underbust Corset",
+    "sku": "MCC82",
+    "hardcoded_measurements": "Front: 13.5-13.75\"; Side: 12.5\"; Back: 12\"; Rib spring: 6\"; Upper Hip Spring: 11\"; Lower Hip Spring: 12\""
+  },
+  "MCC109-C": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc109c-black-cotton-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40],
+    "silhouette_words": ["conical", "underbust", "longline"],
+    "calibration": "waist can stretch a bit and sizes run big (for ex: size 22″ is more close to 23″)",
+    "title": "MCC109C Black Cotton Underbust Corset",
+    "sku": "MCC109C Black Cotton",
+    "hardcoded_measurements": "Rib spring: 10″, Upper Hip Spring: 11″, Lower Hip Spring: 14″"
+  },
+  "MCC85": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc85-peacock-brocade-underbust-wide-hips-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36],
+    "silhouette_words": ["underbust", "long torso", "hourglass"],
+    "calibration": "sizes run a little bigger, waist tape can stretch a bit",
+    "title": "MCC85 Peacock Brocade Wide Hips Long Torso Underbust Corset",
+    "sku": null,
+    "hardcoded_measurements": "Rib spring: 10″, Upper Hip Spring: 20″, Hips spring: 22″, front length: 14.25″, side length: 11″-14.5″, back length: 13.50″"
+  },
+  "MCC122": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc122-leopard-satin-underbust-corset-long-line-wide-hips/",
+    "sizes": [22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["underbust", "longline", "long torso"],
+    "calibration": null,
+    "title": "MCC122 Leopard Satin Underbust corset Long Line, Wide Hips",
+    "sku": "MCC122 leopard",
+    "hardcoded_measurements": "Front: 13.5-13.3/4″, Side: 10.25-13″, Back: 14.5″, Rib spring: 7″, Upper Hip Spring: 16″, Hips Spring: 18″; 26 bones (6 flat, 20 spiral); stiff busk; 1″ wide flat stiff bone underbusk"
+  },
+  "MCC100": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc100-black-cotton-black-metallic-pvc-underbust-corset/",
+    "sizes": [20, 22, 24, 26, 28, 30, 32],
+    "silhouette_words": ["underbust", "cupped rib", "long torso"],
+    "calibration": null,
+    "title": "MCC100 Black Cotton/Black Metallic PVC Underbust Corset",
+    "sku": "MCC100",
+    "hardcoded_measurements": "Front: 13.5″, Side: 11.5-14″, Back: 17.5″, Rib spring: 15″, Upper Hip Spring: 12″; 26 bones (6 flat 12mm, 20 spiral 6mm); 1″ wide flat stiff underbusk; floating modesty panel 6″ wide"
+  },
+  "MCC36X": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc36x-peacock-brocade-mesh-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["underbust", "hourglass", "cupped rib", "hip ties"],
+    "calibration": "Designed for hourglass silhouette; perfect for short torsos, active lifestyles, and as finishing belt for longer torsos",
+    "title": "MCC36X Peacock Brocade Mesh Underbust Corset",
+    "sku": "MCC36X peacock Mesh",
+    "hardcoded_measurements": "Front: 9.75-10\", Side: 9\", Back: 12.25\", Rib spring: 10\", Upper Hip Spring: 14\", Lower Hip Spring: 16\""
+  },
+  "MCC63V": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc63v-black-satin-mesh-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["conical", "underbust", "hip ties"],
+    "calibration": null,
+    "title": "MCC63V Wide Hips, Black Satin/Mesh Underbust Corset",
+    "sku": "MCC63V- with hip ties/black satin/black sport mesh",
+    "hardcoded_measurements": "Front: 11\", Side: 9\", Back: 13.5\", Rib spring: 6\", Upper Hip Spring: 12\", Lower Hip Spring: 14\""
+  },
+  "MCC16": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc16-c-black-satin-sport-mesh-long-line-underbust-corset/",
+    "sizes": [16, 18, 20, 22, 24, 26, 28, 30, 32],
+    "silhouette_words": ["hourglass", "underbust", "longline", "conical"],
+    "calibration": "sizes run a little large, waist tape can stretch a bit",
+    "title": "MCC16C Black Satin, Sport Mesh Long Line Underbust Corset",
+    "sku": "MCC16-C mesh",
+    "hardcoded_measurements": "Front: 12.75\", Back: 13\", Rib spring: 10\", Upper Hip Spring: 16\", Low Hip Spring: 19\""
+  },
+  "MCC33": {
+    "url": "https://www.mysticcitycorsets.com/shop/mcc33-leopard-satin-underbust-corset/",
+    "sizes": [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38],
+    "silhouette_words": ["conical", "underbust"],
+    "calibration": null,
+    "title": "MCC33 Leopard Satin Underbust Corset",
+    "sku": "MCC33 Leopard",
+    "hardcoded_measurements": "Front: 12.75″, Side: 7.5″, Back: 14.5″, Rib spring: 6″, Upper Hip Spring: 12″; 26 bones (6 flat 12mm, 18 spiral 6mm)"
+  }
+}

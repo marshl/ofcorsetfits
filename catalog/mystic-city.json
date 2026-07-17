@@ -1,0 +1,5202 @@
+{
+  "brand": "Mystic City Corsets",
+  "brand_url": "https://mysticcitycorsets.com/",
+  "brand_waist_slack_by_stretch_class_in": {
+    "low": 0.5,
+    "medium": 1.0,
+    "high": 1.75
+  },
+  "generated_at_iso": "2026-07-17T12:36:15+00:00",
+  "sources": {
+    "comparison_chart_json": "https://www.mysticcitycorsets.com/wp-admin/admin-ajax.php?action=wp_ajax_ninja_tables_public_action&table_id=18400&target_action=get-all-data",
+    "product_sitemap": "https://www.mysticcitycorsets.com/product-sitemap.xml",
+    "hip_positions": "manually reviewed against size-chart images",
+    "stretch_class": "auto-classified from title materials + manual review"
+  },
+  "corsets": [
+    {
+      "id": "MCC100",
+      "name": "MCC100 Black Cotton/Black Metallic PVC Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc100-black-cotton-black-metallic-pvc-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "cupped rib",
+        "long torso"
+      ],
+      "grading": "linear",
+      "body_length_in": 13.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -7.0,
+          "spring_in": 15.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 12.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32
+      ],
+      "materials_summary": [
+        "cotton",
+        "pvc"
+      ],
+      "stretch_class_options": [
+        "low"
+      ],
+      "variants": [
+        {
+          "name": "Black Cotton Black Metallic Pvc",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc100-black-cotton-black-metallic-pvc-underbust-corset/",
+          "materials": [
+            "cotton",
+            "pvc"
+          ],
+          "stretch_class": "low"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "15",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "-",
+          "underbust_length": "7",
+          "princess_seam": "11",
+          "torso_length": "13.5"
+        },
+        "scrape": {
+          "sku": "MCC100",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 13.5\u2033, Side: 11.5-14\u2033, Back: 17.5\u2033, Rib spring: 15\u2033, Upper Hip Spring: 12\u2033; 26 bones (6 flat 12mm, 20 spiral 6mm); 1\u2033 wide flat stiff underbusk; floating modesty panel 6\u2033 wide"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC101",
+      "name": "MCC101 Black Cotton Mesh Underbust Long Line Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc101-black-cotton-brocade-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "longline",
+        "cupped rib",
+        "hip ties"
+      ],
+      "grading": "linear",
+      "body_length_in": 14.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -6.0,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.5,
+          "spring_in": 8.0,
+          "label": "upper-hip (4.5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton"
+      ],
+      "stretch_class_options": [
+        "low"
+      ],
+      "variants": [
+        {
+          "name": "Black Cotton Brocade",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc101-black-cotton-brocade-underbust-corset/",
+          "materials": [
+            "brocade",
+            "cotton"
+          ],
+          "stretch_class": "low"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "8",
+          "upper_hip_spring": "8",
+          "low_hip_spring": "-",
+          "underbust_length": "6",
+          "princess_seam": "10.5",
+          "torso_length": "14.5"
+        },
+        "scrape": {
+          "sku": "MCC101",
+          "calibration_from_page": "Designed for inverted triangle, ruler or masculine silhouette",
+          "hardcoded_measurements_from_page": "Front: 14.5\", Side: 10.5\", Back: 15.25\", Rib spring: 8\", Upper Hip Spring: 8\", Modesty Panel: 6\" wide; hip ties accommodate up to 4\" additional room"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC109-C",
+      "name": "MCC109C Black Cotton Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc109c-black-cotton-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "conical",
+        "underbust",
+        "longline"
+      ],
+      "grading": "linear",
+      "body_length_in": 13.25,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 10.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 11.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 7.0,
+          "spring_in": 14.0,
+          "label": "low-hip (7in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40
+      ],
+      "materials_summary": [
+        "cotton",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Black Cotton",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc109c-black-cotton-underbust-corset/",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Cotton Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc109c-black-cotton-mesh-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "10",
+          "upper_hip_spring": "11",
+          "low_hip_spring": "14",
+          "underbust_length": "5.5",
+          "princess_seam": "12.5",
+          "torso_length": "13.25"
+        },
+        "scrape": {
+          "sku": "MCC109C Black Cotton",
+          "calibration_from_page": "waist can stretch a bit and sizes run big (for ex: size 22\u2033 is more close to 23\u2033)",
+          "hardcoded_measurements_from_page": "Rib spring: 10\u2033, Upper Hip Spring: 11\u2033, Lower Hip Spring: 14\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC110",
+      "name": "MCC110 Baby Blue Satin/White Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc110-baby-blue-satin-mesh-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "longline",
+        "cupped rib"
+      ],
+      "grading": "linear",
+      "body_length_in": 13.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.0,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 3.5,
+          "spring_in": 12.0,
+          "label": "upper-hip (3.5in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 14.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "brocade",
+        "mesh",
+        "satin",
+        "velveteen"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Black Velveteen Brocade",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc110-black-velveteen-brocade-underbust-corset/",
+          "materials": [
+            "brocade",
+            "velveteen"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Green Velveteen Brocade",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc110-green-velveteen-brocade-underbust-corset/",
+          "materials": [
+            "brocade",
+            "velveteen"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Baby Blue Satin Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc110-baby-blue-satin-mesh-underbust-corset/",
+          "materials": [
+            "mesh",
+            "satin"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Baby Blue Satin White Mesh Lace",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc110-baby-blue-satin-white-mesh-underbust-corset-with-lace/",
+          "materials": [
+            "mesh",
+            "satin"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "8",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "14",
+          "underbust_length": "5",
+          "princess_seam": "10.5",
+          "torso_length": "13"
+        },
+        "scrape": {
+          "sku": "MCC110 Baby Blue Satin/Mesh",
+          "calibration_from_page": "waist can stretch a bit and sizes run big (for ex: size 22\u2033 is more close to 23\u2033)",
+          "hardcoded_measurements_from_page": "Rib spring: 8\u2033, Upper Hip Spring: 12\u2033, Lower Hip Spring: 14\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC112",
+      "name": "MCC112 Black Cotton Long Torso Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc112-black-cotton-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "long torso",
+        "longline",
+        "underbust",
+        "cupped rib"
+      ],
+      "grading": "linear",
+      "body_length_in": 14.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 10.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 14.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 7.0,
+          "spring_in": 17.0,
+          "label": "low-hip (7in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "cotton",
+        "mesh",
+        "satin",
+        "sport mesh"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Black Cotton",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc112-black-cotton-underbust-corset/",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Printed Satin Sport Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc112-printed-satin-sport-mesh-underbust-corset/",
+          "materials": [
+            "mesh",
+            "satin",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Satin Sport Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc112-satin-sport-mesh-underbust-corset/",
+          "materials": [
+            "mesh",
+            "satin",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "10",
+          "upper_hip_spring": "14",
+          "low_hip_spring": "17",
+          "underbust_length": "5.5",
+          "princess_seam": "12",
+          "torso_length": "14.5"
+        },
+        "scrape": {
+          "sku": "MCC112 Black Cotton",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 14.5\", Side: 12\", Back: 14\", Underbust length: 5.5\", Rib spring: 10\", Upper Hip Spring: 14\", Lower Hip Spring: 17\""
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC122",
+      "name": "MCC122 Leopard Satin Underbust corset Long Line, Wide Hips",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc122-leopard-satin-underbust-corset-long-line-wide-hips/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "longline",
+        "long torso"
+      ],
+      "grading": "linear",
+      "body_length_in": 13.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 7.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 16.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 18.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low"
+      ],
+      "variants": [
+        {
+          "name": "Leopard Satin Long Line Wide Hips",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc122-leopard-satin-underbust-corset-long-line-wide-hips/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "7",
+          "upper_hip_spring": "16",
+          "low_hip_spring": "18",
+          "underbust_length": "5.5",
+          "princess_seam": "10.25",
+          "torso_length": "13.5"
+        },
+        "scrape": {
+          "sku": "MCC122 leopard",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 13.5-13.3/4\u2033, Side: 10.25-13\u2033, Back: 14.5\u2033, Rib spring: 7\u2033, Upper Hip Spring: 16\u2033, Hips Spring: 18\u2033; 26 bones (6 flat, 20 spiral); stiff busk; 1\u2033 wide flat stiff bone underbusk"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC124",
+      "name": "MCC124 Black Satin Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc124-black-satin-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "hourglass",
+        "underbust",
+        "longline"
+      ],
+      "grading": "linear",
+      "body_length_in": 14.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 9.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 11.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 14.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36
+      ],
+      "materials_summary": [
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low"
+      ],
+      "variants": [
+        {
+          "name": "Black Satin",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc124-black-satin-underbust-corset/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Satin Hip Ties",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc124-black-satin-underbust-corset-hip-ties/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "9",
+          "upper_hip_spring": "11",
+          "low_hip_spring": "14",
+          "underbust_length": "5.5",
+          "princess_seam": "11.5",
+          "torso_length": "14"
+        },
+        "scrape": {
+          "sku": "MCC124 Satin",
+          "calibration_from_page": "sizes run a little large, waist tape can stretch a bit",
+          "hardcoded_measurements_from_page": "Rib spring: 9\"; Upper Hip Spring: 11\"; Lower Hip Spring: 14\""
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC127",
+      "name": "MCC127 \"Plus Size\" Black Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc127-plus-size-black-mesh-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "plus size",
+        "conical",
+        "hip ties",
+        "longline"
+      ],
+      "grading": "linear",
+      "body_length_in": 13.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.0,
+          "spring_in": 4.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 14.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 16.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "low",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Black Cotton Plus",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc127-black-cotton-plus-size-underbust-corset/",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Green Bird Brocade Plus",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc127-green-bird-brocade-plus-size-underbust-corset/",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Navy Silver Bird Brocade Plus",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc127-navy-silver-bird-brocade-plus-size-underbust-corset/",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Plus Black Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc127-plus-size-black-mesh-underbust-corset/",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "4",
+          "upper_hip_spring": "14",
+          "low_hip_spring": "16",
+          "underbust_length": "5",
+          "princess_seam": "10",
+          "torso_length": "13.5"
+        },
+        "scrape": {
+          "sku": "MCC127 Black Cotton/Sport Mesh/with hip ties",
+          "calibration_from_page": "waist can stretch a bit and sizes run big (for ex: size 22\u2033 is more close to 23\u2033)",
+          "hardcoded_measurements_from_page": "Front: 13.5\u2033, Side: 10-13\u2033, Back: 13.5\u2033, Rib spring: 4\u2033, Upper Hip Spring: 14\u2033, Lower Hip Spring: 16\u2033; 28 bones (6 flat, 22 spiral)"
+        },
+        "review_stretch_class_at_representative_variant": "high",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC130",
+      "name": "MCC130 Black Cotton/Black Metallic PVC Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc130-black-cotton-black-metallic-pvc-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "cupped rib",
+        "long torso"
+      ],
+      "grading": "linear",
+      "body_length_in": 14.75,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -7.5,
+          "spring_in": 14.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 13.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 14.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "cotton",
+        "pvc"
+      ],
+      "stretch_class_options": [
+        "low"
+      ],
+      "variants": [
+        {
+          "name": "Black Cotton Black Metallic Pvc",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc130-black-cotton-black-metallic-pvc-underbust-corset/",
+          "materials": [
+            "cotton",
+            "pvc"
+          ],
+          "stretch_class": "low"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "14",
+          "upper_hip_spring": "13",
+          "low_hip_spring": "14",
+          "underbust_length": "7.5",
+          "princess_seam": "13.5",
+          "torso_length": "14.75"
+        },
+        "scrape": {
+          "sku": "MCC130 Cotton/PVC",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 14.75\u2033, Side: 13-15.5\u2033, Back: 15\u2033, Rib spring: 14\u2033, Upper Hip Spring: 13\u2033, Hips Spring: 14\u2033; 26 total bones (6 flat 12mm, 20 spiral 6mm); 1\u2033 wide flat stiff bone underbusk; Floating modesty panel 6\u2033 wide"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC139",
+      "name": "MCC139 Black Cotton Sport Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc139-black-cotton-sport-mesh-underbust-corset/",
+      "silhouette_category": "cupped-rib",
+      "silhouette_words": [
+        "underbust",
+        "cupped rib",
+        "hip ties"
+      ],
+      "grading": "linear",
+      "body_length_in": 12.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 13.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 13.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 14.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28
+      ],
+      "materials_summary": [
+        "cotton",
+        "mesh",
+        "sport mesh"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Black Cotton Sport Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc139-black-cotton-sport-mesh-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "13",
+          "upper_hip_spring": "13",
+          "low_hip_spring": "14",
+          "underbust_length": "5.5",
+          "princess_seam": "11.5",
+          "torso_length": "12.5"
+        },
+        "scrape": {
+          "sku": "MCC139-sport-mesh-black",
+          "calibration_from_page": "waist can stretch a bit and sizes run big (for ex: size 22\u2033 is more close to 23\u2033)",
+          "hardcoded_measurements_from_page": "Rib spring: 13\u2033, Upper Hip Spring: 13\u2033 (closed), Lower Hip Spring: 14\u2033 (closed)"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC144",
+      "name": "MCC144 Brocade Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc144-brocade-mesh-underbust-corset/",
+      "silhouette_category": "cupped-rib",
+      "silhouette_words": [
+        "underbust",
+        "cupped rib"
+      ],
+      "grading": "linear",
+      "body_length_in": 11.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.5,
+          "spring_in": 7.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 5.0,
+          "spring_in": 12.0,
+          "label": "upper-hip (5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36
+      ],
+      "materials_summary": [
+        "brocade",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Brocade Hip Ties",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc144-brocade-hip-ties-underbust-corset/",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Brocade Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc144-black-brocade-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Brocade Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc144-brocade-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "7",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "-",
+          "underbust_length": "4.5",
+          "princess_seam": "9",
+          "torso_length": "11.5"
+        },
+        "scrape": {
+          "sku": "MCC144-Bird Brocade/Mesh",
+          "calibration_from_page": "waist can stretch a bit and sizes run big (for ex: size 22\u2033 is more close to 23\u2033)",
+          "hardcoded_measurements_from_page": "Rib spring: 7\u2033, Upper Hip Spring: 12\u2033, front length: 11.5\u2033, side length: 9-11\u2033, back length: 11.75\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC148",
+      "name": "MCC148 Black Satin underbust corset Wide Hips",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc148-black-satin-underbust-corset-plus-size/",
+      "silhouette_category": "cupped-rib",
+      "silhouette_words": [
+        "underbust",
+        "hourglass",
+        "cupped rib",
+        "hip ties"
+      ],
+      "grading": "linear",
+      "body_length_in": 13.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.0,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 13.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 18.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46
+      ],
+      "materials_summary": [
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low"
+      ],
+      "variants": [
+        {
+          "name": "Black Satin Plus",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc148-black-satin-underbust-corset-plus-size/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Plus Beige Satin Wide Hips",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc148-plus-size-beige-satin-underbust-corset-wide-hips/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "8",
+          "upper_hip_spring": "13",
+          "low_hip_spring": "18",
+          "underbust_length": "4",
+          "princess_seam": "11",
+          "torso_length": "13.5"
+        },
+        "scrape": {
+          "sku": "MCC148",
+          "calibration_from_page": "Designed for short waisted body shapes; accommodates quite large reduction with conical shape and slight cupped rib",
+          "hardcoded_measurements_from_page": "Front: 13.5\", Side: 10\", Back: 15\"; Rib spring: 8\"; Upper Hip Spring: 13\"; Lower Hip Spring: 18\"; 34 total bones (6 flat 12mm, 28 spiral 6mm)"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC152X",
+      "name": "MCC152X Red PVC \"Mini\" Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc152x-black-red-mini-underbust-corset/",
+      "silhouette_category": "waspie",
+      "silhouette_words": [
+        "underbust",
+        "waspie"
+      ],
+      "grading": "linear",
+      "body_length_in": 6.75,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -2.0,
+          "spring_in": 2.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 6.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32
+      ],
+      "materials_summary": [
+        "mesh",
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Black Satin Mini",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc152x-black-satin-mini-underbust-corset/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Red Mini",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc152x-black-red-mini-underbust-corset/",
+          "materials": [],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Beige Mesh Mini",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc152x-beige-mesh-mini-underbust-corset/",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high"
+        },
+        {
+          "name": "Black Mesh Mini",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc152x-black-mesh-mini-underbust-corset/",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high"
+        },
+        {
+          "name": "Purple Red Black Peach Beige White Pink Mesh Mini",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc152x-purple-red-black-peach-beige-white-pink-mesh-mini-underbust-corset/",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "2",
+          "upper_hip_spring": "6",
+          "low_hip_spring": "-",
+          "underbust_length": "2",
+          "princess_seam": "4",
+          "torso_length": "6.75"
+        },
+        "scrape": {
+          "sku": "MCC152X-Red PVC",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 6.75\", Side: 4\" (also stated as 3.5\"), Back: 6.75\", Modesty Panel: 5.5\" wide; 26 total bones (6 flat, 20 spiral 6mm); Size 18\" has 16 bones"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC16",
+      "name": "MCC16C Black Satin, Sport Mesh Long Line Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc16-c-black-satin-sport-mesh-long-line-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "hourglass",
+        "underbust",
+        "longline",
+        "conical"
+      ],
+      "grading": "linear",
+      "body_length_in": 12.75,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 10.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 16.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 19.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32
+      ],
+      "materials_summary": [
+        "mesh",
+        "satin",
+        "sport mesh"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "C Black Satin Sport Mesh Long Line",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc16-c-black-satin-sport-mesh-long-line-underbust-corset/",
+          "materials": [
+            "mesh",
+            "satin",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "10",
+          "upper_hip_spring": "16",
+          "low_hip_spring": "19",
+          "underbust_length": "5.5",
+          "princess_seam": "10",
+          "torso_length": "12.75"
+        },
+        "scrape": {
+          "sku": "MCC16-C mesh",
+          "calibration_from_page": "sizes run a little large, waist tape can stretch a bit",
+          "hardcoded_measurements_from_page": "Front: 12.75\", Back: 13\", Rib spring: 10\", Upper Hip Spring: 16\", Low Hip Spring: 19\""
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC17",
+      "name": "MCC17 Cotton Satin Mesh Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc17-black-satin-sport-mesh/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "hourglass",
+        "cupped rib",
+        "hip ties",
+        "underbust",
+        "longline"
+      ],
+      "grading": "linear",
+      "body_length_in": 12.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.0,
+          "spring_in": 10.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 13.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 16.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40
+      ],
+      "materials_summary": [
+        "mesh",
+        "satin",
+        "sport mesh"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Black Satin Sport Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc17-black-satin-sport-mesh/",
+          "materials": [
+            "mesh",
+            "satin",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "10",
+          "upper_hip_spring": "13",
+          "low_hip_spring": "16",
+          "underbust_length": "5",
+          "princess_seam": "10",
+          "torso_length": "12.5"
+        },
+        "scrape": {
+          "sku": "MCC17mesh",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 12.5\u2033, Side: 10-14\u2033, Back: 14\u2033, Rib spring: 10\u2033, Upper Hip Spring: 13\u2033, Lower Hip Spring: 16\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC19",
+      "name": "MCC19 Black Satin / Sport Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc19-sport-mesh-underbust-corset/",
+      "silhouette_category": "conical",
+      "silhouette_words": [
+        "underbust",
+        "conical"
+      ],
+      "grading": "linear",
+      "body_length_in": 11.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.5,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 12.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36
+      ],
+      "materials_summary": [
+        "brocade",
+        "mesh",
+        "sport mesh"
+      ],
+      "stretch_class_options": [
+        "low",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Cherry Blossom Brocade",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc19-cherry-blossom-brocade-underbust-corset/",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Sport Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc19-sport-mesh-underbust-corset/",
+          "materials": [
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "high"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "8",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "-",
+          "underbust_length": "4.5",
+          "princess_seam": "8.5",
+          "torso_length": "11.5"
+        },
+        "scrape": {
+          "sku": "MCC19 Black Sport Mesh",
+          "calibration_from_page": "waist can stretch a bit and sizes run big (for ex: size 22\u2033 is more close to 23\u2033)",
+          "hardcoded_measurements_from_page": "front length: 11.5\u2033, side length: 8.5-12\u2033, back length: 13.25\u2033, Rib spring: 8\u2033, Upper Hip Spring: 12\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC19A",
+      "name": "MCC19A Black Satin/Cotton/Sport Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc19a-black-cotton-sport-mesh-underbust-corset/",
+      "silhouette_category": "conical",
+      "silhouette_words": [
+        "underbust",
+        "conical"
+      ],
+      "grading": "linear",
+      "body_length_in": 12.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.5,
+          "spring_in": 6.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 10.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36
+      ],
+      "materials_summary": [
+        "cotton",
+        "mesh",
+        "sport mesh"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Black Cotton Sport Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc19a-black-cotton-sport-mesh-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "6",
+          "upper_hip_spring": "10",
+          "low_hip_spring": "-",
+          "underbust_length": "4.5",
+          "princess_seam": "8",
+          "torso_length": "12"
+        },
+        "scrape": {
+          "sku": "MCC19A Black cotton/Black sport mesh/Busk",
+          "calibration_from_page": "waist can stretch a bit and sizes run big (for ex: size 22\u2033 is more close to 23\u2033)",
+          "hardcoded_measurements_from_page": "Front: 11.75\", Side: 8.5-12\", Back: 13.25\", Rib spring: 6\", Upper Hip Spring: 10\""
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC20",
+      "name": "MCC20 Leopard Satin Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc20-leopard-underbust-corset/",
+      "silhouette_category": "waspie",
+      "silhouette_words": [
+        "hourglass",
+        "waspie",
+        "cupped rib"
+      ],
+      "grading": "linear",
+      "body_length_in": 8.75,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -3.5,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 14.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "brocade",
+        "mesh",
+        "sport mesh"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Leopard",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc20-leopard-underbust-corset/",
+          "materials": [],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Sport Mesh Black Brocade",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc20-sport-mesh-black-brocade-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Sport Mesh Brocade",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc20-sport-mesh-brocade-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "8",
+          "upper_hip_spring": "14",
+          "low_hip_spring": "-",
+          "underbust_length": "3.5",
+          "princess_seam": "6.75",
+          "torso_length": "8.75"
+        },
+        "scrape": {
+          "sku": "MCC20 Leopard Satin",
+          "calibration_from_page": "Designed for hourglass silhouette; perfect for short torsos",
+          "hardcoded_measurements_from_page": "Front: 8.75\", Back: 9.25\", Side: 6.75\"; Rib spring: 8\"; Upper Hip Spring: 14\""
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC21",
+      "name": "MCC21 Black Brocade Mesh Underbust Corset Waspie",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc21-black-brocade-mesh-underbust-corset/",
+      "silhouette_category": "waspie",
+      "silhouette_words": [
+        "underbust",
+        "waspie",
+        "hourglass"
+      ],
+      "grading": "linear",
+      "body_length_in": 8.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -3.5,
+          "spring_in": 5.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 10.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "brocade",
+        "mesh",
+        "satin"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Beige Satin Mesh Waspie",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc21-beige-satin-mesh-underbust-corset-waspie/",
+          "materials": [
+            "mesh",
+            "satin"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Black Brocade Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc21-black-brocade-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Pink Brocade Mesh Waspie",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc21-pink-brocade-mesh-underbust-corset-waspie/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "5",
+          "upper_hip_spring": "10",
+          "low_hip_spring": "-",
+          "underbust_length": "3.5",
+          "princess_seam": "6.75",
+          "torso_length": "8.5"
+        },
+        "scrape": {
+          "sku": "MCC21 Black Brocade-Mesh",
+          "calibration_from_page": "Designed for hourglass silhouette",
+          "hardcoded_measurements_from_page": "Front: 8.5\", Back: 9.5\", Side: 6.75\"; Rib spring: 5\"; Upper Hip Spring: 10\""
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC227",
+      "name": "MCC227 Long Torso Bird Brocade Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc227-bird-brocade-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "long torso",
+        "cupped rib",
+        "hip ties",
+        "longline"
+      ],
+      "grading": "linear",
+      "body_length_in": 12.75,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 9.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 12.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 7.0,
+          "spring_in": 13.0,
+          "label": "low-hip (7in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40
+      ],
+      "materials_summary": [
+        "brocade"
+      ],
+      "stretch_class_options": [
+        "low"
+      ],
+      "variants": [
+        {
+          "name": "Bird Brocade",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc227-bird-brocade-underbust-corset/",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "9",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "13",
+          "underbust_length": "5.5",
+          "princess_seam": "12.5",
+          "torso_length": "12.75"
+        },
+        "scrape": {
+          "sku": "MCC227 Navy Bird Brocade",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 12.75\u2033, Side: 10.5-14\u2033, Back: 16.25\u2033, Rib spring: 9\u2033, Upper Hip Spring: 12\u2033, Lower Hip Spring: 13\u2033; 26 bones (6 flat 12mm, 20 spiral 6mm); 1\u2033 wide flat stiff underbusk; floating modesty panel 5\u2033 wide"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC25",
+      "name": "MCC25 Beige Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc25-beige-mesh-underbust-corset/",
+      "silhouette_category": "cupped-rib",
+      "silhouette_words": [
+        "underbust",
+        "cupped rib"
+      ],
+      "grading": "linear",
+      "body_length_in": 11.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.0,
+          "spring_in": 6.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 9.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "cotton",
+        "mesh",
+        "pvc"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Glitter Pvc",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc25-glitter-pvc-underbust-corset/",
+          "materials": [
+            "pvc"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Cotton Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc25-black-cotton-mesh-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Beige Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc25-beige-mesh-underbust-corset/",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "6",
+          "upper_hip_spring": "9",
+          "low_hip_spring": "-",
+          "underbust_length": "4",
+          "princess_seam": "8",
+          "torso_length": "11.5"
+        },
+        "scrape": {
+          "sku": "MCC25 Beige Satin/Mesh",
+          "calibration_from_page": "waist measurement runs big \u2013 for ex: size 20\u2033 is more close to 21\u2033",
+          "hardcoded_measurements_from_page": "Rib spring: 6\u2033, Upper Hip Spring: 9-10\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "high",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC254",
+      "name": "MCC254 Black Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc254-mesh-underbust-corset/",
+      "silhouette_category": "cupped-rib",
+      "silhouette_words": [
+        "hourglass",
+        "underbust",
+        "cupped rib"
+      ],
+      "grading": "linear",
+      "body_length_in": 11.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.0,
+          "spring_in": 15.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 5.0,
+          "spring_in": 18.0,
+          "label": "upper-hip (5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26
+      ],
+      "materials_summary": [
+        "brocade",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "medium",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Red Mesh Brocade",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc254-red-mesh-brocade-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc254-mesh-underbust-corset/",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "15",
+          "upper_hip_spring": "18",
+          "low_hip_spring": "-",
+          "underbust_length": "5",
+          "princess_seam": "10",
+          "torso_length": "11"
+        },
+        "scrape": {
+          "sku": "MCC254 Black Mesh, extreme, stiff busk",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 10-11\u2033, Side: 9.25-11\u2033, Back: 12\u2033, Rib spring: 15\u2033, Upper Hip Spring: 18\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "high",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC32X",
+      "name": "MCC32X Beige Mesh Underbust Waspie Curvy Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc32x-beige-mesh-underbust-corset/",
+      "silhouette_category": "waspie",
+      "silhouette_words": [
+        "hourglass",
+        "waspie",
+        "underbust",
+        "cupped rib"
+      ],
+      "grading": "linear",
+      "body_length_in": 9.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.0,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 12.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "brocade",
+        "mesh",
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Leopard Satin",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc32x-leopard-satin-underbust-corset/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Brocade Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc32x-black-brocade-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Beige Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc32x-beige-mesh-underbust-corset/",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "8",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "-",
+          "underbust_length": "4",
+          "princess_seam": "8",
+          "torso_length": "9.5"
+        },
+        "scrape": {
+          "sku": "MCC32X Beige Satin/Mesh",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 9.25-9.5\u2033, Side: 7.5-8\u2033, Back: 9\u2033, Rib spring: 8\u2033, Upper Hip Spring: 12\u2033; 6 flat bones, 18 spiral bones (sizes 16-18\u2033 have 16 bones); stiff busk; stiff 1\u2033 wide underbusk"
+        },
+        "review_stretch_class_at_representative_variant": "high",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC33",
+      "name": "MCC33 Leopard Satin Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc33-leopard-satin-underbust-corset/",
+      "silhouette_category": "conical",
+      "silhouette_words": [
+        "conical",
+        "underbust"
+      ],
+      "grading": "linear",
+      "body_length_in": 12.75,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.0,
+          "spring_in": 6.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 12.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low"
+      ],
+      "variants": [
+        {
+          "name": "Leopard Satin",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc33-leopard-satin-underbust-corset/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "6",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "-",
+          "underbust_length": "4",
+          "princess_seam": "8",
+          "torso_length": "12.75"
+        },
+        "scrape": {
+          "sku": "MCC33 Leopard",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 12.75\u2033, Side: 7.5\u2033, Back: 14.5\u2033, Rib spring: 6\u2033, Upper Hip Spring: 12\u2033; 26 bones (6 flat 12mm, 18 spiral 6mm)"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC34",
+      "name": "MCC34 Hip Ties Black Cotton/Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc34-black-cotton-mesh-hip-ties-underbust-corset/",
+      "silhouette_category": "cupped-rib",
+      "silhouette_words": [
+        "underbust",
+        "conical",
+        "cupped rib",
+        "hip ties"
+      ],
+      "grading": "linear",
+      "body_length_in": 10.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.5,
+          "spring_in": 6.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 5.0,
+          "spring_in": 12.0,
+          "label": "upper-hip (5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "cotton",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Black Cotton Mesh Hip Ties",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc34-black-cotton-mesh-hip-ties-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "6",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "-",
+          "underbust_length": "4.5",
+          "princess_seam": "8.5",
+          "torso_length": "10.5"
+        },
+        "scrape": {
+          "sku": "MCC34 with hip ties-black cotton/mesh",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 10.5\u2033, Side: 8.5-11.5\u2033, Back: 12.5\u2033, Busk: 9.5\u2033, Rib spring: 6\u2033, Hip Spring: 12\u2033; 6 flat bones (12mm), 20 spiral bones (6mm), total 26 bones"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC35",
+      "name": "MCC35-R Peacock Brocade/Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc35-r-purple-brocade-mesh-underbust-corset/",
+      "silhouette_category": "hourglass",
+      "silhouette_words": [
+        "hourglass",
+        "underbust"
+      ],
+      "grading": "linear",
+      "body_length_in": 10.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.0,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.5,
+          "spring_in": 14.0,
+          "label": "upper-hip (4.5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "brocade",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "R Purple Brocade Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc35-r-purple-brocade-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "8",
+          "upper_hip_spring": "14",
+          "low_hip_spring": "-",
+          "underbust_length": "5",
+          "princess_seam": "10",
+          "torso_length": "10"
+        },
+        "scrape": {
+          "sku": "MCC35-R Peacock/Mesh",
+          "calibration_from_page": "Designed for hourglass silhouette, perfect for short torsos",
+          "hardcoded_measurements_from_page": "Front: 10-11\", Back: 10.25\", Side: 10\"; Rib spring: 8\"; Upper Hip Spring: 14\""
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC36X",
+      "name": "MCC36X Peacock Brocade Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc36x-peacock-brocade-mesh-underbust-corset/",
+      "silhouette_category": "cupped-rib",
+      "silhouette_words": [
+        "underbust",
+        "hourglass",
+        "cupped rib",
+        "hip ties"
+      ],
+      "grading": "linear",
+      "body_length_in": 11.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.0,
+          "spring_in": 10.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 14.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 16.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "brocade",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Peacock Brocade Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc36x-peacock-brocade-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "10",
+          "upper_hip_spring": "14",
+          "low_hip_spring": "16",
+          "underbust_length": "4",
+          "princess_seam": "10",
+          "torso_length": "11"
+        },
+        "scrape": {
+          "sku": "MCC36X peacock Mesh",
+          "calibration_from_page": "Designed for hourglass silhouette; perfect for short torsos, active lifestyles, and as finishing belt for longer torsos",
+          "hardcoded_measurements_from_page": "Front: 9.75-10\", Side: 9\", Back: 12.25\", Rib spring: 10\", Upper Hip Spring: 14\", Lower Hip Spring: 16\""
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC38",
+      "name": "MCC38 Black Brocade/Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc38-black-brocade-mesh-underbust-corset/",
+      "silhouette_category": "cupped-rib",
+      "silhouette_words": [
+        "underbust",
+        "cupped rib"
+      ],
+      "grading": "linear",
+      "body_length_in": 11.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.0,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.5,
+          "spring_in": 12.0,
+          "label": "upper-hip (4.5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "brocade",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Beige Floral Brocade Black Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc38-beige-floral-brocade-black-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Black Brocade Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc38-black-brocade-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "8",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "-",
+          "underbust_length": "4",
+          "princess_seam": "8",
+          "torso_length": "11"
+        },
+        "scrape": {
+          "sku": "MCC38 black brocade/mesh",
+          "calibration_from_page": "Sizes run a little bigger, waist tape can stretch a bit",
+          "hardcoded_measurements_from_page": "Front: 11.25\u2033, Side: 8\u2033, Back: 11\u2033, Rib spring: 8\u2033, Upper Hip Spring: 12\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC38-W",
+      "name": "MCC38W Cream Floral Brocade/White Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc38-w-cream-floral-brocade-white-mesh-underbust-corset/",
+      "silhouette_category": "cupped-rib",
+      "silhouette_words": [
+        "underbust",
+        "conical",
+        "cupped rib"
+      ],
+      "grading": "linear",
+      "body_length_in": 11.25,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.0,
+          "spring_in": 9.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.5,
+          "spring_in": 16.0,
+          "label": "upper-hip (4.5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "brocade",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Cream Floral Brocade White Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc38-w-cream-floral-brocade-white-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "9",
+          "upper_hip_spring": "16",
+          "low_hip_spring": "-",
+          "underbust_length": "4",
+          "princess_seam": "8.5",
+          "torso_length": "11.25"
+        },
+        "scrape": {
+          "sku": "MCC38-W",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 11.25\u2033, Side: 8\u2033, Back: 11.25\u2033, Rib spring: 9\u2033, Upper Hip Spring: 16\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC38X",
+      "name": "MCC38X Cream Floral Brocade/White Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc38x-cream-floral-brocade-white-mesh-underbust-corset/",
+      "silhouette_category": "cupped-rib",
+      "silhouette_words": [
+        "underbust",
+        "conical",
+        "cupped rib"
+      ],
+      "grading": "linear",
+      "body_length_in": 11.25,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.0,
+          "spring_in": 10.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.5,
+          "spring_in": 13.0,
+          "label": "upper-hip (4.5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "brocade",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Cream Floral Brocade White Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc38x-cream-floral-brocade-white-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "10",
+          "upper_hip_spring": "13",
+          "low_hip_spring": "-",
+          "underbust_length": "4",
+          "princess_seam": "8.5",
+          "torso_length": "11.25"
+        },
+        "scrape": {
+          "sku": "MCC38X white sport mesh",
+          "calibration_from_page": "Sizes run a little bigger, waist tape can stretch a bit",
+          "hardcoded_measurements_from_page": "Front: 11.25\u2033, Side: 8.5\u2033, Back: 11\u2033, Rib spring: 10\u2033, Upper Hip Spring: 13\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC44A",
+      "name": "MCC44A Metallic PVC Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc44a-wine-metallic-pvc-underbust-corset/",
+      "silhouette_category": "conical",
+      "silhouette_words": [
+        "underbust",
+        "conical",
+        "hip ties"
+      ],
+      "grading": "linear",
+      "body_length_in": 10.75,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.5,
+          "spring_in": 5.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 5.0,
+          "spring_in": 11.0,
+          "label": "upper-hip (5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36
+      ],
+      "materials_summary": [
+        "pvc"
+      ],
+      "stretch_class_options": [
+        "low"
+      ],
+      "variants": [
+        {
+          "name": "Wine Metallic Pvc",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc44a-wine-metallic-pvc-underbust-corset/",
+          "materials": [
+            "pvc"
+          ],
+          "stretch_class": "low"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "5",
+          "upper_hip_spring": "11",
+          "low_hip_spring": "-",
+          "underbust_length": "4.5",
+          "princess_seam": "9.5",
+          "torso_length": "10.75"
+        },
+        "scrape": {
+          "sku": "MCC44A Black&Wine PVC with hip ties and chains",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 10.75-11\u2033, Side: 8.5-9.5\u2033, Back: 11.25\u2033, Busk: 9.25\u2033, Rib spring: 5\u2033, Upper Hip Spring: 11\u2033; 26 bones (6 flat 12mm, 20 spiral 6mm); hip ties accommodate up to 4\u2033 additional"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC44L",
+      "name": "MCC44L Beige Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc44l-beige-mesh-underbust-corset/",
+      "silhouette_category": "conical",
+      "silhouette_words": [
+        "underbust",
+        "conical"
+      ],
+      "grading": "linear",
+      "body_length_in": 11.25,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.0,
+          "spring_in": 6.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 5.0,
+          "spring_in": 11.0,
+          "label": "upper-hip (5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "mesh",
+        "velveteen"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Bird Brocade Hip Ties",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc44l-bird-brocade-hip-ties-underbust-corset/",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Cotton",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc44l-black-cotton-underbust-corset/",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Velveteen Brocade",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc44l-black-velveteen-brocade-underbust-corset/",
+          "materials": [
+            "brocade",
+            "velveteen"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Burgundy Velveteen Brocade",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc44l-burgundy-velveteen-brocade-underbust-corset/",
+          "materials": [
+            "brocade",
+            "velveteen"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Green Velveteen Brocade",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc44l-green-velveteen-brocade-underbust-corset/",
+          "materials": [
+            "brocade",
+            "velveteen"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "White Cotton Hip Ties",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc44l-white-cotton-hip-ties-underbust-corset/",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Cotton Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc44l-black-cotton-mesh-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Black Cotton Mesh Hip Ties",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc44l-black-cotton-mesh-hip-ties-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Buttercream Cotton Mesh Hip Ties",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc44l-buttercream-cotton-mesh-hip-ties-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Cherry Brocade Black Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc44l-cherry-brocade-black-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Beige Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc44l-beige-mesh-underbust-corset/",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "6",
+          "upper_hip_spring": "11",
+          "low_hip_spring": "-",
+          "underbust_length": "5",
+          "princess_seam": "9\u201d",
+          "torso_length": "11.25"
+        },
+        "scrape": {
+          "sku": "MCC44L Beige Satin/Beige Mesh",
+          "calibration_from_page": "waist can stretch a bit and sizes run big (for ex: size 22\u2033 is more close to 23\u2033)",
+          "hardcoded_measurements_from_page": "Front: 11.25\u2033, Side: 9-10.5\u2033, Back: 12\u2033, Rib spring: 6\u2033, Upper Hip Spring: 11\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "high",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC5",
+      "name": "MCC5 Satin/Old Map Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc5-old-map-underbust-corset/",
+      "silhouette_category": "hourglass",
+      "silhouette_words": [
+        "hourglass",
+        "underbust"
+      ],
+      "grading": "linear",
+      "body_length_in": 10.75,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.0,
+          "spring_in": 6.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.5,
+          "spring_in": 11.0,
+          "label": "upper-hip (4.5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Old Map",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc5-old-map-underbust-corset/",
+          "materials": [],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "6",
+          "upper_hip_spring": "11",
+          "low_hip_spring": "-",
+          "underbust_length": "5",
+          "princess_seam": "9",
+          "torso_length": "10.75"
+        },
+        "scrape": {
+          "sku": "MCC5-old map fabric/satin/leather",
+          "calibration_from_page": "sizes run a little large, waist tape can stretch a bit",
+          "hardcoded_measurements_from_page": "Front: 10.75\u2033, Side: 9\u2033, Back: 10.75\u2033, Rib spring: 6\u2033, Upper Hip Spring: 11\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC54",
+      "name": "MCC54 Red Brocade/Mesh Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc54-red-brocade-mesh-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "hourglass",
+        "underbust",
+        "longline",
+        "cupped rib"
+      ],
+      "grading": "linear",
+      "body_length_in": 12.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.0,
+          "spring_in": 9.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 13.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 15.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "brocade",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Red Brocade Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc54-red-brocade-mesh-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "9",
+          "upper_hip_spring": "13",
+          "low_hip_spring": "15",
+          "underbust_length": "4",
+          "princess_seam": "9",
+          "torso_length": "12"
+        },
+        "scrape": {
+          "sku": "MCC54 red peacock/Back sport mesh",
+          "calibration_from_page": "sizes run a little large, waist tape can stretch a bit",
+          "hardcoded_measurements_from_page": "Rib spring: 9\u2033, Upper Hip Spring: 13\u2033, Lower Hip Spring: 15\u2033, Front: 12\u2033, Side: 9-12.5\u2033, Back: 14\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC57",
+      "name": "MCC57 Purple Brocade Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc57-purple-brocade-mesh-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "cupped rib",
+        "hip ties",
+        "longline"
+      ],
+      "grading": "linear",
+      "body_length_in": 13.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.5,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 12.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 15.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Antimuffin Black Cotton",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc57-antimuffin-black-cotton-underbust-corset/",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Purple Brocade Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc57-purple-brocade-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Red Peacock Brocade Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc57-red-peacock-brocade-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "8",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "15",
+          "underbust_length": "4.5",
+          "princess_seam": "9.5",
+          "torso_length": "13"
+        },
+        "scrape": {
+          "sku": "MCC57 Purple Mesh/Brocade",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 13\u2033, Side: 9.5-13\u2033, Back: 14.5\u2033, Rib spring: 8\u2033, Upper Hip Spring: 12\u2033, Lower Hip Spring: 15\u2033; 28 bones (6 flat 12mm, 22 spiral 6mm), underbusk 1\u2033 wide stiff bone, floating modesty panel 6\u2033 wide"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC59",
+      "name": "MCC59 Black Satin Steel Boned Waist Training Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc59-black-satin-underbust-corset/",
+      "silhouette_category": "cupped-rib",
+      "silhouette_words": [
+        "underbust",
+        "cupped rib",
+        "hip ties"
+      ],
+      "grading": "linear",
+      "body_length_in": 13.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 12.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.5,
+          "spring_in": 8.0,
+          "label": "upper-hip (4.5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32
+      ],
+      "materials_summary": [
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low"
+      ],
+      "variants": [
+        {
+          "name": "Black Satin",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc59-black-satin-underbust-corset/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "12",
+          "upper_hip_spring": "8",
+          "low_hip_spring": "-",
+          "underbust_length": "5.5",
+          "princess_seam": "10",
+          "torso_length": "13.5"
+        },
+        "scrape": {
+          "sku": "MCC59 satin/Hip ties",
+          "calibration_from_page": "waist can stretch a bit and sizes runs big (for ex: size 22\" is more close to 23\")",
+          "hardcoded_measurements_from_page": "Front: 13.5\", Back: 12\", Rib spring: 12\", Upper Hip Spring: 8\""
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC6",
+      "name": "MCC6 Peacock Brocade Waspie Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc6-peacock-brocade-waspie-underbust-corset/",
+      "silhouette_category": "waspie",
+      "silhouette_words": [
+        "underbust",
+        "waspie",
+        "hourglass"
+      ],
+      "grading": "linear",
+      "body_length_in": 9.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -3.5,
+          "spring_in": 6.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 3.5,
+          "spring_in": 8.0,
+          "label": "upper-hip (3.5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "mesh",
+        "sport mesh"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Peacock Brocade Waspie",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc6-peacock-brocade-waspie-underbust-corset/",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Bird Brocade Sport Mesh Waspie",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc6-bird-brocade-sport-mesh-waspie-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Black Brocade Sport Mesh Waspie",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc6-black-brocade-sport-mesh-waspie-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Black Cotton Sport Mesh Waspie",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc6-black-cotton-sport-mesh-waspie-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Beige Sport Mesh Waspie",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc6-beige-sport-mesh-waspie-underbust-corset/",
+          "materials": [
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "high"
+        },
+        {
+          "name": "Pink Sport Mesh Waspie",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc6-pink-sport-mesh-waspie-underbust-corset/",
+          "materials": [
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "high"
+        },
+        {
+          "name": "Red Sport Mesh Waspie",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc6-red-sport-mesh-waspie-underbust-corset-2/",
+          "materials": [
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "high"
+        },
+        {
+          "name": "White Sport Mesh Waspie",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc6-white-sport-mesh-waspie-underbust-corset/",
+          "materials": [
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "high"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "6",
+          "upper_hip_spring": "8",
+          "low_hip_spring": "-",
+          "underbust_length": "3.5",
+          "princess_seam": "6.5",
+          "torso_length": "9"
+        },
+        "scrape": {
+          "sku": "MCC6 peacock brocade",
+          "calibration_from_page": "MCC sizes run a little bigger, waist tape can stretch a bit.",
+          "hardcoded_measurements_from_page": "Front: 9 1/8\u2033, Side: 6 1/2\u2033, Back: 9 3/4\u2033, Rib spring: 5-6\u2033, Upper Hip Spring: 8\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC61",
+      "name": "MCC61 Orange Satin/Black Sport Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc61-orange-satin-sport-mesh-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "longline",
+        "hip ties",
+        "cupped rib"
+      ],
+      "grading": "linear",
+      "body_length_in": 12.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.5,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 12.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 15.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40
+      ],
+      "materials_summary": [
+        "mesh",
+        "satin",
+        "sport mesh"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Orange Satin Peach Sport Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc61-orange-satin-peach-sport-mesh-underbust-corset/",
+          "materials": [
+            "mesh",
+            "satin",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Orange Satin Sport Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc61-orange-satin-sport-mesh-underbust-corset/",
+          "materials": [
+            "mesh",
+            "satin",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "8",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "15",
+          "underbust_length": "4.5",
+          "princess_seam": "10",
+          "torso_length": "12"
+        },
+        "scrape": {
+          "sku": "MCC61 Orange Satin/Black Sport mesh",
+          "calibration_from_page": "waist can stretch a bit and sizes run big (for ex: size 22\u2033 is more close to 23\u2033)",
+          "hardcoded_measurements_from_page": "Rib spring: 8\u2033, Upper Hip Spring: 12\u2033, Lower Hip Spring: 15\u2033, front length: 12\u2033, side length: 10-14\u2033, back length: 13.5\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC63",
+      "name": "MCC63 Black Cotton/Mesh Underbust Corset with hip ties",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc63-black-cotton-mesh-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "longline",
+        "cupped rib",
+        "hip ties"
+      ],
+      "grading": "linear",
+      "body_length_in": 11.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -3.5,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 12.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 14.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "cotton",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Black Cotton Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc63-black-cotton-mesh-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "8",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "14",
+          "underbust_length": "3.5",
+          "princess_seam": "9",
+          "torso_length": "11"
+        },
+        "scrape": {
+          "sku": "MCC63-Black Cotton/Mesh",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 11\u2033, Side: 9\u2033, Back: 13.5\u2033, Rib spring: 8\u2033, Upper Hip Spring: 12\u2033, Lower Hip Spring: 14\u2033; 26 bones (6 flat 12mm, 20 spiral 6mm); stiff busk; stiff underbusk"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC63V",
+      "name": "MCC63V Wide Hips, Black Satin/Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc63v-black-satin-mesh-underbust-corset/",
+      "silhouette_category": "conical",
+      "silhouette_words": [
+        "conical",
+        "underbust",
+        "hip ties"
+      ],
+      "grading": "linear",
+      "body_length_in": 11.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -3.5,
+          "spring_in": 6.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 12.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 14.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "mesh",
+        "satin"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Black Satin Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc63v-black-satin-mesh-underbust-corset/",
+          "materials": [
+            "mesh",
+            "satin"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "6",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "14",
+          "underbust_length": "3.5",
+          "princess_seam": "9.5",
+          "torso_length": "11"
+        },
+        "scrape": {
+          "sku": "MCC63V- with hip ties/black satin/black sport mesh",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 11\", Side: 9\", Back: 13.5\", Rib spring: 6\", Upper Hip Spring: 12\", Lower Hip Spring: 14\""
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC64",
+      "name": "MCC64 Black Cotton Sport Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc64-black-cotton-sport-mesh-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "longline",
+        "cupped rib",
+        "conical",
+        "hip ties"
+      ],
+      "grading": "linear",
+      "body_length_in": 12.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.0,
+          "spring_in": 10.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 12.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.5,
+          "spring_in": 14.0,
+          "label": "low-hip (6.5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "mesh",
+        "satin",
+        "sport mesh"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Green Satin Hipties",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc64-corset-underbust-green-satin-with-hipties/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Cotton Sport Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc64-black-cotton-sport-mesh-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Brocade White Sport Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc64-brocade-white-sport-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "10",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "14",
+          "underbust_length": "5",
+          "princess_seam": "10",
+          "torso_length": "12.5"
+        },
+        "scrape": {
+          "sku": "MCC64-black cotton/black sport mesh",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 12.5\u2033, Side: 10-14\u2033, Back: 14.5-13.5\u2033, Rib spring: 10\u2033, Upper Hip Spring: 12\u2033, Lower Hip Spring: 14\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC68",
+      "name": "MCC68 Cherry Brocade Hipties Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc68-cherry-brocade-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "longline",
+        "cupped rib",
+        "hip ties"
+      ],
+      "grading": "linear",
+      "body_length_in": 12.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.5,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 12.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 7.0,
+          "spring_in": 14.0,
+          "label": "low-hip (7in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "mesh",
+        "sport mesh"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Cherry Brocade",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc68-cherry-brocade-underbust-corset/",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Cotton Sport Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc68-black-cotton-sport-mesh-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Black Cotton Sport Mesh Antimuffin",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc68-black-cotton-sport-mesh-antimuffin-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Sport Mesh Hip Ties",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc68-sport-mesh-with-hip-ties-underbust-corset/",
+          "materials": [
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "high"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "8",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "14",
+          "underbust_length": "4.5",
+          "princess_seam": "10.5",
+          "torso_length": "12.5"
+        },
+        "scrape": {
+          "sku": "MCC68 Wine Cherry Brocade/hip ties",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 12.5\u2033, Side: 10.5-14\u2033, Back: 15\u2033, Rib spring: 8\u2033, Upper Hip Spring: 12\u2033, Lower Hip Spring: 14\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC69",
+      "name": "MCC69 White Cotton Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc69-white-cotton-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "longline",
+        "cupped rib"
+      ],
+      "grading": "linear",
+      "body_length_in": 12.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.5,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 10.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 7.0,
+          "spring_in": 12.0,
+          "label": "low-hip (7in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Black Cotton",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc69-black-cotton-underbust-corset-2/",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Cotton A",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc69-black-cotton-underbust-corset-a/",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Floral Brocade",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc69-floral-brocade-underbust-corset/",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "White Cotton",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc69-white-cotton-underbust-corset/",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Brocade Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc69-black-brocade-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "8",
+          "upper_hip_spring": "10",
+          "low_hip_spring": "12",
+          "underbust_length": "4.5",
+          "princess_seam": "9.5",
+          "torso_length": "12.5"
+        },
+        "scrape": {
+          "sku": "MCC69 White Cotton",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 12.5\u2033, Side: 9.5-14\u2033, Back: 14\u2033, Rib spring: 8\u2033, Upper Hip Spring: 10\u2033, Lower Hip Spring: 12\u2033; 6 flat bones (12mm), 20 spiral bones (6mm), total 26 bones; Floating modesty panel: 6\u2033 wide"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC72",
+      "name": "MCC72 Black Satin Mesh Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc72-black-satin-mesh-underbust-corset/",
+      "silhouette_category": "cupped-rib",
+      "silhouette_words": [
+        "underbust",
+        "conical",
+        "cupped rib",
+        "hip ties"
+      ],
+      "grading": "linear",
+      "body_length_in": 10.75,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -3.5,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 10.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36
+      ],
+      "materials_summary": [
+        "mesh",
+        "satin"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Black Satin Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc72-black-satin-mesh-underbust-corset/",
+          "materials": [
+            "mesh",
+            "satin"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "8",
+          "upper_hip_spring": "10",
+          "low_hip_spring": "-",
+          "underbust_length": "3.5",
+          "princess_seam": "8.5",
+          "torso_length": "10.75"
+        },
+        "scrape": {
+          "sku": "MCC72",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 10.75\u2033; Side: 8.5\u2033; Back: 10\u2033; Underbust Length: 3.5\u2033; Rib spring: 8-9\u2033 (measured 3.5\u2033 above waist); Upper Hip Spring: 10\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC73",
+      "name": "MCC73 Black Satin Mesh with lace Underbust corset size 28\u2033",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc73-black-satin-mesh-with-lace-underbust-corset-size-28/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "hourglass",
+        "longline"
+      ],
+      "grading": "linear",
+      "body_length_in": 12.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.0,
+          "spring_in": 10.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.5,
+          "spring_in": 14.0,
+          "label": "upper-hip (4.5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36
+      ],
+      "materials_summary": [
+        "mesh",
+        "satin"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Black Satin Mesh Lace",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc73-black-satin-mesh-with-lace-underbust-corset-size-28/",
+          "materials": [
+            "mesh",
+            "satin"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "10",
+          "upper_hip_spring": "14",
+          "low_hip_spring": "-",
+          "underbust_length": "5",
+          "princess_seam": "9.5",
+          "torso_length": "12"
+        },
+        "scrape": {
+          "sku": "MCC73 Black Satin/Sport Mesh with burgundy lace size 28\"",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 12\", Back: 14.5\", Side: 9.5\", Rib spring: 9-10\"; Upper Hip Spring: 14\"; 34 bones (6 flat 12mm, 28 spiral 6mm)"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC75",
+      "name": "MCC75 Leopard Satin Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc75-leopard-satin-underbust-corset/",
+      "silhouette_category": "conical",
+      "silhouette_words": [
+        "underbust",
+        "conical"
+      ],
+      "grading": "linear",
+      "body_length_in": 12.25,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.5,
+          "spring_in": 6.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 14.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "mesh",
+        "satin",
+        "sport mesh"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Leopard Satin",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc75-leopard-satin-underbust-corset/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Gold Brocade Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc75-gold-brocade-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Purple Brocade Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc75-purple-brocade-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Wide Hips Black Cotton Sport Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc75-wide-hips-black-cotton-sport-mesh-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Wide Hips Beige Sport Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc75-wide-hips-beige-sport-mesh-underbust-corset/",
+          "materials": [
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "high"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "6",
+          "upper_hip_spring": "14",
+          "low_hip_spring": "-",
+          "underbust_length": "4.5",
+          "princess_seam": "10",
+          "torso_length": "12.25"
+        },
+        "scrape": {
+          "sku": "MCC75 Leopard",
+          "calibration_from_page": "waist can stretch a bit and sizes run big (for ex: size 22\u2033 is more close to 23\u2033); requires longer 'seasoning'",
+          "hardcoded_measurements_from_page": "front length: 12 1/4\u2033; side length: 10-12.5\u2033; back length: 12.5\u2033; rib spring: 6\u2033; upper hip spring: 14\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC76",
+      "name": "MCC76 Black Satin Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc76-black-satin-underbust-corset/",
+      "silhouette_category": "conical",
+      "silhouette_words": [
+        "underbust",
+        "conical"
+      ],
+      "grading": "linear",
+      "body_length_in": 13.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 6.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 9.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.5,
+          "spring_in": 12.0,
+          "label": "low-hip (6.5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42
+      ],
+      "materials_summary": [
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low"
+      ],
+      "variants": [
+        {
+          "name": "Black Satin",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc76-black-satin-underbust-corset/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Satin Hip Ties",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc76-black-satin-hip-ties-underbust-corset/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "6",
+          "upper_hip_spring": "9",
+          "low_hip_spring": "12",
+          "underbust_length": "5.5",
+          "princess_seam": "12",
+          "torso_length": "13.5"
+        },
+        "scrape": {
+          "sku": "MCC76 Black Satin",
+          "calibration_from_page": "waist can stretch a bit and sizes runs big. for ex: size 22\u2033 is more close to 23\u2033",
+          "hardcoded_measurements_from_page": "Front: 13.5\u2033, Side: 10.5-15\u2033, Back: 15\u2033, Rib spring: 6\u2033, Upper Hip Spring: 9\u2033, Low Hip Spring: 12\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC79",
+      "name": "MCC79 Leopard Satin Plus size Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc79-leopard-satin-plus-size-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "longline",
+        "plus size",
+        "conical ribs"
+      ],
+      "grading": "linear",
+      "body_length_in": 17.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.0,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 5.0,
+          "spring_in": 18.0,
+          "label": "upper-hip (5in below waist)"
+        },
+        {
+          "position_from_waist_in": 8.0,
+          "spring_in": 22.0,
+          "label": "low-hip (8in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46
+      ],
+      "materials_summary": [
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low"
+      ],
+      "variants": [
+        {
+          "name": "Leopard Satin Plus",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc79-leopard-satin-plus-size-underbust-corset/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "8",
+          "upper_hip_spring": "18",
+          "low_hip_spring": "22",
+          "underbust_length": "5",
+          "princess_seam": "13",
+          "torso_length": "17"
+        },
+        "scrape": {
+          "sku": "MCC79 leopard",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 17\u2033, Busk: 13.5\u2033, Side: 12-16\u2033, Back: 15.5-17\u2033, Rib spring: 8\u2033, Upper Hip Spring: 18\u2033, Lower Hip Spring: 22\u2033; 30 bones (6 flat 12mm, 24 spiral 6mm), 7\u2033 floating modesty panel"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC82",
+      "name": "MCC82 Black Cotton/Mesh \"Plus Size\" Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc82-black-cotton-mesh-satin-plus-size-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "longline",
+        "plus size"
+      ],
+      "grading": "linear",
+      "body_length_in": 13.75,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.0,
+          "spring_in": 6.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 11.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 7.0,
+          "spring_in": 12.0,
+          "label": "low-hip (7in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46
+      ],
+      "materials_summary": [
+        "cotton",
+        "mesh",
+        "satin"
+      ],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Black Cotton Mesh Satin Plus",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc82-black-cotton-mesh-satin-plus-size-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh",
+            "satin"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "6",
+          "upper_hip_spring": "11",
+          "low_hip_spring": "12",
+          "underbust_length": "5",
+          "princess_seam": "12.5",
+          "torso_length": "13.75"
+        },
+        "scrape": {
+          "sku": "MCC82",
+          "calibration_from_page": "waist can stretch a bit and sizes run big (for ex: size 22\" is more close to 23\")",
+          "hardcoded_measurements_from_page": "Front: 13.5-13.75\"; Side: 12.5\"; Back: 12\"; Rib spring: 6\"; Upper Hip Spring: 11\"; Lower Hip Spring: 12\""
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC83",
+      "name": "MCC83 Rose Satin \"Plus Size\" Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc83-rose-satin-plus-size-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "longline",
+        "plus size",
+        "hip ties"
+      ],
+      "grading": "linear",
+      "body_length_in": 13.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 4.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 10.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 12.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46
+      ],
+      "materials_summary": [
+        "mesh",
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Rose Satin Plus",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc83-rose-satin-plus-size-underbust-corset/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Beige Satin Mesh Plus",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc83-beige-satin-mesh-plus-size-underbust-corset/",
+          "materials": [
+            "mesh",
+            "satin"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Mesh Satin Plus",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc83-mesh-satin-plus-size-underbust-corset/",
+          "materials": [
+            "mesh",
+            "satin"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "4",
+          "upper_hip_spring": "10",
+          "low_hip_spring": "12",
+          "underbust_length": "5.5",
+          "princess_seam": "13.5",
+          "torso_length": "13.5"
+        },
+        "scrape": {
+          "sku": "MCC83 Rose",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 13.5\"; Side: 13.5\"; Back: 15\"; Rib spring: 4\"; Upper Hip Spring: 10\"; Lower Hip Spring: 12\"; 26 steel bones (6 flat, 20 spiral); Floating Modesty Panel: 8\" wide"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC84L",
+      "name": "MCC84L Black Satin Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc84l-black-satin-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "conical",
+        "longline",
+        "long torso",
+        "underbust",
+        "hip ties"
+      ],
+      "grading": "linear",
+      "body_length_in": 14.25,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 14.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 19.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low"
+      ],
+      "variants": [
+        {
+          "name": "Black Satin",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc84l-black-satin-corset/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Pink Brocade Size32",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc84l-pink-brocade-size32/",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Plus Black Cotton Hip Ties",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc84l-plus-size-black-cotton-corset-with-hip-ties-size-38/",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "8",
+          "upper_hip_spring": "14",
+          "low_hip_spring": "19",
+          "underbust_length": "5.5",
+          "princess_seam": "11.5",
+          "torso_length": "14.25"
+        },
+        "scrape": {
+          "sku": "MCC84L Satin",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Rib spring: 8\u2033, Upper Hip Spring: 14\u2033, lower Hip spring: 19\u2033; Front length: 14.25\u2033, back length: 16.5\u2033; 26 bones in sizes 22-26\u2033, 34 bones in sizes 28-38\u2033; 6 flat bones, 20 spiral bones"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC85",
+      "name": "MCC85 Peacock Brocade Wide Hips Long Torso Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc85-peacock-brocade-underbust-wide-hips-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "long torso",
+        "hourglass"
+      ],
+      "grading": "linear",
+      "body_length_in": 14.25,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 10.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 20.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 22.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36
+      ],
+      "materials_summary": [
+        "brocade"
+      ],
+      "stretch_class_options": [
+        "low"
+      ],
+      "variants": [
+        {
+          "name": "Peacock Brocade Wide Hips",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc85-peacock-brocade-underbust-wide-hips-corset/",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "10",
+          "upper_hip_spring": "20",
+          "low_hip_spring": "22",
+          "underbust_length": "5.5",
+          "princess_seam": "11.5",
+          "torso_length": "14.25"
+        },
+        "scrape": {
+          "sku": null,
+          "calibration_from_page": "sizes run a little bigger, waist tape can stretch a bit",
+          "hardcoded_measurements_from_page": "Rib spring: 10\u2033, Upper Hip Spring: 20\u2033, Hips spring: 22\u2033, front length: 14.25\u2033, side length: 11\u2033-14.5\u2033, back length: 13.50\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC86",
+      "name": "MCC86 Long Line, Steel Boned Underbust Corset Black Cotton",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc86-black-cotton-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "long torso",
+        "cupped rib"
+      ],
+      "grading": "linear",
+      "body_length_in": 14.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.0,
+          "spring_in": 7.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 10.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 13.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Black Cotton",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc86-black-cotton-underbust-corset/",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Red Cotton Lace",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc86-red-cotton-lace-underbust-corset/",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Brocade Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc86-black-brocade-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "7",
+          "upper_hip_spring": "10",
+          "low_hip_spring": "13",
+          "underbust_length": "5",
+          "princess_seam": "11",
+          "torso_length": "14"
+        },
+        "scrape": {
+          "sku": "MCC86",
+          "calibration_from_page": "sizes run a little large, waist tape can stretch a bit",
+          "hardcoded_measurements_from_page": "Front: 14\", Back: 15.75\", Rib spring: 7\", Upper Hip Spring: 10\", Low Hip Spring: 13\""
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC90",
+      "name": "MCC90 Hip Ties Cherry Brocade Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc90-cherry-brocade-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "underbust",
+        "longline",
+        "hip ties",
+        "cupped rib",
+        "long torso"
+      ],
+      "grading": "linear",
+      "body_length_in": 14.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -7.0,
+          "spring_in": 12.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 10.0,
+          "label": "upper-hip (4in below waist)"
+        },
+        {
+          "position_from_waist_in": 6.0,
+          "spring_in": 12.0,
+          "label": "low-hip (6in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "mesh",
+        "pvc",
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Black Cotton Black Metallic Pvc",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc90-black-cotton-black-metallic-pvc-underbust-corset/",
+          "materials": [
+            "cotton",
+            "pvc"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Cotton Zipper",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc90-black-cotton-zipper-underbust-corset-size-36/",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Cherry Brocade",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc90-cherry-brocade-underbust-corset/",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Hip Ties Blue Teal Satin",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc90-hip-ties-blue-teal-satin-underbust-corset/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Hip Ties Dragon Brocade",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc90-hip-ties-dragon-brocade-underbust-corset/",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Satin Black Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc90-black-satin-black-mesh-underbust-corset/",
+          "materials": [
+            "mesh",
+            "satin"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "12",
+          "upper_hip_spring": "10",
+          "low_hip_spring": "12",
+          "underbust_length": "7",
+          "princess_seam": "12",
+          "torso_length": "14.5"
+        },
+        "scrape": {
+          "sku": "MCC90 Cherry Brocade/Hip Ties",
+          "calibration_from_page": "waist can stretch a bit and sizes run big (for ex: size 22\u2033 is more close to 23\u2033)",
+          "hardcoded_measurements_from_page": "Front: 14.5\u2033, Side: 12\u2033, Back: 17.25\u2033, Rib spring: 12\u2033, Upper Hip Spring: 10\u2033, Hips Spring: 12\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC94",
+      "name": "MCC94 Black Cotton Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc94-black-cotton-underbust-corset/",
+      "silhouette_category": "cupped-rib",
+      "silhouette_words": [
+        "underbust",
+        "cupped rib"
+      ],
+      "grading": "linear",
+      "body_length_in": 10.75,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.0,
+          "spring_in": 11.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 12.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Black Cotton",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc94-black-cotton-underbust-corset/",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Brocade Cotton",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc94-brocade-cotton-underbust-corset/",
+          "materials": [
+            "brocade",
+            "cotton"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Cotton Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc94-black-cotton-mesh-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Purple Rose Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc94-purple-rose-mesh-underbust-corset/",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "11",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "-",
+          "underbust_length": "4",
+          "princess_seam": "8",
+          "torso_length": "10.75"
+        },
+        "scrape": {
+          "sku": "MCC94 Black Cotton",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 10.75\u2033, Side: 8\u2033, Back: 12\u2033, Rib spring: 11\u2033, Upper Hip Spring: 12\u2033; 26 bones (6 flat, 20 spiral), stiff busk, stiff underbusk 1\u2033 wide"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC95",
+      "name": "MCC95 Black Satin/PVC Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc95-black-satin-metallic-pvc-underbust-corset/",
+      "silhouette_category": "cupped-rib",
+      "silhouette_words": [
+        "underbust",
+        "cupped rib"
+      ],
+      "grading": "linear",
+      "body_length_in": 13.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 11.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 12.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "pvc",
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low"
+      ],
+      "variants": [
+        {
+          "name": "Black Satin Metallic Pvc",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc95-black-satin-metallic-pvc-underbust-corset/",
+          "materials": [
+            "pvc",
+            "satin"
+          ],
+          "stretch_class": "low"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "11",
+          "upper_hip_spring": "12",
+          "low_hip_spring": "-",
+          "underbust_length": "5.5",
+          "princess_seam": "11",
+          "torso_length": "13.5"
+        },
+        "scrape": {
+          "sku": "MCC95 Satin/PVC",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 13\u2033, Side: 11\u2033, Back: 11.5\u2033, Rib spring: 11\u2033, Upper Hip Spring: 12\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "low",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC98",
+      "name": "MCC98 Hip Ties Black Satin/Mesh Short Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc98-black-satin-mesh-short-underbust-corset/",
+      "silhouette_category": "hourglass",
+      "silhouette_words": [
+        "underbust",
+        "hip ties"
+      ],
+      "grading": "linear",
+      "body_length_in": 10.0,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -4.5,
+          "spring_in": 7.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 3.5,
+          "spring_in": 7.0,
+          "label": "upper-hip (3.5in below waist)"
+        }
+      ],
+      "waist_sizes_in": [
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38
+      ],
+      "materials_summary": [
+        "cotton",
+        "mesh",
+        "pvc",
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Black Cottonblack Metallic Pvc Waspie",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc98-black-cottonblack-metallic-pvc-underbust-waspie-corset/",
+          "materials": [
+            "pvc"
+          ],
+          "stretch_class": "low"
+        },
+        {
+          "name": "Black Cotton Mesh Short",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc98-black-cotton-mesh-short-underbust-corset/",
+          "materials": [
+            "cotton",
+            "mesh"
+          ],
+          "stretch_class": "medium"
+        },
+        {
+          "name": "Black Satin Mesh Short",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc98-black-satin-mesh-short-underbust-corset/",
+          "materials": [
+            "mesh",
+            "satin"
+          ],
+          "stretch_class": "medium"
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "7",
+          "upper_hip_spring": "7",
+          "low_hip_spring": "-",
+          "underbust_length": "4.5",
+          "princess_seam": "7.5",
+          "torso_length": "10"
+        },
+        "scrape": {
+          "sku": "MCC98 Hip Ties Black Satin/Mesh",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": "Front: 10\u2033, Side: 7.5\u2033, Back: 9.25\u2033, Rib spring: 7\u2033, Upper Hip Spring: 7\u2033"
+        },
+        "review_stretch_class_at_representative_variant": "medium",
+        "warnings": []
+      }
+    }
+  ]
+}
