@@ -11,6 +11,7 @@ const BODY_KEY = 'ofcorsetfits:body:v1';
 const STRETCH_KEY = 'ofcorsetfits:stretch_preference:v1';
 const REDUCTION_KEY = 'ofcorsetfits:desired_reduction_in:v1';
 const GAP_SHAPE_KEY = 'ofcorsetfits:gap_shape:v1';
+const ACCEPTABLE_GAP_SHAPES_KEY = 'ofcorsetfits:acceptable_gap_shapes:v1';
 const ADVANCED_KEY = 'ofcorsetfits:show_advanced:v1';
 
 export function loadBody(): Body | null {
@@ -69,21 +70,46 @@ export function saveReduction(reduction: number): void {
   }
 }
 
-export function loadGapShape(): GapShape | null {
+function isGapShape(v: unknown): v is GapShape {
+  return (
+    v === 'curved' ||
+    v === 'straight' ||
+    v === 'slant-hip' ||
+    v === 'slant-rib' ||
+    v === 'closed'
+  );
+}
+
+/**
+ * Load the acceptable-shapes checkbox set. Falls back to migrating the
+ * legacy single-value `gap_shape` key ({single shape} → singleton array)
+ * so users who saved a preference under the old dropdown UI don't lose it.
+ * Returns null if nothing is stored or the stored value is corrupt — the
+ * caller is expected to substitute a default set.
+ */
+export function loadAcceptableGapShapes(): GapShape[] | null {
   try {
-    const raw = localStorage.getItem(GAP_SHAPE_KEY);
-    if (raw === 'curved' || raw === 'straight' || raw === 'closed') {
-      return raw;
+    const raw = localStorage.getItem(ACCEPTABLE_GAP_SHAPES_KEY);
+    if (raw !== null) {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) {
+        const filtered = parsed.filter(isGapShape);
+        return filtered.length > 0 ? filtered : null;
+      }
+      return null;
     }
+    // Migration path: legacy single-value dropdown → singleton array.
+    const legacy = localStorage.getItem(GAP_SHAPE_KEY);
+    if (isGapShape(legacy)) return [legacy];
     return null;
   } catch {
     return null;
   }
 }
 
-export function saveGapShape(gap_shape: GapShape): void {
+export function saveAcceptableGapShapes(shapes: GapShape[]): void {
   try {
-    localStorage.setItem(GAP_SHAPE_KEY, gap_shape);
+    localStorage.setItem(ACCEPTABLE_GAP_SHAPES_KEY, JSON.stringify(shapes));
   } catch {
     // ignore
   }

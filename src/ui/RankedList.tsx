@@ -1,16 +1,26 @@
 /**
- * Ranked list — one row per VARIANT GROUP (silhouette + fit signature).
- * A group is 1+ SKUs sharing the same stretch class + material composition:
- * they differ only by fabric color / decorative flourishes, which don't
- * affect fit, so they get one shared row with multiple buy links.
+ * Ranked list — one row per (variant group × waist size). A variant group
+ * collapses SKUs that share stretch class (same fit math, different color /
+ * decorative flourishes); each size the group is offered in produces its
+ * own row so a silhouette can show up multiple times at different sizes if
+ * multiple sizes score competitively.
  *
- * Expanding a row shows the per-position penalty breakdown for the group's
- * canonical variant, all group members' buy links, and a cross-reference
- * to any OTHER fit-signature groups of the same silhouette.
+ * Expanding a row shows the per-position penalty breakdown at that specific
+ * size, all group members' buy links pre-selected to that size, and a
+ * cross-reference to sibling fit-signature groups of the same silhouette
+ * (typically different stretch classes).
  */
 
 import { useState } from 'react';
-import type { RankedResult, VariantGroup } from '../scoring/types.ts';
+import type { GapShape, RankedResult, VariantGroup } from '../scoring/types.ts';
+
+const GAP_SHAPE_LABELS: Record<GapShape, { glyph: string; name: string }> = {
+  curved: { glyph: ')(', name: 'curved (pinched at waist)' },
+  straight: { glyph: '||', name: 'parallel' },
+  'slant-hip': { glyph: '/\\', name: 'slanted, wider at hip' },
+  'slant-rib': { glyph: '\\/', name: 'slanted, wider at rib' },
+  closed: { glyph: '|', name: 'fully closed' },
+};
 
 interface RankedListProps {
   results: RankedResult[];
@@ -30,9 +40,9 @@ function groupSignatureKey(g: VariantGroup): string {
   return g.variants[0].url;
 }
 
-/** Unique key per row: silhouette + group's canonical URL. */
+/** Unique key per row: silhouette + group's canonical URL + row size. */
 function rowKey(r: RankedResult): string {
-  return `${r.corset.id}::${groupSignatureKey(r.variant_group)}`;
+  return `${r.corset.id}::${groupSignatureKey(r.variant_group)}::${r.best.waist_size_in}`;
 }
 
 /**
@@ -52,6 +62,41 @@ function buyUrlWithSize(
   return `${url}${separator}attribute_pa_size=${size}`;
 }
 
+/**
+ * Max score difference within a tier. Rows whose scores are within this
+ * much of the tier's anchor row share a tier. Set small enough that a
+ * tier really means "practically equivalent picks"; larger and the top-N
+ * would collapse into one huge first tier.
+ */
+const TIER_THRESHOLD = 0.3;
+
+/**
+ * Assign a 1-based tier index to each row so consecutive rows within
+ * `TIER_THRESHOLD` of the tier's anchor score share a tier. Tier numbers
+ * are dense (1, 2, 3, …), not competition-ranked — the tier IS the "rank"
+ * shown in the UI, and only the tier's first row displays it.
+ *
+ * The anchor is the tier's first row, NOT the previous row, so transitive
+ * drift can't string together an unbounded tier via 0.29-pt hops.
+ */
+function assignTiers(rows: { best: { total: number } }[]): number[] {
+  const tiers: number[] = new Array(rows.length);
+  if (rows.length === 0) return tiers;
+  let anchorScore = rows[0].best.total;
+  let currentTier = 1;
+  tiers[0] = 1;
+  for (let i = 1; i < rows.length; i++) {
+    if (rows[i].best.total - anchorScore <= TIER_THRESHOLD) {
+      tiers[i] = currentTier;
+    } else {
+      currentTier += 1;
+      anchorScore = rows[i].best.total;
+      tiers[i] = currentTier;
+    }
+  }
+  return tiers;
+}
+
 export function RankedList({
   results,
   topN = 30,
@@ -60,6 +105,7 @@ export function RankedList({
 }: RankedListProps) {
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
   const shown = results.slice(0, topN);
+  const tiers = assignTiers(shown);
 
   if (results.length === 0) {
     return (
@@ -79,8 +125,9 @@ export function RankedList({
         <h2>
           Best fits{' '}
           <span className="count">
-            ({shown.length} of {results.length} shown — variants with the
-            same stretch class are grouped)
+            ({shown.length} of {results.length} shown — one row per
+            available size; color variants with the same stretch class
+            are grouped)
           </span>
         </h2>
         <label className="advanced-toggle">
@@ -102,15 +149,22 @@ export function RankedList({
             (g) => groupSignatureKey(g) !== groupSignatureKey(group),
           );
           const memberCount = group.variants.length;
+          const isTierLeader = i === 0 || tiers[i] !== tiers[i - 1];
           return (
-            <li key={key} className={`ranked-row ranked-row-${stretch}`}>
+            <li
+              key={key}
+              className={
+                `ranked-row ranked-row-${stretch}` +
+                (isTierLeader ? ' tier-leader' : ' tier-follower')
+              }
+            >
               <button
                 type="button"
                 className="ranked-row-header"
                 onClick={() => setExpandedKey(isExpanded ? null : key)}
                 aria-expanded={isExpanded}
               >
-                <span className="rank">{i + 1}</span>
+                <span className="rank">{isTierLeader ? tiers[i] : ''}</span>
                 <span className="corset-id">{r.corset.id}</span>
                 <span className="corset-name">
                   {r.best.variant.name}
@@ -121,6 +175,12 @@ export function RankedList({
                 <span className={`stretch stretch-${stretch}`}>{stretch}</span>
                 <span className="best-size">size {r.best.waist_size_in}"</span>
                 <span className="silhouette">{r.corset.silhouette_category}</span>
+                <span
+                  className={`gap-shape gap-shape-${r.best.gap_shape}`}
+                  title={`Scored best as ${GAP_SHAPE_LABELS[r.best.gap_shape].name}`}
+                >
+                  {GAP_SHAPE_LABELS[r.best.gap_shape].glyph}
+                </span>
                 <span className="score">score {r.best.total.toFixed(2)}</span>
                 <span className="expand">{isExpanded ? '▼' : '▶'}</span>
               </button>
@@ -141,6 +201,11 @@ export function RankedList({
                     <div>
                       <strong>Torso length:</strong>{' '}
                       {r.corset.body_length_in ?? 'unknown'}"
+                    </div>
+                    <div>
+                      <strong>Best gap shape:</strong>{' '}
+                      {GAP_SHAPE_LABELS[r.best.gap_shape].glyph}{' '}
+                      {GAP_SHAPE_LABELS[r.best.gap_shape].name}
                     </div>
                   </div>
 

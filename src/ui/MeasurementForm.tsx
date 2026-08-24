@@ -18,9 +18,52 @@ interface MeasurementFormProps {
   onStretchPreferenceChange: (pref: StretchClass | 'any') => void;
   desiredReduction: number;
   onDesiredReductionChange: (reduction: number) => void;
-  gapShape: GapShape;
-  onGapShapeChange: (shape: GapShape) => void;
+  acceptableGapShapes: GapShape[];
+  onAcceptableGapShapesChange: (shapes: GapShape[]) => void;
 }
+
+const GAP_SHAPE_OPTIONS: {
+  value: GapShape;
+  glyph: string;
+  label: string;
+  helper: string;
+}[] = [
+  {
+    value: 'curved',
+    glyph: ')(',
+    label: 'Curved',
+    helper:
+      'Smoothly curving gap that pinches at the waist and opens toward the rib & hip. The natural corsetry default.',
+  },
+  {
+    value: 'straight',
+    glyph: '||',
+    label: 'Parallel',
+    helper:
+      'Uniform ~2" gap top to bottom. Needs a corset whose spring profile matches your silhouette.',
+  },
+  {
+    value: 'slant-hip',
+    glyph: '/\\',
+    label: 'Slanted — wider at hip',
+    helper:
+      'Straight-line gap that grows toward the hip. Closer (or closed) at the rib, wider at the hip.',
+  },
+  {
+    value: 'slant-rib',
+    glyph: '\\/',
+    label: 'Slanted — wider at rib',
+    helper:
+      'Straight-line gap that grows toward the rib. Wider at the rib, closer (or closed) at the hip.',
+  },
+  {
+    value: 'closed',
+    glyph: '|',
+    label: 'Fully closed',
+    helper:
+      'No gap at any position. Most restrictive — typically only bespoke corsets qualify.',
+  },
+];
 
 type LandmarkKey = 'underbust' | 'upper_hip' | 'iliac';
 type Direction = 'above' | 'below';
@@ -71,9 +114,27 @@ export function MeasurementForm({
   onStretchPreferenceChange,
   desiredReduction,
   onDesiredReductionChange,
-  gapShape,
-  onGapShapeChange,
+  acceptableGapShapes,
+  onAcceptableGapShapesChange,
 }: MeasurementFormProps) {
+  const acceptableSet = new Set(acceptableGapShapes);
+  const toggleGapShape = (shape: GapShape, checked: boolean) => {
+    if (checked) {
+      if (acceptableSet.has(shape)) return;
+      // Preserve the canonical order (curved, straight, closed) regardless
+      // of the order the user checks the boxes in.
+      const next = GAP_SHAPE_OPTIONS
+        .map((o) => o.value)
+        .filter((s) => acceptableSet.has(s) || s === shape);
+      onAcceptableGapShapesChange(next);
+    } else {
+      // Never let the user leave zero shapes checked — an empty set would
+      // wipe out the ranking. The last checked box acts as a floor.
+      if (acceptableGapShapes.length <= 1) return;
+      onAcceptableGapShapesChange(acceptableGapShapes.filter((s) => s !== shape));
+    }
+  };
+  const onlyOneChecked = acceptableGapShapes.length === 1;
   const setWaist = (raw: string) => {
     const n = toNumber(raw);
     if (n !== null) onBodyChange({ ...body, natural_waist_in: n });
@@ -222,36 +283,40 @@ export function MeasurementForm({
         <span className="helper">Filter corsets by the material's stretch behavior.</span>
       </label>
 
-      <label className="field">
-        <span>Lacing gap shape</span>
-        <select
-          value={gapShape}
-          onChange={(e) => onGapShapeChange(e.target.value as GapShape)}
-        >
-          <option value="curved">
-            )( &nbsp; V-shape / teardrop — wider at rib &amp; hip, tighter at waist
-          </option>
-          <option value="straight">
-            || &nbsp; Parallel — uniform gap top to bottom
-          </option>
-          <option value="closed">
-            | &nbsp; Fully closed — no gap at any position
-          </option>
-        </select>
+      <fieldset className="landmark gap-shape-fieldset">
+        <legend>Acceptable lacing gap shapes</legend>
         <span className="helper">
-          The visual shape of the laced gap at the back of the corset.{' '}
-          <strong>)( V-shape / teardrop</strong> is the natural default: the
-          corset cinches at the waist and opens gradually toward the rib and
-          hip. Reverse gaps <em>()</em> (hourglass / X-shape), where the
-          waist billows wider than the rib and hip, are heavily penalized.{' '}
-          <strong>|| Parallel</strong> targets a uniform 2" gap at every
-          position (the standard corsetry convention, independent of your
-          reduction goal) — only corsets whose spring profile matches your
-          body's silhouette can achieve this.{' '}
-          <strong>| Fully closed</strong> is the most restrictive: the corset
-          must close on you at every landmark, not just the waist.
+          Check every gap shape you'd be happy wearing. Each corset gets
+          scored under all of them and ranked by whichever produces its best
+          fit — so leaving all three checked ranks the widest set of
+          candidates; unchecking a shape hides fits that only work under it.
+          Reverse gaps <em>()</em> (waist wider than rib/hip) are always
+          penalized regardless.
         </span>
-      </label>
+        {GAP_SHAPE_OPTIONS.map((opt) => {
+          const checked = acceptableSet.has(opt.value);
+          // Disable unchecking the last remaining box: an empty set would
+          // produce an empty ranking with no user feedback about why.
+          const disabled = checked && onlyOneChecked;
+          return (
+            <label key={opt.value} className="field field-checkbox">
+              <input
+                type="checkbox"
+                checked={checked}
+                disabled={disabled}
+                onChange={(e) => toggleGapShape(opt.value, e.target.checked)}
+              />
+              <span>
+                <strong>
+                  {opt.glyph} {opt.label}
+                </strong>
+                {' — '}
+                {opt.helper}
+              </span>
+            </label>
+          );
+        })}
+      </fieldset>
     </form>
   );
 }

@@ -16,17 +16,25 @@ import { defaultScoringConfig, rank } from '../scoring/index.ts';
 import { MeasurementForm } from './MeasurementForm.tsx';
 import { RankedList } from './RankedList.tsx';
 import {
+  loadAcceptableGapShapes,
   loadBody,
-  loadGapShape,
   loadReduction,
   loadShowAdvanced,
   loadStretchPreference,
+  saveAcceptableGapShapes,
   saveBody,
-  saveGapShape,
   saveReduction,
   saveShowAdvanced,
   saveStretchPreference,
 } from './persist.ts';
+
+const ALL_GAP_SHAPES: GapShape[] = [
+  'curved',
+  'straight',
+  'slant-hip',
+  'slant-rib',
+  'closed',
+];
 
 const catalog = catalogJson as unknown as Catalog;
 
@@ -45,8 +53,8 @@ export function App() {
   const [desiredReduction, setDesiredReduction] = useState<number>(
     () => loadReduction() ?? 2,
   );
-  const [gapShape, setGapShape] = useState<GapShape>(
-    () => loadGapShape() ?? 'curved',
+  const [acceptableGapShapes, setAcceptableGapShapes] = useState<GapShape[]>(
+    () => loadAcceptableGapShapes() ?? ALL_GAP_SHAPES,
   );
   const [showAdvanced, setShowAdvanced] = useState<boolean>(
     () => loadShowAdvanced() ?? false,
@@ -65,8 +73,8 @@ export function App() {
   }, [desiredReduction]);
 
   useEffect(() => {
-    saveGapShape(gapShape);
-  }, [gapShape]);
+    saveAcceptableGapShapes(acceptableGapShapes);
+  }, [acceptableGapShapes]);
 
   useEffect(() => {
     saveShowAdvanced(showAdvanced);
@@ -76,9 +84,9 @@ export function App() {
     const config = defaultScoringConfig(catalog);
     config.stretch_preference = stretchPreference;
     config.desired_reduction_in = desiredReduction;
-    config.gap_shape = gapShape;
+    config.acceptable_gap_shapes = acceptableGapShapes;
     return rank(body, catalog, config);
-  }, [body, stretchPreference, desiredReduction, gapShape]);
+  }, [body, stretchPreference, desiredReduction, acceptableGapShapes]);
 
   return (
     <div className="app">
@@ -103,8 +111,8 @@ export function App() {
             onStretchPreferenceChange={setStretchPreference}
             desiredReduction={desiredReduction}
             onDesiredReductionChange={setDesiredReduction}
-            gapShape={gapShape}
-            onGapShapeChange={setGapShape}
+            acceptableGapShapes={acceptableGapShapes}
+            onAcceptableGapShapesChange={setAcceptableGapShapes}
           />
         </aside>
         <section className="app-content">

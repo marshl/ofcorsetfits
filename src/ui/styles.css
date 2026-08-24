@@ -170,10 +170,18 @@ fieldset.landmark .helper {
   background: white;
 }
 
+/* Extra breathing room between tiers — a tier-leader that follows any
+   other row gets a bigger top gap on top of the flex gap. The very first
+   row has no preceding sibling, so it stays flush with the header. */
+.ranked-row + .ranked-row.tier-leader { margin-top: 0.75rem; }
+/* Empty rank cell on follower rows still occupies the grid column so
+   the other columns don't shift horizontally row-to-row. */
+.ranked-row.tier-follower .rank { visibility: hidden; }
+
 .ranked-row-header {
   width: 100%;
   display: grid;
-  grid-template-columns: 2.5rem 5rem 1fr 5rem 4.5rem 6rem 5rem 1rem;
+  grid-template-columns: 2.5rem 5rem 1fr 5rem 4.5rem 6rem 2.2rem 5rem 1rem;
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 0.75rem;
@@ -211,6 +219,38 @@ fieldset.landmark .helper {
 .silhouette { color: var(--muted); font-size: 0.85rem; }
 .score { font-weight: 600; }
 .expand { color: var(--muted); text-align: center; }
+
+.gap-shape {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 700;
+  text-align: center;
+  color: var(--muted);
+  cursor: help;
+}
+.gap-shape-curved { color: #1c9c78; }
+.gap-shape-straight { color: #6a5acd; }
+.gap-shape-slant-hip { color: #2f7ec7; }
+.gap-shape-slant-rib { color: #c74a91; }
+.gap-shape-closed { color: #c9761b; }
+
+.field-checkbox {
+  display: grid;
+  grid-template-columns: 1.25rem 1fr;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+.field-checkbox input[type='checkbox'] {
+  margin: 0;
+  align-self: center;
+}
+.field-checkbox input[type='checkbox']:disabled + span {
+  color: var(--muted);
+}
+.gap-shape-fieldset .helper {
+  margin-bottom: 0.4rem;
+}
 
 .ranked-row-details {
   border-top: 1px solid var(--border);

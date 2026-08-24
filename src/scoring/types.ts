@@ -11,16 +11,28 @@ export type StretchClass = 'low' | 'medium' | 'high';
 
 /**
  * How the wearer wants the corset's laced gap to look:
- * - `curved`: no gap-uniformity constraint. Per-position penalties are
+ * - `curved` )(: no gap-uniformity constraint. Per-position penalties are
  *   independent; scoring is asymmetric (waist over-target harsh, under-target
  *   mild; other landmarks tight harsh, loose mild). Current default.
- * - `straight`: wearer wants a parallel gap of size G = desired_reduction_in
+ * - `straight` ||: wearer wants a parallel gap of size G = straight_gap_size_in
  *   at every position. Per-position penalty is `|actual_gap_i - G| * weight`.
  *   Requires the corset's spring profile to match the wearer's body silhouette.
- * - `closed`: wearer wants the corset fully closed (gap = 0) at every position.
- *   Most restrictive; typically only bespoke corsets can achieve this.
+ * - `slant-hip` /\: linear (straight-line) gap that grows toward the hip.
+ *   Target at position pos is `max(0, G + slant_slope_in_per_in * pos)` —
+ *   narrower (or closed) at the rib, wider at the hip. Same symmetric
+ *   penalty as `straight`.
+ * - `slant-rib` \/: linear gap that grows toward the rib. Target at pos is
+ *   `max(0, G - slant_slope_in_per_in * pos)` — wider at the rib, narrower
+ *   (or closed) at the hip. Same symmetric penalty as `straight`.
+ * - `closed` |: wearer wants the corset fully closed (gap = 0) at every
+ *   position. Most restrictive; typically only bespoke corsets can achieve this.
  */
-export type GapShape = 'curved' | 'straight' | 'closed';
+export type GapShape =
+  | 'curved'
+  | 'straight'
+  | 'slant-hip'
+  | 'slant-rib'
+  | 'closed';
 
 export type SilhouetteCategory =
   | 'hourglass'
@@ -127,6 +139,15 @@ export interface ScoringConfig {
    */
   straight_gap_size_in: number;
   /**
+   * Slope (inches of gap change per inch of position from waist) used by the
+   * `slant-hip` / `slant-rib` modes to build a linear target gap profile.
+   * Higher = steeper slant; 0 collapses back onto `straight`. Default ~0.5
+   * produces a gap that changes by ~2" between the waist and a 4"-away
+   * landmark — a definite slant but not extreme. Ignored in the other three
+   * modes.
+   */
+  slant_slope_in_per_in: number;
+  /**
    * Waist-specific asymmetry — INVERTED relative to the other landmarks.
    * `waist_over_target_slope` (typically HIGHER) applies when the corset's
    * effective waist is LARGER than the target — meaning the corset physically
@@ -146,8 +167,25 @@ export interface ScoringConfig {
   /**
    * How the wearer wants the laced gap to look. Determines the shape of
    * per-position penalties (see `GapShape` type for full description).
+   *
+   * When `acceptable_gap_shapes` is also set on the config, `gap_shape` is
+   * only the SCORING-TIME shape passed into `scoreCorset` — the ranking
+   * layer overrides it per-attempt, iterating over each acceptable shape
+   * and keeping the best score. `gap_shape` alone (with
+   * `acceptable_gap_shapes` unset) still works as the single-mode input.
    */
   gap_shape: GapShape;
+  /**
+   * The set of gap shapes the wearer considers acceptable. When set,
+   * `rank()` scores each candidate row under EACH acceptable shape and
+   * keeps the minimum-penalty result — semantically "any of these gaps
+   * is fine, pick whichever this corset does best." When unset, `rank()`
+   * uses `[config.gap_shape]` (single-mode behavior).
+   *
+   * The winning shape lands on `CorsetScoreResult.gap_shape` so the UI
+   * can label the row with the mode that produced its score.
+   */
+  acceptable_gap_shapes?: GapShape[];
   /**
    * Slope for the "reverse gap" penalty applied in `curved` gap_shape mode
    * only. Fires when a non-waist position's actual gap is SMALLER than the
@@ -174,6 +212,10 @@ export interface PositionResult {
 export interface CorsetScoreResult {
   waist_size_in: number;
   variant: CorsetVariant;
+  /** The gap shape this score was computed under. When the ranking layer
+   *  iterates over multiple acceptable shapes, this is the shape that
+   *  produced the minimum-penalty result for this row. */
+  gap_shape: GapShape;
   /** Waist circumference when the corset is fully closed on the wearer:
    *  `waist_size_in + stretch_slack`. This is the minimum wearable waist. */
   effective_waist_in: number;

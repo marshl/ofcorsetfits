@@ -25,11 +25,45 @@ import type {
   CorsetMeasurement,
   CorsetScoreResult,
   CorsetVariant,
+  GapShape,
   PositionResult,
   PositionWeights,
   ScoringConfig,
 } from './types.ts';
 import { bodyCircumferenceAt } from './body.ts';
+
+/**
+ * Target lacing-gap width at a given position for each SYMMETRIC gap mode
+ * (all modes except `curved`, which doesn't have a single target).
+ *
+ * - `straight`: G everywhere — uniform parallel gap.
+ * - `closed`: 0 everywhere.
+ * - `slant-hip` /\: `max(0, G + slope * pos)` — grows toward the hip
+ *   (pos > 0), clamps to 0 above the waist once the linear target dips
+ *   below zero, i.e. the corset target-closes at the rib.
+ * - `slant-rib` \/: `max(0, G - slope * pos)` — grows toward the rib
+ *   (pos < 0), clamps to 0 below the waist for the same reason.
+ *
+ * The clamp models real corsets: a slanted gap can only get so narrow —
+ * once it hits zero, it stays zero rather than going "negative."
+ */
+function targetGapAt(
+  mode: Exclude<GapShape, 'curved'>,
+  pos: number,
+  G: number,
+  slope: number,
+): number {
+  switch (mode) {
+    case 'straight':
+      return G;
+    case 'closed':
+      return 0;
+    case 'slant-hip':
+      return Math.max(0, G + slope * pos);
+    case 'slant-rib':
+      return Math.max(0, G - slope * pos);
+  }
+}
 
 /**
  * Asymmetric linear penalty for a landmark (non-waist) fit difference.
@@ -90,19 +124,12 @@ export function scoreCorset(
   const G = config.straight_gap_size_in;
 
   // ----- Waist penalty (branches on gap_shape) -----
+  // Curved is asymmetric; the four other modes all target a specific gap
+  // width at the waist and use a symmetric |actual - target| penalty. The
+  // slant modes evaluate their target-gap function at pos=0, which yields
+  // G — the same as straight — so they share the same waist ideal.
   let waistPenaltyValue: number;
-  if (config.gap_shape === 'straight') {
-    // Want gap_at_waist = G, i.e. targetWaist - effectiveWaist = G,
-    // i.e. effectiveWaist = targetWaist - G. Symmetric penalty on deviation.
-    const idealEff = targetWaist - G;
-    waistPenaltyValue =
-      config.weights.waist * Math.abs(effectiveWaist - idealEff) * config.tightness_slope;
-  } else if (config.gap_shape === 'closed') {
-    // Want gap_at_waist = 0, i.e. effectiveWaist = targetWaist. Symmetric.
-    waistPenaltyValue =
-      config.weights.waist * Math.abs(effectiveWaist - targetWaist) * config.tightness_slope;
-  } else {
-    // curved (default): asymmetric — over-target harsh, under-target mild.
+  if (config.gap_shape === 'curved') {
     const waistDiff = effectiveWaist - targetWaist;
     waistPenaltyValue = waistPenalty(
       waistDiff,
@@ -110,6 +137,16 @@ export function scoreCorset(
       config.waist_over_target_slope,
       config.waist_under_target_slope,
     );
+  } else {
+    const waistTargetGap = targetGapAt(
+      config.gap_shape,
+      0,
+      G,
+      config.slant_slope_in_per_in,
+    );
+    const idealEff = targetWaist - waistTargetGap;
+    waistPenaltyValue =
+      config.weights.waist * Math.abs(effectiveWaist - idealEff) * config.tightness_slope;
   }
 
   // ----- Per-position results (branches on gap_shape) -----
@@ -139,13 +176,7 @@ export function scoreCorset(
       const weight = config.weights[weightKey];
 
       let penalty: number;
-      if (config.gap_shape === 'straight') {
-        // Want actualGap = G everywhere. Symmetric deviation penalty.
-        penalty = weight * Math.abs(actualGap - G) * config.tightness_slope;
-      } else if (config.gap_shape === 'closed') {
-        // Want actualGap = 0 everywhere. Symmetric deviation penalty.
-        penalty = weight * Math.abs(actualGap) * config.tightness_slope;
-      } else {
+      if (config.gap_shape === 'curved') {
         // curved: asymmetric on diff — EXCEPT at the underbust of a cupped-rib
         // silhouette, where the design intent is to CUP the rib (accommodate,
         // don't compress or flare away from it). Both directions of misfit
@@ -157,6 +188,16 @@ export function scoreCorset(
           ? config.tightness_slope
           : config.looseness_slope;
         penalty = penaltyForDiff(diff, weight, config.tightness_slope, loosenessSlope);
+      } else {
+        // straight / slant-hip / slant-rib / closed all define a per-position
+        // target gap and use a symmetric |actual - target| penalty.
+        const targetGap = targetGapAt(
+          config.gap_shape,
+          m.position_from_waist_in,
+          G,
+          config.slant_slope_in_per_in,
+        );
+        penalty = weight * Math.abs(actualGap - targetGap) * config.tightness_slope;
       }
 
       return {
@@ -208,6 +249,7 @@ export function scoreCorset(
   return {
     waist_size_in: waistSize,
     variant,
+    gap_shape: config.gap_shape,
     effective_waist_in: effectiveWaist,
     target_waist_in: targetWaist,
     waist_gap_in: targetWaist - effectiveWaist,

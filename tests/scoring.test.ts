@@ -295,13 +295,48 @@ describe('gap_shape modes', () => {
     expect(anyHourglass).toBe(true);
   });
 
-  it('hourglass_penalty is 0 in straight/closed modes (not applied)', () => {
+  it('hourglass_penalty is 0 in every non-curved mode', () => {
     const config = defaultScoringConfig(catalog);
-    for (const mode of ['straight', 'closed'] as const) {
+    for (const mode of ['straight', 'slant-hip', 'slant-rib', 'closed'] as const) {
       const results = rank(highSpringBody, catalog, { ...config, gap_shape: mode });
       for (const r of results) {
         expect(r.best.hourglass_penalty).toBe(0);
       }
+    }
+  });
+
+  it('slant-hip top result has non-waist gaps that grow toward the hip', () => {
+    const config = defaultScoringConfig(catalog);
+    const results = rank(mediumBody, catalog, { ...config, gap_shape: 'slant-hip' });
+    expect(results.length).toBeGreaterThan(0);
+    const top = results[0];
+    // Compare rib gap vs the largest hip gap. Slant-hip's target grows with
+    // position, so the top-ribbed and top-hipped positions should reflect
+    // that ordering — hip gap should be strictly larger than rib gap.
+    const rib = top.best.position_results.find(
+      (p) => p.label?.startsWith('under-bust') && p.actual_gap_in !== null,
+    );
+    const hip = top.best.position_results
+      .filter((p) => p.position_from_waist_in > 0 && p.actual_gap_in !== null)
+      .sort((a, b) => b.position_from_waist_in - a.position_from_waist_in)[0];
+    if (rib && hip && rib.actual_gap_in !== null && hip.actual_gap_in !== null) {
+      expect(hip.actual_gap_in).toBeGreaterThan(rib.actual_gap_in);
+    }
+  });
+
+  it('slant-rib top result has non-waist gaps that grow toward the rib', () => {
+    const config = defaultScoringConfig(catalog);
+    const results = rank(mediumBody, catalog, { ...config, gap_shape: 'slant-rib' });
+    expect(results.length).toBeGreaterThan(0);
+    const top = results[0];
+    const rib = top.best.position_results.find(
+      (p) => p.label?.startsWith('under-bust') && p.actual_gap_in !== null,
+    );
+    const hip = top.best.position_results
+      .filter((p) => p.position_from_waist_in > 0 && p.actual_gap_in !== null)
+      .sort((a, b) => b.position_from_waist_in - a.position_from_waist_in)[0];
+    if (rib && hip && rib.actual_gap_in !== null && hip.actual_gap_in !== null) {
+      expect(rib.actual_gap_in).toBeGreaterThan(hip.actual_gap_in);
     }
   });
 
