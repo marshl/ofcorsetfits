@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 140" role="img" aria-label="ofcorsetfits">
+  <title>ofcorsetfits</title>
+  <defs>
+    <!-- Pull Great Vibes from Google Fonts. Browsers apply this @import
+         when the SVG renders (inline in HTML or as a standalone document).
+         `cursive` is the generic-family fallback the browser reaches for
+         if the network fetch fails or is blocked. -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;display=swap');
+      .wordmark {
+        font-family: 'Great Vibes', 'Sacramento', 'Dancing Script', cursive;
+        font-weight: 400;
+      }
+    </style>
+  </defs>
+
+  <!-- Faint cream underline flourish — a wide, low-opacity brush stroke
+       that gives the wordmark a soft base without competing with it. -->
+  <path d="M 130 110 Q 400 130 670 105"
+        fill="none" stroke="#f6ecd2" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- The wordmark itself, pale blue to match the corset icon. -->
+  <text x="400" y="95" text-anchor="middle" class="wordmark"
+        font-size="110" fill="#6da2c4">ofcorsetfits</text>
+</svg>

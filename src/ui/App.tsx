@@ -91,7 +91,7 @@ export function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>ofcorsetfits</h1>
+        <h1>OfCorsetFits</h1>
         <p className="tagline">
           Ranked Mystic City corsets by fit against your anatomical measurements.
           Enter your body on the left; results update live.

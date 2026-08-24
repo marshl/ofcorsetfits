@@ -38,7 +38,17 @@ body {
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
 }
-.app-header h1 { margin: 0 0 0.25rem; font-size: 1.75rem; }
+.app-header h1 {
+  margin: 0 0 0.25rem;
+  /* Great Vibes is thin at typical body-copy sizes; bump the size so the
+     wordmark reads as the site's mark, not a stray heading. `cursive` is
+     the CSS generic-family fallback if the web font hasn't loaded yet. */
+  font-family: 'Great Vibes', 'Sacramento', 'Dancing Script', cursive;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #6da2c4;
+}
 .app-header .tagline { margin: 0.25rem 0; color: var(--muted); }
 .app-header .meta { margin: 0.25rem 0; color: var(--muted); font-size: 0.85rem; }
 

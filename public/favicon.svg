@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="ofcorsetfits">
+  <title>ofcorsetfits</title>
+  <!-- Cream rounded-square backdrop — visible against dark browser chrome
+       and against the light page. -->
+  <rect x="4" y="4" width="92" height="92" rx="18" ry="18" fill="#f6ecd2"/>
+  <!-- The )( corset silhouette: two mirrored quadratic curves whose
+       convex bellies meet near the center, pinching the "waist" and
+       flaring open at the "rib" (top) and "hip" (bottom). -->
+  <path d="M 32 20 Q 54 50 32 80"
+        fill="none" stroke="#6da2c4" stroke-width="7" stroke-linecap="round"/>
+  <path d="M 68 20 Q 46 50 68 80"
+        fill="none" stroke="#6da2c4" stroke-width="7" stroke-linecap="round"/>
+</svg>
