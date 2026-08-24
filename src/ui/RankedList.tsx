@@ -471,33 +471,56 @@ export function RankedList({
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          waist{' '}
-                          <span className="waist-size-hint">
-                            (size {r.best.waist_size_in}")
-                          </span>
-                        </td>
-                        <td>{r.best.effective_waist_in.toFixed(1)}"</td>
-                        <td>{r.best.target_waist_in.toFixed(1)}"</td>
-                        <td>{formatDiff(r.best.waist_gap_in)}</td>
-                        {showAdvanced && <td>—</td>}
-                        {showAdvanced && <td>{r.best.waist_penalty.toFixed(3)}</td>}
-                      </tr>
-                      {r.best.position_results.map((p, idx) => (
-                        <tr key={idx}>
-                          <td>{p.label ?? `pos ${p.position_from_waist_in}`}</td>
-                          <td>{p.corset_circumference_in.toFixed(1)}"</td>
-                          <td>
-                            {p.user_circumference_in === null
-                              ? '—'
-                              : `${p.user_circumference_in.toFixed(1)}"`}
-                          </td>
-                          <td>{formatDiff(p.actual_gap_in)}</td>
-                          {showAdvanced && <td>{p.weight.toFixed(1)}</td>}
-                          {showAdvanced && <td>{p.penalty.toFixed(3)}</td>}
-                        </tr>
-                      ))}
+                      {(() => {
+                        // Order rows head-to-toe so the table mirrors how
+                        // the corset sits on the body: rib (position < 0)
+                        // at the top, waist in the middle, hip (position
+                        // > 0) at the bottom. `position_results` from the
+                        // scoring engine already has one entry per corset
+                        // measurement; splitting on sign preserves stable
+                        // ordering within each half.
+                        const above = r.best.position_results
+                          .filter((p) => p.position_from_waist_in < 0)
+                          .slice()
+                          .sort((a, b) => a.position_from_waist_in - b.position_from_waist_in);
+                        const below = r.best.position_results
+                          .filter((p) => p.position_from_waist_in >= 0)
+                          .slice()
+                          .sort((a, b) => a.position_from_waist_in - b.position_from_waist_in);
+                        const renderPosRow = (p: typeof r.best.position_results[number], idx: number) => (
+                          <tr key={`pos-${idx}-${p.position_from_waist_in}`}>
+                            <td>{p.label ?? `pos ${p.position_from_waist_in}`}</td>
+                            <td>{p.corset_circumference_in.toFixed(1)}"</td>
+                            <td>
+                              {p.user_circumference_in === null
+                                ? '—'
+                                : `${p.user_circumference_in.toFixed(1)}"`}
+                            </td>
+                            <td>{formatDiff(p.actual_gap_in)}</td>
+                            {showAdvanced && <td>{p.weight.toFixed(1)}</td>}
+                            {showAdvanced && <td>{p.penalty.toFixed(3)}</td>}
+                          </tr>
+                        );
+                        return (
+                          <>
+                            {above.map((p, i) => renderPosRow(p, i))}
+                            <tr>
+                              <td>
+                                waist{' '}
+                                <span className="waist-size-hint">
+                                  (size {r.best.waist_size_in}")
+                                </span>
+                              </td>
+                              <td>{r.best.effective_waist_in.toFixed(1)}"</td>
+                              <td>{r.best.target_waist_in.toFixed(1)}"</td>
+                              <td>{formatDiff(r.best.waist_gap_in)}</td>
+                              {showAdvanced && <td>—</td>}
+                              {showAdvanced && <td>{r.best.waist_penalty.toFixed(3)}</td>}
+                            </tr>
+                            {below.map((p, i) => renderPosRow(p, above.length + i))}
+                          </>
+                        );
+                      })()}
                       {r.best.hourglass_penalty > 0 && (
                         <tr className="hourglass-row">
                           <td>hourglass gap</td>
