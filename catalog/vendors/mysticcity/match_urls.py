@@ -5,10 +5,11 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-HERE = Path(__file__).parent
-JSON_PATH = HERE.parent / "mystic-city-comparison-chart.raw.json"
-URLS_PATH = HERE / "product-urls.txt"
-OUT_PATH = HERE / "url-to-design.json"
+HERE = Path(__file__).resolve().parent
+DATA_DIR = HERE / "data"
+JSON_PATH = DATA_DIR / "comparison-chart.raw.json"
+URLS_PATH = DATA_DIR / "product-urls.txt"
+OUT_PATH = DATA_DIR / "url-to-design.json"
 
 
 def normalize(design_id):

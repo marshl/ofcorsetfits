@@ -1,60 +1,70 @@
-# Catalog data — Mystic City Corsets
+# Catalog
 
-This directory holds source data used to build `mystic-city.json`, the catalog file consumed by the app.
+This directory holds the vendor-agnostic catalog files consumed by the app, plus the per-vendor pipelines that build them.
 
-## Files
+## Layout
 
-### Source data (from Mystic City Corsets)
-
-- **`mystic-city-comparison-chart.raw.json`** — raw response from MCC's public "Corset Comparison Chart" ninja_tables ajax endpoint. 79 unique underbust silhouettes with per-model spring values, geometry, and torso length. Fetched 2026-07-17.
-- **`scratch/product-sitemap.xml`** — raw copy of `https://www.mysticcitycorsets.com/product-sitemap.xml`. 220 product URLs.
-- **`scratch/product-urls.txt`** — flat list of product URLs extracted from the sitemap.
-
-### Derived / working files
-
-- **`scratch/match_urls.py`** — matches sitemap product URLs to design_ids from the comparison-chart JSON by prefix (with dash normalization for cases like `MCC109-C` ↔ `mcc109c`). Picks one representative URL per silhouette.
-- **`scratch/url-to-design.json`** — output of `match_urls.py`. Contains: representative URL per design, extras (silhouettes on the sitemap but not in the JSON), missing (JSON designs with no product URL, likely discontinued).
-- **`scratch/scraped-per-design.json`** — per-page scrape of the ~57 representative product pages. Extracts waist sizes from the `<select>` variation dropdown, silhouette words from descriptions, and any calibration notes ("runs small", "5-6″" ranges, etc.) from HTML text.
-- **`scratch/stretch_class.py`** — small classifier that maps a product title's material keywords to a `stretch_class` (`low` | `medium` | `high`). Mesh-dominant → high; hybrid → medium; structural fabrics only → low. Used to fold material-dependent stretch into the scoring model's waist slack calculation.
-- **`hip-positions.yaml`** — the manual-review file. For each of 57 corsets: URL + context + editable `upper_hip_position_in`, `low_hip_position_in`, `stretch_class`. User opens each URL, verifies hip positions against the size-chart image, verifies stretch class against product materials, edits values as needed. Merged into the final catalog when done.
-
-### Reproducibility
-
-To refetch the comparison-chart JSON (its `ninja_table_public_nonce` may have expired):
-
-```bash
-# Load any product page in a browser, view source, and grep the current public nonce
-# from a "ninja_table_public_nonce" line in the inline JS or Vue.js data. Then:
-
-NONCE="<current-public-nonce>"
-curl -sSL \
-  -H "User-Agent: ofcorsetfits-catalog-builder/0.1 (personal fit-calculator project)" \
-  "https://www.mysticcitycorsets.com/wp-admin/admin-ajax.php?action=wp_ajax_ninja_tables_public_action&table_id=18400&target_action=get-all-data&default_sorting=new_first&skip_rows=0&limit_rows=0&ninja_table_public_nonce=${NONCE}" \
-  > mystic-city-comparison-chart.raw.json
+```
+catalog/
+├── mystic-city.json              # OUTPUT: catalog the app imports
+├── vendors/
+│   ├── shared/                   # vendor-agnostic helpers
+│   │   ├── http.py               # rate-limited GET, safe writes, standard UA
+│   │   ├── sitemap.py            # WordPress sitemap XML → URL list
+│   │   ├── woocommerce.py        # WooCommerce pa_size dropdown parser
+│   │   └── stretch_class.py      # title-keyword → stretch_class classifier
+│   └── mysticcity/               # MCC-specific pipeline + data
+│       ├── refresh.py            # end-to-end orchestrator (steps 1-8)
+│       ├── fetch_sitemap.py            # 1: product-sitemap.xml → product-urls.txt
+│       ├── fetch_comparison_chart.py   # 2: ninja_tables ajax → raw JSON
+│       ├── match_urls.py               # 3: sitemap × chart → url-to-design.json
+│       ├── fetch_page_meta.py          # 4: each rep URL → scraped-per-design.json
+│       ├── review_hip_positions.py     # 5: interactive prompt → hip-positions.yaml
+│       ├── build.py                    # 6+8: merge sources → catalog/mystic-city.json
+│       ├── fetch_sizes.py              # 7: each variant URL → per-variant-sizes.json
+│       ├── analyze_variant_sizes.py    # one-off diagnostic
+│       └── data/                       # input + intermediate files
+│           ├── product-sitemap.xml
+│           ├── product-urls.txt
+│           ├── comparison-chart.raw.json
+│           ├── url-to-design.json
+│           ├── scraped-per-design.json
+│           ├── hip-positions.yaml           # human-edited via review_hip_positions.py
+│           └── per-variant-sizes.json
 ```
 
-To refetch the sitemap:
+The catalog schema (documented in the design doc + `src/scoring/types.ts`) is vendor-agnostic: `brand`, `brand_url`, `brand_waist_slack_by_stretch_class_in`, `sources`, `generated_at_iso`, `corsets: [...]`. To add a new vendor, create a sibling folder under `vendors/` (e.g. `vendors/orchardcorset/`) with its own `refresh.py` + `build.py`, reuse the shared helpers, and write to `catalog/<vendor-slug>.json`.
+
+## Rebuilding from scratch
 
 ```bash
-curl -sSL "https://www.mysticcitycorsets.com/product-sitemap.xml" > scratch/product-sitemap.xml
-grep -oE '<loc>[^<]+</loc>' scratch/product-sitemap.xml | sed 's|</\?loc>||g' > scratch/product-urls.txt
+# Full end-to-end refresh (fetches sitemap + chart + sizes, builds catalog):
+python3 catalog/vendors/mysticcity/refresh.py
+
+# Only rebuild from cached data (no HTTP):
+python3 catalog/vendors/mysticcity/refresh.py --skip-fetch
+
+# Skip individual fetch steps if their cache is still current:
+python3 catalog/vendors/mysticcity/refresh.py --skip-sitemap --skip-chart
+
+# If the ninja_tables nonce auto-detect breaks, grep the current nonce
+# out of any MCC page's HTML and pass it explicitly:
+python3 catalog/vendors/mysticcity/refresh.py --nonce <public-nonce>
 ```
 
-To rerun the URL matcher:
+The pipeline runs 8 steps: fetch sitemap → fetch chart → match URLs → fetch page meta → **interactive** hip-position review (prompts only for new designs) → build v1 (structure only) → fetch sizes → build v2 (with sizes). The double-build is intentional and cheap; step 6 is HTTP-free.
 
-```bash
-python3 scratch/match_urls.py
-```
+Rate limits: `shared.http.Fetcher` waits 2 s between requests by default. A full end-to-end fetch is ~135 variant URLs + 57 rep URLs + 1 sitemap + 1 chart ≈ 6–7 minutes wall clock.
+
+**Interactive hip-position step:** MCC's size-chart images encode the vertical hip positions in green annotations that can't be scraped from HTML. `review_hip_positions.py` walks you through each unreviewed design, prints the product URL + full context (title, springs, torso length, sizes, silhouette words, materials), and prompts for values. Entries save incrementally — Ctrl-C is safe, re-running resumes. Non-interactive mode via `--assume-defaults` fills new designs with 4.0 / 6.0 / inferred-stretch when a human review isn't practical.
 
 ## Source and use notes
 
-Data is factual (measurements, sizes) — factual data is not copyrightable in most jurisdictions. Robots.txt (`https://www.mysticcitycorsets.com/robots.txt`) explicitly permits access to `/wp-admin/admin-ajax.php` and does not disallow product pages.
+Data is factual (measurements, sizes) — factual data is not copyrightable in most jurisdictions. MCC's `robots.txt` explicitly permits access to `/wp-admin/admin-ajax.php` and does not disallow product pages. Requests are rate-limited and the User-Agent identifies the project and contact.
 
-Requests are rate-limited to ≤1/sec during scrapes. The User-Agent string identifies the project and contact.
+The tool this data feeds is a fit-finder that directs users toward buying corsets, i.e. aligned with vendors' interests rather than competing.
 
-The tool this data feeds is a fit-finder that directs users toward buying Mystic City corsets, i.e. aligned with MCC's interests rather than competing. Product URLs should be visible in the SPA's ranked results so users can click through to buy.
-
-If MCC ever objects to the data being in this repo, the right response is to remove the raw JSON and refactor the app to compute needed values on the fly from the (permitted) ajax endpoint at page load — the endpoint is public and browser-consumable by design. The static JSON is a convenience for offline dev.
+If a vendor ever objects to their data being in this repo, the right response is to remove the raw JSON for that vendor and refactor to compute needed values on the fly from the public endpoints at page load. The static JSON is a convenience for offline dev.
 
 ## Related
 

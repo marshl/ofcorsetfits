@@ -1,44 +1,33 @@
-"""Fetch every variant URL in the catalog and record its size dropdown.
+"""Fetch each variant's currently-offered size list from MCC's product pages.
 
-Rate-limited to one request every 2 seconds. Uses a descriptive User-Agent
-identifying the project. Writes results incrementally so a mid-run failure
-still leaves partial data on disk.
+For every variant URL currently in `catalog/mystic-city.json`, GET its
+product page and extract the WooCommerce size dropdown. Results write to
+`data/per-variant-sizes.json` — a `{url: [int, ...]}` mapping, or a
+`{url: {"error": "..."}` sentinel when the fetch failed. The build step
+merges this into each variant's `waist_sizes_in`.
 
-Output: catalog/scratch/per-variant-sizes.json — a mapping from URL to a
-list of integer waist sizes extracted from the WooCommerce <select> dropdown.
+Rate-limited (see `shared.http.Fetcher` defaults). Writes incrementally
+every 5 URLs so a Ctrl-C mid-run doesn't lose progress — re-running skips
+already-successful URLs and retries error entries.
 """
 
 from __future__ import annotations
 
 import json
-import re
 import sys
 import time
 import urllib.error
-import urllib.request
 from pathlib import Path
 
-HERE = Path(__file__).parent
-CATALOG_PATH = HERE.parent / "mystic-city.json"
-OUT_PATH = HERE / "per-variant-sizes.json"
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-RATE_LIMIT_SECONDS = 2.0
-USER_AGENT = (
-    "ofcorsetfits-catalog-builder/0.1 "
-    "(liam.marshall@repositpower.com; personal fit-calculator project)"
-)
+from shared.http import Fetcher  # noqa: E402
+from shared.woocommerce import extract_size_options  # noqa: E402
 
-# WooCommerce variation select regex — captures the numeric size value from
-# each <option value="18"> line inside the size <select>. Strict enough to
-# avoid catching unrelated numeric options elsewhere on the page.
-SELECT_BLOCK_RE = re.compile(
-    r'<select[^>]*id="pa_size"[^>]*>(.+?)</select>',
-    re.DOTALL | re.IGNORECASE,
-)
-OPTION_VALUE_RE = re.compile(
-    r'<option[^>]*value="(\d+)"',
-    re.IGNORECASE,
-)
+HERE = Path(__file__).resolve().parent
+DATA_DIR = HERE / "data"
+CATALOG_PATH = HERE.parent.parent / "mystic-city.json"
+OUT_PATH = DATA_DIR / "per-variant-sizes.json"
 
 
 def load_variant_urls() -> list[str]:
@@ -50,24 +39,18 @@ def load_variant_urls() -> list[str]:
     return sorted(set(urls))
 
 
-def fetch(url: str) -> str:
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return resp.read().decode("utf-8", errors="replace")
-
-
-def extract_sizes(html: str) -> list[int]:
-    m = SELECT_BLOCK_RE.search(html)
-    if not m:
-        return []
-    return sorted({int(v) for v in OPTION_VALUE_RE.findall(m.group(1))})
-
-
 def main() -> int:
+    if not CATALOG_PATH.exists():
+        print(
+            f"Catalog file {CATALOG_PATH} does not exist. Run build.py first "
+            "so we know which variant URLs to fetch.",
+            file=sys.stderr,
+        )
+        return 1
+
     urls = load_variant_urls()
     print(f"Total variant URLs to fetch: {len(urls)}", flush=True)
 
-    # Load existing partial results if any, so a re-run resumes.
     results: dict[str, list[int] | dict[str, str]] = {}
     if OUT_PATH.exists():
         try:
@@ -76,17 +59,20 @@ def main() -> int:
         except Exception:
             results = {}
 
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+
     def flush() -> None:
         OUT_PATH.write_text(json.dumps(results, indent=2, sort_keys=True))
 
+    fetcher = Fetcher()
     errors = 0
     started = time.monotonic()
     for i, url in enumerate(urls, 1):
         if url in results and isinstance(results[url], list):
             continue
         try:
-            html = fetch(url)
-            sizes = extract_sizes(html)
+            html = fetcher.get_text(url)
+            sizes = extract_size_options(html)
             results[url] = sizes
             note = "" if sizes else " (WARN: empty sizes list)"
             print(f"[{i}/{len(urls)}] {url} -> {len(sizes)} sizes{note}", flush=True)
@@ -99,10 +85,8 @@ def main() -> int:
             errors += 1
             print(f"[{i}/{len(urls)}] {url} -> ERROR {type(e).__name__}", flush=True)
 
-        # Save incrementally every 5 URLs.
         if i % 5 == 0:
             flush()
-        time.sleep(RATE_LIMIT_SECONDS)
 
     flush()
     dur = time.monotonic() - started

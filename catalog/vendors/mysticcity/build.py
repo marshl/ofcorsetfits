@@ -1,4 +1,4 @@
-"""Merge raw MCC JSON + scrape output + manual-review YAML into the final catalog.
+"""Merge MCC raw JSON + scrape output + manual-review YAML into the final catalog.
 
 Produces `catalog/mystic-city.json` in the schema documented in the design doc.
 Each corset entry captures:
@@ -26,18 +26,21 @@ from pathlib import Path
 
 import yaml
 
-HERE = Path(__file__).parent
-CATALOG = HERE.parent
-JSON_PATH = CATALOG / "mystic-city-comparison-chart.raw.json"
-URL_MAP_PATH = HERE / "url-to-design.json"
-SCRAPED_PATH = HERE / "scraped-per-design.json"
-REVIEW_PATH = CATALOG / "hip-positions.yaml"
-PRODUCT_URLS_PATH = HERE / "product-urls.txt"
-PER_VARIANT_SIZES_PATH = HERE / "per-variant-sizes.json"
-OUT_PATH = CATALOG / "mystic-city.json"
+# Add catalog/vendors/ to sys.path so `shared.*` resolves.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-sys.path.insert(0, str(HERE))
-from stretch_class import classify as classify_stretch  # noqa: E402
+from shared.stretch_class import classify as classify_stretch  # noqa: E402
+
+HERE = Path(__file__).resolve().parent
+DATA_DIR = HERE / "data"
+CATALOG_DIR = HERE.parent.parent
+JSON_PATH = DATA_DIR / "comparison-chart.raw.json"
+URL_MAP_PATH = DATA_DIR / "url-to-design.json"
+SCRAPED_PATH = DATA_DIR / "scraped-per-design.json"
+REVIEW_PATH = DATA_DIR / "hip-positions.yaml"
+PRODUCT_URLS_PATH = DATA_DIR / "product-urls.txt"
+PER_VARIANT_SIZES_PATH = DATA_DIR / "per-variant-sizes.json"
+OUT_PATH = CATALOG_DIR / "mystic-city.json"
 
 # Slug qualifier words we strip from the variant name derivation.
 NAME_STRIP_WORDS = {
@@ -60,13 +63,10 @@ def derive_variant_name(slug: str, design_id: str) -> str:
     """
     up = slug.upper()
     did_up = design_id.upper()
-    # Strip design_id prefix (dash-normalized fallback).
     if up.startswith(did_up):
         remainder = slug[len(did_up):]
     else:
         did_nd = did_up.replace("-", "")
-        # Find where the design_id ends in the slug when dashes are normalized.
-        # This mirrors the matcher logic in match_urls.py.
         consumed = 0
         matched = 0
         while matched < len(did_nd) and consumed < len(slug):
@@ -75,29 +75,26 @@ def derive_variant_name(slug: str, design_id: str) -> str:
                 matched += 1
             consumed += 1
         remainder = slug[consumed:] if matched == len(did_nd) else slug
-    # Strip leading dash and any leading empty-suffix qualifiers like "-2"/"-a".
     remainder = remainder.lstrip("-")
-    # Split on dashes, drop filler words + bare numbers, title-case the rest.
     tokens = [
         t for t in remainder.split("-")
         if t and t.lower() not in NAME_STRIP_WORDS and not NAME_STRIP_NUM_RE.fullmatch(t)
     ]
     name = " ".join(t.capitalize() for t in tokens).strip()
-    return name or slug  # fall back to raw slug if we stripped everything
+    return name or slug
 
-# Priority order for picking a single silhouette_category from the scraped
-# silhouette_words. Highest priority = most specific.
+
 SILHOUETTE_PRIORITY = [
-    "waspie",       # length-specific: short
-    "longline",     # length-specific: long
-    "long torso",   # length-specific: long (variant)
-    "pipestem",     # rib-specific
-    "cupped rib",   # rib-specific
-    "cupped ribs",  # rib-specific (plural variant)
-    "conical",      # rib-specific
-    "conical rib",  # rib-specific (variant)
-    "conical ribs", # rib-specific (plural variant)
-    "hourglass",    # overall shape
+    "waspie",
+    "longline",
+    "long torso",
+    "pipestem",
+    "cupped rib",
+    "cupped ribs",
+    "conical",
+    "conical rib",
+    "conical ribs",
+    "hourglass",
 ]
 
 SILHOUETTE_ENUM_MAP = {
@@ -115,12 +112,11 @@ SILHOUETTE_ENUM_MAP = {
 
 
 def pick_silhouette_category(words: list[str]) -> str:
-    """Return one canonical silhouette_category from the scraped word list."""
     normalized = {w.lower().strip() for w in words}
     for candidate in SILHOUETTE_PRIORITY:
         if candidate in normalized:
             return SILHOUETTE_ENUM_MAP[candidate]
-    return "hourglass"  # safe default
+    return "hourglass"
 
 
 def load_json_designs() -> dict[str, dict]:
@@ -128,8 +124,6 @@ def load_json_designs() -> dict[str, dict]:
     out: dict[str, dict] = {}
     for row in rows:
         key = row["value"]["design"].upper()
-        # If dupes exist (raw JSON had MCC254 twice), later entries win —
-        # they're identical rows so it doesn't matter.
         out[key] = row["value"]
     return out
 
@@ -154,17 +148,12 @@ def collect_variants_per_design(design_ids: list[str]) -> dict[str, list[dict]]:
     derive material+stretch_class per variant from the slug alone (no HTTP
     fetches needed — the material keywords live in the slug itself).
     Attaches per-variant waist_sizes_in from the per-variant size scrape.
-
-    Returns { design_id: [ {name, url, materials, stretch_class,
-                            waist_sizes_in}, ... ], ... }.
     """
     per_variant_sizes = load_per_variant_sizes()
     urls = [
         u.strip() for u in PRODUCT_URLS_PATH.read_text().splitlines()
         if u.strip() and "/shop/" in u and not u.rstrip("/").endswith("/shop")
     ]
-    # Sort design IDs longest-first so MCC109-C wins over MCC109 for
-    # slug `mcc109c-...` even after dash normalization.
     designs_sorted = sorted(design_ids, key=lambda s: (-len(s), s))
 
     def match_slug(slug: str) -> str | None:
@@ -174,9 +163,6 @@ def collect_variants_per_design(design_ids: list[str]) -> dict[str, list[dict]]:
             did_nd = did.replace("-", "")
             for haystack, needle in ((up, did), (up_nd, did_nd)):
                 if haystack.startswith(needle):
-                    # Boundary check on the original slug — the next char
-                    # after the design ID (accounting for stripped dashes)
-                    # must be '-' or end of string.
                     if haystack is up:
                         end_pos = len(needle)
                     else:
@@ -200,7 +186,6 @@ def collect_variants_per_design(design_ids: list[str]) -> dict[str, list[dict]]:
         design_id = match_slug(slug)
         if not design_id:
             continue
-        # Materials + stretch_class from the slug (treat dashes as spaces).
         slug_as_text = slug.replace("-", " ")
         stretch_cls, materials = classify_stretch(slug_as_text)
         name = derive_variant_name(slug, design_id)
@@ -212,8 +197,6 @@ def collect_variants_per_design(design_ids: list[str]) -> dict[str, list[dict]]:
             "waist_sizes_in": per_variant_sizes.get(url, []),
         })
 
-    # Sort variants within each design by (stretch_class order, name) for
-    # stable output. low → medium → high.
     order = {"low": 0, "medium": 1, "high": 2}
     for did, vlist in variants.items():
         vlist.sort(key=lambda v: (order.get(v["stretch_class"], 99), v["name"]))
@@ -244,14 +227,8 @@ def build_entry(design_id: str, review_row: dict, json_row: dict,
     low_hip_position = review_row.get("low_hip_position_in")
     if low_hip_position is not None:
         low_hip_position = to_float(low_hip_position)
-    # Note: review_row.get("stretch_class") is no longer used at silhouette level;
-    # variants each carry their own stretch_class derived from their URL slug.
-    # We record it in provenance only, so the user's review isn't silently
-    # discarded.
     review_stretch_class = review_row.get("stretch_class")
 
-    # Build measurements list — each with position (negative above waist) and
-    # the corresponding spring, plus a human-readable label.
     measurements = []
     if underbust_length is not None and rib_spring is not None:
         measurements.append({
@@ -292,7 +269,6 @@ def build_entry(design_id: str, review_row: dict, json_row: dict,
             "low_hip_position=null — cannot form measurement"
         )
 
-    # Scrape-derived metadata.
     silhouette_words = scrape_row.get("silhouette_words") or []
     title = (scrape_row.get("title") or "").replace("\n", " ").strip()
     scraped_calibration = scrape_row.get("calibration")
@@ -300,10 +276,6 @@ def build_entry(design_id: str, review_row: dict, json_row: dict,
 
     silhouette_category = pick_silhouette_category(silhouette_words)
 
-    # Aggregate materials + stretch classes across variants. Sizes are per-variant
-    # (see CorsetVariant.waist_sizes_in) — no silhouette-level rollup, since it
-    # would be misleading (unioning what "the silhouette offers" hides real
-    # per-color availability differences the ranking already accounts for).
     all_materials: set[str] = set()
     all_stretch_classes: set[str] = set()
     for v in variants:
@@ -356,10 +328,9 @@ def build_entry(design_id: str, review_row: dict, json_row: dict,
 
 def main():
     json_designs = load_json_designs()
-    scraped = json.loads(SCRAPED_PATH.read_text())
+    scraped = json.loads(SCRAPED_PATH.read_text()) if SCRAPED_PATH.exists() else {}
     review = yaml.safe_load(REVIEW_PATH.read_text())
 
-    # Collect all variant SKUs across the sitemap, grouped by design_id.
     design_ids_in_review = [r["design_id"] for r in review["designs"]]
     variants_by_design = collect_variants_per_design(design_ids_in_review)
 
@@ -367,7 +338,6 @@ def main():
     per_entry_warnings = []
     for review_row in review["designs"]:
         design_id = review_row["design_id"]
-        # Look up the JSON row, allowing dash-normalized fallback.
         json_row = json_designs.get(design_id)
         if not json_row:
             for k, v in json_designs.items():
@@ -427,17 +397,12 @@ def main():
     for w in per_entry_warnings:
         print(f"  ⚠ {w}")
 
-    # Also print a compact distribution summary.
     from collections import Counter
     print()
     print("--- Distribution ---")
     print("Silhouette categories:",
           dict(Counter(c["silhouette_category"] for c in corsets)))
     print("Silhouettes with stretch_class_options:")
-    for options in ("['low']", "['medium']", "['high']", "['low', 'medium']",
-                    "['low', 'medium', 'high']", "['medium', 'high']",
-                    "['low', 'high']"):
-        pass
     opts_dist = Counter(tuple(c["stretch_class_options"]) for c in corsets)
     for opts, n in sorted(opts_dist.items(), key=lambda x: (-x[1], x[0])):
         print(f"  {list(opts)}: {n}")

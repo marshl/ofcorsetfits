@@ -1,28 +1,18 @@
-# Mystic City underbust catalog — manual review template
+# Mystic City underbust catalog — hip-position + stretch-class review
 #
-# 57 corsets. For each entry, verify TWO fields against the product page:
+# One entry per design that has both a comparison-chart row AND a product
+# URL. For each, the user has verified:
 #
-# 1. HIP POSITIONS (upper_hip_position_in, low_hip_position_in)
-#    - Open the `url`, find the size chart image, read the GREEN annotation
-#      labels. They show the vertical position of each hip measurement
-#      relative to the natural waist.
-#    - Values are inches below the natural waist. Defaults are 4 (upper)
-#      and 6 (low). Override where the image shows a different number.
-#    - Waspies and shorter corsets often use 3-3.5" instead of 4".
-#    - `low_hip_position_in: null` for models with `low_hip_spring: -` in
-#      MCC's JSON — those corsets have no low hip measurement. Leave null.
+# 1. HIP POSITIONS  — read from the green annotations on the size-chart
+#                     image on the product page. Inches below waist.
+#                     `null` when MCC's low_hip_spring is '-'.
+# 2. STRETCH CLASS  — verified against the actual product materials.
+#                     Inferred from title keywords as a starting default.
 #
-# 2. STRETCH CLASS (stretch_class)
-#    - Auto-classified from the product title's material words:
-#      * `low`    — no mesh (cotton/satin/brocade/PVC only). Waist ≈ nominal.
-#      * `medium` — hybrid (mesh + structural fabric). Waist runs ~1" large.
-#      * `high`   — mesh-dominant. Waist runs 1.5-2" large.
-#    - Titles can be misleading (e.g. "cotton" corset with mesh panels).
-#      If you've handled the product and know the material mix differs from
-#      the classification, override.
-#
-# Format is YAML. Preserve the exact indentation and quoting. When done,
-# save the file and tell Claude to merge into the final catalog.
+# The comments on each entry are regenerated from the current chart data
+# every time review_hip_positions.py runs — don't edit the comments, they
+# won't survive. Edit only the three data fields:
+#   upper_hip_position_in, low_hip_position_in, stretch_class.
 
 designs:
   - design_id: MCC100
@@ -36,9 +26,9 @@ designs:
     # sizes:              [20, 22, 24, 26, 28, 30, 32]
     # silhouette:         underbust, cupped rib, long torso
     # materials in title: cotton, pvc
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
+    upper_hip_position_in: 4.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: low  # low | medium | high — override if title misleading
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC101
     url: https://www.mysticcitycorsets.com/shop/mcc101-black-cotton-brocade-underbust-corset/
@@ -51,9 +41,9 @@ designs:
     # sizes:              [22, 24, 26, 28, 30, 32, 34, 36]
     # silhouette:         underbust, longline, cupped rib, hip ties
     # materials in title: cotton, mesh
-    upper_hip_position_in: 4.5  # inches below waist — verify from image
+    upper_hip_position_in: 4.5  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: medium  # low | medium | high — override if title misleading
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC109-C
     url: https://www.mysticcitycorsets.com/shop/mcc109c-black-cotton-underbust-corset/
@@ -66,9 +56,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
     # silhouette:         conical, underbust, longline
     # materials in title: cotton
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 7.0  # inches below waist — verify from image
-    stretch_class: low  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 7.0  # inches below waist
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC110
     url: https://www.mysticcitycorsets.com/shop/mcc110-baby-blue-satin-mesh-underbust-corset/
@@ -81,9 +71,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         underbust, longline, cupped rib
     # materials in title: mesh, satin
-    upper_hip_position_in: 3.5  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: medium  # low | medium | high — override if title misleading
+    upper_hip_position_in: 3.5  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC112
     url: https://www.mysticcitycorsets.com/shop/mcc112-black-cotton-underbust-corset/
@@ -96,9 +86,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         long torso, longline, underbust, cupped rib
     # materials in title: cotton
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 7.0  # inches below waist — verify from image
-    stretch_class: low  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 7.0  # inches below waist
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC122
     url: https://www.mysticcitycorsets.com/shop/mcc122-leopard-satin-underbust-corset-long-line-wide-hips/
@@ -111,9 +101,9 @@ designs:
     # sizes:              [22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         underbust, longline, long torso
     # materials in title: satin
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: low  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC124
     url: https://www.mysticcitycorsets.com/shop/mcc124-black-satin-underbust-corset/
@@ -126,9 +116,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36]
     # silhouette:         hourglass, underbust, longline
     # materials in title: satin
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: low  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC127
     url: https://www.mysticcitycorsets.com/shop/mcc127-plus-size-black-mesh-underbust-corset/
@@ -141,24 +131,9 @@ designs:
     # sizes:              [26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46]
     # silhouette:         underbust, plus size, conical, hip ties, longline
     # materials in title: mesh
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: high  # low | medium | high — override if title misleading
-
-  - design_id: MCC130
-    url: https://www.mysticcitycorsets.com/shop/mcc130-black-cotton-black-metallic-pvc-underbust-corset/
-    # title:              MCC130 Black Cotton/Black Metallic PVC Underbust Corset
-    # torso_length_in:   14.75
-    # rib_spring_in:     14
-    # upper_hip_spring:  13
-    # low_hip_spring:    14
-    # underbust_at_in:    7.5  (inches ABOVE waist — where MCC takes the underbust measurement)
-    # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
-    # silhouette:         underbust, cupped rib, long torso
-    # materials in title: cotton, pvc
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: low  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: high  # low | medium | high
 
   - design_id: MCC139
     url: https://www.mysticcitycorsets.com/shop/mcc139-black-cotton-sport-mesh-underbust-corset/
@@ -171,9 +146,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28]
     # silhouette:         underbust, cupped rib, hip ties
     # materials in title: cotton, mesh, sport mesh
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: medium  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC144
     url: https://www.mysticcitycorsets.com/shop/mcc144-brocade-mesh-underbust-corset/
@@ -186,9 +161,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36]
     # silhouette:         underbust, cupped rib
     # materials in title: brocade, mesh
-    upper_hip_position_in: 5.0  # inches below waist — verify from image
+    upper_hip_position_in: 5.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: medium  # low | medium | high — override if title misleading
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC148
     url: https://www.mysticcitycorsets.com/shop/mcc148-black-satin-underbust-corset-plus-size/
@@ -201,9 +176,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46]
     # silhouette:         underbust, hourglass, cupped rib, hip ties
     # materials in title: satin
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: low  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC152X
     url: https://www.mysticcitycorsets.com/shop/mcc152x-black-red-mini-underbust-corset/
@@ -216,9 +191,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32]
     # silhouette:         underbust, waspie
     # materials in title: pvc
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
+    upper_hip_position_in: 4.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: low  # low | medium | high — override if title misleading
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC16
     url: https://www.mysticcitycorsets.com/shop/mcc16-c-black-satin-sport-mesh-long-line-underbust-corset/
@@ -231,27 +206,12 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32]
     # silhouette:         hourglass, underbust, longline, conical
     # materials in title: mesh, satin, sport mesh
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: medium  # low | medium | high — override if title misleading
-
-  - design_id: MCC17
-    url: https://www.mysticcitycorsets.com/shop/mcc17-black-satin-sport-mesh/
-    # title:              MCC17 Cotton Satin Mesh Corset
-    # torso_length_in:   12.5
-    # rib_spring_in:     10
-    # upper_hip_spring:  13
-    # low_hip_spring:    16
-    # underbust_at_in:    5  (inches ABOVE waist — where MCC takes the underbust measurement)
-    # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
-    # silhouette:         hourglass, cupped rib, hip ties, underbust, longline
-    # materials in title: cotton, mesh, satin
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: medium  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC19
-    url: https://www.mysticcitycorsets.com/shop/mcc19-sport-mesh-underbust-corset/
+    url: https://www.mysticcitycorsets.com/shop/mcc19-cherry-blossom-brocade-underbust-corset/
     # title:              MCC19 Black Satin / Sport Mesh Underbust Corset
     # torso_length_in:   11.5
     # rib_spring_in:     8
@@ -261,9 +221,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36]
     # silhouette:         underbust, conical
     # materials in title: mesh, satin, sport mesh
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
+    upper_hip_position_in: 4.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: medium  # low | medium | high — override if title misleading
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC19A
     url: https://www.mysticcitycorsets.com/shop/mcc19a-black-cotton-sport-mesh-underbust-corset/
@@ -276,9 +236,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36]
     # silhouette:         underbust, conical
     # materials in title: cotton, mesh, satin, sport mesh
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
+    upper_hip_position_in: 4.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: medium  # low | medium | high — override if title misleading
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC20
     url: https://www.mysticcitycorsets.com/shop/mcc20-leopard-underbust-corset/
@@ -291,9 +251,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         hourglass, waspie, cupped rib
     # materials in title: satin
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
+    upper_hip_position_in: 4.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: low  # low | medium | high — override if title misleading
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC21
     url: https://www.mysticcitycorsets.com/shop/mcc21-black-brocade-mesh-underbust-corset/
@@ -306,9 +266,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         underbust, waspie, hourglass
     # materials in title: brocade, mesh
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
+    upper_hip_position_in: 4.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: medium  # low | medium | high — override if title misleading
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC227
     url: https://www.mysticcitycorsets.com/shop/mcc227-bird-brocade-underbust-corset/
@@ -321,9 +281,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
     # silhouette:         underbust, long torso, cupped rib, hip ties, longline
     # materials in title: brocade
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 7.0  # inches below waist — verify from image
-    stretch_class: low  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 7.0  # inches below waist
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC25
     url: https://www.mysticcitycorsets.com/shop/mcc25-beige-mesh-underbust-corset/
@@ -336,9 +296,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         underbust, cupped rib
     # materials in title: mesh
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
+    upper_hip_position_in: 4.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: high  # low | medium | high — override if title misleading
+    stretch_class: high  # low | medium | high
 
   - design_id: MCC254
     url: https://www.mysticcitycorsets.com/shop/mcc254-mesh-underbust-corset/
@@ -351,9 +311,9 @@ designs:
     # sizes:              [14, 16, 18, 20, 22, 24, 26]
     # silhouette:         hourglass, underbust, cupped rib
     # materials in title: mesh
-    upper_hip_position_in: 5.0  # inches below waist — verify from image
+    upper_hip_position_in: 5.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: high  # low | medium | high — override if title misleading
+    stretch_class: high  # low | medium | high
 
   - design_id: MCC32X
     url: https://www.mysticcitycorsets.com/shop/mcc32x-beige-mesh-underbust-corset/
@@ -366,9 +326,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         hourglass, waspie, underbust, cupped rib
     # materials in title: mesh
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
+    upper_hip_position_in: 4.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: high  # low | medium | high — override if title misleading
+    stretch_class: high  # low | medium | high
 
   - design_id: MCC33
     url: https://www.mysticcitycorsets.com/shop/mcc33-leopard-satin-underbust-corset/
@@ -381,9 +341,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         conical, underbust
     # materials in title: satin
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
+    upper_hip_position_in: 4.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: low  # low | medium | high — override if title misleading
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC34
     url: https://www.mysticcitycorsets.com/shop/mcc34-black-cotton-mesh-hip-ties-underbust-corset/
@@ -396,9 +356,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         underbust, conical, cupped rib, hip ties
     # materials in title: cotton, mesh
-    upper_hip_position_in: 5.0  # inches below waist — verify from image
+    upper_hip_position_in: 5.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: medium  # low | medium | high — override if title misleading
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC35
     url: https://www.mysticcitycorsets.com/shop/mcc35-r-purple-brocade-mesh-underbust-corset/
@@ -411,9 +371,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         hourglass, underbust
     # materials in title: brocade, mesh
-    upper_hip_position_in: 4.5  # inches below waist — verify from image
+    upper_hip_position_in: 4.5  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: medium  # low | medium | high — override if title misleading
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC36X
     url: https://www.mysticcitycorsets.com/shop/mcc36x-peacock-brocade-mesh-underbust-corset/
@@ -426,9 +386,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         underbust, hourglass, cupped rib, hip ties
     # materials in title: brocade, mesh
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: medium  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC38
     url: https://www.mysticcitycorsets.com/shop/mcc38-black-brocade-mesh-underbust-corset/
@@ -441,9 +401,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         underbust, cupped rib
     # materials in title: brocade, mesh
-    upper_hip_position_in: 4.5  # inches below waist — verify from image
+    upper_hip_position_in: 4.5  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: medium  # low | medium | high — override if title misleading
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC38-W
     url: https://www.mysticcitycorsets.com/shop/mcc38-w-cream-floral-brocade-white-mesh-underbust-corset/
@@ -456,9 +416,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         underbust, conical, cupped rib
     # materials in title: brocade, mesh
-    upper_hip_position_in: 4.5  # inches below waist — verify from image
+    upper_hip_position_in: 4.5  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: medium  # low | medium | high — override if title misleading
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC38X
     url: https://www.mysticcitycorsets.com/shop/mcc38x-cream-floral-brocade-white-mesh-underbust-corset/
@@ -471,9 +431,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         underbust, conical, cupped rib
     # materials in title: brocade, mesh
-    upper_hip_position_in: 4.5  # inches below waist — verify from image
+    upper_hip_position_in: 4.5  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: medium  # low | medium | high — override if title misleading
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC44A
     url: https://www.mysticcitycorsets.com/shop/mcc44a-wine-metallic-pvc-underbust-corset/
@@ -486,9 +446,9 @@ designs:
     # sizes:              [20, 22, 24, 26, 28, 30, 32, 34, 36]
     # silhouette:         underbust, conical, hip ties
     # materials in title: pvc
-    upper_hip_position_in: 5.0  # inches below waist — verify from image
+    upper_hip_position_in: 5.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: low  # low | medium | high — override if title misleading
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC44L
     url: https://www.mysticcitycorsets.com/shop/mcc44l-beige-mesh-underbust-corset/
@@ -501,24 +461,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         underbust, conical
     # materials in title: mesh
-    upper_hip_position_in: 5.0  # inches below waist — verify from image
+    upper_hip_position_in: 5.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: high  # low | medium | high — override if title misleading
-
-  - design_id: MCC5
-    url: https://www.mysticcitycorsets.com/shop/mcc5-old-map-underbust-corset/
-    # title:              MCC5 Satin/Old Map Underbust Corset
-    # torso_length_in:   10.75
-    # rib_spring_in:     6
-    # upper_hip_spring:  11
-    # low_hip_spring:    -
-    # underbust_at_in:    5  (inches ABOVE waist — where MCC takes the underbust measurement)
-    # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
-    # silhouette:         hourglass, underbust
-    # materials in title: satin
-    upper_hip_position_in: 4.5  # inches below waist — verify from image
-    low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: low  # low | medium | high — override if title misleading
+    stretch_class: high  # low | medium | high
 
   - design_id: MCC54
     url: https://www.mysticcitycorsets.com/shop/mcc54-red-brocade-mesh-corset/
@@ -531,9 +476,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         hourglass, underbust, longline, cupped rib
     # materials in title: brocade, mesh
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: medium  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC57
     url: https://www.mysticcitycorsets.com/shop/mcc57-purple-brocade-mesh-underbust-corset/
@@ -546,9 +491,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         underbust, cupped rib, hip ties, longline
     # materials in title: brocade, mesh
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: medium  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC59
     url: https://www.mysticcitycorsets.com/shop/mcc59-black-satin-underbust-corset/
@@ -561,9 +506,9 @@ designs:
     # sizes:              [20, 22, 24, 26, 28, 30, 32]
     # silhouette:         underbust, cupped rib, hip ties
     # materials in title: satin
-    upper_hip_position_in: 4.5  # inches below waist — verify from image
+    upper_hip_position_in: 4.5  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: low  # low | medium | high — override if title misleading
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC6
     url: https://www.mysticcitycorsets.com/shop/mcc6-peacock-brocade-waspie-underbust-corset/
@@ -576,9 +521,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34]
     # silhouette:         underbust, waspie, hourglass
     # materials in title: brocade
-    upper_hip_position_in: 3.5  # inches below waist — verify from image
+    upper_hip_position_in: 3.5  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: low  # low | medium | high — override if title misleading
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC61
     url: https://www.mysticcitycorsets.com/shop/mcc61-orange-satin-sport-mesh-underbust-corset/
@@ -591,9 +536,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
     # silhouette:         underbust, longline, hip ties, cupped rib
     # materials in title: mesh, satin, sport mesh
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: medium  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC63
     url: https://www.mysticcitycorsets.com/shop/mcc63-black-cotton-mesh-underbust-corset/
@@ -606,9 +551,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         underbust, longline, cupped rib, hip ties
     # materials in title: cotton, mesh
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: medium  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC63V
     url: https://www.mysticcitycorsets.com/shop/mcc63v-black-satin-mesh-underbust-corset/
@@ -621,9 +566,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         conical, underbust, hip ties
     # materials in title: mesh, satin
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: medium  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC64
     url: https://www.mysticcitycorsets.com/shop/mcc64-black-cotton-sport-mesh-underbust-corset/
@@ -636,9 +581,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32]
     # silhouette:         underbust, longline, cupped rib, conical, hip ties
     # materials in title: cotton, mesh, sport mesh
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.5  # inches below waist — verify from image
-    stretch_class: medium  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.5  # inches below waist
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC68
     url: https://www.mysticcitycorsets.com/shop/mcc68-cherry-brocade-underbust-corset/
@@ -651,9 +596,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
     # silhouette:         underbust, longline, cupped rib, hip ties
     # materials in title: brocade
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 7.0  # inches below waist — verify from image
-    stretch_class: low  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 7.0  # inches below waist
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC69
     url: https://www.mysticcitycorsets.com/shop/mcc69-white-cotton-underbust-corset/
@@ -666,9 +611,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
     # silhouette:         underbust, longline, cupped rib
     # materials in title: cotton
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 7.0  # inches below waist — verify from image
-    stretch_class: low  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 7.0  # inches below waist
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC72
     url: https://www.mysticcitycorsets.com/shop/mcc72-black-satin-mesh-underbust-corset/
@@ -681,9 +626,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36]
     # silhouette:         underbust, conical, cupped rib, hip ties
     # materials in title: mesh, satin
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
+    upper_hip_position_in: 4.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: medium  # low | medium | high — override if title misleading
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC73
     url: https://www.mysticcitycorsets.com/shop/mcc73-black-satin-mesh-with-lace-underbust-corset-size-28/
@@ -696,9 +641,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36]
     # silhouette:         underbust, hourglass, longline
     # materials in title: mesh, satin
-    upper_hip_position_in: 4.5  # inches below waist — verify from image
+    upper_hip_position_in: 4.5  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: medium  # low | medium | high — override if title misleading
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC75
     url: https://www.mysticcitycorsets.com/shop/mcc75-leopard-satin-underbust-corset/
@@ -711,12 +656,12 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
     # silhouette:         underbust, conical
     # materials in title: satin
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
+    upper_hip_position_in: 4.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: low  # low | medium | high — override if title misleading
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC76
-    url: https://www.mysticcitycorsets.com/shop/mcc76-black-satin-underbust-corset/
+    url: https://www.mysticcitycorsets.com/shop/mcc76-black-satin-hip-ties-underbust-corset/
     # title:              MCC76 Black Satin Underbust Corset
     # torso_length_in:   13.5
     # rib_spring_in:     6
@@ -726,9 +671,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42]
     # silhouette:         underbust, conical
     # materials in title: satin
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.5  # inches below waist — verify from image
-    stretch_class: low  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.5  # inches below waist
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC79
     url: https://www.mysticcitycorsets.com/shop/mcc79-leopard-satin-plus-size-underbust-corset/
@@ -741,9 +686,9 @@ designs:
     # sizes:              [34, 36, 38, 40, 42, 44, 46]
     # silhouette:         underbust, longline, plus size, conical ribs
     # materials in title: satin
-    upper_hip_position_in: 5.0  # inches below waist — verify from image
-    low_hip_position_in: 8.0  # inches below waist — verify from image
-    stretch_class: low  # low | medium | high — override if title misleading
+    upper_hip_position_in: 5.0  # inches below waist
+    low_hip_position_in: 8.0  # inches below waist
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC82
     url: https://www.mysticcitycorsets.com/shop/mcc82-black-cotton-mesh-satin-plus-size-underbust-corset/
@@ -756,9 +701,9 @@ designs:
     # sizes:              [34, 36, 38, 40, 42, 44, 46]
     # silhouette:         underbust, longline, plus size
     # materials in title: cotton, mesh
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 7.0  # inches below waist — verify from image
-    stretch_class: medium  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 7.0  # inches below waist
+    stretch_class: medium  # low | medium | high
 
   - design_id: MCC83
     url: https://www.mysticcitycorsets.com/shop/mcc83-rose-satin-plus-size-underbust-corset/
@@ -771,9 +716,9 @@ designs:
     # sizes:              [26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46]
     # silhouette:         underbust, longline, plus size, hip ties
     # materials in title: satin
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: low  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC84L
     url: https://www.mysticcitycorsets.com/shop/mcc84l-black-satin-corset/
@@ -786,9 +731,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46]
     # silhouette:         conical, longline, long torso, underbust, hip ties
     # materials in title: satin
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: low  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC85
     url: https://www.mysticcitycorsets.com/shop/mcc85-peacock-brocade-underbust-wide-hips-corset/
@@ -801,12 +746,12 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36]
     # silhouette:         underbust, long torso, hourglass
     # materials in title: brocade
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: low  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC86
-    url: https://www.mysticcitycorsets.com/shop/mcc86-black-cotton-underbust-corset/
+    url: https://www.mysticcitycorsets.com/shop/mcc86-red-cotton-lace-underbust-corset/
     # title:              MCC86 Long Line, Steel Boned Underbust Corset Black Cotton
     # torso_length_in:   14
     # rib_spring_in:     7
@@ -816,9 +761,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36]
     # silhouette:         underbust, long torso, cupped rib
     # materials in title: cotton
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: low  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC90
     url: https://www.mysticcitycorsets.com/shop/mcc90-cherry-brocade-underbust-corset/
@@ -831,9 +776,9 @@ designs:
     # sizes:              [20, 22, 24, 26, 28, 30, 32]
     # silhouette:         underbust, longline, hip ties, cupped rib, long torso
     # materials in title: brocade
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
-    low_hip_position_in: 6.0  # inches below waist — verify from image
-    stretch_class: low  # low | medium | high — override if title misleading
+    upper_hip_position_in: 4.0  # inches below waist
+    low_hip_position_in: 6.0  # inches below waist
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC94
     url: https://www.mysticcitycorsets.com/shop/mcc94-black-cotton-underbust-corset/
@@ -846,9 +791,9 @@ designs:
     # sizes:              [16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         underbust, cupped rib
     # materials in title: cotton
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
+    upper_hip_position_in: 4.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: low  # low | medium | high — override if title misleading
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC95
     url: https://www.mysticcitycorsets.com/shop/mcc95-black-satin-metallic-pvc-underbust-corset/
@@ -861,9 +806,9 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         underbust, cupped rib
     # materials in title: pvc, satin
-    upper_hip_position_in: 4.0  # inches below waist — verify from image
+    upper_hip_position_in: 4.0  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: low  # low | medium | high — override if title misleading
+    stretch_class: low  # low | medium | high
 
   - design_id: MCC98
     url: https://www.mysticcitycorsets.com/shop/mcc98-black-satin-mesh-short-underbust-corset/
@@ -876,6 +821,6 @@ designs:
     # sizes:              [18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]
     # silhouette:         underbust, hip ties
     # materials in title: mesh, satin
-    upper_hip_position_in: 3.5  # inches below waist — verify from image
+    upper_hip_position_in: 3.5  # inches below waist
     low_hip_position_in: null  # no low hip on this model — leave null
-    stretch_class: medium  # low | medium | high — override if title misleading
+    stretch_class: medium  # low | medium | high
