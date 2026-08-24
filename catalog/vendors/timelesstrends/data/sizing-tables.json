@@ -1,0 +1,1074 @@
+{
+  "gemini-sizing-information": {
+    "hip_spring_in": 14.0,
+    "length_hint": "regular",
+    "product_type_codes": [
+      "GSX",
+      "GCX"
+    ],
+    "rib_spring_in": 8.0,
+    "silhouette_category": "conical",
+    "size_rows": [
+      {
+        "high_hip_in": 30.0,
+        "size": 16,
+        "underbust_in": 24.0,
+        "waist_max_in": 22.0,
+        "waist_min_in": 21.0
+      },
+      {
+        "high_hip_in": 32.0,
+        "size": 18,
+        "underbust_in": 26.0,
+        "waist_max_in": 24.0,
+        "waist_min_in": 23.0
+      },
+      {
+        "high_hip_in": 34.0,
+        "size": 20,
+        "underbust_in": 28.0,
+        "waist_max_in": 27.0,
+        "waist_min_in": 25.0
+      },
+      {
+        "high_hip_in": 36.0,
+        "size": 22,
+        "underbust_in": 30.0,
+        "waist_max_in": 29.0,
+        "waist_min_in": 28.0
+      },
+      {
+        "high_hip_in": 38.0,
+        "size": 24,
+        "underbust_in": 32.0,
+        "waist_max_in": 31.0,
+        "waist_min_in": 30.0
+      },
+      {
+        "high_hip_in": 40.0,
+        "size": 26,
+        "underbust_in": 34.0,
+        "waist_max_in": 33.0,
+        "waist_min_in": 32.0
+      },
+      {
+        "high_hip_in": 42.0,
+        "size": 28,
+        "underbust_in": 36.0,
+        "waist_max_in": 35.0,
+        "waist_min_in": 34.0
+      },
+      {
+        "high_hip_in": 44.0,
+        "size": 30,
+        "underbust_in": 38.0,
+        "waist_max_in": 38.0,
+        "waist_min_in": 36.0
+      },
+      {
+        "high_hip_in": 46.0,
+        "size": 32,
+        "underbust_in": 40.0,
+        "waist_max_in": 40.0,
+        "waist_min_in": 39.0
+      },
+      {
+        "high_hip_in": 48.0,
+        "size": 34,
+        "underbust_in": 42.0,
+        "waist_max_in": 42.0,
+        "waist_min_in": 41.0
+      },
+      {
+        "high_hip_in": 50.0,
+        "size": 36,
+        "underbust_in": 44.0,
+        "waist_max_in": 44.0,
+        "waist_min_in": 43.0
+      },
+      {
+        "high_hip_in": 52.0,
+        "size": 38,
+        "underbust_in": 46.0,
+        "waist_max_in": 47.0,
+        "waist_min_in": 45.0
+      },
+      {
+        "high_hip_in": 54.0,
+        "size": 40,
+        "underbust_in": 48.0,
+        "waist_max_in": 50.0,
+        "waist_min_in": 48.0
+      },
+      {
+        "high_hip_in": 56.0,
+        "size": 42,
+        "underbust_in": 50.0,
+        "waist_max_in": 54.0,
+        "waist_min_in": 51.0
+      }
+    ],
+    "sizes_offered": [
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42
+    ],
+    "url": "https://timeless-trends.com/pages/gemini-sizing-information"
+  },
+  "hourglass-long-sizing-information": {
+    "hip_spring_in": 12.0,
+    "length_hint": "long",
+    "product_type_codes": [
+      "UHL"
+    ],
+    "rib_spring_in": 7.0,
+    "silhouette_category": "longline",
+    "size_rows": [
+      {
+        "high_hip_in": 30.0,
+        "size": 18,
+        "underbust_in": 25.0,
+        "waist_max_in": 24.0,
+        "waist_min_in": 23.0
+      },
+      {
+        "high_hip_in": 32.0,
+        "size": 20,
+        "underbust_in": 27.0,
+        "waist_max_in": 26.0,
+        "waist_min_in": 25.0
+      },
+      {
+        "high_hip_in": 34.0,
+        "size": 22,
+        "underbust_in": 29.0,
+        "waist_max_in": 28.0,
+        "waist_min_in": 27.0
+      },
+      {
+        "high_hip_in": 36.0,
+        "size": 24,
+        "underbust_in": 31.0,
+        "waist_max_in": 30.0,
+        "waist_min_in": 29.0
+      },
+      {
+        "high_hip_in": 38.0,
+        "size": 26,
+        "underbust_in": 33.0,
+        "waist_max_in": 32.0,
+        "waist_min_in": 31.0
+      },
+      {
+        "high_hip_in": 40.0,
+        "size": 28,
+        "underbust_in": 35.0,
+        "waist_max_in": 35.0,
+        "waist_min_in": 33.0
+      },
+      {
+        "high_hip_in": 42.0,
+        "size": 30,
+        "underbust_in": 37.0,
+        "waist_max_in": 37.0,
+        "waist_min_in": 36.0
+      },
+      {
+        "high_hip_in": 44.0,
+        "size": 32,
+        "underbust_in": 39.0,
+        "waist_max_in": 39.0,
+        "waist_min_in": 38.0
+      },
+      {
+        "high_hip_in": 46.0,
+        "size": 34,
+        "underbust_in": 41.0,
+        "waist_max_in": 41.0,
+        "waist_min_in": 40.0
+      },
+      {
+        "high_hip_in": 48.0,
+        "size": 36,
+        "underbust_in": 43.0,
+        "waist_max_in": 45.0,
+        "waist_min_in": 42.0
+      },
+      {
+        "high_hip_in": 50.0,
+        "size": 38,
+        "underbust_in": 45.0,
+        "waist_max_in": 48.0,
+        "waist_min_in": 46.0
+      },
+      {
+        "high_hip_in": 52.0,
+        "size": 40,
+        "underbust_in": 47.0,
+        "waist_max_in": 51.0,
+        "waist_min_in": 49.0
+      },
+      {
+        "high_hip_in": 54.0,
+        "size": 42,
+        "underbust_in": 49.0,
+        "waist_max_in": 55.0,
+        "waist_min_in": 52.0
+      }
+    ],
+    "sizes_offered": [
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42
+    ],
+    "url": "https://timeless-trends.com/pages/hourglass-long-sizing-information"
+  },
+  "hourglass-regular-sizing-information": {
+    "hip_spring_in": 10.0,
+    "length_hint": "regular",
+    "product_type_codes": [
+      "UHR",
+      "NHR"
+    ],
+    "rib_spring_in": 7.0,
+    "silhouette_category": "hourglass",
+    "size_rows": [
+      {
+        "high_hip_in": 28.0,
+        "size": 18,
+        "underbust_in": 25.0,
+        "waist_max_in": 24.0,
+        "waist_min_in": 23.0
+      },
+      {
+        "high_hip_in": 30.0,
+        "size": 20,
+        "underbust_in": 27.0,
+        "waist_max_in": 26.0,
+        "waist_min_in": 25.0
+      },
+      {
+        "high_hip_in": 32.0,
+        "size": 22,
+        "underbust_in": 29.0,
+        "waist_max_in": 28.0,
+        "waist_min_in": 27.0
+      },
+      {
+        "high_hip_in": 34.0,
+        "size": 24,
+        "underbust_in": 31.0,
+        "waist_max_in": 30.0,
+        "waist_min_in": 29.0
+      },
+      {
+        "high_hip_in": 36.0,
+        "size": 26,
+        "underbust_in": 33.0,
+        "waist_max_in": 32.0,
+        "waist_min_in": 31.0
+      },
+      {
+        "high_hip_in": 38.0,
+        "size": 28,
+        "underbust_in": 35.0,
+        "waist_max_in": 35.0,
+        "waist_min_in": 33.0
+      },
+      {
+        "high_hip_in": 40.0,
+        "size": 30,
+        "underbust_in": 37.0,
+        "waist_max_in": 37.0,
+        "waist_min_in": 36.0
+      },
+      {
+        "high_hip_in": 42.0,
+        "size": 32,
+        "underbust_in": 39.0,
+        "waist_max_in": 39.0,
+        "waist_min_in": 38.0
+      },
+      {
+        "high_hip_in": 44.0,
+        "size": 34,
+        "underbust_in": 41.0,
+        "waist_max_in": 41.0,
+        "waist_min_in": 40.0
+      },
+      {
+        "high_hip_in": 46.0,
+        "size": 36,
+        "underbust_in": 43.0,
+        "waist_max_in": 45.0,
+        "waist_min_in": 42.0
+      },
+      {
+        "high_hip_in": 48.0,
+        "size": 38,
+        "underbust_in": 45.0,
+        "waist_max_in": 48.0,
+        "waist_min_in": 46.0
+      },
+      {
+        "high_hip_in": 50.0,
+        "size": 40,
+        "underbust_in": 47.0,
+        "waist_max_in": 51.0,
+        "waist_min_in": 49.0
+      },
+      {
+        "high_hip_in": 52.0,
+        "size": 42,
+        "underbust_in": 49.0,
+        "waist_max_in": 55.0,
+        "waist_min_in": 52.0
+      }
+    ],
+    "sizes_offered": [
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42
+    ],
+    "url": "https://timeless-trends.com/pages/hourglass-regular-sizing-information"
+  },
+  "hourglass-short-sizing-information": {
+    "hip_spring_in": 7.0,
+    "length_hint": "short",
+    "product_type_codes": [
+      "UHS"
+    ],
+    "rib_spring_in": 4.0,
+    "silhouette_category": "waspie",
+    "size_rows": [
+      {
+        "high_hip_in": 25.0,
+        "size": 18,
+        "underbust_in": 22.0,
+        "waist_max_in": 24.0,
+        "waist_min_in": 23.0
+      },
+      {
+        "high_hip_in": 27.0,
+        "size": 20,
+        "underbust_in": 24.0,
+        "waist_max_in": 26.0,
+        "waist_min_in": 25.0
+      },
+      {
+        "high_hip_in": 29.0,
+        "size": 22,
+        "underbust_in": 26.0,
+        "waist_max_in": 28.0,
+        "waist_min_in": 27.0
+      },
+      {
+        "high_hip_in": 31.0,
+        "size": 24,
+        "underbust_in": 28.0,
+        "waist_max_in": 30.0,
+        "waist_min_in": 29.0
+      },
+      {
+        "high_hip_in": 33.0,
+        "size": 26,
+        "underbust_in": 30.0,
+        "waist_max_in": 32.0,
+        "waist_min_in": 31.0
+      },
+      {
+        "high_hip_in": 35.0,
+        "size": 28,
+        "underbust_in": 32.0,
+        "waist_max_in": 35.0,
+        "waist_min_in": 33.0
+      },
+      {
+        "high_hip_in": 37.0,
+        "size": 30,
+        "underbust_in": 34.0,
+        "waist_max_in": 37.0,
+        "waist_min_in": 36.0
+      },
+      {
+        "high_hip_in": 39.0,
+        "size": 32,
+        "underbust_in": 36.0,
+        "waist_max_in": 39.0,
+        "waist_min_in": 38.0
+      },
+      {
+        "high_hip_in": 41.0,
+        "size": 34,
+        "underbust_in": 38.0,
+        "waist_max_in": 41.0,
+        "waist_min_in": 40.0
+      },
+      {
+        "high_hip_in": 43.0,
+        "size": 36,
+        "underbust_in": 40.0,
+        "waist_max_in": 45.0,
+        "waist_min_in": 42.0
+      },
+      {
+        "high_hip_in": 45.0,
+        "size": 38,
+        "underbust_in": 42.0,
+        "waist_max_in": 48.0,
+        "waist_min_in": 46.0
+      },
+      {
+        "high_hip_in": 47.0,
+        "size": 40,
+        "underbust_in": 44.0,
+        "waist_max_in": 51.0,
+        "waist_min_in": 49.0
+      },
+      {
+        "high_hip_in": 49.0,
+        "size": 42,
+        "underbust_in": 46.0,
+        "waist_max_in": 55.0,
+        "waist_min_in": 52.0
+      }
+    ],
+    "sizes_offered": [
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42
+    ],
+    "url": "https://timeless-trends.com/pages/hourglass-short-sizing-information"
+  },
+  "libby-libra-gentle-sizing-information": {
+    "hip_spring_in": 8.0,
+    "length_hint": "regular",
+    "product_type_codes": [
+      "LBS"
+    ],
+    "rib_spring_in": 7.0,
+    "silhouette_category": "hourglass",
+    "size_rows": [
+      {
+        "high_hip_in": 26.0,
+        "size": 18,
+        "underbust_in": 25.0,
+        "waist_max_in": 22.0,
+        "waist_min_in": 20.0
+      },
+      {
+        "high_hip_in": 28.0,
+        "size": 20,
+        "underbust_in": 27.0,
+        "waist_max_in": 24.0,
+        "waist_min_in": 23.0
+      },
+      {
+        "high_hip_in": 30.0,
+        "size": 22,
+        "underbust_in": 29.0,
+        "waist_max_in": 26.0,
+        "waist_min_in": 25.0
+      },
+      {
+        "high_hip_in": 32.0,
+        "size": 24,
+        "underbust_in": 31.0,
+        "waist_max_in": 28.0,
+        "waist_min_in": 27.0
+      },
+      {
+        "high_hip_in": 34.0,
+        "size": 26,
+        "underbust_in": 33.0,
+        "waist_max_in": 30.0,
+        "waist_min_in": 29.0
+      },
+      {
+        "high_hip_in": 36.0,
+        "size": 28,
+        "underbust_in": 35.0,
+        "waist_max_in": 32.0,
+        "waist_min_in": 31.0
+      },
+      {
+        "high_hip_in": 38.0,
+        "size": 30,
+        "underbust_in": 37.0,
+        "waist_max_in": 35.0,
+        "waist_min_in": 33.0
+      },
+      {
+        "high_hip_in": 40.0,
+        "size": 32,
+        "underbust_in": 39.0,
+        "waist_max_in": 37.0,
+        "waist_min_in": 36.0
+      },
+      {
+        "high_hip_in": 42.0,
+        "size": 34,
+        "underbust_in": 41.0,
+        "waist_max_in": 39.0,
+        "waist_min_in": 38.0
+      },
+      {
+        "high_hip_in": 44.0,
+        "size": 36,
+        "underbust_in": 43.0,
+        "waist_max_in": 41.0,
+        "waist_min_in": 40.0
+      },
+      {
+        "high_hip_in": 46.0,
+        "size": 38,
+        "underbust_in": 45.0,
+        "waist_max_in": 45.0,
+        "waist_min_in": 42.0
+      },
+      {
+        "high_hip_in": 48.0,
+        "size": 40,
+        "underbust_in": 47.0,
+        "waist_max_in": 48.0,
+        "waist_min_in": 46.0
+      },
+      {
+        "high_hip_in": 50.0,
+        "size": 42,
+        "underbust_in": 49.0,
+        "waist_max_in": 52.0,
+        "waist_min_in": 49.0
+      }
+    ],
+    "sizes_offered": [
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42
+    ],
+    "url": "https://timeless-trends.com/pages/libby-libra-gentle-sizing-information"
+  },
+  "libra-sizing-information": {
+    "hip_spring_in": 11.0,
+    "length_hint": "regular",
+    "product_type_codes": [
+      "LIB"
+    ],
+    "rib_spring_in": 10.0,
+    "silhouette_category": "hourglass",
+    "size_rows": [
+      {
+        "high_hip_in": 27.0,
+        "size": 16,
+        "underbust_in": 26.0,
+        "waist_max_in": 21.0,
+        "waist_min_in": 20.0
+      },
+      {
+        "high_hip_in": 29.0,
+        "size": 18,
+        "underbust_in": 28.0,
+        "waist_max_in": 24.0,
+        "waist_min_in": 22.0
+      },
+      {
+        "high_hip_in": 31.0,
+        "size": 20,
+        "underbust_in": 30.0,
+        "waist_max_in": 26.0,
+        "waist_min_in": 25.0
+      },
+      {
+        "high_hip_in": 33.0,
+        "size": 22,
+        "underbust_in": 32.0,
+        "waist_max_in": 28.0,
+        "waist_min_in": 27.0
+      },
+      {
+        "high_hip_in": 35.0,
+        "size": 24,
+        "underbust_in": 34.0,
+        "waist_max_in": 30.0,
+        "waist_min_in": 29.0
+      },
+      {
+        "high_hip_in": 37.0,
+        "size": 26,
+        "underbust_in": 36.0,
+        "waist_max_in": 32.0,
+        "waist_min_in": 31.0
+      },
+      {
+        "high_hip_in": 39.0,
+        "size": 28,
+        "underbust_in": 38.0,
+        "waist_max_in": 35.0,
+        "waist_min_in": 33.0
+      },
+      {
+        "high_hip_in": 41.0,
+        "size": 30,
+        "underbust_in": 40.0,
+        "waist_max_in": 37.0,
+        "waist_min_in": 36.0
+      },
+      {
+        "high_hip_in": 43.0,
+        "size": 32,
+        "underbust_in": 42.0,
+        "waist_max_in": 39.0,
+        "waist_min_in": 38.0
+      },
+      {
+        "high_hip_in": 45.0,
+        "size": 34,
+        "underbust_in": 44.0,
+        "waist_max_in": 41.0,
+        "waist_min_in": 40.0
+      },
+      {
+        "high_hip_in": 47.0,
+        "size": 36,
+        "underbust_in": 46.0,
+        "waist_max_in": 45.0,
+        "waist_min_in": 42.0
+      },
+      {
+        "high_hip_in": 49.0,
+        "size": 38,
+        "underbust_in": 48.0,
+        "waist_max_in": 48.0,
+        "waist_min_in": 46.0
+      },
+      {
+        "high_hip_in": 51.0,
+        "size": 40,
+        "underbust_in": 50.0,
+        "waist_max_in": 51.0,
+        "waist_min_in": 49.0
+      }
+    ],
+    "sizes_offered": [
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40
+    ],
+    "url": "https://timeless-trends.com/pages/libra-sizing-information"
+  },
+  "slim-long-sizing-information": {
+    "hip_spring_in": 7.0,
+    "length_hint": "long",
+    "product_type_codes": [
+      "USL"
+    ],
+    "rib_spring_in": 4.0,
+    "silhouette_category": "longline",
+    "size_rows": [
+      {
+        "high_hip_in": 25.0,
+        "size": 18,
+        "underbust_in": 22.0,
+        "waist_max_in": 22.0,
+        "waist_min_in": 21.0
+      },
+      {
+        "high_hip_in": 27.0,
+        "size": 20,
+        "underbust_in": 24.0,
+        "waist_max_in": 24.0,
+        "waist_min_in": 23.0
+      },
+      {
+        "high_hip_in": 29.0,
+        "size": 22,
+        "underbust_in": 26.0,
+        "waist_max_in": 26.0,
+        "waist_min_in": 25.0
+      },
+      {
+        "high_hip_in": 31.0,
+        "size": 24,
+        "underbust_in": 28.0,
+        "waist_max_in": 28.0,
+        "waist_min_in": 27.0
+      },
+      {
+        "high_hip_in": 33.0,
+        "size": 26,
+        "underbust_in": 30.0,
+        "waist_max_in": 30.0,
+        "waist_min_in": 29.0
+      },
+      {
+        "high_hip_in": 35.0,
+        "size": 28,
+        "underbust_in": 32.0,
+        "waist_max_in": 32.0,
+        "waist_min_in": 31.0
+      },
+      {
+        "high_hip_in": 37.0,
+        "size": 30,
+        "underbust_in": 34.0,
+        "waist_max_in": 35.0,
+        "waist_min_in": 33.0
+      },
+      {
+        "high_hip_in": 39.0,
+        "size": 32,
+        "underbust_in": 36.0,
+        "waist_max_in": 37.0,
+        "waist_min_in": 36.0
+      },
+      {
+        "high_hip_in": 41.0,
+        "size": 34,
+        "underbust_in": 38.0,
+        "waist_max_in": 39.0,
+        "waist_min_in": 38.0
+      },
+      {
+        "high_hip_in": 43.0,
+        "size": 36,
+        "underbust_in": 40.0,
+        "waist_max_in": 41.0,
+        "waist_min_in": 40.0
+      },
+      {
+        "high_hip_in": 45.0,
+        "size": 8,
+        "underbust_in": 42.0,
+        "waist_max_in": 45.0,
+        "waist_min_in": 42.0
+      },
+      {
+        "high_hip_in": 47.0,
+        "size": 40,
+        "underbust_in": 44.0,
+        "waist_max_in": 48.0,
+        "waist_min_in": 46.0
+      },
+      {
+        "high_hip_in": 49.0,
+        "size": 42,
+        "underbust_in": 46.0,
+        "waist_max_in": 51.0,
+        "waist_min_in": 49.0
+      }
+    ],
+    "sizes_offered": [
+      8,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      40,
+      42
+    ],
+    "url": "https://timeless-trends.com/pages/slim-long-sizing-information"
+  },
+  "slim-regular-sizing-information": {
+    "hip_spring_in": 7.0,
+    "length_hint": "regular",
+    "product_type_codes": [
+      "USR"
+    ],
+    "rib_spring_in": 4.0,
+    "silhouette_category": "hourglass",
+    "size_rows": [
+      {
+        "high_hip_in": 25.0,
+        "size": 18,
+        "underbust_in": 22.0,
+        "waist_max_in": 22.0,
+        "waist_min_in": 21.0
+      },
+      {
+        "high_hip_in": 27.0,
+        "size": 20,
+        "underbust_in": 24.0,
+        "waist_max_in": 24.0,
+        "waist_min_in": 23.0
+      },
+      {
+        "high_hip_in": 29.0,
+        "size": 22,
+        "underbust_in": 26.0,
+        "waist_max_in": 26.0,
+        "waist_min_in": 25.0
+      },
+      {
+        "high_hip_in": 31.0,
+        "size": 24,
+        "underbust_in": 28.0,
+        "waist_max_in": 28.0,
+        "waist_min_in": 27.0
+      },
+      {
+        "high_hip_in": 33.0,
+        "size": 26,
+        "underbust_in": 30.0,
+        "waist_max_in": 30.0,
+        "waist_min_in": 29.0
+      },
+      {
+        "high_hip_in": 35.0,
+        "size": 28,
+        "underbust_in": 32.0,
+        "waist_max_in": 32.0,
+        "waist_min_in": 31.0
+      },
+      {
+        "high_hip_in": 37.0,
+        "size": 30,
+        "underbust_in": 34.0,
+        "waist_max_in": 35.0,
+        "waist_min_in": 33.0
+      },
+      {
+        "high_hip_in": 39.0,
+        "size": 32,
+        "underbust_in": 36.0,
+        "waist_max_in": 37.0,
+        "waist_min_in": 36.0
+      },
+      {
+        "high_hip_in": 41.0,
+        "size": 34,
+        "underbust_in": 38.0,
+        "waist_max_in": 39.0,
+        "waist_min_in": 38.0
+      },
+      {
+        "high_hip_in": 43.0,
+        "size": 36,
+        "underbust_in": 40.0,
+        "waist_max_in": 41.0,
+        "waist_min_in": 40.0
+      },
+      {
+        "high_hip_in": 45.0,
+        "size": 8,
+        "underbust_in": 42.0,
+        "waist_max_in": 45.0,
+        "waist_min_in": 42.0
+      },
+      {
+        "high_hip_in": 47.0,
+        "size": 40,
+        "underbust_in": 44.0,
+        "waist_max_in": 48.0,
+        "waist_min_in": 46.0
+      },
+      {
+        "high_hip_in": 49.0,
+        "size": 42,
+        "underbust_in": 46.0,
+        "waist_max_in": 51.0,
+        "waist_min_in": 49.0
+      }
+    ],
+    "sizes_offered": [
+      8,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      40,
+      42
+    ],
+    "url": "https://timeless-trends.com/pages/slim-regular-sizing-information"
+  },
+  "slim-short-sizing-information": {
+    "hip_spring_in": 3.0,
+    "length_hint": "short",
+    "product_type_codes": [
+      "USS"
+    ],
+    "rib_spring_in": 2.0,
+    "silhouette_category": "waspie",
+    "size_rows": [
+      {
+        "high_hip_in": 21.0,
+        "size": 18,
+        "underbust_in": 20.0,
+        "waist_max_in": 22.0,
+        "waist_min_in": 21.0
+      },
+      {
+        "high_hip_in": 23.0,
+        "size": 20,
+        "underbust_in": 22.0,
+        "waist_max_in": 24.0,
+        "waist_min_in": 23.0
+      },
+      {
+        "high_hip_in": 25.0,
+        "size": 22,
+        "underbust_in": 24.0,
+        "waist_max_in": 26.0,
+        "waist_min_in": 25.0
+      },
+      {
+        "high_hip_in": 27.0,
+        "size": 24,
+        "underbust_in": 26.0,
+        "waist_max_in": 28.0,
+        "waist_min_in": 27.0
+      },
+      {
+        "high_hip_in": 29.0,
+        "size": 26,
+        "underbust_in": 28.0,
+        "waist_max_in": 30.0,
+        "waist_min_in": 29.0
+      },
+      {
+        "high_hip_in": 31.0,
+        "size": 28,
+        "underbust_in": 30.0,
+        "waist_max_in": 32.0,
+        "waist_min_in": 31.0
+      },
+      {
+        "high_hip_in": 33.0,
+        "size": 30,
+        "underbust_in": 32.0,
+        "waist_max_in": 35.0,
+        "waist_min_in": 33.0
+      },
+      {
+        "high_hip_in": 35.0,
+        "size": 32,
+        "underbust_in": 34.0,
+        "waist_max_in": 37.0,
+        "waist_min_in": 36.0
+      },
+      {
+        "high_hip_in": 37.0,
+        "size": 34,
+        "underbust_in": 36.0,
+        "waist_max_in": 39.0,
+        "waist_min_in": 38.0
+      },
+      {
+        "high_hip_in": 39.0,
+        "size": 36,
+        "underbust_in": 38.0,
+        "waist_max_in": 41.0,
+        "waist_min_in": 40.0
+      },
+      {
+        "high_hip_in": 41.0,
+        "size": 38,
+        "underbust_in": 40.0,
+        "waist_max_in": 45.0,
+        "waist_min_in": 42.0
+      },
+      {
+        "high_hip_in": 43.0,
+        "size": 40,
+        "underbust_in": 42.0,
+        "waist_max_in": 48.0,
+        "waist_min_in": 46.0
+      },
+      {
+        "high_hip_in": 45.0,
+        "size": 42,
+        "underbust_in": 44.0,
+        "waist_max_in": 51.0,
+        "waist_min_in": 49.0
+      }
+    ],
+    "sizes_offered": [
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42
+    ],
+    "url": "https://timeless-trends.com/pages/slim-short-sizing-information"
+  }
+}

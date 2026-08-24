@@ -10,8 +10,9 @@
  */
 
 import { useEffect, useMemo, useState } from 'react';
-import catalogJson from '../../catalog/mystic-city.json';
-import type { Body, Catalog, GapShape, StretchClass } from '../scoring/types.ts';
+import mysticCityJson from '../../catalog/mystic-city.json';
+import timelessTrendsJson from '../../catalog/timeless-trends.json';
+import type { Body, Catalog, Corset, GapShape, StretchClass } from '../scoring/types.ts';
 import { defaultScoringConfig, rank } from '../scoring/index.ts';
 import { MeasurementForm } from './MeasurementForm.tsx';
 import { RankedList } from './RankedList.tsx';
@@ -36,7 +37,41 @@ const ALL_GAP_SHAPES: GapShape[] = [
   'closed',
 ];
 
-const catalog = catalogJson as unknown as Catalog;
+/**
+ * Merge two vendor catalogs into one combined catalog that the ranker
+ * consumes. Stamps each corset with the source `brand` + `brand_url` so
+ * the UI can label rows and generate per-vendor buy links (already carried
+ * on each variant's `url`).
+ *
+ * `brand_waist_slack_by_stretch_class_in` is taken from the FIRST catalog
+ * (MCC's). This is a small correctness hazard — TT's mesh behaviour may
+ * differ from MCC's — but the values are close and both vendors' catalogs
+ * are structural-fabric-heavy, so the drift is small. If it starts to
+ * matter, the fix is to move slack from catalog-level to corset-level.
+ */
+function mergeCatalogs(mystic: Catalog, tt: Catalog): Catalog {
+  const stampBrand = (source: Catalog): Corset[] =>
+    source.corsets.map((c) => ({
+      ...c,
+      brand: source.brand,
+      brand_url: source.brand_url,
+    }));
+  return {
+    ...mystic,
+    brand: `${mystic.brand} + ${tt.brand}`,
+    brand_url: mystic.brand_url,
+    generated_at_iso: mystic.generated_at_iso >= tt.generated_at_iso
+      ? mystic.generated_at_iso
+      : tt.generated_at_iso,
+    sources: { ...mystic.sources, ...tt.sources },
+    corsets: [...stampBrand(mystic), ...stampBrand(tt)],
+  };
+}
+
+const catalog = mergeCatalogs(
+  mysticCityJson as unknown as Catalog,
+  timelessTrendsJson as unknown as Catalog,
+);
 
 const DEFAULT_BODY: Body = {
   natural_waist_in: 28,
@@ -93,8 +128,9 @@ export function App() {
       <header className="app-header">
         <h1>OfCorsetFits</h1>
         <p className="tagline">
-          Ranked Mystic City corsets by fit against your anatomical measurements.
-          Enter your body on the left; results update live.
+          Ranked Mystic City and Timeless Trends corsets by fit against your
+          anatomical measurements. Enter your body on the left; results
+          update live.
         </p>
         <p className="meta">
           Catalog: {catalog.corsets.length} silhouettes ·{' '}
@@ -125,9 +161,10 @@ export function App() {
       </main>
       <footer className="app-footer">
         <small>
-          Data from mysticcitycorsets.com. Fit rankings are computed
-          from published spring/geometry values plus your inputs — always
-          check the product page for stock, exact color, and MCC's own
+          Data from mysticcitycorsets.com and timeless-trends.com. Fit
+          rankings are computed from each vendor's published
+          spring/geometry values plus your inputs — always check the
+          product page for stock, exact color, and the vendor's own
           fitting notes before buying.
         </small>
       </footer>

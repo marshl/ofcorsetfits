@@ -1,0 +1,4786 @@
+{
+  "brand": "Timeless Trends",
+  "brand_url": "https://timeless-trends.com/",
+  "brand_waist_slack_by_stretch_class_in": {
+    "low": 0.5,
+    "medium": 1.0,
+    "high": 1.75
+  },
+  "generated_at_iso": "2026-08-24T06:25:16+00:00",
+  "sources": {
+    "collections_json": "https://timeless-trends.com/collections/all/products.json",
+    "sizing_pages": "https://timeless-trends.com/pages/*-sizing-information",
+    "landmark_positions": "manually reviewed against size-chart images"
+  },
+  "corsets": [
+    {
+      "id": "TT-GCX",
+      "name": "Timeless Trends Cupped-Rib Regular",
+      "url": "https://timeless-trends.com/collections/all",
+      "silhouette_category": "cupped-rib",
+      "silhouette_words": [
+        "cupped-rib",
+        "regular"
+      ],
+      "body_length_in": null,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 14.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "mesh",
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Beige Cotton Cupped",
+          "url": "https://timeless-trends.com/products/beige-cotton-cupped-corset-gemini-silhouette-long",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Beige Cotton Cupped",
+          "url": "https://timeless-trends.com/products/copy-of-beige-cotton-cupped-corset-gemini-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Black Floral Brocade Cupped",
+          "url": "https://timeless-trends.com/products/black-floral-brocade-cupped-corset-gemini-silhouette-regular",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Buttermilk Satin Cupped",
+          "url": "https://timeless-trends.com/products/buttermilk-satin-cupped-corset-gemini-silhouette-regular",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Creme Cotton Cupped",
+          "url": "https://timeless-trends.com/products/gemini-cupped-nude",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            24,
+            26,
+            28,
+            30,
+            32
+          ]
+        },
+        {
+          "name": "Deep Forest Green satin Cupped",
+          "url": "https://timeless-trends.com/products/deep-forest-green-satin-cupped-corset-gemini-silhouette-long",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Emerald Cupped",
+          "url": "https://timeless-trends.com/products/emerald-cupped-corset-gemini-silhouette-regular",
+          "materials": [
+            "brocade",
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Hot Peppers Cupped",
+          "url": "https://timeless-trends.com/products/hot-peppers-cupped-corset-gemini-silhouette-regular-copy",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Impatiens Embrace Cupped",
+          "url": "https://timeless-trends.com/products/impatiens-embrace-cupped-corset-gemini-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Through the Grapevine Cotton Cupped",
+          "url": "https://timeless-trends.com/products/through-the-grapevine-cotton-cupped-corset-gemini-silhouette-regular-copy",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Black Cashmere Cupped",
+          "url": "https://timeless-trends.com/products/black-cashmere-cupped-corset-gemini-silhouette-long",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Black Cupped",
+          "url": "https://timeless-trends.com/products/gemini-cupped-black",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Daisies at Sunset Cupped",
+          "url": "https://timeless-trends.com/products/daisies-at-sunset-cupped-corset-gemini-silhouette-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Green Fairy Cupped",
+          "url": "https://timeless-trends.com/products/green-fairy-cupped-corset-gemini-silhouette-regular-1",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Impressionist Shimmer Cupped",
+          "url": "https://timeless-trends.com/products/impressionist-shimmer-cupped-corset-gemini-silhouette-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Peonies in Bloom Cupped",
+          "url": "https://timeless-trends.com/products/peonies-in-bloom-cupped-corset-gemini-silhouette-long",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Beige Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/beige-fine-mesh-no-line-corset-gemini-cupped-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Black Fine Mesh Cupped",
+          "url": "https://timeless-trends.com/products/black-fine-mesh-cupped-corset-gemini-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Black Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/black-fine-mesh-no-line-corset-gemini-cupped-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "sizing_page_slug": "gemini-sizing-information",
+        "sizing_page_url": "https://timeless-trends.com/pages/gemini-sizing-information",
+        "product_type_code": "GCX",
+        "rib_spring_in": 8.0,
+        "hip_spring_in": 14.0,
+        "sizing_sizes_offered": [
+          16,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          34,
+          36,
+          38,
+          40,
+          42
+        ],
+        "underbust_position_in": 5.5,
+        "high_hip_position_in": 4.0
+      }
+    },
+    {
+      "id": "TT-GSX",
+      "name": "Timeless Trends Conical Regular",
+      "url": "https://timeless-trends.com/collections/all",
+      "silhouette_category": "conical",
+      "silhouette_words": [
+        "conical",
+        "regular"
+      ],
+      "body_length_in": null,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 8.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 14.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "mesh"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Bed of Roses Straight",
+          "url": "https://timeless-trends.com/products/bed-of-roses-corset-gemini-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Beige Cotton Straight",
+          "url": "https://timeless-trends.com/products/beige-cotton-straight-corset-gemini-silhouette-long",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Beige Cotton Straight",
+          "url": "https://timeless-trends.com/products/beige-cotton-straight-corset-gemini-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Berry Sweet Cotton Straight",
+          "url": "https://timeless-trends.com/products/berry-sweet-cotton-straight-corset-gemini-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Floral Brocade Straight",
+          "url": "https://timeless-trends.com/products/black-floral-brocade-straight-corset-gemini-silhouette-regular",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Bubble Blooms in Blue Straight",
+          "url": "https://timeless-trends.com/products/bubble-blooms-in-blue-straight-corset-gemini-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Creme Cotton Straight",
+          "url": "https://timeless-trends.com/products/nude-straight-corset-gemini-silhouette-regular-only-available-in-size-36-copy",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            30,
+            32,
+            34
+          ]
+        },
+        {
+          "name": "Fortuna Brocade Straight",
+          "url": "https://timeless-trends.com/products/fortuna-brocade-straight-corset-gemini-silhouette-regular",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Cashmere Straight",
+          "url": "https://timeless-trends.com/products/black-cashmere-straight-corset-gemini-silhouette-long",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Black Straight",
+          "url": "https://timeless-trends.com/products/gemini-straight-black",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Emerald Straight",
+          "url": "https://timeless-trends.com/products/emerald-straight-corset-gemini-silhouette-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40
+          ]
+        },
+        {
+          "name": "Peonies in Bloom Straight",
+          "url": "https://timeless-trends.com/products/peonies-in-bloom-corset-gemini-silhouette-long",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40
+          ]
+        },
+        {
+          "name": "Beige Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/beige-fine-mesh-no-line-corset-gemini-straight-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Black Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/black-fine-mesh-no-line-corset-gemini-straight-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Burgundy Lace and Black Mesh Straight",
+          "url": "https://timeless-trends.com/products/burgundy-lace-and-black-mesh-straight-corset-gemini-silhouette-long",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Fine Mesh Straight",
+          "url": "https://timeless-trends.com/products/fine-mesh-straight-gemini-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "sizing_page_slug": "gemini-sizing-information",
+        "sizing_page_url": "https://timeless-trends.com/pages/gemini-sizing-information",
+        "product_type_code": "GSX",
+        "rib_spring_in": 8.0,
+        "hip_spring_in": 14.0,
+        "sizing_sizes_offered": [
+          16,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          34,
+          36,
+          38,
+          40,
+          42
+        ],
+        "underbust_position_in": 5.5,
+        "high_hip_position_in": 4.0
+      }
+    },
+    {
+      "id": "TT-LBS",
+      "name": "Timeless Trends Hourglass Regular",
+      "url": "https://timeless-trends.com/collections/all",
+      "silhouette_category": "hourglass",
+      "silhouette_words": [
+        "hourglass",
+        "regular"
+      ],
+      "body_length_in": null,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 7.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 8.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "materials_summary": [],
+      "stretch_class_options": [
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Customizer - Libby (Libra Gentle)",
+          "url": "https://timeless-trends.com/products/customizer-libby-libra-gentle",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": []
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "sizing_page_slug": "libby-libra-gentle-sizing-information",
+        "sizing_page_url": "https://timeless-trends.com/pages/libby-libra-gentle-sizing-information",
+        "product_type_code": "LBS",
+        "rib_spring_in": 7.0,
+        "hip_spring_in": 8.0,
+        "sizing_sizes_offered": [
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          34,
+          36,
+          38,
+          40,
+          42
+        ],
+        "underbust_position_in": 5.5,
+        "high_hip_position_in": 4.0
+      }
+    },
+    {
+      "id": "TT-LIB",
+      "name": "Timeless Trends Hourglass Regular",
+      "url": "https://timeless-trends.com/collections/all",
+      "silhouette_category": "hourglass",
+      "silhouette_words": [
+        "hourglass",
+        "regular"
+      ],
+      "body_length_in": null,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 10.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 11.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "mesh",
+        "satin",
+        "silk"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Ballet Slipper",
+          "url": "https://timeless-trends.com/products/ballet-slipper-corset-libra-silhouette-regular",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Beige Cotton",
+          "url": "https://timeless-trends.com/products/beige-cotton-corset-libra-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Beige Cotton Libby Corset (Libra Gentle Silhouette",
+          "url": "https://timeless-trends.com/products/beige-cotton-libby-libra-gentle-corset-libra-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Cotton",
+          "url": "https://timeless-trends.com/products/black-cotton-corset-libra-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Black Cotton Libby Corset (Libra Gentle Silhouette",
+          "url": "https://timeless-trends.com/products/black-cotton-libby-libra-gentle-cotton-corset-libra-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Floral Brocade",
+          "url": "https://timeless-trends.com/products/black-floral-brocade-corset-libra-silhouette-regular",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Bubble Blooms in Blue Libby Corset (Libra Gentle Silhouette",
+          "url": "https://timeless-trends.com/products/bubble-blooms-in-blue-libby-corset-libra-gentle-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Cobalt Silver Blossom",
+          "url": "https://timeless-trends.com/products/cobalt-silver-blossom-corset-libra-silhouette-regular",
+          "materials": [
+            "silk"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Dragonfly at Night",
+          "url": "https://timeless-trends.com/products/dragonfly-at-night-corset-libra-silhouette-regular",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Emerald",
+          "url": "https://timeless-trends.com/products/emerald-corset-libra-silhouette-regular",
+          "materials": [
+            "brocade",
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Fortuna Brocade Libby Corset (Libra Gentle Silhouette",
+          "url": "https://timeless-trends.com/products/fortuna-brocade-libby-corset-libra-gentle-silhouette-regular",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Red Lacquer",
+          "url": "https://timeless-trends.com/products/red-lacquer-corset-libra-silhouette-regular",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Through the Grapevine Cotton Libby Corset (Libra Gentle Silhouette",
+          "url": "https://timeless-trends.com/products/through-the-grapevine-cotton-libby-corset-libra-gentle-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Lace Cascade",
+          "url": "https://timeless-trends.com/products/black-lace-cascade-corset-libra-silhouette-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Green Fairy Libby Corset (Libra Gentle Silhouette",
+          "url": "https://timeless-trends.com/products/green-fairy-libby-corset-libra-gentle-silhouette-regular-1",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Robin's Egg",
+          "url": "https://timeless-trends.com/products/robins-egg-corset-libra-silhouette-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Beige Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/beige-fine-mesh-no-line-corset-libra-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Beige Fine Mesh No Line Libby Corset (Libra Gentle Silhouette",
+          "url": "https://timeless-trends.com/products/beige-fine-mesh-no-line-libby-corset-libra-gentle-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Fine Mesh",
+          "url": "https://timeless-trends.com/products/black-fine-mesh-corset-libra-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Black Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/black-fine-mesh-no-line-corset-libra-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Black Fine Mesh No Line Libby Corset (Libra Gentle Silhouette",
+          "url": "https://timeless-trends.com/products/black-fine-mesh-no-line-libby-corset-libra-gentle-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Siren Sequin Mesh Libby Corset (Libra Gentle Silhouette",
+          "url": "https://timeless-trends.com/products/siren-sequin-mesh-libby-corset-libra-gentle-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "sizing_page_slug": "libra-sizing-information",
+        "sizing_page_url": "https://timeless-trends.com/pages/libra-sizing-information",
+        "product_type_code": "LIB",
+        "rib_spring_in": 10.0,
+        "hip_spring_in": 11.0,
+        "sizing_sizes_offered": [
+          16,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          34,
+          36,
+          38,
+          40
+        ],
+        "underbust_position_in": 5.5,
+        "high_hip_position_in": 4.0
+      }
+    },
+    {
+      "id": "TT-NHR",
+      "name": "Timeless Trends Hourglass Regular",
+      "url": "https://timeless-trends.com/collections/all",
+      "silhouette_category": "hourglass",
+      "silhouette_words": [
+        "hourglass",
+        "regular"
+      ],
+      "body_length_in": null,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 7.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 10.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Beige Cotton Novice",
+          "url": "https://timeless-trends.com/products/beige-cotton-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Berry Sweet Cotton Novice",
+          "url": "https://timeless-trends.com/products/berry-sweet-cotton-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Black Cotton Novice",
+          "url": "https://timeless-trends.com/products/black-cotton-corset",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Citrus Mint Novice",
+          "url": "https://timeless-trends.com/products/citrus-mint-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Coming Up Aces Novice",
+          "url": "https://timeless-trends.com/products/coming-up-aces-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "French Bulldogs in Black Novice",
+          "url": "https://timeless-trends.com/products/french-bulldogs-in-black-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Gift for the Season in Black Novice",
+          "url": "https://timeless-trends.com/products/gift-for-the-season-in-black-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Gift for the Season in Green Novice",
+          "url": "https://timeless-trends.com/products/gift-for-the-season-in-green-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Groovy Peace Novice",
+          "url": "https://timeless-trends.com/products/groovy-peace-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Guitars Novice",
+          "url": "https://timeless-trends.com/products/guitars-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Mazatl\u00e1n Lady Novice",
+          "url": "https://timeless-trends.com/products/mazatlan-lady-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Pink Flamingos Novice",
+          "url": "https://timeless-trends.com/products/pink-flamingos-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Rainbow Fractals Novice",
+          "url": "https://timeless-trends.com/products/rainbow-fractals-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Seasonal Joy Novice",
+          "url": "https://timeless-trends.com/products/seasonal-joy-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Shades of Aqua in Checks Novice",
+          "url": "https://timeless-trends.com/products/shades-of-aqua-in-checks-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Strawberries and Lace Novice",
+          "url": "https://timeless-trends.com/products/strawberries-and-lace-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "The Cats Meow Novice",
+          "url": "https://timeless-trends.com/products/the-cats-meow-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Tie Dye Red Novice",
+          "url": "https://timeless-trends.com/products/tie-dye-red-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Tiny Ladybugs Novice",
+          "url": "https://timeless-trends.com/products/tiny-ladybugs-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Tropical Nights Novice",
+          "url": "https://timeless-trends.com/products/tropical-nights-novice-corset-hourglass-silhouette-regular-1",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "White Dragon Novice",
+          "url": "https://timeless-trends.com/products/white-dragon-corset",
+          "materials": [
+            "brocade",
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Happy Hippos Novice",
+          "url": "https://timeless-trends.com/products/happy-hippos-novice-corset-hourglass-silhouette-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "sizing_page_slug": "hourglass-regular-sizing-information",
+        "sizing_page_url": "https://timeless-trends.com/pages/hourglass-regular-sizing-information",
+        "product_type_code": "NHR",
+        "rib_spring_in": 7.0,
+        "hip_spring_in": 10.0,
+        "sizing_sizes_offered": [
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          34,
+          36,
+          38,
+          40,
+          42
+        ],
+        "underbust_position_in": 5.5,
+        "high_hip_position_in": 4.0
+      }
+    },
+    {
+      "id": "TT-UHL",
+      "name": "Timeless Trends Longline Long",
+      "url": "https://timeless-trends.com/collections/all",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "longline",
+        "long"
+      ],
+      "body_length_in": null,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 7.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 12.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "satin",
+        "silk",
+        "vinyl"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Beige Cotton",
+          "url": "https://timeless-trends.com/products/beige-cotton-corset-hourglass-silhouette-long",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Berry Sweet Cotton",
+          "url": "https://timeless-trends.com/products/berry-sweet-cotton-corset-hourglass-silhouette-long",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Dragon",
+          "url": "https://timeless-trends.com/products/dragon-long-hourglass-corset",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18
+          ]
+        },
+        {
+          "name": "Black Floral Brocade",
+          "url": "https://timeless-trends.com/products/black-floral-brocade-corset-hourglass-silhouette-long",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Vinyl",
+          "url": "https://timeless-trends.com/products/black-vinyl-long-corset",
+          "materials": [
+            "vinyl"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Burgundy with Flowers",
+          "url": "https://timeless-trends.com/products/burgundy-with-flowers-corset-hourglass-silhouette-long",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Emerald",
+          "url": "https://timeless-trends.com/products/emerald-long-hourglass-corset",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Hot Peppers",
+          "url": "https://timeless-trends.com/products/hot-peppers-corset-hourglass-silhouette-long",
+          "materials": [
+            "brocade",
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Impatiens Embrace",
+          "url": "https://timeless-trends.com/products/steely-blue-satin-corset-hourglass-silhouette-long-1",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Imperfect Hearts",
+          "url": "https://timeless-trends.com/products/imperfect-hearts-corset-hourglass-silhouette-long",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Lapis Blue",
+          "url": "https://timeless-trends.com/products/lapis-blue-silk-corset-hourglass-silhouette-long-photo-sample-only-size-22-is-available-copy",
+          "materials": [
+            "silk"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Purple Haze",
+          "url": "https://timeless-trends.com/products/purple-haze-corset-hourglass-silhouette-long",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Red White and Blue",
+          "url": "https://timeless-trends.com/products/red-white-and-blue-corset-hourglass-silhouette-long",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "White Satin",
+          "url": "https://timeless-trends.com/products/white-satin-long-hourglass",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Cashmere",
+          "url": "https://timeless-trends.com/products/black-cashmere-long-hourglass",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Customizer - Hourglass Long",
+          "url": "https://timeless-trends.com/products/customizer-hourglass-long",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": []
+        },
+        {
+          "name": "Iridescent Purple",
+          "url": "https://timeless-trends.com/products/purple-long-hourglass-corset",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "sizing_page_slug": "hourglass-long-sizing-information",
+        "sizing_page_url": "https://timeless-trends.com/pages/hourglass-long-sizing-information",
+        "product_type_code": "UHL",
+        "rib_spring_in": 7.0,
+        "hip_spring_in": 12.0,
+        "sizing_sizes_offered": [
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          34,
+          36,
+          38,
+          40,
+          42
+        ],
+        "underbust_position_in": 5.5,
+        "high_hip_position_in": 4.0
+      }
+    },
+    {
+      "id": "TT-UHR",
+      "name": "Timeless Trends Hourglass Regular",
+      "url": "https://timeless-trends.com/collections/all",
+      "silhouette_category": "hourglass",
+      "silhouette_words": [
+        "hourglass",
+        "regular"
+      ],
+      "body_length_in": null,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 7.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 10.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "leather",
+        "mesh",
+        "satin",
+        "silk",
+        "velvet",
+        "vinyl"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "(UFR) Beige Cotton",
+          "url": "https://timeless-trends.com/products/beige-ufr-cotton-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "(UFR) Cobalt Silver Blossom",
+          "url": "https://timeless-trends.com/products/new-ufr-cobalt-silver-blossom-corset-hourglass-silhouette-funnel-regular",
+          "materials": [
+            "silk"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "(UFR) Red Lacquer",
+          "url": "https://timeless-trends.com/products/new-ufr-red-lacquer-corset-hourglass-silhouette-funnel-regular",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Beige Cotton",
+          "url": "https://timeless-trends.com/products/beige-cotton-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Beige Cotton",
+          "url": "https://timeless-trends.com/products/beige-cotton-corset-hourglass-silhouette-regular-w-hip-ties",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Cotton",
+          "url": "https://timeless-trends.com/products/black-cotton-corset-hourglass-silhouette-regular-w-hip-ties",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Floral Brocade",
+          "url": "https://timeless-trends.com/products/black-floral-brocade-hourglass",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Leather",
+          "url": "https://timeless-trends.com/products/black-leather-hourglass-corset",
+          "materials": [
+            "leather"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40
+          ]
+        },
+        {
+          "name": "Black Vinyl",
+          "url": "https://timeless-trends.com/products/black-vinyl-hourglass-corset",
+          "materials": [
+            "vinyl"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Emerald",
+          "url": "https://timeless-trends.com/products/emerald-hourglass-corset",
+          "materials": [
+            "brocade",
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Green Burnout Velvet",
+          "url": "https://timeless-trends.com/products/green-flocking-corset-hourglass-silhouette-regular",
+          "materials": [
+            "velvet"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Imperfect Hearts",
+          "url": "https://timeless-trends.com/products/imperfect-hearts-corset-hourglass-silhouette-regular-w-hip-ties",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Impressionist Shimmer",
+          "url": "https://timeless-trends.com/products/impressionist-shimmer-corset-hourglass-silhouette-regular-w-hip-ties",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Toffee Satin",
+          "url": "https://timeless-trends.com/products/toffee-satin-corset-hourglass-silhouette-regular",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "White Satin",
+          "url": "https://timeless-trends.com/products/white-bridal-hourglass-corset",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "(UFR) Basil and Lace",
+          "url": "https://timeless-trends.com/products/ufr-basil-and-lace-corset-hourglass-silhouette-funnel-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "(UFR) Black Cashmere",
+          "url": "https://timeless-trends.com/products/black-ufr-cashmere-corset-hourglass-silhouette-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "(UFR) Robin's Egg",
+          "url": "https://timeless-trends.com/products/new-ufr-deep-sea-shimmer-corset-hourglass-silhouette-funnel-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Cashmere",
+          "url": "https://timeless-trends.com/products/black-cashmere-hourglass-corset",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Cashmere with Silver Zipper",
+          "url": "https://timeless-trends.com/products/black-cashmere-with-zipper-hourglass-silhouette-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Daisies at Sunset",
+          "url": "https://timeless-trends.com/products/daisies-at-sunset-corset-hourglass-silhouette-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Dotted Lace on Red",
+          "url": "https://timeless-trends.com/products/dotted-lace-on-red-corset-hourglass-silhouette-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Dotted Veil",
+          "url": "https://timeless-trends.com/products/dotted-veil-corset-hourglass-silhouette-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Gothic Cashmere",
+          "url": "https://timeless-trends.com/products/gothic-cashmere-hourglass",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Tic Tac Violets Novice",
+          "url": "https://timeless-trends.com/products/vintage-daisies-in-red-novice-corset-hourglass-silhouette-regular-1",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Vintage Daisies in Red",
+          "url": "https://timeless-trends.com/products/vintage-daisies-in-red-corset-hourglass-silhouette-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Vintage Daisies in Red Novice",
+          "url": "https://timeless-trends.com/products/vintage-daisies-in-red-novice-corset-hourglass-silhouette-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "White with Red Sparkle",
+          "url": "https://timeless-trends.com/products/white-with-red-sparkle-hourglass-silhouette-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18
+          ]
+        },
+        {
+          "name": "(UFR) Beige Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/beige-ufr-fine-mesh-no-line-corset-hourglass-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "(UFR) Black Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/black-ufr-fine-mesh-no-line-corset-hourglass-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Beige Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/beige-fine-mesh-no-line-corset-hourglass-silhouette-long",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Beige Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/beige-fine-mesh-no-line-corset-hourglass-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Beige Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/beige-fine-mesh-no-line-corset-hourglass-silhouette-short",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Beige Open Mesh",
+          "url": "https://timeless-trends.com/products/beige-open-mesh-corset-hourglass-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Black Fine Mesh",
+          "url": "https://timeless-trends.com/products/black-fine-mesh-corset-hourglass-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Black Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/black-fine-mesh-no-line-corset-hourglass-silhouette-long",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Black Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/black-fine-mesh-no-line-corset-hourglass-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Black Open Mesh",
+          "url": "https://timeless-trends.com/products/black-open-mesh-corset-hourglass-silhouette-regular-1",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Customizer - MESH Hourglass Regular",
+          "url": "https://timeless-trends.com/products/customizer-mesh-hourglass-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": []
+        },
+        {
+          "name": "Emerald Glitter Mesh",
+          "url": "https://timeless-trends.com/products/emerald-glitter-mesh-corset-hourglass-silhouette-regular-1",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Pink Tourmaline Glitter Mesh",
+          "url": "https://timeless-trends.com/products/pink-tourmaline-glitter-mesh-corset-hourglass-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Ruby Glitter Mesh",
+          "url": "https://timeless-trends.com/products/ruby-glitter-mesh-corset-hourglass-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Sapphire Glitter Mesh",
+          "url": "https://timeless-trends.com/products/sapphire-glitter-mesh-corset-hourglass-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "sizing_page_slug": "hourglass-regular-sizing-information",
+        "sizing_page_url": "https://timeless-trends.com/pages/hourglass-regular-sizing-information",
+        "product_type_code": "UHR",
+        "rib_spring_in": 7.0,
+        "hip_spring_in": 10.0,
+        "sizing_sizes_offered": [
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          34,
+          36,
+          38,
+          40,
+          42
+        ],
+        "underbust_position_in": 5.5,
+        "high_hip_position_in": 4.0
+      }
+    },
+    {
+      "id": "TT-UHS",
+      "name": "Timeless Trends Waspie Short",
+      "url": "https://timeless-trends.com/collections/all",
+      "silhouette_category": "waspie",
+      "silhouette_words": [
+        "waspie",
+        "short"
+      ],
+      "body_length_in": null,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 4.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 7.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "leather",
+        "mesh",
+        "satin",
+        "silk",
+        "vinyl"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Beige Cotton",
+          "url": "https://timeless-trends.com/products/beige-cotton-corset-hourglass-silhouette-short",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Floral Brocade",
+          "url": "https://timeless-trends.com/products/black-floral-brocade-corset-hourglass-silhouette-short",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Vinyl",
+          "url": "https://timeless-trends.com/products/vinyl-waist-cincher-corset",
+          "materials": [
+            "vinyl"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Brown Leather",
+          "url": "https://timeless-trends.com/products/brown-leather-corset-hourglass-silhouette-short",
+          "materials": [
+            "leather"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Dragon Master Returns",
+          "url": "https://timeless-trends.com/products/dragon-master-returns-corset-hourglass-silhouette-short",
+          "materials": [
+            "vinyl"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Emerald",
+          "url": "https://timeless-trends.com/products/emerald-hourglass-waist-cincher",
+          "materials": [
+            "brocade",
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Lapis Blue Silk",
+          "url": "https://timeless-trends.com/products/lapis-blue-silk-corset-hourglass-silhouette-short",
+          "materials": [
+            "silk"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "White Satin",
+          "url": "https://timeless-trends.com/products/white-satin-cincher",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Black Cashmere",
+          "url": "https://timeless-trends.com/products/cashmere-hourglass-cincher",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Dots on Beige",
+          "url": "https://timeless-trends.com/products/black-dots-on-beige-corset-hourglass-silhouette-short",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Lace Cascade",
+          "url": "https://timeless-trends.com/products/black-lace-cascade-corset-hourglass-silhouette-short",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Dotted Lace on Red",
+          "url": "https://timeless-trends.com/products/dotted-lace-on-red-corset-hourglass-silhouette-short",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Iridescent Purple",
+          "url": "https://timeless-trends.com/products/iridescent-purple-waist-cincher",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Rusted Brown",
+          "url": "https://timeless-trends.com/products/rusted-brown-satin-hourglass-silhouette-short",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            30,
+            32,
+            36
+          ]
+        },
+        {
+          "name": "Black Fine Mesh",
+          "url": "https://timeless-trends.com/products/black-fine-mesh-corset-hourglass-silhouette-short",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Black Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/black-fine-mesh-no-line-corset-hourglass-silhouette-short",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "sizing_page_slug": "hourglass-short-sizing-information",
+        "sizing_page_url": "https://timeless-trends.com/pages/hourglass-short-sizing-information",
+        "product_type_code": "UHS",
+        "rib_spring_in": 4.0,
+        "hip_spring_in": 7.0,
+        "sizing_sizes_offered": [
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          34,
+          36,
+          38,
+          40,
+          42
+        ],
+        "underbust_position_in": 5.5,
+        "high_hip_position_in": 4.0
+      }
+    },
+    {
+      "id": "TT-USL",
+      "name": "Timeless Trends Longline Long",
+      "url": "https://timeless-trends.com/collections/all",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "longline",
+        "long"
+      ],
+      "body_length_in": 13.416666666666666,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 4.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 7.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "leather",
+        "mesh",
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Beige Cotton",
+          "url": "https://timeless-trends.com/products/beige-cotton-corset-slim-silhouette-long",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Floral Brocade",
+          "url": "https://timeless-trends.com/products/black-floral-long-corset",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Leather",
+          "url": "https://timeless-trends.com/products/black-leather-long-corset",
+          "materials": [
+            "leather"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Brown Leather",
+          "url": "https://timeless-trends.com/products/brown-leather-long-corset",
+          "materials": [
+            "leather"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "White Floral Brocade",
+          "url": "https://timeless-trends.com/products/white-floral-brocade-corset",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            20,
+            22,
+            24
+          ]
+        },
+        {
+          "name": "White Satin",
+          "url": "https://timeless-trends.com/products/bridal-satin-long-corset",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Cashmere",
+          "url": "https://timeless-trends.com/products/black-cashmere-long-corset",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Customizer - Slim Long",
+          "url": "https://timeless-trends.com/products/customizer-slim-long",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": []
+        },
+        {
+          "name": "Grab Bag - Hourglass Long (only size 18\" left)",
+          "url": "https://timeless-trends.com/products/grab-bag-hourglass-long-size-18",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18
+          ]
+        },
+        {
+          "name": "Grab Bag - Slim Long",
+          "url": "https://timeless-trends.com/products/grab-bag-slim-long-size-18",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22
+          ]
+        },
+        {
+          "name": "Purple Iridescent",
+          "url": "https://timeless-trends.com/products/purple-iridescent-long-corset",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Beige Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/beige-fine-mesh-no-line-corset-slim-silhouette-long",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Black Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/black-fine-mesh-no-line-corset-slim-silhouette-long",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "sizing_page_slug": "slim-long-sizing-information",
+        "sizing_page_url": "https://timeless-trends.com/pages/slim-long-sizing-information",
+        "product_type_code": "USL",
+        "rib_spring_in": 4.0,
+        "hip_spring_in": 7.0,
+        "sizing_sizes_offered": [
+          8,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          34,
+          36,
+          40,
+          42
+        ],
+        "underbust_position_in": 5.5,
+        "high_hip_position_in": 4.0
+      }
+    },
+    {
+      "id": "TT-USR",
+      "name": "Timeless Trends Hourglass Regular",
+      "url": "https://timeless-trends.com/collections/all",
+      "silhouette_category": "hourglass",
+      "silhouette_words": [
+        "hourglass",
+        "regular"
+      ],
+      "body_length_in": 12.25,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 4.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 7.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "leather",
+        "mesh",
+        "satin",
+        "vinyl"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "variants": [
+        {
+          "name": "Ballet Slipper",
+          "url": "https://timeless-trends.com/products/ballet-slipper-corset-slim-silhouette-long",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Beige Cotton",
+          "url": "https://timeless-trends.com/products/beige-cotton-corset-slim-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Beige Cotton Corset w/ Hip Ties",
+          "url": "https://timeless-trends.com/products/beige-cotton-corset-w-hip-ties-slim-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Floral Brocade",
+          "url": "https://timeless-trends.com/products/black-floral-brocade-corset",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Leather",
+          "url": "https://timeless-trends.com/products/black-leather-corset",
+          "materials": [
+            "leather"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Vinyl",
+          "url": "https://timeless-trends.com/products/shiny-black-vinyl-corset",
+          "materials": [
+            "vinyl"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Buttermilk Satin",
+          "url": "https://timeless-trends.com/products/ballet-slipper-corset-slim-silhouette-long-1",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Dyeable",
+          "url": "https://timeless-trends.com/products/dyeable-corset",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18
+          ]
+        },
+        {
+          "name": "Emerald",
+          "url": "https://timeless-trends.com/products/emerald-corset",
+          "materials": [
+            "brocade",
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "White Cherry Blossom",
+          "url": "https://timeless-trends.com/products/white-floral-corset",
+          "materials": [
+            "brocade",
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22
+          ]
+        },
+        {
+          "name": "White Satin",
+          "url": "https://timeless-trends.com/products/white-bridal-satin-corset",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Black Cashmere",
+          "url": "https://timeless-trends.com/products/black-cashmere-corset",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Cashmere Corset w/ Hip Ties",
+          "url": "https://timeless-trends.com/products/black-cashmere-corset-w-hip-ties-slim-silhouette-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Dotted Veil",
+          "url": "https://timeless-trends.com/products/dotted-veil-corset-slim-silhouette-regular",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Floral Sweetness Slim Long Corset** SIZE 22\"",
+          "url": "https://timeless-trends.com/products/floral-sweetness-corset-slim-silhouette-long",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            22
+          ]
+        },
+        {
+          "name": "Gothic Cashmere",
+          "url": "https://timeless-trends.com/products/gothic-cashmere-gentle",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Grab Bag - Slim Regular",
+          "url": "https://timeless-trends.com/products/grab-bag-slim-regular-size-18",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22
+          ]
+        },
+        {
+          "name": "Grab Bag - Waspie Mix",
+          "url": "https://timeless-trends.com/products/grab-bag-slim-short",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            22
+          ]
+        },
+        {
+          "name": "Green Fairy",
+          "url": "https://timeless-trends.com/products/green-fairy-corset-slim-silhouette-long",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": []
+        },
+        {
+          "name": "Green Fairy",
+          "url": "https://timeless-trends.com/products/green-fairy-corset-slim-silhouette-long-1",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Mystery White Corset - ADD ON** (20\" and 22\" remaining)",
+          "url": "https://timeless-trends.com/products/mystery-white-corset-your-size-add-on",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            20,
+            22
+          ]
+        },
+        {
+          "name": "Mystery White LONG Corset - ADD ON** (sizes 18 to 22)",
+          "url": "https://timeless-trends.com/products/mystery-white-long-corset-add-on",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22
+          ]
+        },
+        {
+          "name": "Beige Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/beige-fine-mesh-no-line-corset-slim-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Beige Open Mesh",
+          "url": "https://timeless-trends.com/products/corset-slim-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Fine Mesh",
+          "url": "https://timeless-trends.com/products/black-fine-mesh-corset-slim-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
+          "name": "Black Fine Mesh No Line",
+          "url": "https://timeless-trends.com/products/black-fine-mesh-no-line-corset-slim-silhouette-regular",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "sizing_page_slug": "slim-regular-sizing-information",
+        "sizing_page_url": "https://timeless-trends.com/pages/slim-regular-sizing-information",
+        "product_type_code": "USR",
+        "rib_spring_in": 4.0,
+        "hip_spring_in": 7.0,
+        "sizing_sizes_offered": [
+          8,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          34,
+          36,
+          40,
+          42
+        ],
+        "underbust_position_in": 5.5,
+        "high_hip_position_in": 4.0
+      }
+    },
+    {
+      "id": "TT-USS",
+      "name": "Timeless Trends Waspie Short",
+      "url": "https://timeless-trends.com/collections/all",
+      "silhouette_category": "waspie",
+      "silhouette_words": [
+        "waspie",
+        "short"
+      ],
+      "body_length_in": 9.5,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -5.5,
+          "spring_in": 2.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 4.0,
+          "spring_in": 3.0,
+          "label": "upper-hip (4in below waist)"
+        }
+      ],
+      "materials_summary": [
+        "brocade",
+        "cotton",
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low",
+        "medium"
+      ],
+      "variants": [
+        {
+          "name": "Beige Cotton",
+          "url": "https://timeless-trends.com/products/beige-cotton-corset-slim-silhouette-short",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Black Floral Brocade",
+          "url": "https://timeless-trends.com/products/black-floral-waist-cincher",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "White Satin",
+          "url": "https://timeless-trends.com/products/bridal-satin-waist-cincher",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            20,
+            32,
+            42
+          ]
+        },
+        {
+          "name": "Black Cashmere",
+          "url": "https://timeless-trends.com/products/black-cashmere-waist-cincher",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
+          "name": "Customizer - Slim Short",
+          "url": "https://timeless-trends.com/products/customizer-slim-short",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": []
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "sizing_page_slug": "slim-short-sizing-information",
+        "sizing_page_url": "https://timeless-trends.com/pages/slim-short-sizing-information",
+        "product_type_code": "USS",
+        "rib_spring_in": 2.0,
+        "hip_spring_in": 3.0,
+        "sizing_sizes_offered": [
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          34,
+          36,
+          38,
+          40,
+          42
+        ],
+        "underbust_position_in": 5.5,
+        "high_hip_position_in": 4.0
+      }
+    }
+  ]
+}

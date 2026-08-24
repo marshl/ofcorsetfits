@@ -191,7 +191,7 @@ fieldset.landmark .helper {
 .ranked-row-header {
   width: 100%;
   display: grid;
-  grid-template-columns: 2.5rem 5rem 1fr 5rem 4.5rem 6rem 2.2rem 5rem 1rem;
+  grid-template-columns: 2.5rem 7rem 1fr 5rem 4.5rem 6rem 2.2rem 5rem 1rem;
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 0.75rem;
@@ -210,7 +210,31 @@ fieldset.landmark .helper {
   color: var(--accent);
   font-variant-numeric: tabular-nums;
 }
-.corset-id { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 600; }
+.corset-id {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.brand-tag {
+  display: inline-block;
+  padding: 0.05rem 0.35rem;
+  border-radius: 3px;
+  font-family: system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: white;
+  flex-shrink: 0;
+  cursor: help;
+}
+.brand-tag-mystic-city-corsets { background: #6da2c4; }
+.brand-tag-timeless-trends { background: #c9761b; }
 .corset-name { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .stretch {
   display: inline-block;

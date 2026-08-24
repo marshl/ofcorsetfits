@@ -1,0 +1,103 @@
+# Timeless Trends silhouette landmark positions — human review
+#
+# One entry per silhouette (identified by its sizing-page slug). Each
+# holds two developer-reviewed positions in inches:
+#
+#   underbust_position_in  — inches ABOVE natural waist (where TT's
+#                           'Underbust' size-chart measurement is taken)
+#   high_hip_position_in   — inches BELOW natural waist (where TT's
+#                           'High Hip' measurement is taken)
+#
+# Comments below each entry are context regenerated from the sizing
+# pages every run; edit only the two data fields.
+
+silhouettes:
+  gemini-sizing-information:
+    # silhouette_category:  conical
+    # length_hint:          regular
+    # rib_spring_in:        8.0
+    # hip_spring_in:        14.0
+    # product_type_codes:   [GSX, GCX]
+    # example_url:          https://timeless-trends.com/products/bed-of-roses-corset-gemini-silhouette-regular
+    underbust_position_in: 5.5  # inches above waist
+    high_hip_position_in:  4.0   # inches below waist
+
+  hourglass-long-sizing-information:
+    # silhouette_category:  longline
+    # length_hint:          long
+    # rib_spring_in:        7.0
+    # hip_spring_in:        12.0
+    # product_type_codes:   [UHL]
+    # example_url:          https://timeless-trends.com/products/beige-cotton-corset-hourglass-silhouette-long
+    underbust_position_in: 5.5  # inches above waist
+    high_hip_position_in:  4.0   # inches below waist
+
+  hourglass-regular-sizing-information:
+    # silhouette_category:  hourglass
+    # length_hint:          regular
+    # rib_spring_in:        7.0
+    # hip_spring_in:        10.0
+    # product_type_codes:   [UHR, NHR]
+    # example_url:          https://timeless-trends.com/products/beige-cotton-corset-hourglass-silhouette-regular
+    underbust_position_in: 5.5  # inches above waist
+    high_hip_position_in:  4.0   # inches below waist
+
+  hourglass-short-sizing-information:
+    # silhouette_category:  waspie
+    # length_hint:          short
+    # rib_spring_in:        4.0
+    # hip_spring_in:        7.0
+    # product_type_codes:   [UHS]
+    # example_url:          https://timeless-trends.com/products/beige-cotton-corset-hourglass-silhouette-short
+    underbust_position_in: 5.5  # inches above waist
+    high_hip_position_in:  4.0   # inches below waist
+
+  libby-libra-gentle-sizing-information:
+    # silhouette_category:  hourglass
+    # length_hint:          regular
+    # rib_spring_in:        7.0
+    # hip_spring_in:        8.0
+    # product_type_codes:   [LBS]
+    # example_url:          https://timeless-trends.com/products/customizer-libby-libra-gentle
+    underbust_position_in: 5.5  # inches above waist
+    high_hip_position_in:  4.0   # inches below waist
+
+  libra-sizing-information:
+    # silhouette_category:  hourglass
+    # length_hint:          regular
+    # rib_spring_in:        10.0
+    # hip_spring_in:        11.0
+    # product_type_codes:   [LIB]
+    # example_url:          https://timeless-trends.com/products/ballet-slipper-corset-libra-silhouette-regular
+    underbust_position_in: 5.5  # inches above waist
+    high_hip_position_in:  4.0   # inches below waist
+
+  slim-long-sizing-information:
+    # silhouette_category:  longline
+    # length_hint:          long
+    # rib_spring_in:        4.0
+    # hip_spring_in:        7.0
+    # product_type_codes:   [USL]
+    # example_url:          https://timeless-trends.com/products/beige-cotton-corset-slim-silhouette-long
+    underbust_position_in: 5.5  # inches above waist
+    high_hip_position_in:  4.0   # inches below waist
+
+  slim-regular-sizing-information:
+    # silhouette_category:  hourglass
+    # length_hint:          regular
+    # rib_spring_in:        4.0
+    # hip_spring_in:        7.0
+    # product_type_codes:   [USR]
+    # example_url:          https://timeless-trends.com/products/ballet-slipper-corset-slim-silhouette-long
+    underbust_position_in: 5.5  # inches above waist
+    high_hip_position_in:  4.0   # inches below waist
+
+  slim-short-sizing-information:
+    # silhouette_category:  waspie
+    # length_hint:          short
+    # rib_spring_in:        2.0
+    # hip_spring_in:        3.0
+    # product_type_codes:   [USS]
+    # example_url:          https://timeless-trends.com/products/beige-cotton-corset-slim-silhouette-short
+    underbust_position_in: 5.5  # inches above waist
+    high_hip_position_in:  4.0   # inches below waist

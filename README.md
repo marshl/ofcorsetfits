@@ -48,7 +48,12 @@ That runs eight steps end-to-end: sitemap → comparison chart → URL matching 
 
 The interactive step prints each product URL and asks you to open it in a browser and read the hip positions off the size-chart image — those positions aren't machine-readable from HTML. Entries save incrementally so Ctrl-C is safe. `--assume-defaults` skips the prompt for CI-style runs.
 
-Currently the only wired-up vendor is [Mystic City Corsets](https://mysticcitycorsets.com/). Adding another vendor is a matter of mirroring `catalog/vendors/mysticcity/` and writing a new output `catalog/<vendor>.json`; the scoring engine doesn't care where a catalog came from.
+Currently-wired vendors:
+
+- [Mystic City Corsets](https://mysticcitycorsets.com/) — WooCommerce. Catalog data comes from MCC's `ninja_tables` ajax endpoint (whole-catalog spring/geometry) plus per-variant product-page scrapes.
+- [Timeless Trends](https://timeless-trends.com/) — Shopify. Catalog data comes from `/collections/all/products.json` (bulk product enumeration) plus per-silhouette sizing-info pages (`/pages/*-sizing-information`) for the spring numbers.
+
+Adding another vendor is a matter of copying `catalog/vendors/<existing>/`, adjusting the fetchers to the vendor's platform (`shared/woocommerce.py` and `shared/shopify.py` cover the two big ones), and writing a new output `catalog/<vendor>.json`. The scoring engine doesn't care where a catalog came from.
 
 ## Data + ethics
 

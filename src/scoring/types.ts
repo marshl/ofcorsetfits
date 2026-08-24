@@ -67,6 +67,14 @@ export interface Corset {
   id: string;
   name: string;
   url: string;
+  /**
+   * Brand display name — stamped onto each corset at merge time in
+   * `App.tsx` when multiple vendor catalogs are combined. Rows display
+   * this so the user knows which vendor to buy from. Optional because
+   * a single-vendor catalog (or a scoring-only test) may leave it unset.
+   */
+  brand?: string;
+  brand_url?: string;
   silhouette_category: SilhouetteCategory;
   silhouette_words: string[];
   body_length_in: number | null;

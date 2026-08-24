@@ -22,6 +22,24 @@ const GAP_SHAPE_LABELS: Record<GapShape, { glyph: string; name: string }> = {
   closed: { glyph: '|', name: 'fully closed' },
 };
 
+/**
+ * Short vendor code for the brand pill on each row header. Falls back
+ * to the first three letters of the brand name when we haven't seen
+ * this vendor before — better than nothing, and prompts an update here.
+ */
+function brandShortCode(brand: string | undefined): string {
+  if (!brand) return '';
+  if (brand.startsWith('Mystic City')) return 'MCC';
+  if (brand.startsWith('Timeless Trends')) return 'TT';
+  return brand.slice(0, 3).toUpperCase();
+}
+
+/** Kebab-case slug for the CSS modifier class on the brand pill. */
+function brandSlug(brand: string | undefined): string {
+  if (!brand) return 'unknown';
+  return brand.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
 interface RankedListProps {
   results: RankedResult[];
   topN?: number;
@@ -58,8 +76,28 @@ function buyUrlWithSize(
   variantSizes: number[],
 ): string {
   if (!variantSizes.includes(size)) return url;
+  // WooCommerce (MCC): `?attribute_pa_size=N` pre-selects the dropdown.
+  // Shopify (TT): pre-selecting a variant needs `?variant=<numeric-id>`,
+  // which we don't carry in the catalog — bare URL is the honest link,
+  // and the size dropdown is right at the top of the product page anyway.
+  // Any other host: leave alone.
+  const isWooCommerce = /mysticcitycorsets\.com$/.test(hostnameOf(url));
+  if (!isWooCommerce) return url;
   const separator = url.includes('?') ? '&' : '?';
   return `${url}${separator}attribute_pa_size=${size}`;
+}
+
+/**
+ * Return "mysticcitycorsets.com" from any product URL on that host so the
+ * "buy on X" link text reflects the actual vendor. Falls back to the raw
+ * URL string if parsing fails (bad URL / non-http scheme).
+ */
+function hostnameOf(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
 }
 
 /**
@@ -165,7 +203,17 @@ export function RankedList({
                 aria-expanded={isExpanded}
               >
                 <span className="rank">{isTierLeader ? tiers[i] : ''}</span>
-                <span className="corset-id">{r.corset.id}</span>
+                <span className="corset-id">
+                  {r.corset.brand && (
+                    <span
+                      className={`brand-tag brand-tag-${brandSlug(r.corset.brand)}`}
+                      title={r.corset.brand}
+                    >
+                      {brandShortCode(r.corset.brand)}
+                    </span>
+                  )}
+                  {r.corset.id}
+                </span>
                 <span className="corset-name">
                   {r.best.variant.name}
                   {memberCount > 1 && (
@@ -188,6 +236,22 @@ export function RankedList({
               {isExpanded && (
                 <div className="ranked-row-details">
                   <div className="detail-meta">
+                    {r.corset.brand && (
+                      <div>
+                        <strong>Brand:</strong>{' '}
+                        {r.corset.brand_url ? (
+                          <a
+                            href={r.corset.brand_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {r.corset.brand}
+                          </a>
+                        ) : (
+                          r.corset.brand
+                        )}
+                      </div>
+                    )}
                     <div>
                       <strong>Materials:</strong>{' '}
                       {r.best.variant.materials.join(', ') || '(unspecified)'}
@@ -246,7 +310,7 @@ export function RankedList({
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              buy on mysticcitycorsets.com
+                              buy on {hostnameOf(v.url)}
                               {offersBestSize && (
                                 <> (size {r.best.waist_size_in}")</>
                               )}
