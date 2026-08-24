@@ -185,11 +185,13 @@ export function rank(
  * Weights: waist matters most (2×), low hip least (0.7× — most people
  * don't emphasize it).
  *
- * Non-waist landmark slopes: tightness (3.0) > looseness (2.0), but
- * looseness is meaningful — a corset that's LOOSER than the body at rib
- * or hip (negative actual_gap; corset flares away from the body) is a
- * real fit problem, not "a shrug." Tightness is still worse because at
- * a bony landmark the corset just physically can't close.
+ * Non-waist landmark slopes: looseness (3.0) > tightness (2.0). A corset
+ * that FLOATS LOOSE at a rib/hip landmark (corset > body → negative gap
+ * in the display convention) fails at contouring — the silhouette gapes
+ * and no amount of gap-lacing fixes it. A corset that runs a bit TIGHT
+ * (corset < body → positive gap) closes smaller than the landmark and
+ * simply leaves a wider lacing gap there, which is largely cosmetic. So
+ * looseness is now the harsher penalty.
  *
  * Waist target math: 2" reduction default (comfortable daily wear;
  * tightlacing pushes toward 4-6"). Over-target slope is HARSH (3.0)
@@ -207,8 +209,8 @@ export function defaultScoringConfig(catalog: Catalog): ScoringConfig {
       upper_hip: 1.0,
       low_hip: 0.7,
     },
-    tightness_slope: 3.0,
-    looseness_slope: 2.0,
+    tightness_slope: 2.0,
+    looseness_slope: 3.0,
     desired_reduction_in: 2.0,
     straight_gap_size_in: 2.0,
     slant_slope_in_per_in: 0.5,

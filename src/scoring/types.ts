@@ -116,9 +116,12 @@ export interface ScoringConfig {
   weights: PositionWeights;
   /**
    * Slopes applied to non-waist landmark diffs (underbust, upper hip, low hip).
-   * Positive diff = corset > body (loose). Negative diff = corset < body (tight).
-   * Tightness is typically harsher because a corset can't compress the ribs
-   * or hip bones, whereas a loose corset is at worst a shrug.
+   * Positive diff = corset > body (loose; corset floats over the landmark →
+   * negative gap in the display convention). Negative diff = corset < body
+   * (tight; corset closes smaller than the landmark → positive gap).
+   * Looseness is the harsher penalty by default: a floating corset fails at
+   * contouring and can't be gap-laced back into shape, whereas a corset that
+   * runs a bit tight just widens the lacing gap at that landmark.
    */
   tightness_slope: number;
   looseness_slope: number;

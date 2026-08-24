@@ -180,14 +180,15 @@ export function scoreCorset(
         // curved: asymmetric on diff — EXCEPT at the underbust of a cupped-rib
         // silhouette, where the design intent is to CUP the rib (accommodate,
         // don't compress or flare away from it). Both directions of misfit
-        // are equally bad there, so we symmetrize by using tightness_slope
-        // for looseness too.
+        // are equally bad there, so we symmetrize BOTH slopes to the harsher
+        // of the two (Math.max) — robust regardless of which slope defaults
+        // higher on any given day.
         const isCuppedRibUnderbust =
           corset.silhouette_category === 'cupped-rib' && weightKey === 'underbust';
-        const loosenessSlope = isCuppedRibUnderbust
-          ? config.tightness_slope
-          : config.looseness_slope;
-        penalty = penaltyForDiff(diff, weight, config.tightness_slope, loosenessSlope);
+        const harsher = Math.max(config.tightness_slope, config.looseness_slope);
+        const tightSlope = isCuppedRibUnderbust ? harsher : config.tightness_slope;
+        const looseSlope = isCuppedRibUnderbust ? harsher : config.looseness_slope;
+        penalty = penaltyForDiff(diff, weight, tightSlope, looseSlope);
       } else {
         // straight / slant-hip / slant-rib / closed all define a per-position
         // target gap and use a symmetric |actual - target| penalty.
