@@ -12,10 +12,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" />
-    <title>ofcorsetfits</title>
+
+    <title>ofcorsetfits — corset fit finder from your measurements</title>
+    <meta name="description"
+          content="A fit-finder for corsets: enter your waist, underbust, and hip measurements and see every Mystic City corset ranked by how well it will fit, at every available size." />
+
+    <!-- Open Graph — used by Slack, Facebook, LinkedIn, most social/preview
+         generators. og:image resolves to /ofcorsetfits/title.svg under the
+         deployed base. og:url should be the deployed URL so link unfurlers
+         normalize to it. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ofcorsetfits — corset fit finder" />
+    <meta property="og:description"
+          content="Enter your measurements and see every Mystic City corset ranked by fit, at every available size." />
+    <meta property="og:url" content="https://marshl.github.io/ofcorsetfits/" />
+    <meta property="og:image" content="https://marshl.github.io/ofcorsetfits/title.svg" />
+
+    <!-- Twitter Card — Twitter/X uses these instead of Open Graph. -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ofcorsetfits — corset fit finder" />
+    <meta name="twitter:description"
+          content="Enter your measurements and see every Mystic City corset ranked by fit, at every available size." />
+    <meta name="twitter:image" content="https://marshl.github.io/ofcorsetfits/title.svg" />
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Fallback content for crawlers / social-preview generators that don't
+         execute JavaScript. React replaces this with the live app on mount.
+         Keeping the h1 + tagline text here mirrors what App.tsx renders so
+         indexing sees the same words search users would land on. -->
+    <div id="root">
+      <header>
+        <h1>OfCorsetFits</h1>
+        <p>
+          A fit-finder for corsets. Enter your waist, underbust, and hip
+          measurements and see every Mystic City corset ranked by how well it
+          will fit — at every available size, under every acceptable lacing-gap
+          shape. Inspired by abrathatfits, adapted for corset sizing.
+        </p>
+      </header>
+    </div>
     <script type="module" src="./src/ui/main.tsx"></script>
   </body>
 </html>
