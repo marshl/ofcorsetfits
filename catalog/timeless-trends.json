@@ -6,11 +6,12 @@
     "medium": 1.0,
     "high": 1.75
   },
-  "generated_at_iso": "2026-08-24T06:25:16+00:00",
+  "generated_at_iso": "2026-08-24T07:17:37+00:00",
   "sources": {
     "collections_json": "https://timeless-trends.com/collections/all/products.json",
     "sizing_pages": "https://timeless-trends.com/pages/*-sizing-information",
-    "landmark_positions": "manually reviewed against size-chart images"
+    "product_metafields": "https://timeless-trends.com/products/* (rendered HTML)",
+    "landmark_positions_fallback": "manually reviewed against size-chart images"
   },
   "corsets": [
     {
@@ -22,19 +23,19 @@
         "cupped-rib",
         "regular"
       ],
-      "body_length_in": null,
+      "body_length_in": 13.5,
       "above_waist_length_in": null,
       "below_waist_length_in": null,
       "measurements": [
         {
-          "position_from_waist_in": -5.5,
-          "spring_in": 8.0,
+          "position_from_waist_in": -5.0,
+          "spring_in": 8.5,
           "label": "under-bust"
         },
         {
-          "position_from_waist_in": 4.0,
+          "position_from_waist_in": 3.0,
           "spring_in": 14.0,
-          "label": "upper-hip (4in below waist)"
+          "label": "upper-hip (3in below waist)"
         }
       ],
       "materials_summary": [
@@ -461,8 +462,10 @@
         "sizing_page_slug": "gemini-sizing-information",
         "sizing_page_url": "https://timeless-trends.com/pages/gemini-sizing-information",
         "product_type_code": "GCX",
-        "rib_spring_in": 8.0,
+        "rib_spring_in": 8.5,
+        "rib_spring_source": "metafield_median",
         "hip_spring_in": 14.0,
+        "hip_spring_source": "metafield_median",
         "sizing_sizes_offered": [
           16,
           18,
@@ -479,8 +482,12 @@
           40,
           42
         ],
-        "underbust_position_in": 5.5,
-        "high_hip_position_in": 4.0
+        "underbust_position_in": 5.0,
+        "underbust_position_source": "metafield_median",
+        "high_hip_position_in": 3.0,
+        "high_hip_position_source": "metafield_median",
+        "body_length_source": "metafield_median",
+        "product_count": 19
       }
     },
     {
@@ -492,19 +499,19 @@
         "conical",
         "regular"
       ],
-      "body_length_in": null,
+      "body_length_in": 13.5,
       "above_waist_length_in": null,
       "below_waist_length_in": null,
       "measurements": [
         {
-          "position_from_waist_in": -5.5,
-          "spring_in": 8.0,
+          "position_from_waist_in": -5.0,
+          "spring_in": 8.5,
           "label": "under-bust"
         },
         {
-          "position_from_waist_in": 4.0,
+          "position_from_waist_in": 3.0,
           "spring_in": 14.0,
-          "label": "upper-hip (4in below waist)"
+          "label": "upper-hip (3in below waist)"
         }
       ],
       "materials_summary": [
@@ -874,8 +881,10 @@
         "sizing_page_slug": "gemini-sizing-information",
         "sizing_page_url": "https://timeless-trends.com/pages/gemini-sizing-information",
         "product_type_code": "GSX",
-        "rib_spring_in": 8.0,
+        "rib_spring_in": 8.5,
+        "rib_spring_source": "metafield_median",
         "hip_spring_in": 14.0,
+        "hip_spring_source": "metafield_median",
         "sizing_sizes_offered": [
           16,
           18,
@@ -892,8 +901,12 @@
           40,
           42
         ],
-        "underbust_position_in": 5.5,
-        "high_hip_position_in": 4.0
+        "underbust_position_in": 5.0,
+        "underbust_position_source": "metafield_median",
+        "high_hip_position_in": 3.0,
+        "high_hip_position_source": "metafield_median",
+        "body_length_source": "metafield_median",
+        "product_count": 16
       }
     },
     {
@@ -905,7 +918,7 @@
         "hourglass",
         "regular"
       ],
-      "body_length_in": null,
+      "body_length_in": 12.0,
       "above_waist_length_in": null,
       "below_waist_length_in": null,
       "measurements": [
@@ -939,7 +952,9 @@
         "sizing_page_url": "https://timeless-trends.com/pages/libby-libra-gentle-sizing-information",
         "product_type_code": "LBS",
         "rib_spring_in": 7.0,
+        "rib_spring_source": "metafield_median",
         "hip_spring_in": 8.0,
+        "hip_spring_source": "metafield_median",
         "sizing_sizes_offered": [
           18,
           20,
@@ -956,7 +971,11 @@
           42
         ],
         "underbust_position_in": 5.5,
-        "high_hip_position_in": 4.0
+        "underbust_position_source": "positions_yaml",
+        "high_hip_position_in": 4.0,
+        "high_hip_position_source": "positions_yaml",
+        "body_length_source": "metafield_median",
+        "product_count": 1
       }
     },
     {
@@ -968,12 +987,12 @@
         "hourglass",
         "regular"
       ],
-      "body_length_in": null,
+      "body_length_in": 12.0,
       "above_waist_length_in": null,
       "below_waist_length_in": null,
       "measurements": [
         {
-          "position_from_waist_in": -5.5,
+          "position_from_waist_in": -4.5,
           "spring_in": 10.0,
           "label": "under-bust"
         },
@@ -1480,7 +1499,9 @@
         "sizing_page_url": "https://timeless-trends.com/pages/libra-sizing-information",
         "product_type_code": "LIB",
         "rib_spring_in": 10.0,
+        "rib_spring_source": "metafield_median",
         "hip_spring_in": 11.0,
+        "hip_spring_source": "metafield_median",
         "sizing_sizes_offered": [
           16,
           18,
@@ -1496,8 +1517,12 @@
           38,
           40
         ],
-        "underbust_position_in": 5.5,
-        "high_hip_position_in": 4.0
+        "underbust_position_in": 4.5,
+        "underbust_position_source": "metafield_median",
+        "high_hip_position_in": 4.0,
+        "high_hip_position_source": "metafield_median",
+        "body_length_source": "metafield_median",
+        "product_count": 22
       }
     },
     {
@@ -1509,19 +1534,19 @@
         "hourglass",
         "regular"
       ],
-      "body_length_in": null,
+      "body_length_in": 12.5,
       "above_waist_length_in": null,
       "below_waist_length_in": null,
       "measurements": [
         {
-          "position_from_waist_in": -5.5,
-          "spring_in": 7.0,
+          "position_from_waist_in": -5.0,
+          "spring_in": 6.5,
           "label": "under-bust"
         },
         {
-          "position_from_waist_in": 4.0,
+          "position_from_waist_in": 3.0,
           "spring_in": 10.0,
-          "label": "upper-hip (4in below waist)"
+          "label": "upper-hip (3in below waist)"
         }
       ],
       "materials_summary": [
@@ -1981,8 +2006,10 @@
         "sizing_page_slug": "hourglass-regular-sizing-information",
         "sizing_page_url": "https://timeless-trends.com/pages/hourglass-regular-sizing-information",
         "product_type_code": "NHR",
-        "rib_spring_in": 7.0,
+        "rib_spring_in": 6.5,
+        "rib_spring_source": "metafield_median",
         "hip_spring_in": 10.0,
+        "hip_spring_source": "metafield_median",
         "sizing_sizes_offered": [
           18,
           20,
@@ -1998,8 +2025,12 @@
           40,
           42
         ],
-        "underbust_position_in": 5.5,
-        "high_hip_position_in": 4.0
+        "underbust_position_in": 5.0,
+        "underbust_position_source": "metafield_median",
+        "high_hip_position_in": 3.0,
+        "high_hip_position_source": "metafield_median",
+        "body_length_source": "metafield_median",
+        "product_count": 22
       }
     },
     {
@@ -2011,19 +2042,19 @@
         "longline",
         "long"
       ],
-      "body_length_in": null,
+      "body_length_in": 14.5,
       "above_waist_length_in": null,
       "below_waist_length_in": null,
       "measurements": [
         {
           "position_from_waist_in": -5.5,
-          "spring_in": 7.0,
+          "spring_in": 6.5,
           "label": "under-bust"
         },
         {
-          "position_from_waist_in": 4.0,
+          "position_from_waist_in": 5.0,
           "spring_in": 12.0,
-          "label": "upper-hip (4in below waist)"
+          "label": "upper-hip (5in below waist)"
         }
       ],
       "materials_summary": [
@@ -2399,8 +2430,10 @@
         "sizing_page_slug": "hourglass-long-sizing-information",
         "sizing_page_url": "https://timeless-trends.com/pages/hourglass-long-sizing-information",
         "product_type_code": "UHL",
-        "rib_spring_in": 7.0,
+        "rib_spring_in": 6.5,
+        "rib_spring_source": "metafield_median",
         "hip_spring_in": 12.0,
+        "hip_spring_source": "metafield_median",
         "sizing_sizes_offered": [
           18,
           20,
@@ -2417,7 +2450,11 @@
           42
         ],
         "underbust_position_in": 5.5,
-        "high_hip_position_in": 4.0
+        "underbust_position_source": "metafield_median",
+        "high_hip_position_in": 5.0,
+        "high_hip_position_source": "metafield_median",
+        "body_length_source": "metafield_median",
+        "product_count": 17
       }
     },
     {
@@ -2429,19 +2466,19 @@
         "hourglass",
         "regular"
       ],
-      "body_length_in": null,
+      "body_length_in": 12.5,
       "above_waist_length_in": null,
       "below_waist_length_in": null,
       "measurements": [
         {
-          "position_from_waist_in": -5.5,
-          "spring_in": 7.0,
+          "position_from_waist_in": -5.0,
+          "spring_in": 6.5,
           "label": "under-bust"
         },
         {
-          "position_from_waist_in": 4.0,
+          "position_from_waist_in": 3.0,
           "spring_in": 10.0,
-          "label": "upper-hip (4in below waist)"
+          "label": "upper-hip (3in below waist)"
         }
       ],
       "materials_summary": [
@@ -3371,8 +3408,10 @@
         "sizing_page_slug": "hourglass-regular-sizing-information",
         "sizing_page_url": "https://timeless-trends.com/pages/hourglass-regular-sizing-information",
         "product_type_code": "UHR",
-        "rib_spring_in": 7.0,
+        "rib_spring_in": 6.5,
+        "rib_spring_source": "metafield_median",
         "hip_spring_in": 10.0,
+        "hip_spring_source": "metafield_median",
         "sizing_sizes_offered": [
           18,
           20,
@@ -3388,8 +3427,12 @@
           40,
           42
         ],
-        "underbust_position_in": 5.5,
-        "high_hip_position_in": 4.0
+        "underbust_position_in": 5.0,
+        "underbust_position_source": "metafield_median",
+        "high_hip_position_in": 3.0,
+        "high_hip_position_source": "metafield_median",
+        "body_length_source": "metafield_median",
+        "product_count": 43
       }
     },
     {
@@ -3401,12 +3444,12 @@
         "waspie",
         "short"
       ],
-      "body_length_in": null,
+      "body_length_in": 10.0,
       "above_waist_length_in": null,
       "below_waist_length_in": null,
       "measurements": [
         {
-          "position_from_waist_in": -5.5,
+          "position_from_waist_in": -4.0,
           "spring_in": 4.0,
           "label": "under-bust"
         },
@@ -3773,7 +3816,9 @@
         "sizing_page_url": "https://timeless-trends.com/pages/hourglass-short-sizing-information",
         "product_type_code": "UHS",
         "rib_spring_in": 4.0,
+        "rib_spring_source": "metafield_median",
         "hip_spring_in": 7.0,
+        "hip_spring_source": "metafield_median",
         "sizing_sizes_offered": [
           18,
           20,
@@ -3789,8 +3834,12 @@
           40,
           42
         ],
-        "underbust_position_in": 5.5,
-        "high_hip_position_in": 4.0
+        "underbust_position_in": 4.0,
+        "underbust_position_source": "metafield_median",
+        "high_hip_position_in": 4.0,
+        "high_hip_position_source": "positions_yaml",
+        "body_length_source": "metafield_median",
+        "product_count": 16
       }
     },
     {
@@ -3802,19 +3851,19 @@
         "longline",
         "long"
       ],
-      "body_length_in": 13.416666666666666,
+      "body_length_in": 14.0,
       "above_waist_length_in": null,
       "below_waist_length_in": null,
       "measurements": [
         {
           "position_from_waist_in": -5.5,
-          "spring_in": 4.0,
+          "spring_in": 3.0,
           "label": "under-bust"
         },
         {
-          "position_from_waist_in": 4.0,
+          "position_from_waist_in": 5.0,
           "spring_in": 7.0,
-          "label": "upper-hip (4in below waist)"
+          "label": "upper-hip (5in below waist)"
         }
       ],
       "materials_summary": [
@@ -4070,8 +4119,10 @@
         "sizing_page_slug": "slim-long-sizing-information",
         "sizing_page_url": "https://timeless-trends.com/pages/slim-long-sizing-information",
         "product_type_code": "USL",
-        "rib_spring_in": 4.0,
+        "rib_spring_in": 3.0,
+        "rib_spring_source": "metafield_median",
         "hip_spring_in": 7.0,
+        "hip_spring_source": "metafield_median",
         "sizing_sizes_offered": [
           8,
           18,
@@ -4088,7 +4139,11 @@
           42
         ],
         "underbust_position_in": 5.5,
-        "high_hip_position_in": 4.0
+        "underbust_position_source": "metafield_median",
+        "high_hip_position_in": 5.0,
+        "high_hip_position_source": "metafield_median",
+        "body_length_source": "metafield_median",
+        "product_count": 13
       }
     },
     {
@@ -4100,19 +4155,19 @@
         "hourglass",
         "regular"
       ],
-      "body_length_in": 12.25,
+      "body_length_in": 12.5,
       "above_waist_length_in": null,
       "below_waist_length_in": null,
       "measurements": [
         {
-          "position_from_waist_in": -5.5,
+          "position_from_waist_in": -5.0,
           "spring_in": 4.0,
           "label": "under-bust"
         },
         {
-          "position_from_waist_in": 4.0,
+          "position_from_waist_in": 5.0,
           "spring_in": 7.0,
-          "label": "upper-hip (4in below waist)"
+          "label": "upper-hip (5in below waist)"
         }
       ],
       "materials_summary": [
@@ -4614,7 +4669,9 @@
         "sizing_page_url": "https://timeless-trends.com/pages/slim-regular-sizing-information",
         "product_type_code": "USR",
         "rib_spring_in": 4.0,
+        "rib_spring_source": "metafield_median",
         "hip_spring_in": 7.0,
+        "hip_spring_source": "metafield_median",
         "sizing_sizes_offered": [
           8,
           18,
@@ -4630,8 +4687,12 @@
           40,
           42
         ],
-        "underbust_position_in": 5.5,
-        "high_hip_position_in": 4.0
+        "underbust_position_in": 5.0,
+        "underbust_position_source": "metafield_median",
+        "high_hip_position_in": 5.0,
+        "high_hip_position_source": "metafield_median",
+        "body_length_source": "metafield_median",
+        "product_count": 26
       }
     },
     {
@@ -4648,7 +4709,7 @@
       "below_waist_length_in": null,
       "measurements": [
         {
-          "position_from_waist_in": -5.5,
+          "position_from_waist_in": -4.0,
           "spring_in": 2.0,
           "label": "under-bust"
         },
@@ -4762,7 +4823,9 @@
         "sizing_page_url": "https://timeless-trends.com/pages/slim-short-sizing-information",
         "product_type_code": "USS",
         "rib_spring_in": 2.0,
+        "rib_spring_source": "metafield_median",
         "hip_spring_in": 3.0,
+        "hip_spring_source": "metafield_median",
         "sizing_sizes_offered": [
           18,
           20,
@@ -4778,8 +4841,12 @@
           40,
           42
         ],
-        "underbust_position_in": 5.5,
-        "high_hip_position_in": 4.0
+        "underbust_position_in": 4.0,
+        "underbust_position_source": "metafield_median",
+        "high_hip_position_in": 4.0,
+        "high_hip_position_source": "positions_yaml",
+        "body_length_source": "metafield_median",
+        "product_count": 5
       }
     }
   ]

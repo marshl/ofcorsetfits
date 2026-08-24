@@ -39,6 +39,7 @@ CATALOG_DIR = HERE.parent.parent
 PRODUCTS_PATH = DATA_DIR / "products.json"
 SIZING_PATH = DATA_DIR / "sizing-tables.json"
 POSITIONS_PATH = DATA_DIR / "positions.yaml"
+METAFIELDS_PATH = DATA_DIR / "product-metafields.json"
 OUT_PATH = CATALOG_DIR / "timeless-trends.json"
 
 # TT publishes all corsets under a small set of 3-letter product-type
@@ -215,6 +216,18 @@ def _measurements(sizing_row: dict, positions_row: dict) -> list[dict]:
     return measurements
 
 
+def _median(values: list[float]) -> float | None:
+    """Median with None-safety; returns None if no values remain."""
+    xs = [v for v in values if v is not None]
+    if not xs:
+        return None
+    xs.sort()
+    n = len(xs)
+    if n % 2 == 1:
+        return xs[n // 2]
+    return (xs[n // 2 - 1] + xs[n // 2]) / 2
+
+
 def main() -> None:
     if not PRODUCTS_PATH.exists() or not SIZING_PATH.exists():
         print("Missing inputs — run fetch_all_products.py + fetch_sizing_pages.py first.", file=sys.stderr)
@@ -224,6 +237,14 @@ def main() -> None:
     sizing = json.loads(SIZING_PATH.read_text())
     positions_doc = yaml.safe_load(POSITIONS_PATH.read_text()) if POSITIONS_PATH.exists() else {}
     positions = positions_doc.get("silhouettes", {}) if positions_doc else {}
+    metafields: dict[str, dict] = {}
+    if METAFIELDS_PATH.exists():
+        raw = json.loads(METAFIELDS_PATH.read_text())
+        # Filter out error entries — only keep dicts with real fields.
+        metafields = {
+            h: v for h, v in raw.items()
+            if isinstance(v, dict) and "error" not in v and v
+        }
     code_to_slug = _code_to_slug(sizing)
 
     # Bucket products by product_type code.
@@ -251,6 +272,7 @@ def main() -> None:
     # `silhouette_category` — same fit math, different scoring semantics
     # (cupped-rib vs conical treat the underbust penalty differently).
     corsets: list[dict] = []
+    provenance_stats = Counter()
     for code, prods in sorted(per_code.items()):
         slug = code_to_slug[code]
         sizing_row = sizing[slug]
@@ -261,6 +283,42 @@ def main() -> None:
             or sizing_row.get("silhouette_category")
             or "hourglass"
         )
+
+        # Collect per-product metafield values for the products in this
+        # code, then take the MEDIAN as the silhouette-level value.
+        # Prefer these over sizing-page averages when at least one product
+        # supplies them — per-product data is what the vendor actually
+        # publishes for that specific fit, and typically more accurate
+        # than the family-wide chart.
+        mf_rows = [metafields.get(p["handle"], {}) for p in prods]
+        mf_rib = _median([m.get("rib_spring_in") for m in mf_rows])
+        mf_hip = _median([m.get("hip_spring_in") for m in mf_rows])
+        mf_ub_pos = _median([m.get("underbust_position_in") for m in mf_rows])
+        mf_hh_pos = _median([m.get("high_hip_position_in") for m in mf_rows])
+        mf_center_back = _median([m.get("center_back_in") for m in mf_rows])
+
+        # Effective fit values, per-source. Log which source won.
+        rib_spring, rib_source = (
+            (mf_rib, "metafield_median") if mf_rib is not None
+            else (sizing_row.get("rib_spring_in"), "sizing_page_median")
+        )
+        hip_spring, hip_source = (
+            (mf_hip, "metafield_median") if mf_hip is not None
+            else (sizing_row.get("hip_spring_in"), "sizing_page_median")
+        )
+        ub_pos, ub_pos_source = (
+            (mf_ub_pos, "metafield_median") if mf_ub_pos is not None
+            else (pos_row.get("underbust_position_in"), "positions_yaml")
+        )
+        hh_pos, hh_pos_source = (
+            (mf_hh_pos, "metafield_median") if mf_hh_pos is not None
+            else (pos_row.get("high_hip_position_in"), "positions_yaml")
+        )
+        provenance_stats[f"rib_spring:{rib_source}"] += 1
+        provenance_stats[f"hip_spring:{hip_source}"] += 1
+        provenance_stats[f"underbust_position:{ub_pos_source}"] += 1
+        provenance_stats[f"high_hip_position:{hh_pos_source}"] += 1
+
         variants = [build_variant(p, code) for p in prods]
         # Sort variants by stretch order then name for stable output.
         order = {"low": 0, "medium": 1, "high": 2}
@@ -275,13 +333,34 @@ def main() -> None:
             all_stretch, key=lambda s: order.get(s, 99),
         )
         materials_summary = sorted(all_materials)
-        # Torso length — median across variants' descriptions (some products
-        # have it, some don't; median smooths out any bad reads).
-        lengths = [
-            _torso_length_from_description(p) for p in prods
-        ]
-        lengths = [x for x in lengths if x is not None]
-        body_length_in = (sum(lengths) / len(lengths)) if lengths else None
+        # Torso length — prefer per-product `center_back_in` from metafields
+        # (the closest analog to MCC's torso_length), fall back to the
+        # regex-scraped description body from the older code path.
+        body_length_in = mf_center_back
+        length_source = "metafield_median" if body_length_in is not None else None
+        if body_length_in is None:
+            lengths = [_torso_length_from_description(p) for p in prods]
+            lengths = [x for x in lengths if x is not None]
+            if lengths:
+                body_length_in = sum(lengths) / len(lengths)
+                length_source = "description_scrape"
+        provenance_stats[f"body_length:{length_source or 'none'}"] += 1
+
+        # Build measurements from the resolved (metafield-preferred) fit
+        # values, not the raw sizing-page or yaml rows.
+        measurements: list[dict] = []
+        if rib_spring is not None and ub_pos is not None:
+            measurements.append({
+                "position_from_waist_in": -ub_pos,
+                "spring_in": rib_spring,
+                "label": "under-bust",
+            })
+        if hip_spring is not None and hh_pos is not None:
+            measurements.append({
+                "position_from_waist_in": hh_pos,
+                "spring_in": hip_spring,
+                "label": f"upper-hip ({hh_pos:g}in below waist)",
+            })
 
         entry = {
             "id": f"TT-{code}",
@@ -292,7 +371,7 @@ def main() -> None:
             "body_length_in": body_length_in,
             "above_waist_length_in": None,
             "below_waist_length_in": None,
-            "measurements": _measurements(sizing_row, pos_row),
+            "measurements": measurements,
             "materials_summary": materials_summary,
             "stretch_class_options": stretch_class_options,
             "variants": variants,
@@ -301,11 +380,17 @@ def main() -> None:
                 "sizing_page_slug": slug,
                 "sizing_page_url": sizing_row.get("url"),
                 "product_type_code": code,
-                "rib_spring_in": sizing_row.get("rib_spring_in"),
-                "hip_spring_in": sizing_row.get("hip_spring_in"),
+                "rib_spring_in": rib_spring,
+                "rib_spring_source": rib_source,
+                "hip_spring_in": hip_spring,
+                "hip_spring_source": hip_source,
                 "sizing_sizes_offered": sizing_row.get("sizes_offered"),
-                "underbust_position_in": pos_row.get("underbust_position_in"),
-                "high_hip_position_in": pos_row.get("high_hip_position_in"),
+                "underbust_position_in": ub_pos,
+                "underbust_position_source": ub_pos_source,
+                "high_hip_position_in": hh_pos,
+                "high_hip_position_source": hh_pos_source,
+                "body_length_source": length_source,
+                "product_count": len(prods),
             },
         }
         corsets.append(entry)
@@ -320,7 +405,8 @@ def main() -> None:
         "sources": {
             "collections_json": "https://timeless-trends.com/collections/all/products.json",
             "sizing_pages": "https://timeless-trends.com/pages/*-sizing-information",
-            "landmark_positions": "manually reviewed against size-chart images",
+            "product_metafields": "https://timeless-trends.com/products/* (rendered HTML)",
+            "landmark_positions_fallback": "manually reviewed against size-chart images",
         },
         "corsets": corsets,
     }
@@ -334,6 +420,9 @@ def main() -> None:
         print("\nSkipped products by reason:")
         for reason, n in skipped_reasons.most_common():
             print(f"  {n:3}  {reason}")
+    print("\nData-source provenance across silhouettes:")
+    for key, n in sorted(provenance_stats.items()):
+        print(f"  {n:3}  {key}")
 
 
 if __name__ == "__main__":

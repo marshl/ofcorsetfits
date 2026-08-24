@@ -4,9 +4,13 @@ Runs all five pipeline steps in-process:
 
   1. fetch_all_products    — /collections/all/products.json → products.json
   2. fetch_sizing_pages    — /pages/*-sizing-information    → sizing-tables.json
-  3. review_positions      — interactive prompt            → positions.yaml
-                             (prompts only for silhouettes not already reviewed)
-  4. build                 — merge everything              → catalog/timeless-trends.json
+  3. fetch_page_metafields — /products/{handle} (HTML)     → product-metafields.json
+                             (~200 rate-limited requests, ~7 min)
+  4. review_positions      — interactive prompt            → positions.yaml
+                             (fallback for silhouettes where NO product's
+                              metafields carry position data; prompts
+                              only for silhouettes not already reviewed)
+  5. build                 — merge everything              → catalog/timeless-trends.json
 
 There is no double-build here (unlike MCC): TT's sizes come from Shopify's
 `/products.json` in step 1, not from a second per-variant fetch. The
@@ -52,6 +56,7 @@ def main() -> int:
     parser.add_argument("--skip-fetch", action="store_true")
     parser.add_argument("--skip-products", action="store_true")
     parser.add_argument("--skip-sizing", action="store_true")
+    parser.add_argument("--skip-metafields", action="store_true")
     parser.add_argument("--skip-review", action="store_true")
     parser.add_argument("--assume-defaults", action="store_true")
     args = parser.parse_args()
@@ -59,14 +64,16 @@ def main() -> int:
     if args.skip_fetch:
         args.skip_products = True
         args.skip_sizing = True
+        args.skip_metafields = True
         args.skip_review = True
 
     import fetch_all_products
     import fetch_sizing_pages
+    import fetch_page_metafields
     import review_positions
     import build
 
-    N = 4
+    N = 5
 
     if args.skip_products:
         print("Skipping products fetch (using cached products.json).")
@@ -84,10 +91,23 @@ def main() -> int:
         if rc != 0:
             return rc
 
+    if args.skip_metafields:
+        print("\nSkipping per-product metafield fetch (using cached product-metafields.json).")
+    else:
+        step_banner(3, N, "fetching per-product metafields (lengths + springs)")
+        rc = fetch_page_metafields.main()
+        if rc != 0:
+            print(
+                f"\nMetafield fetch reported {rc} error(s). Continuing — "
+                "build will fall back to sizing-page averages for silhouettes "
+                "where all products errored.",
+                file=sys.stderr,
+            )
+
     if args.skip_review:
         print("\nSkipping landmark-position review (using cached positions.yaml).")
     else:
-        step_banner(3, N, "reviewing landmark positions (interactive)")
+        step_banner(4, N, "reviewing landmark positions (fallback for missing metafields)")
         argv = ["review_positions"]
         if args.assume_defaults:
             argv.append("--assume-defaults")
@@ -95,7 +115,7 @@ def main() -> int:
         if rc != 0:
             return rc
 
-    step_banner(4, N, "building timeless-trends.json")
+    step_banner(5, N, "building timeless-trends.json")
     build.main()
     print("\n✔ Timeless Trends catalog refresh complete.")
     return 0

@@ -264,7 +264,9 @@ export function RankedList({
                     </div>
                     <div>
                       <strong>Torso length:</strong>{' '}
-                      {r.corset.body_length_in ?? 'unknown'}"
+                      {r.corset.body_length_in !== null
+                        ? `${r.corset.body_length_in}"`
+                        : 'unknown'}
                     </div>
                     <div>
                       <strong>Best gap shape:</strong>{' '}
