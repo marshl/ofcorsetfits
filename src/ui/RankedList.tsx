@@ -11,7 +11,7 @@
  * (typically different stretch classes).
  */
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { GapShape, RankedResult, VariantGroup } from '../scoring/types.ts';
 
 const GAP_SHAPE_LABELS: Record<GapShape, { glyph: string; name: string }> = {
@@ -142,8 +142,20 @@ export function RankedList({
   onShowAdvancedChange,
 }: RankedListProps) {
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
+  const [helpOpen, setHelpOpen] = useState(false);
   const shown = results.slice(0, topN);
   const tiers = assignTiers(shown);
+
+  // Close the algorithm-details modal on Escape. Registered globally so
+  // the user doesn't have to click into the modal to make the key work.
+  useEffect(() => {
+    if (!helpOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setHelpOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [helpOpen]);
 
   if (results.length === 0) {
     return (
@@ -168,15 +180,138 @@ export function RankedList({
             are grouped)
           </span>
         </h2>
-        <label className="advanced-toggle">
-          <input
-            type="checkbox"
-            checked={showAdvanced}
-            onChange={(e) => onShowAdvancedChange(e.target.checked)}
-          />
-          <span>Show algorithm details (weight, penalty)</span>
-        </label>
+        <div className="advanced-toggle-row">
+          <label className="advanced-toggle">
+            <input
+              type="checkbox"
+              checked={showAdvanced}
+              onChange={(e) => onShowAdvancedChange(e.target.checked)}
+            />
+            <span>Show algorithm details (weight, penalty)</span>
+          </label>
+          <button
+            type="button"
+            className="help-button"
+            aria-label="How does the algorithm work?"
+            title="How does the algorithm work?"
+            onClick={() => setHelpOpen(true)}
+          >
+            ?
+          </button>
+        </div>
       </div>
+
+      {helpOpen && (
+        <div
+          className="help-modal-backdrop"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="help-modal-title"
+          onClick={(e) => {
+            // Click on the backdrop itself (not the modal content) closes.
+            if (e.target === e.currentTarget) setHelpOpen(false);
+          }}
+        >
+          <div className="help-modal">
+            <button
+              type="button"
+              className="help-modal-close"
+              aria-label="Close"
+              onClick={() => setHelpOpen(false)}
+            >
+              ×
+            </button>
+            <h3 id="help-modal-title">How the fit score is computed</h3>
+
+            <p>
+              Every corset in the catalog is a set of circumferences at
+              landmarks along the torso — waist, underbust (rib), upper hip,
+              and sometimes low hip — plus how far above or below the waist
+              each landmark sits. Your body is described the same way. For
+              every <em>(silhouette × stretch class × available size)</em>{' '}
+              combination, the algorithm scores how well the corset would
+              contour to your body. <strong>Lower total = better fit</strong>.
+            </p>
+
+            <h4>Waist</h4>
+            <p>
+              The corset is compared against your{' '}
+              <em>target waist</em> — your natural waist minus the reduction
+              you've asked for. A corset that <strong>can't close small
+              enough</strong> to reach that target is penalized harshly
+              (unusable for its intended reduction). A corset that closes
+              smaller than the target gets only a mild penalty — you just
+              gap-lace it open to hit the target.
+            </p>
+
+            <h4>Non-waist landmarks (rib, hip)</h4>
+            <p>
+              Each landmark's penalty is asymmetric: a corset that runs{' '}
+              <strong>loose</strong> at rib or hip (floats over the body,
+              doesn't contour → negative gap in the display) is penalized{' '}
+              <strong>more heavily</strong> than one that runs a bit tight
+              (closes a bit small there → wider lacing gap at that landmark).
+              Rationale: a floating corset can't be fixed by gap-lacing;
+              running tight just means a slightly wider gap where the corset
+              closes short of the body.
+            </p>
+            <p className="help-aside">
+              Exception: for <strong>cupped-rib</strong> silhouettes, both
+              directions of underbust misfit are penalized equally — the
+              design intent is to cup the rib, not compress or flare away
+              from it.
+            </p>
+
+            <h4>Lacing gap shape</h4>
+            <p>
+              You check off which gap shapes you'd wear:{' '}
+              <span className="glyph">)(</span> curved (pinched at waist),{' '}
+              <span className="glyph">||</span> parallel,{' '}
+              <span className="glyph">/\</span> slanted-wider-at-hip,{' '}
+              <span className="glyph">\/</span> slanted-wider-at-rib, or{' '}
+              <span className="glyph">|</span> fully closed. Each corset is
+              scored under <em>every</em> shape you accept and takes its
+              best score. The winning shape shows on each row's badge.
+            </p>
+            <p className="help-aside">
+              In curved mode only, an additional penalty fires if the corset
+              would leave a wider gap at the <em>waist</em> than at rib or
+              hip — the "hourglass gap" reverse shape, which corsets are
+              built to prevent.
+            </p>
+
+            <h4>Stretch class</h4>
+            <p>
+              Every variant is classified <em>low</em>, <em>medium</em>, or{' '}
+              <em>high</em> stretch based on materials. Higher stretch means
+              the corset closes to a larger effective waist than its nominal
+              size — a slack allowance the algorithm folds into the waist
+              math. Use the sidebar's stretch filter to hide classes you're
+              not interested in.
+            </p>
+
+            <h4>Rows, tiers, and grouping</h4>
+            <p>
+              Every distinct <em>(silhouette, stretch class, size)</em>{' '}
+              combination gets its own row. Color variants that share the
+              same stretch class collapse into a single row (identical fit
+              math — different fabric, same numbers). Rows are grouped into{' '}
+              <strong>tiers</strong>: consecutive rows within 0.3 points of
+              the tier's leader share a tier number, so you can see at a
+              glance which picks are practically equivalent.
+            </p>
+
+            <h4>Buying</h4>
+            <p>
+              Each row shows a buy link per color variant, pointing at the
+              vendor's product page. For Mystic City the size is pre-selected
+              via URL; Timeless Trends uses a different variant-URL scheme,
+              so its links land on the product page and you pick the size
+              from the dropdown yourself.
+            </p>
+          </div>
+        </div>
+      )}
       <ol className="ranked-rows">
         {shown.map((r, i) => {
           const key = rowKey(r);

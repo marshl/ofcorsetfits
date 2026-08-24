@@ -235,6 +235,102 @@ fieldset.landmark .helper {
 }
 .brand-tag-mystic-city-corsets { background: #6da2c4; }
 .brand-tag-timeless-trends { background: #c9761b; }
+
+.advanced-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.help-button {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--muted);
+  font: 700 0.85rem/1 system-ui, sans-serif;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.help-button:hover {
+  background: var(--row-hover);
+  color: var(--text, #333);
+}
+
+/* Modal — dims the page and floats the algorithm-explainer above.
+   Backdrop click and Escape both dismiss (see RankedList.tsx). */
+.help-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  overflow-y: auto;
+}
+.help-modal {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  max-width: 640px;
+  width: 100%;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+.help-modal h3 {
+  margin: 0 0 0.75rem;
+  color: #6da2c4;
+  font-family: 'Great Vibes', 'Sacramento', 'Dancing Script', cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+}
+.help-modal h4 {
+  margin: 1.25rem 0 0.35rem;
+  font-size: 0.95rem;
+  color: var(--text, #333);
+}
+.help-modal p { margin: 0.35rem 0; }
+.help-modal p.help-aside {
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-left: 3px solid #f6ecd2;
+  padding-left: 0.6rem;
+  margin-left: 0;
+}
+.help-modal .glyph {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 700;
+  color: #6da2c4;
+  padding: 0 0.1rem;
+}
+.help-modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+  border-radius: 4px;
+}
+.help-modal-close:hover {
+  background: var(--row-hover);
+  color: var(--text, #333);
+}
 .corset-name { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .stretch {
   display: inline-block;
