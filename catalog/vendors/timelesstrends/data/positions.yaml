@@ -49,8 +49,8 @@ silhouettes:
     # hip_spring_in:        7.0
     # product_type_codes:   [UHS]
     # example_url:          https://timeless-trends.com/products/beige-cotton-corset-hourglass-silhouette-short
-    underbust_position_in: 5.5  # inches above waist
-    high_hip_position_in:  4.0   # inches below waist
+    underbust_position_in: 4.0  # inches above waist
+    high_hip_position_in:  2.0   # inches below waist
 
   libby-libra-gentle-sizing-information:
     # silhouette_category:  hourglass
@@ -99,5 +99,5 @@ silhouettes:
     # hip_spring_in:        3.0
     # product_type_codes:   [USS]
     # example_url:          https://timeless-trends.com/products/beige-cotton-corset-slim-silhouette-short
-    underbust_position_in: 5.5  # inches above waist
-    high_hip_position_in:  4.0   # inches below waist
+    underbust_position_in: 2.0  # inches above waist
+    high_hip_position_in:  3.0   # inches below waist

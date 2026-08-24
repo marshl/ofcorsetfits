@@ -6,7 +6,7 @@
     "medium": 1.0,
     "high": 1.75
   },
-  "generated_at_iso": "2026-08-24T07:17:37+00:00",
+  "generated_at_iso": "2026-08-24T08:27:48+00:00",
   "sources": {
     "collections_json": "https://timeless-trends.com/collections/all/products.json",
     "sizing_pages": "https://timeless-trends.com/pages/*-sizing-information",
@@ -3454,9 +3454,9 @@
           "label": "under-bust"
         },
         {
-          "position_from_waist_in": 4.0,
+          "position_from_waist_in": 2.0,
           "spring_in": 7.0,
-          "label": "upper-hip (4in below waist)"
+          "label": "upper-hip (2in below waist)"
         }
       ],
       "materials_summary": [
@@ -3836,7 +3836,7 @@
         ],
         "underbust_position_in": 4.0,
         "underbust_position_source": "metafield_median",
-        "high_hip_position_in": 4.0,
+        "high_hip_position_in": 2.0,
         "high_hip_position_source": "positions_yaml",
         "body_length_source": "metafield_median",
         "product_count": 16
@@ -4714,9 +4714,9 @@
           "label": "under-bust"
         },
         {
-          "position_from_waist_in": 4.0,
+          "position_from_waist_in": 3.0,
           "spring_in": 3.0,
-          "label": "upper-hip (4in below waist)"
+          "label": "upper-hip (3in below waist)"
         }
       ],
       "materials_summary": [
@@ -4843,7 +4843,7 @@
         ],
         "underbust_position_in": 4.0,
         "underbust_position_source": "metafield_median",
-        "high_hip_position_in": 4.0,
+        "high_hip_position_in": 3.0,
         "high_hip_position_source": "positions_yaml",
         "body_length_source": "metafield_median",
         "product_count": 5
