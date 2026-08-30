@@ -9,24 +9,27 @@
  * is used for all rankings.
  */
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import mysticCityJson from '../../catalog/mystic-city.json';
 import timelessTrendsJson from '../../catalog/timeless-trends.json';
 import type { Body, Catalog, Corset, GapShape, StretchClass } from '../scoring/types.ts';
 import { defaultScoringConfig, rank } from '../scoring/index.ts';
 import { MeasurementForm } from './MeasurementForm.tsx';
 import { RankedList } from './RankedList.tsx';
+import { Tour } from './Tour.tsx';
 import {
   loadAcceptableGapShapes,
   loadBody,
   loadReduction,
   loadShowAdvanced,
   loadStretchPreference,
+  loadTourShown,
   saveAcceptableGapShapes,
   saveBody,
   saveReduction,
   saveShowAdvanced,
   saveStretchPreference,
+  saveTourShown,
 } from './persist.ts';
 
 const ALL_GAP_SHAPES: GapShape[] = [
@@ -80,8 +83,23 @@ const DEFAULT_BODY: Body = {
   iliac: { circumference_in: 38, position_in: 7 },
 };
 
+/**
+ * First-visit body: just a waist. The tour is going to walk the user
+ * through filling in every other landmark, so we don't want the form
+ * pre-populated with example numbers they'd have to overwrite. Anyone
+ * skipping the tour without entering landmarks is opting into a
+ * waist-only ranking — which is still meaningful.
+ */
+const FIRST_VISIT_BODY: Body = {
+  natural_waist_in: 28,
+};
+
 export function App() {
-  const [body, setBody] = useState<Body>(() => loadBody() ?? DEFAULT_BODY);
+  const [body, setBody] = useState<Body>(() => {
+    const saved = loadBody();
+    if (saved) return saved;
+    return loadTourShown() ? DEFAULT_BODY : FIRST_VISIT_BODY;
+  });
   const [stretchPreference, setStretchPreference] = useState<StretchClass | 'any'>(
     () => loadStretchPreference() ?? 'any',
   );
@@ -94,6 +112,55 @@ export function App() {
   const [showAdvanced, setShowAdvanced] = useState<boolean>(
     () => loadShowAdvanced() ?? false,
   );
+  const [tourOpen, setTourOpen] = useState<boolean>(() => !loadTourShown());
+
+  const closeTour = () => {
+    setTourOpen(false);
+    saveTourShown(true);
+  };
+
+  /**
+   * Freeze the ranking inputs while the tour is open, so the results
+   * panel behind the modal doesn't flicker on every keystroke. When the
+   * tour opens we take a snapshot of the current inputs; the ranker
+   * uses that snapshot until the tour closes, at which point the
+   * snapshot is cleared and ranking resumes on live values.
+   *
+   * A ref carries the live values into the open-transition effect
+   * without listing them as effect deps — we deliberately DON'T want
+   * mid-tour edits to re-snapshot.
+   */
+  interface RankInputs {
+    body: Body;
+    stretchPreference: StretchClass | 'any';
+    desiredReduction: number;
+    acceptableGapShapes: GapShape[];
+  }
+  const liveInputsRef = useRef<RankInputs>({
+    body,
+    stretchPreference,
+    desiredReduction,
+    acceptableGapShapes,
+  });
+  liveInputsRef.current = {
+    body,
+    stretchPreference,
+    desiredReduction,
+    acceptableGapShapes,
+  };
+  const [frozenInputs, setFrozenInputs] = useState<RankInputs | null>(null);
+  useEffect(() => {
+    if (tourOpen) {
+      setFrozenInputs(liveInputsRef.current);
+    } else {
+      setFrozenInputs(null);
+    }
+  }, [tourOpen]);
+
+  const rankBody = frozenInputs?.body ?? body;
+  const rankStretch = frozenInputs?.stretchPreference ?? stretchPreference;
+  const rankReduction = frozenInputs?.desiredReduction ?? desiredReduction;
+  const rankShapes = frozenInputs?.acceptableGapShapes ?? acceptableGapShapes;
 
   useEffect(() => {
     saveBody(body);
@@ -117,11 +184,11 @@ export function App() {
 
   const results = useMemo(() => {
     const config = defaultScoringConfig(catalog);
-    config.stretch_preference = stretchPreference;
-    config.desired_reduction_in = desiredReduction;
-    config.acceptable_gap_shapes = acceptableGapShapes;
-    return rank(body, catalog, config);
-  }, [body, stretchPreference, desiredReduction, acceptableGapShapes]);
+    config.stretch_preference = rankStretch;
+    config.desired_reduction_in = rankReduction;
+    config.acceptable_gap_shapes = rankShapes;
+    return rank(rankBody, catalog, config);
+  }, [rankBody, rankStretch, rankReduction, rankShapes]);
 
   return (
     <div className="app">
@@ -136,8 +203,28 @@ export function App() {
           Catalog: {catalog.corsets.length} silhouettes ·{' '}
           {catalog.corsets.reduce((n, c) => n + c.variants.length, 0)} variants ·
           generated {catalog.generated_at_iso.slice(0, 10)}
+          {' · '}
+          <button
+            type="button"
+            className="tour-link-btn"
+            onClick={() => setTourOpen(true)}
+          >
+            Take the tour
+          </button>
         </p>
       </header>
+      <Tour
+        open={tourOpen}
+        onClose={closeTour}
+        body={body}
+        onBodyChange={setBody}
+        stretchPreference={stretchPreference}
+        onStretchPreferenceChange={setStretchPreference}
+        desiredReduction={desiredReduction}
+        onDesiredReductionChange={setDesiredReduction}
+        acceptableGapShapes={acceptableGapShapes}
+        onAcceptableGapShapesChange={setAcceptableGapShapes}
+      />
       <main className="app-main">
         <aside className="app-sidebar">
           <MeasurementForm
