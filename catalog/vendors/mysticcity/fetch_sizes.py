@@ -1,10 +1,15 @@
-"""Fetch each variant's currently-offered size list from MCC's product pages.
+"""Fetch each variant's currently in-stock size list from MCC's product pages.
 
 For every variant URL currently in `catalog/mystic-city.json`, GET its
-product page and extract the WooCommerce size dropdown. Results write to
+product page and parse the WooCommerce `data-product_variations` JSON
+to determine which waist sizes are actually in stock. Results write to
 `data/per-variant-sizes.json` — a `{url: [int, ...]}` mapping, or a
 `{url: {"error": "..."}` sentinel when the fetch failed. The build step
 merges this into each variant's `waist_sizes_in`.
+
+The variations JSON is the source of truth — the pa_size dropdown lists
+sizes regardless of stock, so parsing it produced false positives. See
+`shared/woocommerce.py` for the extractor internals.
 
 Rate-limited (see `shared.http.Fetcher` defaults). Writes incrementally
 every 5 URLs so a Ctrl-C mid-run doesn't lose progress — re-running skips
@@ -22,7 +27,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from shared.http import Fetcher  # noqa: E402
-from shared.woocommerce import extract_size_options  # noqa: E402
+from shared.woocommerce import extract_in_stock_sizes  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 DATA_DIR = HERE / "data"
@@ -72,10 +77,10 @@ def main() -> int:
             continue
         try:
             html = fetcher.get_text(url)
-            sizes = extract_size_options(html)
+            sizes = extract_in_stock_sizes(html)
             results[url] = sizes
-            note = "" if sizes else " (WARN: empty sizes list)"
-            print(f"[{i}/{len(urls)}] {url} -> {len(sizes)} sizes{note}", flush=True)
+            note = "" if sizes else " (WARN: no in-stock sizes)"
+            print(f"[{i}/{len(urls)}] {url} -> {len(sizes)} in-stock sizes{note}", flush=True)
         except urllib.error.HTTPError as e:
             results[url] = {"error": f"HTTP {e.code}"}
             errors += 1
