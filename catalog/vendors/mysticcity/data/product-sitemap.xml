@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://www.mysticcitycorsets.com/shop/</loc>
-		<lastmod>2026-08-23T21:27:04+00:00</lastmod>
+		<lastmod>2026-08-30T01:33:28+00:00</lastmod>
 	</url>
 	<url>
 		<loc>https://www.mysticcitycorsets.com/shop/mcc54-red-brocade-mesh-corset/</loc>
@@ -644,25 +644,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc23l-metallic-pvc-overbust-corset/</loc>
-		<lastmod>2026-03-25T07:53:25+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-73.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-86.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-83.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-75.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MC23-L-size-chart-MCC23-L-scaled.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>https://www.mysticcitycorsets.com/shop/mcc151-rose-brocade-satin-underbust-corset/</loc>
 		<lastmod>2026-03-25T19:34:12+00:00</lastmod>
 		<image:image>
@@ -673,16 +654,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC151-size-chart.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc242-black-satin-overbust-corset/</loc>
-		<lastmod>2026-03-28T18:08:02+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1o.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC242-scaled.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
@@ -829,55 +800,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC123-size-chart-mcc123-v.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc6-bird-brocade-sport-mesh-waspie-underbust-corset/</loc>
-		<lastmod>2026-04-22T22:13:44+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-189.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc6c.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/055.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-189.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-190.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-184.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-177.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-173.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5-161.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-156.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-134.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/8-104.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/9-76.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/10-54.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/11-37.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
@@ -1082,22 +1004,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC131-size-chart.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc44a-wine-metallic-pvc-underbust-corset/</loc>
-		<lastmod>2026-05-25T20:05:33+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1hj.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC44A-size-chart.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2hj.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3hj.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
@@ -1598,22 +1504,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-168.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc118-overbust-emerald-bird-brocade/</loc>
-		<lastmod>2026-07-03T21:37:12+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc118-with-and-without-hip-ties-scaled.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC118.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC118-greeen-no-hip-ties-scaled.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1df-1.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
@@ -2427,34 +2317,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc72-black-satin-mesh-underbust-corset/</loc>
-		<lastmod>2026-08-02T05:25:29+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-223.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc72j.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-224.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-216.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-213.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5-199.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-194.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-169.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>https://www.mysticcitycorsets.com/shop/mcc94c-beige-mesh-underbust-corset/</loc>
 		<lastmod>2026-08-02T09:28:21+00:00</lastmod>
 		<image:image>
@@ -2549,38 +2411,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc69c-peach-rose-mesh-underbust-corset/</loc>
-		<lastmod>2026-08-03T19:37:48+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/14769c-scaled.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/size-chart-MCC69c.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/146mcc69c-scaled.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/293sd-scaled.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc44l-beige-mesh-underbust-corset/</loc>
-		<lastmod>2026-08-04T16:39:14+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1df-3.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC44Lde.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2dft.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/20251206_181419.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>https://www.mysticcitycorsets.com/shop/mcc58-hip-ties-black-satin-mesh-underbust-corset/</loc>
 		<lastmod>2026-08-04T19:25:05+00:00</lastmod>
 		<image:image>
@@ -2612,34 +2442,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc127-black-cotton-plus-size-underbust-corset/</loc>
-		<lastmod>2026-08-04T20:08:53+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6a-1.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1a-1.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3a-1.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5a-1.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7a-1.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2a.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4a-1.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/size-chart-MCC127-x.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>https://www.mysticcitycorsets.com/shop/mcc68-black-cotton-sport-mesh-underbust-corset/</loc>
 		<lastmod>2026-08-05T19:55:05+00:00</lastmod>
 		<image:image>
@@ -2662,25 +2464,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc64-black-cotton-sport-mesh-underbust-corset/</loc>
-		<lastmod>2026-08-06T07:51:25+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1ft.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC64.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2ft.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3ft.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4ft.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>https://www.mysticcitycorsets.com/shop/mcc125-pink-brocade-overbust-corset-hip-ties/</loc>
 		<lastmod>2026-08-07T16:20:12+00:00</lastmod>
 		<image:image>
@@ -2691,19 +2474,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/155wqd-scaled.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc120-black-cotton-mesh-underbust-corset/</loc>
-		<lastmod>2026-08-07T20:00:06+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1c-1.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/9-117.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC120-size-chart.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
@@ -2835,69 +2605,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc61v-black-cotton-satin-sport-mesh-underbust-corset/</loc>
-		<lastmod>2026-08-10T19:53:26+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-102.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc61v.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc101-black-cotton-brocade-underbust-corset/</loc>
-		<lastmod>2026-08-11T04:55:24+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/13qrf134.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/size-chart-MCC101-scaled.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-125.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/13qrf134.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2rf.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc94-black-cotton-underbust-corset/</loc>
-		<lastmod>2026-08-11T21:22:16+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-129.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-131.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-121.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-119.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5-110.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-107.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-87.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/8-66.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/9-43.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC94-size-chart.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>https://www.mysticcitycorsets.com/shop/mcc148-black-satin-underbust-corset-plus-size/</loc>
 		<lastmod>2026-08-12T01:58:33+00:00</lastmod>
 		<image:image>
@@ -2994,59 +2701,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc132.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc98-black-cotton-mesh-short-underbust-corset/</loc>
-		<lastmod>2026-08-13T17:25:43+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-222.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/size-chart-MCC98-xx.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-255.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-252.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-245.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-239.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5-226.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-193.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc94-black-cotton-mesh-underbust-corset/</loc>
-		<lastmod>2026-08-13T19:54:16+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-134.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC94-size-chart.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-132.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-124.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-122.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5-113.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-110.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
@@ -3323,22 +2977,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc94c-black-cotton-underbust-corset/</loc>
-		<lastmod>2026-08-17T16:19:14+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1hj-2.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC94C.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2hj-2.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3hj-2.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>https://www.mysticcitycorsets.com/shop/mcc126-emerald-overbust-bird-brocade/</loc>
 		<lastmod>2026-08-17T22:13:03+00:00</lastmod>
 		<image:image>
@@ -3355,62 +2993,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc126.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc21-black-brocade-mesh-underbust-corset/</loc>
-		<lastmod>2026-08-17T22:13:39+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc21-1-1-scaled.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc21-polka-dotq.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc21-brocade-mesh.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/282-scaled.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc20-sport-mesh-brocade-underbust-corset/</loc>
-		<lastmod>2026-08-18T02:10:16+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/11-36.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-188.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-182.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-175.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-171.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5-159.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-154.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-132.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/8-102.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/9-74.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/10-53.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/IMG_4755.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
@@ -3537,19 +3119,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc6-pink-sport-mesh-waspie-underbust-corset/</loc>
-		<lastmod>2026-08-18T22:54:45+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2pink-tr.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc6c.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1pink-ft.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>https://www.mysticcitycorsets.com/shop/mcc44l-black-cotton-underbust-corset/</loc>
 		<lastmod>2026-08-19T01:37:43+00:00</lastmod>
 		<image:image>
@@ -3603,68 +3172,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc43-black-satin-overbust-corset/</loc>
-		<lastmod>2026-08-19T07:52:10+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3dt.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/size-chart-MCC43.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1dt.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2dt.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4dt.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc152x-purple-red-black-peach-beige-white-pink-mesh-mini-underbust-corset/</loc>
-		<lastmod>2026-08-19T15:14:53+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc152-all.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-mcc152-beige.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/20251206_151933.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/20251206_151919.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-mcc152.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-mcc152.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-mcc152.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-233.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-244.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-241.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1df-4.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/022.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/134.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>https://www.mysticcitycorsets.com/shop/mcc20-sport-mesh-black-brocade-underbust-corset/</loc>
 		<lastmod>2026-08-19T18:50:37+00:00</lastmod>
 		<image:image>
@@ -3693,22 +3200,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/9-104.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc20-leopard-underbust-corset/</loc>
-		<lastmod>2026-08-19T18:50:37+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2sd.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2016/08/mcc20-size-chart-scaled.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-230.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3df.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
@@ -3764,28 +3255,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC169.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc109c-black-cotton-mesh-underbust-corset/</loc>
-		<lastmod>2026-08-20T06:51:51+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4b.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC109-C-small-scaled.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4b.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3b-1.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2b-1.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1b-2.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
@@ -3871,28 +3340,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/20251206_152037.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc29-black-metallic-pvc-overbust-corset/</loc>
-		<lastmod>2026-08-21T02:57:40+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/8-47.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-32.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2016/11/mcc29-size-chart-measurementss-scaled.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-87.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-76.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-62.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
@@ -3984,83 +3431,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/20251206_152424.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/lacing-ribbon-8-meter-5-8in-2/</loc>
-		<lastmod>2026-08-21T16:40:25+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/ribbons-2.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2016/07/s-l1600-8-1.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-295.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-289.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-281.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5-269.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-265.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-233-scaled.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/RIBBONSw.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/corset-mcc110a-pvc-underbust-corset/</loc>
-		<lastmod>2026-08-21T16:40:25+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-221.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC110A.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-216.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-209.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-206.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5-192.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-186.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-162.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/8-128.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/9-99.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/10-70.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/11-46.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/12-40.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/13-24.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
@@ -4174,47 +3544,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc6-black-cotton-sport-mesh-waspie-underbust-corset/</loc>
-		<lastmod>2026-08-21T23:43:20+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/8-3.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-15.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-14.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-8.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-7.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc6.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc68-sport-mesh-with-hip-ties-underbust-corset/</loc>
-		<lastmod>2026-08-22T03:14:24+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-192.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC68-2-scaled.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/14-13.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/18-3.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/17-4.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>https://www.mysticcitycorsets.com/shop/mcc59-black-satin-underbust-corset/</loc>
 		<lastmod>2026-08-22T07:28:35+00:00</lastmod>
 		<image:image>
@@ -4279,19 +3608,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc61-black-cotton-satin-sport-mesh-underbust-corset/</loc>
-		<lastmod>2026-08-22T20:40:37+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc61-s.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC61-hip-ties.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc61-s.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>https://www.mysticcitycorsets.com/shop/mcc44l-black-cotton-mesh-hip-ties-underbust-corset/</loc>
 		<lastmod>2026-08-22T23:14:31+00:00</lastmod>
 		<image:image>
@@ -4305,19 +3621,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3x-2.jpg</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://www.mysticcitycorsets.com/shop/mcc21-beige-satin-mesh-underbust-corset-waspie/</loc>
-		<lastmod>2026-08-23T01:26:55+00:00</lastmod>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-140.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc21-polka-dotq.jpg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-140.jpg</image:loc>
 		</image:image>
 	</url>
 	<url>
@@ -4414,8 +3717,676 @@
 		</image:image>
 	</url>
 	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc23l-metallic-pvc-overbust-corset/</loc>
+		<lastmod>2026-08-24T03:54:04+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-73.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-86.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-83.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-75.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MC23-L-size-chart-MCC23-L-scaled.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc68-sport-mesh-with-hip-ties-underbust-corset/</loc>
+		<lastmod>2026-08-24T08:57:34+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-192.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC68-2-scaled.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/14-13.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/18-3.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/17-4.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc6-black-cotton-sport-mesh-waspie-underbust-corset/</loc>
+		<lastmod>2026-08-24T14:04:22+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/8-3.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-15.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-14.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-8.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-7.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc6.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc118-overbust-emerald-bird-brocade/</loc>
+		<lastmod>2026-08-24T18:19:21+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc118-with-and-without-hip-ties-scaled.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC118.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC118-greeen-no-hip-ties-scaled.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1df-1.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc94c-black-cotton-underbust-corset/</loc>
+		<lastmod>2026-08-24T21:52:34+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1hj-2.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC94C.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2hj-2.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3hj-2.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc109c-black-cotton-mesh-underbust-corset/</loc>
+		<lastmod>2026-08-24T22:32:24+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4b.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC109-C-small-scaled.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4b.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3b-1.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2b-1.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1b-2.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc44l-beige-mesh-underbust-corset/</loc>
+		<lastmod>2026-08-24T23:16:00+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1df-3.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC44Lde.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2dft.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/20251206_181419.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc21-beige-satin-mesh-underbust-corset-waspie/</loc>
+		<lastmod>2026-08-25T08:09:38+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-140.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc21-polka-dotq.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-140.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc43-black-satin-overbust-corset/</loc>
+		<lastmod>2026-08-25T15:08:17+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3dt.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/size-chart-MCC43.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1dt.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2dt.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4dt.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc98-black-cotton-mesh-short-underbust-corset/</loc>
+		<lastmod>2026-08-25T17:09:11+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-222.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/size-chart-MCC98-xx.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-255.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-252.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-245.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-239.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5-226.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-193.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/lacing-ribbon-8-meter-5-8in-2/</loc>
+		<lastmod>2026-08-25T18:44:48+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/ribbons-2.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2016/07/s-l1600-8-1.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-295.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-289.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-281.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5-269.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-265.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-233-scaled.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/RIBBONSw.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc20-sport-mesh-brocade-underbust-corset/</loc>
+		<lastmod>2026-08-25T18:44:48+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/11-36.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-188.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-182.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-175.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-171.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5-159.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-154.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-132.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/8-102.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/9-74.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/10-53.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/IMG_4755.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/corset-mcc110a-pvc-underbust-corset/</loc>
+		<lastmod>2026-08-26T00:41:01+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-221.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC110A.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-216.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-209.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-206.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5-192.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-186.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-162.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/8-128.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/9-99.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/10-70.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/11-46.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/12-40.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/13-24.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc64-black-cotton-sport-mesh-underbust-corset/</loc>
+		<lastmod>2026-08-26T14:51:54+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1ft.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC64.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2ft.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3ft.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4ft.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc242-black-satin-overbust-corset/</loc>
+		<lastmod>2026-08-26T17:11:13+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1o.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC242-scaled.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc44a-wine-metallic-pvc-underbust-corset/</loc>
+		<lastmod>2026-08-26T18:45:24+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1hj.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC44A-size-chart.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2hj.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3hj.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc127-black-cotton-plus-size-underbust-corset/</loc>
+		<lastmod>2026-08-26T18:54:19+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6a-1.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1a-1.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3a-1.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5a-1.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7a-1.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2a.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4a-1.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/size-chart-MCC127-x.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc152x-purple-red-black-peach-beige-white-pink-mesh-mini-underbust-corset/</loc>
+		<lastmod>2026-08-27T05:10:48+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc152-all.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-mcc152-beige.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/20251206_151933.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/20251206_151919.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-mcc152.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-mcc152.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-mcc152.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-233.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-244.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-241.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1df-4.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/022.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/134.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc120-black-cotton-mesh-underbust-corset/</loc>
+		<lastmod>2026-08-27T12:00:44+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1c-1.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/9-117.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC120-size-chart.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc94-black-cotton-mesh-underbust-corset/</loc>
+		<lastmod>2026-08-27T17:46:15+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-134.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC94-size-chart.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-132.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-124.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-122.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5-113.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-110.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc61v-black-cotton-satin-sport-mesh-underbust-corset/</loc>
+		<lastmod>2026-08-27T18:12:37+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-102.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc61v.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc20-leopard-underbust-corset/</loc>
+		<lastmod>2026-08-27T23:35:44+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2sd.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2016/08/mcc20-size-chart-scaled.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-230.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3df.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc6-pink-sport-mesh-waspie-underbust-corset/</loc>
+		<lastmod>2026-08-28T01:21:31+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2pink-tr.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc6c.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1pink-ft.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc94-black-cotton-underbust-corset/</loc>
+		<lastmod>2026-08-28T02:59:47+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-129.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-131.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-121.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-119.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5-110.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-107.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-87.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/8-66.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/9-43.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC94-size-chart.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc72-black-satin-mesh-underbust-corset/</loc>
+		<lastmod>2026-08-28T03:13:41+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-223.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc72j.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-224.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-216.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-213.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5-199.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-194.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-169.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc6-bird-brocade-sport-mesh-waspie-underbust-corset/</loc>
+		<lastmod>2026-08-28T03:25:03+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-189.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc6c.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/055.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-189.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-190.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2-184.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-177.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/4-173.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/5-161.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-156.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-134.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/8-104.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/9-76.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/10-54.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/11-37.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc69c-peach-rose-mesh-underbust-corset/</loc>
+		<lastmod>2026-08-28T04:51:24+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/14769c-scaled.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/size-chart-MCC69c.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/146mcc69c-scaled.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/293sd-scaled.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc101-black-cotton-brocade-underbust-corset/</loc>
+		<lastmod>2026-08-28T15:43:46+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/13qrf134.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/size-chart-MCC101-scaled.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-125.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/13qrf134.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2rf.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc29-black-metallic-pvc-overbust-corset/</loc>
+		<lastmod>2026-08-29T01:09:42+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/8-47.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/1-32.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/2016/11/mcc29-size-chart-measurementss-scaled.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/3-87.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/6-76.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/7-62.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>https://www.mysticcitycorsets.com/shop/mcc16-c-black-satin-sport-mesh-long-line-underbust-corset/</loc>
-		<lastmod>2026-08-23T21:27:04+00:00</lastmod>
+		<lastmod>2026-08-29T19:55:55+00:00</lastmod>
 		<image:image>
 			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc16c.jpg</image:loc>
 		</image:image>
@@ -4430,6 +4401,35 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc16c-dd.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc21-black-brocade-mesh-underbust-corset/</loc>
+		<lastmod>2026-08-29T20:11:33+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc21-1-1-scaled.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc21-polka-dotq.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc21-brocade-mesh.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/282-scaled.jpg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.mysticcitycorsets.com/shop/mcc61-black-cotton-satin-sport-mesh-underbust-corset/</loc>
+		<lastmod>2026-08-30T01:33:28+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc61-s.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/MCC61-hip-ties.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.mysticcitycorsets.com/wp-content/uploads/mcc61-s.jpg</image:loc>
 		</image:image>
 	</url>
 </urlset>

@@ -6,7 +6,7 @@
     "medium": 1.0,
     "high": 1.75
   },
-  "generated_at_iso": "2026-08-24T08:27:48+00:00",
+  "generated_at_iso": "2026-08-30T13:04:02+00:00",
   "sources": {
     "collections_json": "https://timeless-trends.com/collections/all/products.json",
     "sizing_pages": "https://timeless-trends.com/pages/*-sizing-information",
@@ -1468,29 +1468,6 @@
             40,
             42
           ]
-        },
-        {
-          "name": "Siren Sequin Mesh Libby Corset (Libra Gentle Silhouette",
-          "url": "https://timeless-trends.com/products/siren-sequin-mesh-libby-corset-libra-gentle-silhouette-regular",
-          "materials": [
-            "mesh"
-          ],
-          "stretch_class": "high",
-          "waist_sizes_in": [
-            18,
-            20,
-            22,
-            24,
-            26,
-            28,
-            30,
-            32,
-            34,
-            36,
-            38,
-            40,
-            42
-          ]
         }
       ],
       "notes": null,
@@ -1522,7 +1499,7 @@
         "high_hip_position_in": 4.0,
         "high_hip_position_source": "metafield_median",
         "body_length_source": "metafield_median",
-        "product_count": 22
+        "product_count": 21
       }
     },
     {
@@ -1644,6 +1621,26 @@
         {
           "name": "Coming Up Aces Novice",
           "url": "https://timeless-trends.com/products/coming-up-aces-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Dragonfly at Night Novice",
+          "url": "https://timeless-trends.com/products/dragonfly-at-night-novice-corset-hourglass-silhouette-regular",
           "materials": [
             "cotton"
           ],
@@ -1784,6 +1781,26 @@
         {
           "name": "Pink Flamingos Novice",
           "url": "https://timeless-trends.com/products/pink-flamingos-novice-corset-hourglass-silhouette-regular",
+          "materials": [
+            "cotton"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Pumpkin Airlines Novice",
+          "url": "https://timeless-trends.com/products/pumpkin-airlines-novice-corset-hourglass-silhouette-regular",
           "materials": [
             "cotton"
           ],
@@ -2030,7 +2047,7 @@
         "high_hip_position_in": 3.0,
         "high_hip_position_source": "metafield_median",
         "body_length_source": "metafield_median",
-        "product_count": 22
+        "product_count": 24
       }
     },
     {
@@ -2925,6 +2942,25 @@
           ]
         },
         {
+          "name": "Black Cashmere Corset with Brass Clasps",
+          "url": "https://timeless-trends.com/products/black-corset-brass-clasps",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
           "name": "Black Cashmere with Silver Zipper",
           "url": "https://timeless-trends.com/products/black-cashmere-with-zipper-hourglass-silhouette-regular",
           "materials": [],
@@ -3432,7 +3468,7 @@
         "high_hip_position_in": 3.0,
         "high_hip_position_source": "metafield_median",
         "body_length_source": "metafield_median",
-        "product_count": 43
+        "product_count": 44
       }
     },
     {
@@ -4457,6 +4493,27 @@
           ]
         },
         {
+          "name": "Black Cashmere Corset with Brass Clasps",
+          "url": "https://timeless-trends.com/products/black-cashmere-brass-clasps",
+          "materials": [],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40,
+            42
+          ]
+        },
+        {
           "name": "Dotted Veil",
           "url": "https://timeless-trends.com/products/dotted-veil-corset-slim-silhouette-regular",
           "materials": [],
@@ -4692,7 +4749,7 @@
         "high_hip_position_in": 5.0,
         "high_hip_position_source": "metafield_median",
         "body_length_source": "metafield_median",
-        "product_count": 26
+        "product_count": 27
       }
     },
     {

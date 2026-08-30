@@ -6,7 +6,7 @@
     "medium": 1.0,
     "high": 1.75
   },
-  "generated_at_iso": "2026-08-24T03:09:33+00:00",
+  "generated_at_iso": "2026-08-30T13:09:10+00:00",
   "sources": {
     "comparison_chart_json": "https://www.mysticcitycorsets.com/wp-admin/admin-ajax.php?action=wp_ajax_ninja_tables_public_action&table_id=18400&target_action=get-all-data",
     "product_sitemap": "https://www.mysticcitycorsets.com/product-sitemap.xml",

@@ -337,6 +337,7 @@
     "side_seam_in": 11.0,
     "underbust_position_in": 5.0
   },
+  "black-cashmere-brass-clasps": {},
   "black-cashmere-corset": {
     "center_back_in": 12.5,
     "center_front_in": 12.0,
@@ -432,6 +433,7 @@
     "underbust_position_in": 5.0,
     "underbust_to_hip_in": 10.0
   },
+  "black-corset-brass-clasps": {},
   "black-cotton-corset": {
     "center_back_in": 12.5,
     "center_front_in": 11.5,
@@ -1075,6 +1077,16 @@
     "side_seam_in": 9.5,
     "underbust_position_in": 4.5
   },
+  "dragonfly-at-night-novice-corset-hourglass-silhouette-regular": {
+    "center_back_in": 12.5,
+    "center_front_in": 11.5,
+    "high_hip_position_in": 3.0,
+    "hip_spring_in": 10.0,
+    "rib_spring_in": 6.5,
+    "side_seam_in": 9.5,
+    "underbust_position_in": 5.0,
+    "underbust_to_hip_in": 10.0
+  },
   "dyeable-corset": {
     "center_back_in": 12.5,
     "center_front_in": 12.0,
@@ -1531,6 +1543,16 @@
     "underbust_position_in": 5.0,
     "underbust_to_hip_in": 10.0
   },
+  "pumpkin-airlines-novice-corset-hourglass-silhouette-regular": {
+    "center_back_in": 12.5,
+    "center_front_in": 11.5,
+    "high_hip_position_in": 3.0,
+    "hip_spring_in": 10.0,
+    "rib_spring_in": 6.5,
+    "side_seam_in": 9.5,
+    "underbust_position_in": 5.0,
+    "underbust_to_hip_in": 10.0
+  },
   "purple-haze-corset-hourglass-silhouette-long": {
     "center_back_in": 14.5,
     "center_front_in": 13.0,
@@ -1652,6 +1674,7 @@
     "center_front_in": 15.5,
     "side_seam_in": 13.0
   },
+  "steampunk-green-overbust-corset": {},
   "steely-blue-satin-corset-hourglass-silhouette-long-1": {
     "center_back_in": 14.5,
     "center_front_in": 13.0,
