@@ -388,6 +388,138 @@ fieldset.landmark .helper {
   margin-bottom: 0.4rem;
 }
 
+.centre-length-fieldset {
+  grid-template-columns: 1fr;
+}
+.centre-length-fieldset legend {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+.reset-length-btn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+.reset-length-btn:hover { color: var(--fg); }
+
+/* ---------- Dual-thumb range slider ----------
+   Two <input type="range"> overlaid on one visual track. The inputs
+   themselves have transparent tracks and are pointer-events:none;
+   only the ::-webkit-slider-thumb / ::-moz-range-thumb pseudo-elements
+   re-enable pointer-events so both thumbs are independently draggable.
+   The visible track and the between-thumbs "fill" are separate divs. */
+
+.dual-range-summary {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+.dual-range-summary strong {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.dual-range {
+  position: relative;
+  height: 32px;
+  margin: 0.25rem 0 0.1rem;
+}
+.dual-range-track {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  transform: translateY(-50%);
+}
+.dual-range-fill {
+  position: absolute;
+  top: 50%;
+  height: 4px;
+  background: #6da2c4;
+  border-radius: 2px;
+  transform: translateY(-50%);
+  left: var(--low-pct);
+  right: calc(100% - var(--high-pct));
+}
+.dual-range-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  pointer-events: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+/* Max thumb sits above min thumb — when they converge, the user can
+   still drag the max thumb away and then reach the min thumb again. */
+.dual-range-input-max { z-index: 2; }
+.dual-range-input-min { z-index: 1; }
+
+.dual-range-input::-webkit-slider-runnable-track {
+  background: transparent;
+  border: none;
+  height: 4px;
+}
+.dual-range-input::-moz-range-track {
+  background: transparent;
+  border: none;
+  height: 4px;
+}
+.dual-range-input::-webkit-slider-thumb {
+  pointer-events: auto;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #6da2c4;
+  cursor: grab;
+  margin-top: -6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.dual-range-input::-moz-range-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #6da2c4;
+  cursor: grab;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.dual-range-input:focus { outline: none; }
+.dual-range-input:focus::-webkit-slider-thumb {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.dual-range-input:focus::-moz-range-thumb {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.dual-range-input:active::-webkit-slider-thumb { cursor: grabbing; }
+.dual-range-input:active::-moz-range-thumb { cursor: grabbing; }
+
+.dual-range-bounds {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
 .ranked-row-details {
   border-top: 1px solid var(--border);
   padding: 0.75rem;

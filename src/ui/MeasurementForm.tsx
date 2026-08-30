@@ -20,6 +20,10 @@ interface MeasurementFormProps {
   onDesiredReductionChange: (reduction: number) => void;
   acceptableGapShapes: GapShape[];
   onAcceptableGapShapesChange: (shapes: GapShape[]) => void;
+  centreLengthRange: [number, number];
+  onCentreLengthRangeChange: (range: [number, number]) => void;
+  centreLengthMin: number;
+  centreLengthMax: number;
 }
 
 const GAP_SHAPE_OPTIONS: {
@@ -116,7 +120,26 @@ export function MeasurementForm({
   onDesiredReductionChange,
   acceptableGapShapes,
   onAcceptableGapShapesChange,
+  centreLengthRange,
+  onCentreLengthRangeChange,
+  centreLengthMin,
+  centreLengthMax,
 }: MeasurementFormProps) {
+  const [minLen, maxLen] = centreLengthRange;
+  const setMinLen = (raw: string) => {
+    const n = Number(raw);
+    if (!Number.isFinite(n)) return;
+    onCentreLengthRangeChange([Math.min(n, maxLen), maxLen]);
+  };
+  const setMaxLen = (raw: string) => {
+    const n = Number(raw);
+    if (!Number.isFinite(n)) return;
+    onCentreLengthRangeChange([minLen, Math.max(n, minLen)]);
+  };
+  const lengthFilterActive =
+    minLen > centreLengthMin || maxLen < centreLengthMax;
+  const resetLengthFilter = () =>
+    onCentreLengthRangeChange([centreLengthMin, centreLengthMax]);
   const acceptableSet = new Set(acceptableGapShapes);
   const toggleGapShape = (shape: GapShape, checked: boolean) => {
     if (checked) {
@@ -282,6 +305,68 @@ export function MeasurementForm({
         </select>
         <span className="helper">Filter corsets by the material's stretch behavior.</span>
       </label>
+
+      <fieldset className="landmark centre-length-fieldset">
+        <legend>
+          Centre length
+          {lengthFilterActive && (
+            <button
+              type="button"
+              className="reset-length-btn"
+              onClick={resetLengthFilter}
+            >
+              reset
+            </button>
+          )}
+        </legend>
+        <span className="helper">
+          Front length of the corset (top of busk to bottom). Filter to
+          lengths that suit your torso — corsets with unknown length are
+          always shown.
+        </span>
+        <div className="dual-range-summary">
+          <strong>{minLen}"</strong> – <strong>{maxLen}"</strong>
+        </div>
+        <div
+          className="dual-range"
+          style={{
+            // CSS custom properties drive the .dual-range-fill position
+            // (the coloured segment between the two thumbs) so it moves
+            // in lockstep with the thumbs without extra JS.
+            ['--low-pct' as string]:
+              `${((minLen - centreLengthMin) / (centreLengthMax - centreLengthMin)) * 100}%`,
+            ['--high-pct' as string]:
+              `${((maxLen - centreLengthMin) / (centreLengthMax - centreLengthMin)) * 100}%`,
+          }}
+        >
+          <div className="dual-range-track" aria-hidden="true" />
+          <div className="dual-range-fill" aria-hidden="true" />
+          <input
+            type="range"
+            className="dual-range-input dual-range-input-min"
+            aria-label="Minimum centre length in inches"
+            min={centreLengthMin}
+            max={centreLengthMax}
+            step="0.5"
+            value={minLen}
+            onChange={(e) => setMinLen(e.target.value)}
+          />
+          <input
+            type="range"
+            className="dual-range-input dual-range-input-max"
+            aria-label="Maximum centre length in inches"
+            min={centreLengthMin}
+            max={centreLengthMax}
+            step="0.5"
+            value={maxLen}
+            onChange={(e) => setMaxLen(e.target.value)}
+          />
+        </div>
+        <div className="dual-range-bounds">
+          <span>{centreLengthMin}"</span>
+          <span>{centreLengthMax}"</span>
+        </div>
+      </fieldset>
 
       <fieldset className="landmark gap-shape-fieldset">
         <legend>Acceptable lacing gap shapes</legend>

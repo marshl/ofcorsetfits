@@ -21,6 +21,7 @@ import { Tour } from './Tour.tsx';
 import {
   loadAcceptableGapShapes,
   loadBody,
+  loadCentreLengthRange,
   loadReduction,
   loadResultsTourShown,
   loadShowAdvanced,
@@ -28,6 +29,7 @@ import {
   loadTourShown,
   saveAcceptableGapShapes,
   saveBody,
+  saveCentreLengthRange,
   saveReduction,
   saveResultsTourShown,
   saveShowAdvanced,
@@ -79,6 +81,27 @@ const catalog = mergeCatalogs(
   timelessTrendsJson as unknown as Catalog,
 );
 
+/**
+ * Catalog centre-length bounds, computed at module load. Corsets with a
+ * null `body_length_in` don't participate in the min/max (unknowns
+ * shouldn't compress the slider range) and get a bypass in the filter.
+ * Rounded outward to the nearest 0.5" so the slider bounds land on
+ * whole ticks.
+ */
+const catalogLengths = catalog.corsets
+  .map((c) => c.body_length_in)
+  .filter((n): n is number => n !== null);
+const CATALOG_MIN_LEN = catalogLengths.length
+  ? Math.floor(Math.min(...catalogLengths) * 2) / 2
+  : 4;
+const CATALOG_MAX_LEN = catalogLengths.length
+  ? Math.ceil(Math.max(...catalogLengths) * 2) / 2
+  : 16;
+
+function clampLength(n: number): number {
+  return Math.max(CATALOG_MIN_LEN, Math.min(CATALOG_MAX_LEN, n));
+}
+
 const DEFAULT_BODY: Body = {
   natural_waist_in: 28,
   underbust: { circumference_in: 32, position_in: -5 },
@@ -115,6 +138,15 @@ export function App() {
   const [showAdvanced, setShowAdvanced] = useState<boolean>(
     () => loadShowAdvanced() ?? false,
   );
+  const [centreLengthRange, setCentreLengthRange] = useState<[number, number]>(() => {
+    const saved = loadCentreLengthRange();
+    if (saved) return [clampLength(saved[0]), clampLength(saved[1])];
+    return [CATALOG_MIN_LEN, CATALOG_MAX_LEN];
+  });
+  useEffect(() => {
+    saveCentreLengthRange(centreLengthRange);
+  }, [centreLengthRange]);
+
   const [tourOpen, setTourOpen] = useState<boolean>(() => !loadTourShown());
   const [resultsTourOpen, setResultsTourOpen] = useState<boolean>(false);
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
@@ -209,7 +241,26 @@ export function App() {
     return rank(rankBody, catalog, config);
   }, [rankBody, rankStretch, rankReduction, rankShapes]);
 
-  const firstRowKey = results.length > 0 ? rowKey(results[0]) : null;
+  /**
+   * Post-rank centre-length filter. Corsets with null length always
+   * pass (unknown lengths shouldn't be excluded by a length filter).
+   * The filter is skipped entirely when the range is at catalog bounds
+   * so unchanged sliders don't shift the ranking or spend cycles.
+   */
+  const filteredResults = useMemo(() => {
+    const [minL, maxL] = centreLengthRange;
+    const filterActive =
+      minL > CATALOG_MIN_LEN || maxL < CATALOG_MAX_LEN;
+    if (!filterActive) return results;
+    return results.filter((r) => {
+      const len = r.corset.body_length_in;
+      if (len === null) return true;
+      return len >= minL && len <= maxL;
+    });
+  }, [results, centreLengthRange]);
+
+  const firstRowKey =
+    filteredResults.length > 0 ? rowKey(filteredResults[0]) : null;
 
   return (
     <div className="app">
@@ -271,11 +322,15 @@ export function App() {
             onDesiredReductionChange={setDesiredReduction}
             acceptableGapShapes={acceptableGapShapes}
             onAcceptableGapShapesChange={setAcceptableGapShapes}
+            centreLengthRange={centreLengthRange}
+            onCentreLengthRangeChange={setCentreLengthRange}
+            centreLengthMin={CATALOG_MIN_LEN}
+            centreLengthMax={CATALOG_MAX_LEN}
           />
         </aside>
         <section className="app-content">
           <RankedList
-            results={results}
+            results={filteredResults}
             showAdvanced={showAdvanced}
             onShowAdvancedChange={setShowAdvanced}
             expandedKey={expandedKey}

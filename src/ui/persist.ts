@@ -15,6 +15,7 @@ const ACCEPTABLE_GAP_SHAPES_KEY = 'ofcorsetfits:acceptable_gap_shapes:v1';
 const ADVANCED_KEY = 'ofcorsetfits:show_advanced:v1';
 const TOUR_SHOWN_KEY = 'ofcorsetfits:tour_shown:v1';
 const RESULTS_TOUR_SHOWN_KEY = 'ofcorsetfits:results_tour_shown:v1';
+const CENTRE_LENGTH_RANGE_KEY = 'ofcorsetfits:centre_length_range:v1';
 
 export function loadBody(): Body | null {
   try {
@@ -163,6 +164,35 @@ export function loadResultsTourShown(): boolean {
 export function saveResultsTourShown(shown: boolean): void {
   try {
     localStorage.setItem(RESULTS_TOUR_SHOWN_KEY, shown ? 'true' : 'false');
+  } catch {
+    // ignore
+  }
+}
+
+export function loadCentreLengthRange(): [number, number] | null {
+  try {
+    const raw = localStorage.getItem(CENTRE_LENGTH_RANGE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (
+      Array.isArray(parsed) &&
+      parsed.length === 2 &&
+      typeof parsed[0] === 'number' &&
+      typeof parsed[1] === 'number' &&
+      Number.isFinite(parsed[0]) &&
+      Number.isFinite(parsed[1])
+    ) {
+      return [parsed[0], parsed[1]];
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+export function saveCentreLengthRange(range: [number, number]): void {
+  try {
+    localStorage.setItem(CENTRE_LENGTH_RANGE_KEY, JSON.stringify(range));
   } catch {
     // ignore
   }

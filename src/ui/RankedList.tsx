@@ -170,8 +170,10 @@ export function RankedList({
       <section className="ranked-list ranked-list-empty">
         <h2>No matching corsets</h2>
         <p>
-          Try changing your stretch preference to <strong>Any</strong>, or check
-          that you have at least a natural waist entered.
+          Try loosening your filters — set the stretch preference to{' '}
+          <strong>Any</strong>, widen the centre-length range, or check
+          more gap shapes. Also make sure you have at least a natural
+          waist entered.
         </p>
       </section>
     );
