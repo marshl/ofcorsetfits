@@ -45,6 +45,12 @@ interface RankedListProps {
   topN?: number;
   showAdvanced: boolean;
   onShowAdvancedChange: (value: boolean) => void;
+  /**
+   * Which row is expanded. Lifted to App so the results tour can
+   * programmatically expand the first row for the breakdown step.
+   */
+  expandedKey: string | null;
+  onExpandedKeyChange: (key: string | null) => void;
 }
 
 function formatDiff(diff: number | null): string {
@@ -59,7 +65,7 @@ function groupSignatureKey(g: VariantGroup): string {
 }
 
 /** Unique key per row: silhouette + group's canonical URL + row size. */
-function rowKey(r: RankedResult): string {
+export function rowKey(r: RankedResult): string {
   return `${r.corset.id}::${groupSignatureKey(r.variant_group)}::${r.best.waist_size_in}`;
 }
 
@@ -140,8 +146,9 @@ export function RankedList({
   topN = 30,
   showAdvanced,
   onShowAdvancedChange,
+  expandedKey,
+  onExpandedKeyChange,
 }: RankedListProps) {
-  const [expandedKey, setExpandedKey] = useState<string | null>(null);
   const [helpOpen, setHelpOpen] = useState(false);
   const shown = results.slice(0, topN);
   const tiers = assignTiers(shown);
@@ -170,7 +177,7 @@ export function RankedList({
   }
 
   return (
-    <section className="ranked-list">
+    <section className="ranked-list" data-tour="results-panel">
       <div className="ranked-list-header">
         <h2>
           Best fits{' '}
@@ -180,7 +187,7 @@ export function RankedList({
             are grouped)
           </span>
         </h2>
-        <div className="advanced-toggle-row">
+        <div className="advanced-toggle-row" data-tour="advanced-help-row">
           <label className="advanced-toggle">
             <input
               type="checkbox"
@@ -304,10 +311,7 @@ export function RankedList({
             <h4>Buying</h4>
             <p>
               Each row shows a buy link per color variant, pointing at the
-              vendor's product page. For Mystic City the size is pre-selected
-              via URL; Timeless Trends uses a different variant-URL scheme,
-              so its links land on the product page and you pick the size
-              from the dropdown yourself.
+              vendor's product page.
             </p>
           </div>
         </div>
@@ -334,7 +338,8 @@ export function RankedList({
               <button
                 type="button"
                 className="ranked-row-header"
-                onClick={() => setExpandedKey(isExpanded ? null : key)}
+                data-tour={i === 0 ? 'first-row' : undefined}
+                onClick={() => onExpandedKeyChange(isExpanded ? null : key)}
                 aria-expanded={isExpanded}
               >
                 <span className="rank">{isTierLeader ? tiers[i] : ''}</span>
@@ -416,7 +421,7 @@ export function RankedList({
                       {memberCount === 1 ? 'option' : 'variants — same fit'})
                     </strong>
                     <ul className="variant-rows">
-                      {group.variants.map((v) => {
+                      {group.variants.map((v, vIdx) => {
                         const offersBestSize = v.waist_sizes_in.includes(
                           r.best.waist_size_in,
                         );
@@ -446,6 +451,7 @@ export function RankedList({
                               href={href}
                               target="_blank"
                               rel="noopener noreferrer"
+                              data-tour={vIdx === 0 ? 'row-buy-link' : undefined}
                             >
                               buy on {hostnameOf(v.url)}
                               {offersBestSize && (
@@ -459,7 +465,7 @@ export function RankedList({
                     </ul>
                   </div>
 
-                  <table className="score-breakdown">
+                  <table className="score-breakdown" data-tour="row-breakdown">
                     <thead>
                       <tr>
                         <th>Position</th>

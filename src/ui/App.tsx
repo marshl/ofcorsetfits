@@ -15,18 +15,21 @@ import timelessTrendsJson from '../../catalog/timeless-trends.json';
 import type { Body, Catalog, Corset, GapShape, StretchClass } from '../scoring/types.ts';
 import { defaultScoringConfig, rank } from '../scoring/index.ts';
 import { MeasurementForm } from './MeasurementForm.tsx';
-import { RankedList } from './RankedList.tsx';
+import { RankedList, rowKey } from './RankedList.tsx';
+import { ResultsTour } from './ResultsTour.tsx';
 import { Tour } from './Tour.tsx';
 import {
   loadAcceptableGapShapes,
   loadBody,
   loadReduction,
+  loadResultsTourShown,
   loadShowAdvanced,
   loadStretchPreference,
   loadTourShown,
   saveAcceptableGapShapes,
   saveBody,
   saveReduction,
+  saveResultsTourShown,
   saveShowAdvanced,
   saveStretchPreference,
   saveTourShown,
@@ -113,10 +116,26 @@ export function App() {
     () => loadShowAdvanced() ?? false,
   );
   const [tourOpen, setTourOpen] = useState<boolean>(() => !loadTourShown());
+  const [resultsTourOpen, setResultsTourOpen] = useState<boolean>(false);
+  const [expandedKey, setExpandedKey] = useState<string | null>(null);
 
-  const closeTour = () => {
+  /**
+   * Main tour close. `completed=true` means the user clicked "Get
+   * started" on the last step — that's the only path that auto-chains
+   * to the results tour on first visit. Skip / X / Esc / backdrop
+   * (completed=false) just marks the tour shown and stops there.
+   */
+  const closeTour = (completed: boolean) => {
     setTourOpen(false);
     saveTourShown(true);
+    if (completed && !loadResultsTourShown()) {
+      setResultsTourOpen(true);
+    }
+  };
+
+  const closeResultsTour = () => {
+    setResultsTourOpen(false);
+    saveResultsTourShown(true);
   };
 
   /**
@@ -190,6 +209,8 @@ export function App() {
     return rank(rankBody, catalog, config);
   }, [rankBody, rankStretch, rankReduction, rankShapes]);
 
+  const firstRowKey = results.length > 0 ? rowKey(results[0]) : null;
+
   return (
     <div className="app">
       <header className="app-header">
@@ -211,6 +232,14 @@ export function App() {
           >
             Take the tour
           </button>
+          {' · '}
+          <button
+            type="button"
+            className="tour-link-btn"
+            onClick={() => setResultsTourOpen(true)}
+          >
+            Explain the results
+          </button>
         </p>
       </header>
       <Tour
@@ -224,6 +253,12 @@ export function App() {
         onDesiredReductionChange={setDesiredReduction}
         acceptableGapShapes={acceptableGapShapes}
         onAcceptableGapShapesChange={setAcceptableGapShapes}
+      />
+      <ResultsTour
+        open={resultsTourOpen}
+        onClose={closeResultsTour}
+        firstRowKey={firstRowKey}
+        onExpandedKeyChange={setExpandedKey}
       />
       <main className="app-main">
         <aside className="app-sidebar">
@@ -243,6 +278,8 @@ export function App() {
             results={results}
             showAdvanced={showAdvanced}
             onShowAdvancedChange={setShowAdvanced}
+            expandedKey={expandedKey}
+            onExpandedKeyChange={setExpandedKey}
           />
         </section>
       </main>

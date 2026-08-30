@@ -14,6 +14,7 @@ const GAP_SHAPE_KEY = 'ofcorsetfits:gap_shape:v1';
 const ACCEPTABLE_GAP_SHAPES_KEY = 'ofcorsetfits:acceptable_gap_shapes:v1';
 const ADVANCED_KEY = 'ofcorsetfits:show_advanced:v1';
 const TOUR_SHOWN_KEY = 'ofcorsetfits:tour_shown:v1';
+const RESULTS_TOUR_SHOWN_KEY = 'ofcorsetfits:results_tour_shown:v1';
 
 export function loadBody(): Body | null {
   try {
@@ -146,6 +147,22 @@ export function loadTourShown(): boolean {
 export function saveTourShown(shown: boolean): void {
   try {
     localStorage.setItem(TOUR_SHOWN_KEY, shown ? 'true' : 'false');
+  } catch {
+    // ignore
+  }
+}
+
+export function loadResultsTourShown(): boolean {
+  try {
+    return localStorage.getItem(RESULTS_TOUR_SHOWN_KEY) === 'true';
+  } catch {
+    return false;
+  }
+}
+
+export function saveResultsTourShown(shown: boolean): void {
+  try {
+    localStorage.setItem(RESULTS_TOUR_SHOWN_KEY, shown ? 'true' : 'false');
   } catch {
     // ignore
   }

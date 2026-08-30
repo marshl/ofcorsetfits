@@ -669,6 +669,83 @@ fieldset.landmark .helper {
 }
 .tour-link-btn:hover { color: var(--fg); }
 
+/* ---------- Results-tour spotlight ---------- */
+
+/* Transparent full-viewport blocker that eats clicks and wheel so the
+   underlying page can't be interacted with while the spotlight tour is
+   running. Sits BELOW the spotlight and popup in z-order. */
+.results-tour-blocker {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  background: transparent;
+  cursor: default;
+}
+
+/* The spotlight is a small element positioned over the target. Its
+   massive box-shadow paints a translucent dim over everything else in
+   the viewport, cutting out the highlighted rect. `pointer-events: none`
+   keeps it visual-only — the blocker below still catches clicks. */
+.results-tour-spotlight {
+  position: fixed;
+  z-index: 1000;
+  border-radius: 5px;
+  pointer-events: none;
+  box-shadow:
+    0 0 0 3px #6da2c4,
+    0 0 0 9999px rgba(0, 0, 0, 0.55);
+  transition: top 0.2s ease, left 0.2s ease, width 0.2s ease, height 0.2s ease;
+}
+
+.results-tour-popup {
+  position: fixed;
+  z-index: 1001;
+  width: 320px;
+  max-width: calc(100vw - 1rem);
+  background: white;
+  border-radius: 8px;
+  padding: 1rem 1.25rem 0.85rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+.results-tour-popup h3 {
+  margin: 0.15rem 0 0.5rem;
+  color: #6da2c4;
+  font-family: 'Great Vibes', 'Sacramento', 'Dancing Script', cursive;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+}
+.results-tour-body p { margin: 0.4rem 0; }
+.results-tour-body ul { margin: 0.4rem 0; padding-left: 1.25rem; }
+
+/* Small arrow at the popup's edge pointing toward the highlighted
+   element. Fixed horizontal offset (24px in) — the popup itself is
+   center-aligned on the target, so the arrow usually lands close to
+   the target's edge. Perfect for most cases; a viewport-clamped
+   popup can leave the arrow off-target, which is a mild imperfection
+   not worth building an anchor-following arrow to fix. */
+.results-tour-popup-below::before,
+.results-tour-popup-above::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.results-tour-popup-below::before {
+  top: -8px;
+  border-bottom: 8px solid white;
+}
+.results-tour-popup-above::before {
+  bottom: -8px;
+  border-top: 8px solid white;
+}
+.results-tour-popup-center::before { display: none; }
+
 /* ---------- Responsive collapse ---------- */
 
 @media (max-width: 800px) {

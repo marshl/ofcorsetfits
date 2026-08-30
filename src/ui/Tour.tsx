@@ -14,7 +14,7 @@ import type { Body, GapShape, StretchClass } from '../scoring/types.ts';
 
 interface TourProps {
   open: boolean;
-  onClose: () => void;
+  onClose: (completed: boolean) => void;
   body: Body;
   onBodyChange: (body: Body) => void;
   stretchPreference: StretchClass | 'any';
@@ -133,7 +133,7 @@ export function Tour(props: TourProps) {
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape') onClose(false);
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
@@ -145,7 +145,7 @@ export function Tour(props: TourProps) {
   const isFirst = stepIndex === 0;
   const isLast = stepIndex === STEPS.length - 1;
   const next = () => {
-    if (isLast) onClose();
+    if (isLast) onClose(true);
     else setStepIndex((i) => i + 1);
   };
   const back = () => {
@@ -170,7 +170,7 @@ export function Tour(props: TourProps) {
       aria-modal="true"
       aria-labelledby="tour-modal-title"
       onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
+        if (e.target === e.currentTarget) onClose(false);
       }}
     >
       <div className="tour-modal">
@@ -178,7 +178,7 @@ export function Tour(props: TourProps) {
           type="button"
           className="help-modal-close"
           aria-label="Close tour"
-          onClick={onClose}
+          onClick={() => onClose(false)}
         >
           ×
         </button>
@@ -199,7 +199,11 @@ export function Tour(props: TourProps) {
         <h3 id="tour-modal-title">{rendered.title}</h3>
         <div className="tour-content">{rendered.body}</div>
         <div className="tour-buttons">
-          <button type="button" className="tour-btn tour-btn-skip" onClick={onClose}>
+          <button
+            type="button"
+            className="tour-btn tour-btn-skip"
+            onClick={() => onClose(false)}
+          >
             Skip tour
           </button>
           <div className="tour-buttons-right">
