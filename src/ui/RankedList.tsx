@@ -13,6 +13,7 @@
 
 import { useEffect, useState } from 'react';
 import type { GapShape, RankedResult, VariantGroup } from '../scoring/types.ts';
+import { stretchLabel } from './stretchLabel.ts';
 
 const GAP_SHAPE_LABELS: Record<GapShape, { glyph: string; name: string }> = {
   curved: { glyph: ')(', name: 'curved (pinched at waist)' },
@@ -287,14 +288,14 @@ export function RankedList({
               built to prevent.
             </p>
 
-            <h4>Stretch class</h4>
+            <h4>Stretch</h4>
             <p>
-              Every variant is classified <em>low</em>, <em>medium</em>, or{' '}
-              <em>high</em> stretch based on materials. Higher stretch means
-              the corset closes to a larger effective waist than its nominal
-              size — a slack allowance the algorithm folds into the waist
-              math. Use the sidebar's stretch filter to hide classes you're
-              not interested in.
+              Every variant is classified as <em>firm</em>,{' '}
+              <em>semi-stretch</em>, or <em>stretchy</em> based on
+              materials. More stretch means the corset closes to a larger
+              effective waist than its nominal size — a slack allowance
+              the algorithm folds into the waist math. Use the sidebar's
+              stretch filter to hide classes you're not interested in.
             </p>
 
             <h4>Rows, tiers, and grouping</h4>
@@ -360,7 +361,7 @@ export function RankedList({
                     <span className="group-count"> +{memberCount - 1} variants</span>
                   )}
                 </span>
-                <span className={`stretch stretch-${stretch}`}>{stretch}</span>
+                <span className={`stretch stretch-${stretch}`}>{stretchLabel(stretch)}</span>
                 <span className="best-size">size {r.best.waist_size_in}"</span>
                 <span className="silhouette">{r.corset.silhouette_category}</span>
                 <span
@@ -396,7 +397,7 @@ export function RankedList({
                       <strong>Materials:</strong>{' '}
                       {r.best.variant.materials.join(', ') || '(unspecified)'}
                       {' — '}
-                      <em>stretch class: {stretch}</em>
+                      <em>stretch: {stretchLabel(stretch)}</em>
                     </div>
                     <div>
                       <strong>Silhouette words:</strong>{' '}
@@ -563,7 +564,7 @@ export function RankedList({
                               <span
                                 className={`stretch stretch-${rep.stretch_class}`}
                               >
-                                {rep.stretch_class}
+                                {stretchLabel(rep.stretch_class)}
                               </span>
                               <span className="variant-name">
                                 {rep.name}

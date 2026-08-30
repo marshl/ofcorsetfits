@@ -12,9 +12,12 @@
   --muted: #666;
   --border: #d8d6d1;
   --accent: #7a3a3a;
-  --stretch-low: #4a7a4a;
-  --stretch-medium: #7a6a3a;
-  --stretch-high: #7a4a3a;
+  /* Stretch badges. Three related blues in the site palette family
+     (not a green→red quality scale). Ordered dark→light to mirror
+     dense→airy fabric intuition: firm cotton is heavier than mesh. */
+  --stretch-low: #2b5a7d;
+  --stretch-medium: #4d84a8;
+  --stretch-high: #6da2c4;
   --row-hover: #efeeea;
 }
 
@@ -191,7 +194,10 @@ fieldset.landmark .helper {
 .ranked-row-header {
   width: 100%;
   display: grid;
-  grid-template-columns: 2.5rem 7rem 1fr 5rem 4.5rem 6rem 2.2rem 5rem 1rem;
+  /* Columns: rank, corset-id, corset-name (flex), stretch, best-size,
+     silhouette, gap-shape, score, expand. Stretch is 6.5rem so
+     "Semi-stretch" fits on one line at the current badge font. */
+  grid-template-columns: 2.5rem 7rem 1fr 6.5rem 4.5rem 6rem 2.2rem 5rem 1rem;
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 0.75rem;
@@ -338,8 +344,8 @@ fieldset.landmark .helper {
   border-radius: 3px;
   font-size: 0.75rem;
   font-weight: 600;
-  text-transform: uppercase;
   color: white;
+  white-space: nowrap;
 }
 .stretch-low { background: var(--stretch-low); }
 .stretch-medium { background: var(--stretch-medium); }

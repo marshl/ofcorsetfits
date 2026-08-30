@@ -475,10 +475,10 @@ function renderStretch(ctx: Ctx): { title: string; body: ReactNode } {
     body: (
       <>
         <p>
-          Corsets come in low-stretch (cotton, brocade, PVC), medium
-          (hybrid mesh + fabric), and high-stretch (mesh-dominant)
-          fabrics. Higher stretch closes to a larger effective waist
-          than the size on the label.
+          Corsets come in firm (cotton, brocade, PVC), semi-stretch
+          (hybrid mesh + fabric), and stretchy (mesh-dominant) fabrics.
+          More stretch closes to a larger effective waist than the size
+          on the label.
         </p>
         <label className="tour-field">
           <span>Stretch preference</span>
@@ -490,9 +490,9 @@ function renderStretch(ctx: Ctx): { title: string; body: ReactNode } {
             }
           >
             <option value="any">Any (all variants)</option>
-            <option value="low">Low stretch (cotton, satin, brocade, PVC)</option>
-            <option value="medium">Medium stretch (hybrid — mesh + fabric)</option>
-            <option value="high">High stretch (mesh-dominant)</option>
+            <option value="low">Firm — cotton, satin, brocade, PVC</option>
+            <option value="medium">Semi-stretch — hybrid mesh + fabric</option>
+            <option value="high">Stretchy — mesh-dominant</option>
           </select>
           <span className="tour-helper">
             Leave on <strong>Any</strong> to see everything.

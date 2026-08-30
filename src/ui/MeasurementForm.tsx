@@ -276,9 +276,9 @@ export function MeasurementForm({
           onChange={(e) => onStretchPreferenceChange(e.target.value as StretchClass | 'any')}
         >
           <option value="any">Any (all variants)</option>
-          <option value="low">Low stretch (cotton, satin, brocade, PVC)</option>
-          <option value="medium">Medium stretch (hybrid — mesh + fabric)</option>
-          <option value="high">High stretch (mesh-dominant)</option>
+          <option value="low">Firm — cotton, satin, brocade, PVC</option>
+          <option value="medium">Semi-stretch — hybrid mesh + fabric</option>
+          <option value="high">Stretchy — mesh-dominant</option>
         </select>
         <span className="helper">Filter corsets by the material's stretch behavior.</span>
       </label>
