@@ -22,6 +22,7 @@ import {
   loadAcceptableGapShapes,
   loadBody,
   loadCentreLengthRange,
+  loadOnlyAvailableSizes,
   loadReduction,
   loadResultsTourShown,
   loadShowAdvanced,
@@ -30,6 +31,7 @@ import {
   saveAcceptableGapShapes,
   saveBody,
   saveCentreLengthRange,
+  saveOnlyAvailableSizes,
   saveReduction,
   saveResultsTourShown,
   saveShowAdvanced,
@@ -147,6 +149,13 @@ export function App() {
     saveCentreLengthRange(centreLengthRange);
   }, [centreLengthRange]);
 
+  const [onlyAvailableSizes, setOnlyAvailableSizes] = useState<boolean>(
+    () => loadOnlyAvailableSizes() ?? true,
+  );
+  useEffect(() => {
+    saveOnlyAvailableSizes(onlyAvailableSizes);
+  }, [onlyAvailableSizes]);
+
   const [tourOpen, setTourOpen] = useState<boolean>(() => !loadTourShown());
   const [resultsTourOpen, setResultsTourOpen] = useState<boolean>(false);
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
@@ -242,22 +251,49 @@ export function App() {
   }, [rankBody, rankStretch, rankReduction, rankShapes]);
 
   /**
-   * Post-rank centre-length filter. Corsets with null length always
-   * pass (unknown lengths shouldn't be excluded by a length filter).
-   * The filter is skipped entirely when the range is at catalog bounds
-   * so unchanged sliders don't shift the ranking or spend cycles.
+   * Post-rank filters applied in sequence:
+   *
+   * 1. Centre-length range. Skips entirely when sliders are at catalog
+   *    bounds. Corsets with null length always pass — unknown lengths
+   *    shouldn't be excluded by a length filter.
+   *
+   * 2. Only-available-sizes. When on, each row's `variant_group.variants`
+   *    is filtered to just the SKUs that actually offer the row's
+   *    `best.waist_size_in`. Rows left with zero buyable variants drop
+   *    out. The ranker is left untouched (no test churn); this is a
+   *    display-layer trim.
    */
   const filteredResults = useMemo(() => {
+    let rows = results;
+
     const [minL, maxL] = centreLengthRange;
-    const filterActive =
+    const lengthFilterActive =
       minL > CATALOG_MIN_LEN || maxL < CATALOG_MAX_LEN;
-    if (!filterActive) return results;
-    return results.filter((r) => {
-      const len = r.corset.body_length_in;
-      if (len === null) return true;
-      return len >= minL && len <= maxL;
-    });
-  }, [results, centreLengthRange]);
+    if (lengthFilterActive) {
+      rows = rows.filter((r) => {
+        const len = r.corset.body_length_in;
+        if (len === null) return true;
+        return len >= minL && len <= maxL;
+      });
+    }
+
+    if (onlyAvailableSizes) {
+      rows = rows.flatMap((r) => {
+        const size = r.best.waist_size_in;
+        const buyable = r.variant_group.variants.filter((v) =>
+          v.waist_sizes_in.includes(size),
+        );
+        if (buyable.length === 0) return [];
+        if (buyable.length === r.variant_group.variants.length) return [r];
+        return [{
+          ...r,
+          variant_group: { ...r.variant_group, variants: buyable },
+        }];
+      });
+    }
+
+    return rows;
+  }, [results, centreLengthRange, onlyAvailableSizes]);
 
   const firstRowKey =
     filteredResults.length > 0 ? rowKey(filteredResults[0]) : null;
@@ -326,6 +362,8 @@ export function App() {
             onCentreLengthRangeChange={setCentreLengthRange}
             centreLengthMin={CATALOG_MIN_LEN}
             centreLengthMax={CATALOG_MAX_LEN}
+            onlyAvailableSizes={onlyAvailableSizes}
+            onOnlyAvailableSizesChange={setOnlyAvailableSizes}
           />
         </aside>
         <section className="app-content">

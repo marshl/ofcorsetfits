@@ -24,6 +24,8 @@ interface MeasurementFormProps {
   onCentreLengthRangeChange: (range: [number, number]) => void;
   centreLengthMin: number;
   centreLengthMax: number;
+  onlyAvailableSizes: boolean;
+  onOnlyAvailableSizesChange: (value: boolean) => void;
 }
 
 const GAP_SHAPE_OPTIONS: {
@@ -124,6 +126,8 @@ export function MeasurementForm({
   onCentreLengthRangeChange,
   centreLengthMin,
   centreLengthMax,
+  onlyAvailableSizes,
+  onOnlyAvailableSizesChange,
 }: MeasurementFormProps) {
   const [minLen, maxLen] = centreLengthRange;
   const setMinLen = (raw: string) => {
@@ -304,6 +308,20 @@ export function MeasurementForm({
           <option value="high">Stretchy — mesh-dominant</option>
         </select>
         <span className="helper">Filter corsets by the material's stretch behavior.</span>
+      </label>
+
+      <label className="field field-checkbox availability-checkbox">
+        <input
+          type="checkbox"
+          checked={onlyAvailableSizes}
+          onChange={(e) => onOnlyAvailableSizesChange(e.target.checked)}
+        />
+        <span>
+          <strong>Only show available sizes</strong>
+          {' — '}
+          hides rows and color variants where the row's size isn't
+          currently offered.
+        </span>
       </label>
 
       <fieldset className="landmark centre-length-fieldset">

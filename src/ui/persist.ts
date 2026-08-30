@@ -16,6 +16,7 @@ const ADVANCED_KEY = 'ofcorsetfits:show_advanced:v1';
 const TOUR_SHOWN_KEY = 'ofcorsetfits:tour_shown:v1';
 const RESULTS_TOUR_SHOWN_KEY = 'ofcorsetfits:results_tour_shown:v1';
 const CENTRE_LENGTH_RANGE_KEY = 'ofcorsetfits:centre_length_range:v1';
+const ONLY_AVAILABLE_SIZES_KEY = 'ofcorsetfits:only_available_sizes:v1';
 
 export function loadBody(): Body | null {
   try {
@@ -193,6 +194,25 @@ export function loadCentreLengthRange(): [number, number] | null {
 export function saveCentreLengthRange(range: [number, number]): void {
   try {
     localStorage.setItem(CENTRE_LENGTH_RANGE_KEY, JSON.stringify(range));
+  } catch {
+    // ignore
+  }
+}
+
+export function loadOnlyAvailableSizes(): boolean | null {
+  try {
+    const raw = localStorage.getItem(ONLY_AVAILABLE_SIZES_KEY);
+    if (raw === 'true') return true;
+    if (raw === 'false') return false;
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+export function saveOnlyAvailableSizes(value: boolean): void {
+  try {
+    localStorage.setItem(ONLY_AVAILABLE_SIZES_KEY, value ? 'true' : 'false');
   } catch {
     // ignore
   }
