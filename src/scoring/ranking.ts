@@ -211,6 +211,10 @@ export function defaultScoringConfig(catalog: Catalog): ScoringConfig {
     },
     tightness_slope: 2.0,
     looseness_slope: 3.0,
+    // Convex looseness: a 0.5" float stays close to linear, a 3" float
+    // ~quadruples what the linear term alone would produce. Keeps rib/hip
+    // gape from being outrun by a good waist fit.
+    looseness_curvature: 0.5,
     desired_reduction_in: 2.0,
     straight_gap_size_in: 2.0,
     slant_slope_in_per_in: 0.5,

@@ -66,18 +66,26 @@ function targetGapAt(
 }
 
 /**
- * Asymmetric linear penalty for a landmark (non-waist) fit difference.
+ * Asymmetric penalty for a landmark (non-waist) fit difference.
  * diff = corset_circumference - body_circumference.
- *   diff > 0 → corset is loose (weighted by looseness_slope)
- *   diff < 0 → corset is tight (weighted by tightness_slope — usually higher)
+ *   diff > 0 → corset is loose. Convex: `slope * (diff + curvature * diff^2)`.
+ *              Small floats stay ~linear; large floats blow up so a corset
+ *              that gapes 3"+ at a landmark can't win on waist fit alone.
+ *   diff < 0 → corset is tight (linear on tightness_slope).
+ *
+ * `looseness_curvature` defaults to 0 so callers that don't pass it get the
+ * old linear behavior — used by direct-formula unit tests.
  */
 export function penaltyForDiff(
   diff: number,
   weight: number,
   tightness_slope: number,
   looseness_slope: number,
+  looseness_curvature: number = 0,
 ): number {
-  if (diff >= 0) return weight * diff * looseness_slope;
+  if (diff >= 0) {
+    return weight * looseness_slope * (diff + looseness_curvature * diff * diff);
+  }
   return weight * Math.abs(diff) * tightness_slope;
 }
 
@@ -188,7 +196,7 @@ export function scoreCorset(
         const harsher = Math.max(config.tightness_slope, config.looseness_slope);
         const tightSlope = isCuppedRibUnderbust ? harsher : config.tightness_slope;
         const looseSlope = isCuppedRibUnderbust ? harsher : config.looseness_slope;
-        penalty = penaltyForDiff(diff, weight, tightSlope, looseSlope);
+        penalty = penaltyForDiff(diff, weight, tightSlope, looseSlope, config.looseness_curvature);
       } else {
         // straight / slant-hip / slant-rib / closed all define a per-position
         // target gap and use a symmetric |actual - target| penalty.

@@ -134,6 +134,15 @@ export interface ScoringConfig {
   tightness_slope: number;
   looseness_slope: number;
   /**
+   * Convex curvature applied to the LOOSE side only. Landmark penalty on the
+   * loose side is `weight * looseness_slope * (diff + looseness_curvature * diff^2)`.
+   * A small float (~0.5") stays close to linear; a large float (2"+) blows up
+   * quadratically, which pushes corsets that gape at the rib/hip well down
+   * the ranking rather than losing a close race on waist fit. Set to 0 to
+   * recover the old linear behavior.
+   */
+  looseness_curvature: number;
+  /**
    * Target waist reduction in inches. The algorithm ranks corsets by how well
    * they achieve `natural_waist_in - desired_reduction_in` when worn, NOT how
    * well they fit at natural waist. Corsets are almost always worn cinched;

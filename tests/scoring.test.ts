@@ -44,6 +44,28 @@ describe('penaltyForDiff (non-waist landmarks)', () => {
   });
 });
 
+describe('penaltyForDiff loose-side curvature', () => {
+  it('curvature=0 recovers linear behavior', () => {
+    // 4-arg call: default curvature=0.
+    expect(penaltyForDiff(2, 1, 3, 1)).toBe(2);
+    // Explicit curvature=0.
+    expect(penaltyForDiff(2, 1, 3, 1, 0)).toBe(2);
+  });
+  it('adds a quadratic term to the loose side when curvature > 0', () => {
+    // weight=1, looseness_slope=1, curvature=0.5, diff=2
+    // penalty = 1 * 1 * (2 + 0.5 * 4) = 4
+    expect(penaltyForDiff(2, 1, 3, 1, 0.5)).toBe(4);
+  });
+  it('curvature only affects the loose side — tight side stays linear', () => {
+    expect(penaltyForDiff(-2, 1, 3, 1, 0.5)).toBe(6);
+  });
+  it('a 3"+ loose float dominates a 1" loose float super-linearly', () => {
+    const small = penaltyForDiff(1, 1, 3, 1, 0.5); // 1 * (1 + 0.5) = 1.5
+    const big = penaltyForDiff(3, 1, 3, 1, 0.5);   // 1 * (3 + 4.5) = 7.5
+    expect(big / small).toBeGreaterThan(3); // linear ratio would be 3
+  });
+});
+
 describe('waistPenalty (target-based, inverted asymmetry)', () => {
   it('applies over_target_slope to positive diffs (corset too big to reach target)', () => {
     // diff=2 means corset is 2" larger than target — can't reach.
