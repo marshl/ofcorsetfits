@@ -332,7 +332,12 @@ def main():
     review = yaml.safe_load(REVIEW_PATH.read_text())
 
     design_ids_in_review = [r["design_id"] for r in review["designs"]]
-    variants_by_design = collect_variants_per_design(design_ids_in_review)
+    # Match slugs against every chart design, not just the reviewed ones.
+    # Otherwise an unreviewed design like MCC38-W has its URLs claimed by
+    # MCC38. Variants matched to unreviewed designs are left out below.
+    variants_by_design = collect_variants_per_design(
+        sorted(set(design_ids_in_review) | set(json_designs))
+    )
 
     corsets = []
     per_entry_warnings = []
