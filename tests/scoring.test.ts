@@ -196,10 +196,19 @@ describe('cupped-rib silhouette-specific scoring', () => {
     // This test only exercises the tight case (negative diff at rib).
     if (cuppedUnderbust.diff_in >= -0.1) return;
 
+    // Strip both the category AND the 'cupped rib' word so this baseline is
+    // pure default-asymmetric — otherwise the word alone triggers partial
+    // cupping and inflates the baseline.
     const modifiedCatalog: Catalog = {
       ...catalog,
       corsets: catalog.corsets.map((c) =>
-        c.id === cuppedRib.id ? { ...c, silhouette_category: 'hourglass' } : c,
+        c.id === cuppedRib.id
+          ? {
+              ...c,
+              silhouette_category: 'hourglass',
+              silhouette_words: c.silhouette_words.filter((w) => w !== 'cupped rib'),
+            }
+          : c,
       ),
     };
     const asHourglass = rank(wideRibBody, modifiedCatalog, config);
@@ -216,6 +225,63 @@ describe('cupped-rib silhouette-specific scoring', () => {
     expect(cuppedUnderbust.penalty).toBeGreaterThan(hourglassUnderbust.penalty);
     // Sanity: ratio should be roughly looseness_slope / tightness_slope = 1.5.
     expect(cuppedUnderbust.penalty / hourglassUnderbust.penalty).toBeCloseTo(1.5, 1);
+  });
+
+  it("gives partial cupping to corsets with 'cupped rib' as a word but different primary category", () => {
+    // A corset with silhouette_words containing 'cupped rib' but a category
+    // other than 'cupped-rib' should sit between default (asymmetric) and
+    // full cupped-rib (symmetric) at the underbust tight case.
+    const config = defaultScoringConfig(catalog);
+    const wideRibBody: Body = {
+      natural_waist_in: 28,
+      underbust: { circumference_in: 44, position_in: -5 },
+      upper_hip: { circumference_in: 34, position_in: 4 },
+      iliac: { circumference_in: 38, position_in: 7 },
+    };
+    const partial = catalog.corsets.find(
+      (c) =>
+        c.silhouette_category !== 'cupped-rib' &&
+        c.silhouette_words.includes('cupped rib') &&
+        c.variants.some((v) => v.waist_sizes_in.length > 0),
+    );
+    if (!partial) return;
+
+    const partialRow = rank(wideRibBody, catalog, config).find(
+      (r) => r.corset.id === partial.id,
+    );
+    if (!partialRow) return;
+    const partialRib = partialRow.best.position_results.find(
+      (p) => (p.label ?? '').startsWith('under-bust'),
+    );
+    if (!partialRib || partialRib.diff_in === null || partialRib.diff_in >= -0.1) return;
+
+    // Same corset with the 'cupped rib' word stripped — baseline (default asymmetric).
+    const baselineCatalog: Catalog = {
+      ...catalog,
+      corsets: catalog.corsets.map((c) =>
+        c.id === partial.id
+          ? { ...c, silhouette_words: c.silhouette_words.filter((w) => w !== 'cupped rib') }
+          : c,
+      ),
+    };
+    const baselineRib = rank(wideRibBody, baselineCatalog, config)
+      .find((r) => r.corset.id === partial.id)!
+      .best.position_results.find((p) => (p.label ?? '').startsWith('under-bust'))!;
+
+    // Same corset with the primary category set to 'cupped-rib' — full cupping.
+    const fullCatalog: Catalog = {
+      ...catalog,
+      corsets: catalog.corsets.map((c) =>
+        c.id === partial.id ? { ...c, silhouette_category: 'cupped-rib' } : c,
+      ),
+    };
+    const fullRib = rank(wideRibBody, fullCatalog, config)
+      .find((r) => r.corset.id === partial.id)!
+      .best.position_results.find((p) => (p.label ?? '').startsWith('under-bust'))!;
+
+    // Partial cupping sits STRICTLY between baseline and full cupping.
+    expect(partialRib.penalty).toBeGreaterThan(baselineRib.penalty);
+    expect(partialRib.penalty).toBeLessThan(fullRib.penalty);
   });
 });
 

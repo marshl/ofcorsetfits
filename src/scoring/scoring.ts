@@ -185,17 +185,30 @@ export function scoreCorset(
 
       let penalty: number;
       if (config.gap_shape === 'curved') {
-        // curved: asymmetric on diff — EXCEPT at the underbust of a cupped-rib
-        // silhouette, where the design intent is to CUP the rib (accommodate,
-        // don't compress or flare away from it). Both directions of misfit
-        // are equally bad there, so we symmetrize BOTH slopes to the harsher
-        // of the two (Math.max) — robust regardless of which slope defaults
-        // higher on any given day.
-        const isCuppedRibUnderbust =
-          corset.silhouette_category === 'cupped-rib' && weightKey === 'underbust';
+        // curved: asymmetric on diff — EXCEPT at the underbust of a corset
+        // with cupped-rib character, where the design intent is to CUP the
+        // rib (accommodate, don't compress or flare away from it). Both
+        // directions of misfit are equally bad there, so both slopes
+        // interpolate toward the harsher of the two.
+        //
+        // Two tiers of cupping:
+        //   - `silhouette_category === 'cupped-rib'` (strength 1): full
+        //     symmetry — cupping is the primary silhouette.
+        //   - `'cupped rib'` in `silhouette_words` but a different primary
+        //     category (strength 0.5): partial. Corsets like conical- or
+        //     longline-with-slight-cupping — rib is accommodated somewhat
+        //     but the silhouette isn't defined by it.
+        let cuppedStrength = 0;
+        if (weightKey === 'underbust') {
+          if (corset.silhouette_category === 'cupped-rib') {
+            cuppedStrength = 1;
+          } else if (corset.silhouette_words.includes('cupped rib')) {
+            cuppedStrength = 0.5;
+          }
+        }
         const harsher = Math.max(config.tightness_slope, config.looseness_slope);
-        const tightSlope = isCuppedRibUnderbust ? harsher : config.tightness_slope;
-        const looseSlope = isCuppedRibUnderbust ? harsher : config.looseness_slope;
+        const tightSlope = config.tightness_slope + cuppedStrength * (harsher - config.tightness_slope);
+        const looseSlope = config.looseness_slope + cuppedStrength * (harsher - config.looseness_slope);
         penalty = penaltyForDiff(diff, weight, tightSlope, looseSlope, config.looseness_curvature);
       } else {
         // straight / slant-hip / slant-rib / closed all define a per-position
