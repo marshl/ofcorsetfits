@@ -6,7 +6,7 @@
     "medium": 1.0,
     "high": 1.75
   },
-  "generated_at_iso": "2026-08-30T13:35:16+00:00",
+  "generated_at_iso": "2026-10-31T07:06:43+00:00",
   "sources": {
     "comparison_chart_json": "https://www.mysticcitycorsets.com/wp-admin/admin-ajax.php?action=wp_ajax_ninja_tables_public_action&table_id=18400&target_action=get-all-data",
     "product_sitemap": "https://www.mysticcitycorsets.com/product-sitemap.xml",
@@ -192,9 +192,7 @@
             "cotton"
           ],
           "stretch_class": "low",
-          "waist_sizes_in": [
-            28
-          ]
+          "waist_sizes_in": []
         },
         {
           "name": "Black Cotton Mesh",
@@ -205,9 +203,7 @@
           ],
           "stretch_class": "medium",
           "waist_sizes_in": [
-            20,
-            22,
-            26
+            20
           ]
         }
       ],
@@ -377,8 +373,6 @@
           ],
           "stretch_class": "low",
           "waist_sizes_in": [
-            26,
-            28,
             30
           ]
         },
@@ -532,6 +526,7 @@
         }
       ],
       "materials_summary": [
+        "pvc",
         "satin"
       ],
       "stretch_class_options": [
@@ -555,6 +550,24 @@
           ],
           "stretch_class": "low",
           "waist_sizes_in": []
+        },
+        {
+          "name": "Hip Ties Black Pvc",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc124-hip-ties-black-pvc-underbust-corset/",
+          "materials": [
+            "pvc"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34
+          ]
         }
       ],
       "notes": null,
@@ -625,9 +638,7 @@
             "cotton"
           ],
           "stretch_class": "low",
-          "waist_sizes_in": [
-            42
-          ]
+          "waist_sizes_in": []
         },
         {
           "name": "Green Bird Brocade Plus",
@@ -652,6 +663,20 @@
           ]
         },
         {
+          "name": "Pink Floral Brocade Plus",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc127-pink-floral-brocade-plus-size-underbust-corset/",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            32,
+            34,
+            36,
+            38
+          ]
+        },
+        {
           "name": "Plus Black Mesh",
           "url": "https://www.mysticcitycorsets.com/shop/mcc127-plus-size-black-mesh-underbust-corset/",
           "materials": [
@@ -660,8 +685,7 @@
           "stretch_class": "high",
           "waist_sizes_in": [
             32,
-            44,
-            46
+            44
           ]
         }
       ],
@@ -735,7 +759,6 @@
           "waist_sizes_in": [
             16,
             18,
-            20,
             22,
             24,
             26,
@@ -817,9 +840,6 @@
           "waist_sizes_in": [
             18,
             20,
-            22,
-            24,
-            28,
             30,
             32
           ]
@@ -986,7 +1006,21 @@
             "mesh"
           ],
           "stretch_class": "high",
-          "waist_sizes_in": []
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36,
+            38,
+            40
+          ]
         }
       ],
       "notes": null,
@@ -1058,10 +1092,7 @@
           ],
           "stretch_class": "medium",
           "waist_sizes_in": [
-            18,
-            20,
             26,
-            28,
             30
           ]
         }
@@ -1123,9 +1154,7 @@
             "brocade"
           ],
           "stretch_class": "low",
-          "waist_sizes_in": [
-            28
-          ]
+          "waist_sizes_in": []
         }
       ],
       "notes": null,
@@ -1190,7 +1219,11 @@
           ],
           "stretch_class": "medium",
           "waist_sizes_in": [
+            20,
+            22,
+            24,
             26,
+            28,
             30,
             32
           ]
@@ -1274,12 +1307,8 @@
           "stretch_class": "medium",
           "waist_sizes_in": [
             16,
-            18,
-            20,
             24,
-            26,
-            30,
-            32
+            30
           ]
         },
         {
@@ -1548,7 +1577,8 @@
           "stretch_class": "medium",
           "waist_sizes_in": [
             20,
-            26,
+            22,
+            24,
             28,
             30,
             32,
@@ -1650,7 +1680,6 @@
           ],
           "stretch_class": "high",
           "waist_sizes_in": [
-            14,
             16,
             18,
             20,
@@ -1674,6 +1703,75 @@
           "hardcoded_measurements_from_page": "Front: 10-11\u2033, Side: 9.25-11\u2033, Back: 12\u2033, Rib spring: 15\u2033, Upper Hip Spring: 18\u2033"
         },
         "review_stretch_class_at_representative_variant": "high",
+        "warnings": []
+      }
+    },
+    {
+      "id": "MCC254L",
+      "name": "MCC254L Black Satin Underbust Corset",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc254l-black-satin-underbust-corset/",
+      "silhouette_category": "longline",
+      "silhouette_words": [
+        "hourglass",
+        "cupped rib",
+        "long torso",
+        "underbust",
+        "overbust",
+        "hip ties"
+      ],
+      "body_length_in": 12.75,
+      "above_waist_length_in": null,
+      "below_waist_length_in": null,
+      "measurements": [
+        {
+          "position_from_waist_in": -6.0,
+          "spring_in": 14.0,
+          "label": "under-bust"
+        },
+        {
+          "position_from_waist_in": 5.0,
+          "spring_in": 18.0,
+          "label": "upper-hip (5in below waist)"
+        }
+      ],
+      "materials_summary": [
+        "satin"
+      ],
+      "stretch_class_options": [
+        "low"
+      ],
+      "variants": [
+        {
+          "name": "Black Satin",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc254l-black-satin-underbust-corset/",
+          "materials": [
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            16,
+            18,
+            20,
+            22
+          ]
+        }
+      ],
+      "notes": null,
+      "provenance": {
+        "raw_json": {
+          "rib_spring": "14",
+          "upper_hip_spring": "18",
+          "low_hip_spring": "-",
+          "underbust_length": "6",
+          "princess_seam": "11",
+          "torso_length": "12.75"
+        },
+        "scrape": {
+          "sku": "MCC254L Black satin",
+          "calibration_from_page": null,
+          "hardcoded_measurements_from_page": null
+        },
+        "review_stretch_class_at_representative_variant": "low",
         "warnings": []
       }
     },
@@ -1721,9 +1819,7 @@
             "satin"
           ],
           "stretch_class": "low",
-          "waist_sizes_in": [
-            28
-          ]
+          "waist_sizes_in": []
         },
         {
           "name": "Black Brocade Mesh",
@@ -1734,9 +1830,6 @@
           ],
           "stretch_class": "medium",
           "waist_sizes_in": [
-            18,
-            28,
-            30,
             32,
             34
           ]
@@ -1750,9 +1843,7 @@
           "stretch_class": "high",
           "waist_sizes_in": [
             16,
-            18,
-            22,
-            26
+            18
           ]
         }
       ],
@@ -1844,7 +1935,7 @@
     {
       "id": "MCC34",
       "name": "MCC34 Hip Ties Black Cotton/Mesh Underbust Corset",
-      "url": "https://www.mysticcitycorsets.com/shop/mcc34-black-cotton-mesh-hip-ties-underbust-corset/",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc34-hip-ties-black-rose-mesh-underbust-corset/",
       "silhouette_category": "cupped-rib",
       "silhouette_words": [
         "underbust",
@@ -1872,7 +1963,8 @@
         "mesh"
       ],
       "stretch_class_options": [
-        "medium"
+        "medium",
+        "high"
       ],
       "variants": [
         {
@@ -1888,9 +1980,19 @@
             22,
             24,
             26,
-            28,
-            30,
             32
+          ]
+        },
+        {
+          "name": "Hip Ties Black Rose Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc34-hip-ties-black-rose-mesh-underbust-corset/",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
+          "waist_sizes_in": [
+            22,
+            24
           ]
         }
       ],
@@ -2025,8 +2127,9 @@
           ],
           "stretch_class": "medium",
           "waist_sizes_in": [
-            24,
-            28
+            18,
+            20,
+            22
           ]
         }
       ],
@@ -2103,8 +2206,6 @@
           "stretch_class": "medium",
           "waist_sizes_in": [
             18,
-            22,
-            24,
             26,
             28
           ]
@@ -2443,7 +2544,6 @@
             22,
             24,
             26,
-            28,
             30,
             32,
             34,
@@ -2487,7 +2587,6 @@
           "waist_sizes_in": [
             18,
             20,
-            24,
             26,
             30,
             32
@@ -2636,12 +2735,10 @@
             18,
             20,
             22,
-            24,
             26,
             30,
             32,
-            34,
-            36
+            34
           ]
         },
         {
@@ -2830,8 +2927,6 @@
           ],
           "stretch_class": "medium",
           "waist_sizes_in": [
-            18,
-            20,
             26
           ]
         },
@@ -2845,7 +2940,13 @@
           ],
           "stretch_class": "medium",
           "waist_sizes_in": [
+            18,
+            20,
+            22,
             24,
+            26,
+            28,
+            30,
             32,
             34,
             36,
@@ -2863,10 +2964,10 @@
           "stretch_class": "high",
           "waist_sizes_in": [
             18,
-            20,
             24,
             26,
             28,
+            30,
             32,
             34,
             36,
@@ -3014,12 +3115,9 @@
             20,
             22,
             24,
-            26,
-            28,
             30,
             32,
-            34,
-            36
+            34
           ]
         },
         {
@@ -3161,13 +3259,47 @@
         }
       ],
       "materials_summary": [
+        "brocade",
         "mesh",
         "satin"
       ],
       "stretch_class_options": [
-        "medium"
+        "low",
+        "medium",
+        "high"
       ],
       "variants": [
+        {
+          "name": "Wide Hips Peacock Brocade",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc63v-wide-hips-peacock-brocade-underbust-corset/",
+          "materials": [
+            "brocade"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            22
+          ]
+        },
+        {
+          "name": "Wide Hips Peacock Brocade Black Satin",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc63v-wide-hips-peacock-brocade-black-satin-underbust-corset/",
+          "materials": [
+            "brocade",
+            "satin"
+          ],
+          "stretch_class": "low",
+          "waist_sizes_in": [
+            18,
+            20,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
         {
           "name": "Black Satin Mesh",
           "url": "https://www.mysticcitycorsets.com/shop/mcc63v-black-satin-mesh-underbust-corset/",
@@ -3176,6 +3308,46 @@
             "satin"
           ],
           "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Wide Hips Peacock Brocade Black Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc63v-wide-hips-peacock-brocade-black-mesh-underbust-corset/",
+          "materials": [
+            "brocade",
+            "mesh"
+          ],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34,
+            36
+          ]
+        },
+        {
+          "name": "Wide Hips Pink Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc63v-wide-hips-pink-mesh-underbust-corset/",
+          "materials": [
+            "mesh"
+          ],
+          "stretch_class": "high",
           "waist_sizes_in": [
             18,
             20,
@@ -3212,7 +3384,7 @@
     {
       "id": "MCC64",
       "name": "MCC64 Black Cotton Sport Mesh Underbust Corset",
-      "url": "https://www.mysticcitycorsets.com/shop/mcc64-black-cotton-sport-mesh-underbust-corset/",
+      "url": "https://www.mysticcitycorsets.com/shop/mcc64-beige-sport-mesh-underbust-corset/",
       "silhouette_category": "longline",
       "silhouette_words": [
         "underbust",
@@ -3248,7 +3420,8 @@
         "sport mesh"
       ],
       "stretch_class_options": [
-        "medium"
+        "medium",
+        "high"
       ],
       "variants": [
         {
@@ -3261,6 +3434,8 @@
           ],
           "stretch_class": "medium",
           "waist_sizes_in": [
+            16,
+            18,
             26,
             30
           ]
@@ -3274,8 +3449,20 @@
             "sport mesh"
           ],
           "stretch_class": "medium",
+          "waist_sizes_in": []
+        },
+        {
+          "name": "Beige Sport Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc64-beige-sport-mesh-underbust-corset/",
+          "materials": [
+            "mesh",
+            "sport mesh"
+          ],
+          "stretch_class": "high",
           "waist_sizes_in": [
-            16
+            18,
+            20,
+            22
           ]
         }
       ],
@@ -3349,7 +3536,7 @@
           ],
           "stretch_class": "low",
           "waist_sizes_in": [
-            38
+            20
           ]
         },
         {
@@ -3362,9 +3549,11 @@
           ],
           "stretch_class": "medium",
           "waist_sizes_in": [
-            18,
+            24,
+            26,
             28,
-            30
+            30,
+            32
           ]
         },
         {
@@ -3380,7 +3569,10 @@
             22,
             24,
             26,
-            28
+            30,
+            32,
+            34,
+            36
           ]
         }
       ],
@@ -3450,9 +3642,7 @@
             "cotton"
           ],
           "stretch_class": "low",
-          "waist_sizes_in": [
-            26
-          ]
+          "waist_sizes_in": []
         },
         {
           "name": "Floral Brocade",
@@ -3462,7 +3652,6 @@
           ],
           "stretch_class": "low",
           "waist_sizes_in": [
-            28,
             30,
             32
           ]
@@ -3474,9 +3663,7 @@
             "cotton"
           ],
           "stretch_class": "low",
-          "waist_sizes_in": [
-            26
-          ]
+          "waist_sizes_in": []
         },
         {
           "name": "Black Brocade Mesh",
@@ -3491,9 +3678,7 @@
             20,
             22,
             24,
-            26,
             28,
-            30,
             32
           ]
         }
@@ -3561,8 +3746,7 @@
           "stretch_class": "medium",
           "waist_sizes_in": [
             16,
-            18,
-            20
+            18
           ]
         }
       ],
@@ -3694,9 +3878,7 @@
             "satin"
           ],
           "stretch_class": "low",
-          "waist_sizes_in": [
-            38
-          ]
+          "waist_sizes_in": []
         },
         {
           "name": "Gold Brocade Mesh",
@@ -3719,8 +3901,7 @@
           ],
           "stretch_class": "medium",
           "waist_sizes_in": [
-            18,
-            20
+            18
           ]
         },
         {
@@ -3751,10 +3932,6 @@
           ],
           "stretch_class": "high",
           "waist_sizes_in": [
-            24,
-            26,
-            28,
-            30,
             32,
             34,
             36,
@@ -3827,7 +4004,6 @@
           "waist_sizes_in": [
             24,
             26,
-            28,
             30,
             34,
             36,
@@ -4134,10 +4310,12 @@
       "materials_summary": [
         "brocade",
         "cotton",
+        "mesh",
         "satin"
       ],
       "stretch_class_options": [
-        "low"
+        "low",
+        "medium"
       ],
       "variants": [
         {
@@ -4176,6 +4354,23 @@
           "stretch_class": "low",
           "waist_sizes_in": [
             38
+          ]
+        },
+        {
+          "name": "Black Cotton Mesh",
+          "url": "https://www.mysticcitycorsets.com/shop/mcc84l-black-cotton-mesh-corset/",
+          "materials": [
+            "cotton",
+            "mesh"
+          ],
+          "stretch_class": "medium",
+          "waist_sizes_in": [
+            24,
+            26,
+            28,
+            30,
+            32,
+            34
           ]
         }
       ],
@@ -4313,9 +4508,7 @@
             "cotton"
           ],
           "stretch_class": "low",
-          "waist_sizes_in": [
-            36
-          ]
+          "waist_sizes_in": []
         },
         {
           "name": "Black Brocade Mesh",
@@ -4407,7 +4600,6 @@
             24,
             26,
             28,
-            30,
             32,
             34
           ]
@@ -4467,8 +4659,7 @@
           "waist_sizes_in": [
             22,
             24,
-            26,
-            28
+            26
           ]
         }
       ],
@@ -4537,7 +4728,6 @@
             16,
             18,
             22,
-            24,
             28
           ]
         },
@@ -4562,9 +4752,7 @@
           "waist_sizes_in": [
             16,
             18,
-            20,
             22,
-            24,
             26,
             28,
             30
@@ -4735,8 +4923,13 @@
             18,
             20,
             22,
+            24,
+            26,
+            28,
+            30,
             32,
-            36
+            36,
+            38
           ]
         },
         {

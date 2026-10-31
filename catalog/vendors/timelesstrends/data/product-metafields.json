@@ -261,6 +261,15 @@
     "underbust_position_in": 5.0,
     "underbust_to_hip_in": 10.0
   },
+  "beige-fine-mesh-no-line-cupped-corset-gemini-silhouette-long": {
+    "center_back_in": 14.0,
+    "center_front_in": 13.0,
+    "high_hip_position_in": 3.0,
+    "hip_spring_in": 14.0,
+    "rib_spring_in": 8.5,
+    "side_seam_in": 12.0,
+    "underbust_position_in": 5.0
+  },
   "beige-fine-mesh-no-line-libby-corset-libra-gentle-silhouette-regular": {
     "center_back_in": 12.0,
     "center_front_in": 11.0,
@@ -277,6 +286,24 @@
     "center_back_in": 12.5,
     "center_front_in": 13.0,
     "side_seam_in": 11.25
+  },
+  "beige-fine-mesh-no-line-straight-corset-gemini-silhouette-long": {
+    "center_back_in": 14.0,
+    "center_front_in": 13.0,
+    "high_hip_position_in": 3.0,
+    "hip_spring_in": 14.0,
+    "rib_spring_in": 8.5,
+    "side_seam_in": 12.0,
+    "underbust_position_in": 5.0
+  },
+  "beige-fine-mesh-no-line-straight-corset-gemini-silhouette-long-copy": {
+    "center_back_in": 14.0,
+    "center_front_in": 13.0,
+    "high_hip_position_in": 3.0,
+    "hip_spring_in": 14.0,
+    "rib_spring_in": 8.5,
+    "side_seam_in": 12.0,
+    "underbust_position_in": 5.0
   },
   "beige-open-mesh-corset-hourglass-silhouette-regular": {
     "center_back_in": 12.5,
@@ -605,6 +632,15 @@
     "underbust_position_in": 5.0,
     "underbust_to_hip_in": 10.0
   },
+  "black-fine-mesh-no-line-cupped-corset-gemini-silhouette-long": {
+    "center_back_in": 14.0,
+    "center_front_in": 13.0,
+    "high_hip_position_in": 3.0,
+    "hip_spring_in": 14.0,
+    "rib_spring_in": 8.5,
+    "side_seam_in": 12.0,
+    "underbust_position_in": 5.0
+  },
   "black-fine-mesh-no-line-libby-corset-libra-gentle-silhouette-regular": {
     "center_back_in": 12.0,
     "center_front_in": 11.0,
@@ -843,6 +879,25 @@
     "side_seam_in": 11.0,
     "underbust_position_in": 5.5,
     "underbust_to_hip_in": 11.0
+  },
+  "brown-vine-velvet-corset-hourglass-silhouette-long": {
+    "center_back_in": 14.5,
+    "center_front_in": 13.0,
+    "high_hip_position_in": 5.0,
+    "hip_spring_in": 12.0,
+    "rib_spring_in": 6.5,
+    "side_seam_in": 11.5,
+    "underbust_position_in": 5.5,
+    "underbust_to_hip_in": 11.5
+  },
+  "brown-vine-velvet-straight-corset-gemini-silhouette-regular": {
+    "center_back_in": 13.5,
+    "center_front_in": 11.0,
+    "high_hip_position_in": 3.0,
+    "hip_spring_in": 14.0,
+    "rib_spring_in": 8.5,
+    "side_seam_in": 11.0,
+    "underbust_position_in": 5.0
   },
   "bubble-blooms-in-blue-libby-corset-libra-gentle-silhouette-regular": {
     "center_back_in": 12.0,
@@ -1177,6 +1232,25 @@
     "side_seam_in": 11.0,
     "underbust_position_in": 5.0
   },
+  "feline-flowers-cotton-corset-hourglass-silhouette-regular": {
+    "center_back_in": 12.5,
+    "center_front_in": 11.5,
+    "high_hip_position_in": 3.0,
+    "hip_spring_in": 10.0,
+    "rib_spring_in": 6.5,
+    "side_seam_in": 9.5,
+    "underbust_position_in": 5.0,
+    "underbust_to_hip_in": 10.0
+  },
+  "feline-flowers-cotton-corset-hourglass-silhouette-short": {
+    "center_back_in": 10.0,
+    "center_front_in": 8.5,
+    "hip_spring_in": 7.0,
+    "rib_spring_in": 4.0,
+    "side_seam_in": 6.5,
+    "underbust_position_in": 4.0,
+    "underbust_to_hip_in": 7.5
+  },
   "fine-mesh-straight-gemini-silhouette-regular": {
     "center_back_in": 13.5,
     "center_front_in": 11.0,
@@ -1458,7 +1532,25 @@
     "underbust_position_in": 4.0,
     "underbust_to_hip_in": 7.5
   },
+  "leatherbound-diary-corset-hourglass-silhouette-short": {
+    "center_back_in": 10.0,
+    "center_front_in": 8.5,
+    "hip_spring_in": 7.0,
+    "rib_spring_in": 4.0,
+    "side_seam_in": 6.5,
+    "underbust_position_in": 4.0,
+    "underbust_to_hip_in": 7.5
+  },
   "mazatlan-lady-novice-corset-hourglass-silhouette-regular": {},
+  "moths-at-night-corset-hourglass-silhouette-short": {
+    "center_back_in": 10.0,
+    "center_front_in": 8.5,
+    "hip_spring_in": 7.0,
+    "rib_spring_in": 4.0,
+    "side_seam_in": 6.5,
+    "underbust_position_in": 4.0,
+    "underbust_to_hip_in": 7.5
+  },
   "mystery-white-corset-your-size-add-on": {
     "center_back_in": 12.5,
     "center_front_in": 12.0,
@@ -1508,7 +1600,60 @@
     "underbust_position_in": 5.0,
     "underbust_to_hip_in": 9.0
   },
+  "new-ufr-rich-plum-leather-corset-hourglass-silhouette-funnel-regular": {
+    "center_back_in": 12.5,
+    "center_front_in": 11.5,
+    "high_hip_position_in": 5.0,
+    "hip_spring_in": 10.0,
+    "rib_spring_in": 7.0,
+    "side_seam_in": 9.5,
+    "underbust_position_in": 5.0,
+    "underbust_to_hip_in": 10.0
+  },
   "nude-straight-corset-gemini-silhouette-regular-only-available-in-size-36-copy": {},
+  "ocean-cherry-blossom-novice-corset-hourglass-silhouette-regular": {
+    "center_back_in": 12.5,
+    "center_front_in": 11.5,
+    "high_hip_position_in": 3.0,
+    "hip_spring_in": 10.0,
+    "rib_spring_in": 6.5,
+    "side_seam_in": 9.5,
+    "underbust_position_in": 5.0,
+    "underbust_to_hip_in": 10.0
+  },
+  "ocean-cherry-blossom-straight-corset-gemini-silhouette-long": {
+    "center_back_in": 14.0,
+    "center_front_in": 13.0,
+    "high_hip_position_in": 3.0,
+    "hip_spring_in": 14.0,
+    "rib_spring_in": 8.5,
+    "side_seam_in": 12.0,
+    "underbust_position_in": 5.0
+  },
+  "peach-blossom-overbust-corset-hourglass-silhouette-regular": {
+    "center_back_in": 15.5,
+    "center_front_in": 15.5,
+    "side_seam_in": 13.0
+  },
+  "peach-blossom-straight-corset-gemini-silhouette-regular": {
+    "center_back_in": 13.5,
+    "center_front_in": 11.0,
+    "high_hip_position_in": 3.0,
+    "hip_spring_in": 14.0,
+    "rib_spring_in": 8.5,
+    "side_seam_in": 11.0,
+    "underbust_position_in": 5.0
+  },
+  "peach-blossomcorset-hourglass-silhouette-regular": {
+    "center_back_in": 12.5,
+    "center_front_in": 11.5,
+    "high_hip_position_in": 3.0,
+    "hip_spring_in": 10.0,
+    "rib_spring_in": 6.5,
+    "side_seam_in": 9.5,
+    "underbust_position_in": 5.0,
+    "underbust_to_hip_in": 10.0
+  },
   "peonies-in-bloom-corset-gemini-silhouette-long": {
     "center_back_in": 14.0,
     "center_front_in": 13.0,
@@ -1589,6 +1734,11 @@
     "underbust_position_in": 5.0,
     "underbust_to_hip_in": 10.0
   },
+  "rainbow-satin-overbust-corset-hourglass-silhouette-regular-copy": {
+    "center_back_in": 15.5,
+    "center_front_in": 15.5,
+    "side_seam_in": 13.0
+  },
   "red-lacquer-corset-libra-silhouette-regular": {
     "center_back_in": 12.0,
     "center_front_in": 10.5,
@@ -1597,6 +1747,15 @@
     "rib_spring_in": 10.0,
     "side_seam_in": 9.5,
     "underbust_position_in": 4.5
+  },
+  "red-rose-textured-corset-hourglass-silhouette-short": {
+    "center_back_in": 10.0,
+    "center_front_in": 8.5,
+    "hip_spring_in": 7.0,
+    "rib_spring_in": 4.0,
+    "side_seam_in": 6.5,
+    "underbust_position_in": 4.0,
+    "underbust_to_hip_in": 7.5
   },
   "red-white-and-blue-corset-hourglass-silhouette-long": {
     "center_back_in": 14.5,
@@ -1612,6 +1771,16 @@
     "center_back_in": 12.5,
     "center_front_in": 13.0,
     "side_seam_in": 11.25
+  },
+  "rich-plum-leather-corset-hourglass-silhouette-regular-w-hip-ties": {
+    "center_back_in": 12.5,
+    "center_front_in": 11.5,
+    "high_hip_position_in": 3.0,
+    "hip_spring_in": 10.0,
+    "rib_spring_in": 6.5,
+    "side_seam_in": 9.5,
+    "underbust_position_in": 5.0,
+    "underbust_to_hip_in": 10.0
   },
   "robins-egg-corset-libra-silhouette-regular": {
     "center_back_in": 12.0,
@@ -1674,6 +1843,15 @@
     "center_front_in": 15.5,
     "side_seam_in": 13.0
   },
+  "skull-demask-corset-libra-silhouette-regular": {
+    "center_back_in": 12.0,
+    "center_front_in": 10.5,
+    "high_hip_position_in": 4.0,
+    "hip_spring_in": 11.0,
+    "rib_spring_in": 10.0,
+    "side_seam_in": 9.5,
+    "underbust_position_in": 4.5
+  },
   "steampunk-green-overbust-corset": {},
   "steely-blue-satin-corset-hourglass-silhouette-long-1": {
     "center_back_in": 14.5,
@@ -1685,6 +1863,16 @@
     "underbust_position_in": 5.5,
     "underbust_to_hip_in": 11.5
   },
+  "steely-blue-satin-corset-hourglass-silhouette-regular-copy": {
+    "center_back_in": 12.5,
+    "center_front_in": 11.5,
+    "high_hip_position_in": 3.0,
+    "hip_spring_in": 10.0,
+    "rib_spring_in": 6.5,
+    "side_seam_in": 9.5,
+    "underbust_position_in": 5.0,
+    "underbust_to_hip_in": 10.0
+  },
   "strawberries-and-lace-novice-corset-hourglass-silhouette-regular": {
     "center_back_in": 12.5,
     "center_front_in": 11.5,
@@ -1694,6 +1882,11 @@
     "side_seam_in": 9.5,
     "underbust_position_in": 5.0,
     "underbust_to_hip_in": 10.0
+  },
+  "the-academic-overbust-corset-hourglass-silhouette-new": {
+    "center_back_in": 15.5,
+    "center_front_in": 15.5,
+    "side_seam_in": 13.0
   },
   "the-cats-meow-novice-corset-hourglass-silhouette-regular": {},
   "through-the-grapevine-cotton-cupped-corset-gemini-silhouette-regular-copy": {
@@ -1768,6 +1961,26 @@
     "underbust_to_hip_in": 10.0
   },
   "ufr-basil-and-lace-corset-hourglass-silhouette-funnel-regular": {
+    "center_back_in": 12.5,
+    "center_front_in": 11.5,
+    "high_hip_position_in": 5.0,
+    "hip_spring_in": 10.0,
+    "rib_spring_in": 7.0,
+    "side_seam_in": 9.5,
+    "underbust_position_in": 5.0,
+    "underbust_to_hip_in": 9.0
+  },
+  "ufr-red-rose-textured-corset-hourglass-silhouette-funnel-regular": {
+    "center_back_in": 12.5,
+    "center_front_in": 11.5,
+    "high_hip_position_in": 5.0,
+    "hip_spring_in": 10.0,
+    "rib_spring_in": 7.0,
+    "side_seam_in": 9.5,
+    "underbust_position_in": 5.0,
+    "underbust_to_hip_in": 9.0
+  },
+  "ufr-skull-demask-corset-hourglass-silhouette-funnel-regular": {
     "center_back_in": 12.5,
     "center_front_in": 11.5,
     "high_hip_position_in": 5.0,

@@ -540,6 +540,29 @@
     "title": "MCC254 Black Mesh Underbust Corset",
     "url": "https://www.mysticcitycorsets.com/shop/mcc254-mesh-underbust-corset/"
   },
+  "MCC254L": {
+    "calibration": null,
+    "hardcoded_measurements": null,
+    "silhouette_words": [
+      "hourglass",
+      "cupped rib",
+      "long torso",
+      "underbust",
+      "overbust",
+      "hip ties"
+    ],
+    "sizes": [
+      14,
+      16,
+      18,
+      20,
+      22,
+      24
+    ],
+    "sku": "MCC254L Black satin",
+    "title": "MCC254L Black Satin Underbust Corset",
+    "url": "https://www.mysticcitycorsets.com/shop/mcc254l-black-satin-underbust-corset/"
+  },
   "MCC32X": {
     "calibration": null,
     "hardcoded_measurements": "Front: 9.25-9.5\u2033, Side: 7.5-8\u2033, Back: 9\u2033, Rib spring: 8\u2033, Upper Hip Spring: 12\u2033; 6 flat bones, 18 spiral bones (sizes 16-18\u2033 have 16 bones); stiff busk; stiff 1\u2033 wide underbusk",
