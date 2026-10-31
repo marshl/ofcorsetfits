@@ -6,7 +6,8 @@ Grouping model: one catalog "silhouette" entry per sizing page, plus a
 per-code override for `silhouette_category` (GCX → cupped-rib, GSX →
 conical, even though they share the gemini sizing chart). Every product
 whose `product_type` code maps to a sizing page becomes a variant of
-that silhouette; its Shopify variant sizes are intersected with the
+that silhouette, after correcting the code from the silhouette named in
+the product's handle (see `_code_from_handle`); its Shopify variant sizes are intersected with the
 sizing page's `sizes_offered` to get the buyable set.
 
 Overbust products (OSR, OHR) are skipped — the current scoring engine
@@ -24,7 +25,7 @@ import datetime as dt
 import json
 import re
 import sys
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 
 import yaml
@@ -72,6 +73,33 @@ DEFAULT_SLACK = {"low": 0.5, "medium": 1.0, "high": 1.75}
 def _code_from_product_type(product_type: str) -> str | None:
     m = re.search(r"\(([A-Z]{2,4})\)", product_type or "")
     return m.group(1) if m else None
+
+
+# Underbust codes are U + family (H=Hourglass, S=Slim) + length
+# (S=Short, R=Regular, L=Long).
+_UNDERBUST_FAMILY = {"hourglass": "H", "slim": "S"}
+_UNDERBUST_LENGTH = {"short": "S", "regular": "R", "long": "L"}
+
+
+def _code_from_handle(handle: str, code: str) -> str:
+    """
+    Correct a product's product_type code using the silhouette named in its
+    handle. TT's product_type is sometimes wrong (slim-long products typed
+    USR, Libby products typed LIB), while handles like
+    "green-fairy-corset-slim-silhouette-long" or "grab-bag-slim-short" name
+    the silhouette, and their per-product measurements match the handle.
+    Family and length are corrected independently, so
+    "mystery-white-long-corset-add-on" typed USR becomes USL. Handles that
+    name neither keep their product_type code.
+    """
+    words = handle.lower().split("-")
+    if code in ("LIB", "LBS"):
+        return "LBS" if "libby" in words else "LIB"
+    if len(code) != 3 or code[0] != "U":
+        return code
+    family = next((_UNDERBUST_FAMILY[w] for w in words if w in _UNDERBUST_FAMILY), code[1])
+    length = next((_UNDERBUST_LENGTH[w] for w in words if w in _UNDERBUST_LENGTH), code[2])
+    return f"U{family}{length}"
 
 
 def _code_to_slug(sizing: dict) -> dict[str, str]:
@@ -250,6 +278,7 @@ def main() -> None:
     # Bucket products by product_type code.
     per_code: dict[str, list[dict]] = {}
     skipped_reasons: Counter = Counter()
+    recoded: dict[str, list[str]] = defaultdict(list)
     for handle, p in products.items():
         pt = p.get("product_type") or ""
         if not pt or not pt.startswith("Corset-"):
@@ -262,6 +291,10 @@ def main() -> None:
         if code in EXCLUDED_CODES:
             skipped_reasons[f"excluded code {code}"] += 1
             continue
+        corrected = _code_from_handle(handle, code)
+        if corrected != code:
+            recoded[f"{code} -> {corrected}"].append(handle)
+            code = corrected
         if code not in code_to_slug:
             skipped_reasons[f"unknown code {code}"] += 1
             continue
@@ -416,6 +449,10 @@ def main() -> None:
     print(f"Silhouettes in catalog: {len(corsets)}")
     total_variants = sum(len(c["variants"]) for c in corsets)
     print(f"Total variants across silhouettes: {total_variants}")
+    if recoded:
+        print("\nProducts moved to the silhouette their handle names:")
+        for change, handles in sorted(recoded.items()):
+            print(f"  {len(handles):3}  {change}: {', '.join(sorted(handles))}")
     if skipped_reasons:
         print("\nSkipped products by reason:")
         for reason, n in skipped_reasons.most_common():
