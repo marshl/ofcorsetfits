@@ -41,6 +41,22 @@ DATA_DIR = HERE / "data"
 OUT_PATH = DATA_DIR / "products.json"
 
 
+def _drop_updated_at(product: dict) -> dict:
+    """
+    Shopify bumps updated_at on a product and its variants for any stock or
+    admin change. Nothing in the pipeline reads it, and keeping it makes
+    every refresh rewrite thousands of lines of products.json.
+    """
+    product = {k: v for k, v in product.items() if k != "updated_at"}
+    if isinstance(product.get("variants"), list):
+        product["variants"] = [
+            {k: v for k, v in variant.items() if k != "updated_at"}
+            if isinstance(variant, dict) else variant
+            for variant in product["variants"]
+        ]
+    return product
+
+
 def main() -> int:
     fetcher = Fetcher()
     results: dict[str, dict] = {}
@@ -76,6 +92,7 @@ def main() -> int:
             except Exception as e:
                 print(f"    [{i}/{len(missing_meta)}] {handle} -> ERROR {type(e).__name__}: {e}", flush=True)
 
+    results = {h: _drop_updated_at(p) for h, p in results.items()}
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     write_json(OUT_PATH, results, sort_keys=True)
     print(f"\nWrote {OUT_PATH.relative_to(HERE.parent.parent.parent)} ({len(results)} products)")

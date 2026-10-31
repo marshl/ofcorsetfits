@@ -32,6 +32,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from shared.catalog import write_catalog  # noqa: E402
 from shared.stretch_class import classify as classify_stretch  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
@@ -444,8 +445,10 @@ def main() -> None:
         "corsets": corsets,
     }
 
-    OUT_PATH.write_text(json.dumps(catalog, indent=2))
-    print(f"Wrote {OUT_PATH}")
+    if write_catalog(OUT_PATH, catalog):
+        print(f"Wrote {OUT_PATH}")
+    else:
+        print(f"Wrote {OUT_PATH} (no changes; kept previous generated_at_iso)")
     print(f"Silhouettes in catalog: {len(corsets)}")
     total_variants = sum(len(c["variants"]) for c in corsets)
     print(f"Total variants across silhouettes: {total_variants}")

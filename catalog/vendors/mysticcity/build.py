@@ -29,6 +29,7 @@ import yaml
 # Add catalog/vendors/ to sys.path so `shared.*` resolves.
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from shared.catalog import write_catalog  # noqa: E402
 from shared.stretch_class import classify as classify_stretch  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
@@ -410,8 +411,10 @@ def main():
         "corsets": corsets,
     }
 
-    OUT_PATH.write_text(json.dumps(catalog, indent=2))
-    print(f"Wrote {OUT_PATH}")
+    if write_catalog(OUT_PATH, catalog):
+        print(f"Wrote {OUT_PATH}")
+    else:
+        print(f"Wrote {OUT_PATH} (no changes; kept previous generated_at_iso)")
     print(f"Corsets in catalog: {len(corsets)}")
     print(f"Warnings collected: {len(per_entry_warnings)}")
     for w in per_entry_warnings:
