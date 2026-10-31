@@ -61,11 +61,16 @@ function formatDiff(diff: number | null): string {
   return `${sign}${diff.toFixed(2)}"`;
 }
 
+/**
+ * Groups are bucketed by stretch class (see fitSignature in ranking.ts), so
+ * that's the stable key. The first variant's URL isn't: the available-sizes
+ * filter can trim a group's variants and change which one comes first.
+ */
 function groupSignatureKey(g: VariantGroup): string {
-  return g.variants[0].url;
+  return g.variants[0].stretch_class;
 }
 
-/** Unique key per row: silhouette + group's canonical URL + row size. */
+/** Unique key per row: silhouette + group's stretch class + row size. */
 export function rowKey(r: RankedResult): string {
   return `${r.corset.id}::${groupSignatureKey(r.variant_group)}::${r.best.waist_size_in}`;
 }
@@ -323,8 +328,11 @@ export function RankedList({
         {shown.map((r, i) => {
           const key = rowKey(r);
           const isExpanded = expandedKey === key;
-          const stretch = r.best.variant.stretch_class;
           const group = r.variant_group;
+          // The group's first variant rather than r.best.variant, so the
+          // header names a variant that survived the available-sizes filter.
+          const leadVariant = group.variants[0];
+          const stretch = leadVariant.stretch_class;
           const otherGroups = r.all_groups.filter(
             (g) => groupSignatureKey(g) !== groupSignatureKey(group),
           );
@@ -358,7 +366,7 @@ export function RankedList({
                   {r.corset.id}
                 </span>
                 <span className="corset-name">
-                  {r.best.variant.name}
+                  {leadVariant.name}
                   {memberCount > 1 && (
                     <span className="group-count"> +{memberCount - 1} variants</span>
                   )}
@@ -397,7 +405,7 @@ export function RankedList({
                     )}
                     <div>
                       <strong>Materials:</strong>{' '}
-                      {r.best.variant.materials.join(', ') || '(unspecified)'}
+                      {leadVariant.materials.join(', ') || '(unspecified)'}
                       {' — '}
                       <em>stretch: {stretchLabel(stretch)}</em>
                     </div>
