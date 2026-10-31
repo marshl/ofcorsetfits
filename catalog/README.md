@@ -54,7 +54,9 @@ python3 catalog/vendors/mysticcity/refresh.py --nonce <public-nonce>
 
 The pipeline runs 8 steps: fetch sitemap → fetch chart → match URLs → fetch page meta → **interactive** hip-position review (prompts only for new designs) → build v1 (structure only) → fetch sizes → build v2 (with sizes). The double-build is intentional and cheap; step 6 is HTTP-free.
 
-Rate limits: `shared.http.Fetcher` waits 2 s between requests by default. A full end-to-end fetch is ~135 variant URLs + 57 rep URLs + 1 sitemap + 1 chart ≈ 6–7 minutes wall clock.
+Rate limits: `shared.http.Fetcher` waits 2 s between requests by default, and retries 429s, 5xx errors and network errors up to 3 times (honouring `Retry-After`). A full end-to-end fetch is ~135 variant URLs + 57 rep URLs + 1 sitemap + 1 chart ≈ 6–7 minutes wall clock.
+
+Sizes: every refresh backs up `per-variant-sizes.json` and refetches every variant, so stock is always current. If any fetch still fails, or a page has no stock data, the catalog is written with those variants listed as unbuyable, the build names each one, and `refresh.py` exits 1. Re-run with `--resume-sizes --skip-sitemap --skip-chart --skip-page-meta` to retry only the failures.
 
 **Interactive hip-position step:** MCC's size-chart images encode the vertical hip positions in green annotations that can't be scraped from HTML. `review_hip_positions.py` walks you through each unreviewed design, prints the product URL + full context (title, springs, torso length, sizes, silhouette words, materials), and prompts for values. Entries save incrementally — Ctrl-C is safe, re-running resumes. Non-interactive mode via `--assume-defaults` fills new designs with 4.0 / 6.0 / inferred-stretch when a human review isn't practical.
 

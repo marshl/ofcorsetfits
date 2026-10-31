@@ -372,6 +372,21 @@ def main():
 
     corsets.sort(key=lambda c: c["id"])
 
+    # Variants with no successful size fetch go out as waist_sizes_in [],
+    # which the app shows as unbuyable. Name each one so a failed fetch
+    # can't pass for genuinely out of stock.
+    raw_sizes = (json.loads(PER_VARIANT_SIZES_PATH.read_text())
+                 if PER_VARIANT_SIZES_PATH.exists() else {})
+    for c in corsets:
+        for v in c["variants"]:
+            entry = raw_sizes.get(v["url"])
+            if isinstance(entry, list):
+                continue
+            reason = entry.get("error", "bad entry") if isinstance(entry, dict) else "not fetched yet"
+            per_entry_warnings.append(
+                f"{c['id']}: sizes unknown ({reason}), listed as unbuyable: {v['url']}"
+            )
+
     catalog = {
         "brand": "Mystic City Corsets",
         "brand_url": "https://mysticcitycorsets.com/",

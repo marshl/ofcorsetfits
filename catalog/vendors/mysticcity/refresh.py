@@ -9,9 +9,10 @@ Runs all eight pipeline steps in-process:
   5. review_hip_positions    — interactive prompt -> data/hip-positions.yaml
                                 (prompts only for designs not already reviewed)
   6. build (pass 1)          — assemble catalog    -> catalog/mystic-city.json
-                                (variants exist with empty waist_sizes_in
-                                 when the size cache was invalidated)
+                                (sizes still from the previous cache)
   7. fetch_sizes             — each variant URL   -> data/per-variant-sizes.json
+                                (previous cache is backed up and every URL
+                                 refetched, so stock is always current)
   8. build (pass 2)          — re-assemble        -> catalog/mystic-city.json
                                 (now with fresh sizes)
 
@@ -35,6 +36,14 @@ Flags:
   --skip-review         Skip the interactive step entirely — new designs stay
                         out of the catalog until you run review_hip_positions.py.
   --skip-sizes          Reuse data/per-variant-sizes.json.
+  --resume-sizes        Keep data/per-variant-sizes.json and fetch only the
+                        URLs that are missing or errored. Use this to finish
+                        an interrupted or partly failed run, not for a
+                        normal refresh (it keeps the old stock for the rest).
+
+Exits 1 if any size fetch failed. The catalog is still written, with those
+variants listed as unbuyable, and build.py names each one; re-run with
+--resume-sizes to retry just the failures.
   --assume-defaults     Passed through to review_hip_positions — fills new
                         entries with defaults instead of prompting.
   --nonce VALUE         Passed through to fetch_comparison_chart.
@@ -43,7 +52,6 @@ Flags:
 from __future__ import annotations
 
 import argparse
-import json
 import shutil
 import sys
 from datetime import datetime, timezone
@@ -57,29 +65,6 @@ SIZES_PATH = DATA_DIR / "per-variant-sizes.json"
 # Add catalog/vendors/ to sys.path so both shared.* and sibling MCC modules
 # import consistently regardless of how this script is invoked.
 sys.path.insert(0, str(HERE.parent))
-
-
-def previous_size_fetch_complete() -> bool:
-    """True iff per-variant-sizes.json holds a successful (list-typed) entry
-    for every variant URL currently in the catalog. Error-dict entries and
-    missing URLs both count as incomplete so a resume retries them."""
-    if not SIZES_PATH.exists() or not CATALOG_PATH.exists():
-        return False
-    try:
-        sizes = json.loads(SIZES_PATH.read_text())
-        catalog = json.loads(CATALOG_PATH.read_text())
-    except (OSError, json.JSONDecodeError):
-        return False
-    expected_urls = {
-        variant["url"]
-        for corset in catalog["corsets"]
-        for variant in corset["variants"]
-    }
-    for url in expected_urls:
-        entry = sizes.get(url)
-        if not isinstance(entry, list):
-            return False
-    return True
 
 
 def backup_size_cache() -> Path:
@@ -117,6 +102,7 @@ def main() -> int:
     parser.add_argument("--skip-page-meta", action="store_true")
     parser.add_argument("--skip-review", action="store_true")
     parser.add_argument("--skip-sizes", action="store_true")
+    parser.add_argument("--resume-sizes", action="store_true")
     parser.add_argument("--assume-defaults", action="store_true")
     parser.add_argument("--nonce", default=None)
     args = parser.parse_args()
@@ -199,31 +185,32 @@ def main() -> int:
     build.main()
 
     # --- Step 7: sizes ---
+    size_fetch_failed = False
     if args.skip_sizes:
         print("\nSkipping size fetch (using cached per-variant-sizes.json).")
     else:
         step_banner(7, N, "fetching per-variant sizes")
-        if previous_size_fetch_complete():
-            backup = backup_size_cache()
-            print(
-                f"Backed up previous size cache -> {backup.name} "
-                "(was complete; refetching for fresh stock)."
-            )
+        if args.resume_sizes:
+            print("Resuming — only missing or errored URLs will be fetched.")
         elif SIZES_PATH.exists():
-            print("Previous size fetch was incomplete — resuming without backup.")
+            backup = backup_size_cache()
+            print(f"Backed up previous size cache -> {backup.name}; refetching all.")
         else:
             print("No previous size cache — starting fresh.")
-        rc = fetch_sizes.main()
-        if rc != 0:
-            print(
-                f"\nSize fetch reported {rc} error(s). Rebuilding anyway with "
-                "whatever data was collected.",
-                file=sys.stderr,
-            )
+        size_fetch_failed = fetch_sizes.main() != 0
 
     # --- Step 8: build v2 (with sizes) ---
     step_banner(8, N, "rebuilding catalog with fresh sizes")
     build.main()
+    if size_fetch_failed:
+        print(
+            "\n✘ Catalog written, but some size fetches failed — those variants "
+            "are listed as unbuyable (see the build warnings above). Re-run with "
+            "--resume-sizes --skip-sitemap --skip-chart --skip-page-meta to "
+            "retry just the failures.",
+            file=sys.stderr,
+        )
+        return 1
     print("\n✔ Catalog refresh complete.")
     return 0
 
